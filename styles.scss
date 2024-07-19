@@ -1,0 +1,52 @@
+/*-- scss:defaults --*/
+$primary: #772059;
+$link-color: #2e359d;
+$sidebar-bg: $primary;
+$sidebar-fg: #fff;
+$font-size-root: 19px;
+
+/*-- scss:rules --*/
+.sidebar-title {
+    color: #fff;
+}
+
+.sidebar-logo {
+    margin-bottom: 10px;
+}
+
+.quarto-search-button {
+    color: #fff;
+}
+
+pre code:not(.sourceCode){   
+
+
+    border-left: 2px solid #34568B;
+     padding-top: 10px;
+     padding-bottom: 10px;
+     padding-left: 15px;
+    
+
+}
+
+.column-margin.column-container{
+    margin-top: 30px;
+}
+
+
+
+// pre.numberSource.bash code > span > a:first-child::before {
+//     content: "$";
+//   }
+
+  // code.sourceCode.bash:before {
+//     content: "$";
+//   }
+
+pre.numberSource.python code > span > a:first-child::before {
+    color: gray
+}
+
+pre.numberSource.r code > span > a:first-child::before {
+    color: gray
+}
