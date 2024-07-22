@@ -239,7 +239,7 @@ window.Quarto = {
   <li><a href="#getting-data-into-your-script" id="toc-getting-data-into-your-script" class="nav-link" data-scroll-target="#getting-data-into-your-script">Getting data into your script</a></li>
   </ul></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning_python/edit/main/pages/02-data-types.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning_python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/02-data-types.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -266,16 +266,16 @@ window.Quarto = {
 <section id="strings" class="level2">
 <h2 class="anchored" data-anchor-id="strings">Strings</h2>
 <p>In the last chapter we introduced the idea of “strings”. They are a way of representing normal human words inside a Python script. Strings start and end with double quotes (<code>"</code>) e.g.,</p>
-<div id="f203e8cf" class="cell" data-execution_count="1">
+<div id="dcc6c00f" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Hello from Python!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is a string with three words and an exclamation mark as content.</p>
 <p>Strings can contain numbers as well:</p>
-<div id="0c1dce46" class="cell" data-execution_count="2">
+<div id="5e259658" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"The Battle of Hastings was in 1066"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and they can even be empty:</p>
-<div id="124a75c6" class="cell" data-execution_count="3">
+<div id="7ca53c7f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It is possible in Python to also use single quotes (<code>'</code>) to make strings, as long as the string starts and ends with the same type of quote, but it is convention to prefer double quotes.</p>
@@ -302,11 +302,11 @@ Exercise 1
 <li><strong>Integers</strong> are for representing whole numbers</li>
 </ul>
 <p>When creating numbers in Python, you do not use quotes, you write the number directly. So:</p>
-<div id="408f32ca" class="cell" data-execution_count="4">
+<div id="53fbb4ec" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.14159</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is a float and</p>
-<div id="c74b0913" class="cell" data-execution_count="5">
+<div id="80e4bb1e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">42</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is an integer.</p>
@@ -315,17 +315,17 @@ Exercise 1
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
 <p>Of course, it not much use to have numbers and strings floating about with no connection to each other. We want to be able to give them names and combine them together. We assign names to data using the <code>=</code> sign. For example if we want to make some data and give it a name we can do it like:</p>
-<div id="1251a27b" class="cell" data-execution_count="6">
+<div id="211ed2f7" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This has created a number <code>3.14159</code> and given it a name, <code>pi</code>. We can now use this name in other parts of the program to refer to that piece of data:</p>
-<div id="092b3c30" class="cell" data-execution_count="7">
+<div id="8b969e81" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Names in Python can contain upper and lower case letters, numbers and underscores (but can’t start with a number). Chosing the correct name for a particular variable is an important task as a non-descriptive name (or worse, an incorrect name) will be very confusing for you and anyone reading your code. It is common in Python to name your variables with all lower case letters and use underscores to separate words.</p>
 <p>So, for a variable which contains a number representing a distance in miles, avoid shortened names like <code>dm</code>, <code>distm</code> or <code>d</code> and instead use a name like <code>distance_in_miles</code>. Remember, code will be written once but read many times so make it easy to read.</p>
 <p>These two can be combined into a full Python script:</p>
-<div id="0e8299c2" class="cell" data-execution_count="8">
+<div id="f1e30138" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>variables.py</strong></pre>
@@ -341,7 +341,7 @@ Exercise 1
 </div>
 <div class="sourceCode" id="cb10" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> variables.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="691d30a5" class="cell" data-execution_count="9">
+<div id="1459a0b2" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>3.14159</code></pre>
 </div>
@@ -364,7 +364,7 @@ Exercise 2
 <section id="combining-variables" class="level3">
 <h3 class="anchored" data-anchor-id="combining-variables">Combining variables</h3>
 <p>Variables are more that just a way of labelling data, they also make it easier to <em>do</em> things with your data. If you have some numbers you can add, subtract, multiply and divide them as you would expect. The symbol for multiplication is <code>*</code> and the symbol for division is <code>/</code>.</p>
-<div id="b2ed4df5" class="cell" data-execution_count="10">
+<div id="9d89db2c" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script.py</strong></pre>
@@ -380,7 +380,7 @@ Exercise 2
 </div>
 <p>Here we created a variable <code>distance_in_miles</code> with the value of <code>30</code>. Then we used that variable in line two and multiplied it by a number (<code>distance_in_miles * 1.60934</code>) and assigned the result of that calculation to a new variable called <code>distance_in_km</code>. Finally, we printed out the new variable.</p>
 <p>Likewise we can do addition:</p>
-<div id="0b818447" class="cell" data-execution_count="11">
+<div id="0ceb9e39" class="cell" data-execution_count="11">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script.py</strong></pre>
@@ -398,7 +398,7 @@ Exercise 2
 <section id="printing-multiple-things" class="level3">
 <h3 class="anchored" data-anchor-id="printing-multiple-things">Printing multiple things</h3>
 <p>So far we’ve been giving the <code>print</code> function a single argument to print a single thing but we can print many things at once if we give it multiple arguments. Arguments to functions in Python are separated by commas. The <code>print</code> function is designed so that it will print each of the arguments it was provided with, one after another on the same line, separated by spaces.</p>
-<div id="0b5eb266" class="cell" data-execution_count="12">
+<div id="2742e6fe" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script.py</strong></pre>
@@ -439,7 +439,7 @@ Exercise 3
 <p>So far, all the code we’ve run is somewhat static. Every time we run the script, the output will always be the same. What if your favourite colour is not red? The power of programming is that it is dynamic and we can write code which responds and reacts. We’ll see a lot more of this throughout this workshop, but for now we’ll introduce one more function that Python provides, <a href="https://docs.python.org/3/library/functions.html#input"><code>input</code></a>.</p>
 <p>The <code>print</code> function is how we get information out of our program, and the <code>input</code> function is how we get data <em>into</em> it.</p>
 <p>The <code>input</code> function will pause the program and wait for you to type something in. Whatever you type, followed by enter will be assigned to whatever variable name you put on the left hand side of the <code>=</code>.</p>
-<div id="0391f06a" class="cell" data-execution_count="13">
+<div id="198e53f6" class="cell" data-execution_count="13">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>colour.py</strong></pre>
@@ -457,7 +457,7 @@ red
 My favourite colour is red</code></pre>
 <p>Likewise, you can run the script one more time and give a different answer and get a different output:</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">run</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="abb9e3ed" class="cell" data-execution_count="14">
+<div id="feb90523" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>What is your favourite colour?
 My favourite colour is blue</code></pre>
@@ -466,7 +466,7 @@ My favourite colour is blue</code></pre>
 <section id="the-prompt" class="level4">
 <h4 class="anchored" data-anchor-id="the-prompt">The prompt</h4>
 <p>One small improvement we can make is that instead of printing our message “What is your favourite colour?”, prompting the user of the script to type something, we can do this directly with the <code>input</code> function by giving the prompt as an argument:</p>
-<div id="150f5abf" class="cell" data-execution_count="15">
+<div id="658baa49" class="cell" data-execution_count="15">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>colour.py</strong></pre>
@@ -483,7 +483,7 @@ My favourite colour is blue</code></pre>
 </div>
 <div class="sourceCode" id="cb25" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4fe3e6ce" class="cell" data-execution_count="16">
+<div id="f8251b9c" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>My favourite colour is red</code></pre>
 </div>
@@ -958,7 +958,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning_python/edit/main/pages/02-data-types.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning_python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/02-data-types.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
