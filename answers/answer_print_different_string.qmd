@@ -1,13 +1,16 @@
 Here we change the line of code in our script to have the string `"Hello Matt"` instead of `"Hello from Python!"`.
 
-
 ```{python}
-#| filename: script.py
+#| output: false
+#| echo: false
+%%writefile ../scripts/script.py
 print("Hello Matt")
 ```
 
-When we run our changed script we see that it now prints our new string to the screen:
+```{.python include="../scripts/script.py" filename="script.py"}
+```
 
+When we run our changed script we see that it now prints our new string to the screen:
 
 ```{.bash filename="Terminal/Command Prompt"}
 python script.py
@@ -15,7 +18,8 @@ python script.py
 
 ```{python}
 #| echo: false
-print("Hello Matt")
+%run ../scripts/script.py
 ```
+
 
 [Return to course](../pages/02-data-types.qmd)

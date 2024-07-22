@@ -87,12 +87,17 @@ So, for a variable which contains a number representing a distance in miles, avo
 
 These two can be combined into a full Python script:
 
-
 ```{python}
-#| filename: variables.py
+#| echo: false
 #| output: false
+%%writefile variables.py
 pi = 3.14159
 print(pi)
+```
+
+
+
+```{.python include="variables.py" filename="variables.py"}
 ```
 
 and run with:
@@ -103,9 +108,9 @@ python variables.py
 ```
 ```{python}
 #| echo: false
-pi = 3.14159
-print(pi)
+%run variables.py
 ```
+
 
 ::: {.callout-tip title="Exercise 2" icon=false}
 
