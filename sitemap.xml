@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://uob-training.github.io/beginning-python/pages/05-conditionals.html</loc>
-    <lastmod>2024-07-22T09:47:22.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/pages/04-loops.html</loc>
-    <lastmod>2024-07-22T09:47:22.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/pages/01-getting-started.html</loc>
-    <lastmod>2024-07-22T09:47:22.926Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/pages/99-summary.html</loc>
-    <lastmod>2024-07-22T09:47:22.927Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/answers/answer_multiple_print.html</loc>
-    <lastmod>2024-07-22T10:24:25.474Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/answers/answer_hello_input.html</loc>
-    <lastmod>2024-07-22T10:10:15.214Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/AUTHORS.html</loc>
-    <lastmod>2024-07-22T09:47:22.920Z</lastmod>
+    <loc>https://uob-training.github.io/beginning-python/index.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
   </url>
   <url>
     <loc>https://uob-training.github.io/beginning-python/answers/answer_two_line_print.html</loc>
-    <lastmod>2024-07-22T10:01:30.103Z</lastmod>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
   </url>
   <url>
-    <loc>https://uob-training.github.io/beginning-python/answers/answer_print_different_string.html</loc>
-    <lastmod>2024-07-22T10:01:39.189Z</lastmod>
-  </url>
-  <url>
-    <loc>https://uob-training.github.io/beginning-python/index.html</loc>
-    <lastmod>2024-07-22T09:58:41.662Z</lastmod>
+    <loc>https://uob-training.github.io/beginning-python/answers/answer_hello_input.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
   </url>
   <url>
     <loc>https://uob-training.github.io/beginning-python/pages/03-lists.html</loc>
-    <lastmod>2024-07-22T09:47:22.926Z</lastmod>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/pages/05-conditionals.html</loc>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
   </url>
   <url>
     <loc>https://uob-training.github.io/beginning-python/pages/02-data-types.html</loc>
-    <lastmod>2024-07-22T10:27:15.014Z</lastmod>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/AUTHORS.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/pages/99-summary.html</loc>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
   </url>
   <url>
     <loc>https://uob-training.github.io/beginning-python/pages/06-dictionaries.html</loc>
-    <lastmod>2024-07-22T09:47:22.927Z</lastmod>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/pages/01-getting-started.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/pages/04-loops.html</loc>
+    <lastmod>2024-07-22T10:40:36.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/answers/answer_print_different_string.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
+  </url>
+  <url>
+    <loc>https://uob-training.github.io/beginning-python/answers/answer_multiple_print.html</loc>
+    <lastmod>2024-07-22T10:40:36.951Z</lastmod>
   </url>
 </urlset>
