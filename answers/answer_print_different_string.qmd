@@ -10,7 +10,7 @@ When we run our changed script we see that it now prints our new string to the s
 
 
 ```{.bash filename="Terminal/Command Prompt"}
-run script.py
+python script.py
 ```
 
 ```{python}

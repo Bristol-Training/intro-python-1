@@ -1,0 +1,33 @@
+The variables `first_phrase` and `second_phrase` are almost unchanged. The only difference is that `first_phrase` no longer has the extra space at the end of it.
+
+We pass these two variables as two arguments to `print()`, separating them by commas. `print()` will automatically add spaces between each argument when displaying the output.
+
+
+```{python}
+#| filename: script.py
+#| eval: false
+greeting = "Hello"
+name = "Matt"
+
+print(greeting, name)
+```
+
+
+Once more, when we run our code, the output has not changed, as expected:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+run script.py
+```
+
+```{python}
+#| filename: script.py
+#| echo: false
+greeting = "Hello"
+name = "Matt"
+
+print(greeting, name)
+```
+
+[Return to course](../pages/02-data-types.qmd)
+

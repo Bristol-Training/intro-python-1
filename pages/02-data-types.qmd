@@ -38,7 +38,6 @@ Hello Matt
 ```
 
 [<small>answer</small>](../answers/answer_print_different_string.qmd)
-
 :::
 
 ## Numbers
@@ -112,14 +111,15 @@ print(pi)
 
 Edit your `script.py` to split it over two lines. The first line should create a string and give it a variable name and the second line should use that name to print. Make sure you save the file and rerun it in the terminal.
 
-[<small>answer</small>](answer_two_line_print.ipynb)
+[<small>answer</small>](../answers/answer_two_line_print.qmd)
 :::
 
 ## Combining variables
 
 Variables are more that just a way of labelling data, they also make it easier to *do* things with your data. If you have some numbers you can add, subtract, multiply and divide them as you would expect. The symbol for multiplication is `*` and the symbol for division is `/`.
 
-```python
+```{python}
+#| filename: script.py
 distance_in_miles = 30
 distance_in_km = distance_in_miles * 1.60934
 
@@ -130,7 +130,8 @@ Here we created a variable `distance_in_miles` with the value of `30`. Then we u
 
 Likewise we can do addition:
 
-```python
+```{python}
+#| filename: script.py
 temperature_in_celcius = 25.1
 temperature_in_kelvin = temperature_in_celcius + 273.15
 
@@ -142,8 +143,8 @@ print(temperature_in_kelvin)
 So far we've been giving the `print` function a single argument to print a single thing but we can print many things at once if we give it multiple arguments. Arguments to functions in Python are separated by commas. The `print` function is designed so that it will print each of the arguments it was provided with, one after another on the same line, separated by spaces.
 
 
-```python
-%%writefile colour.py
+```{python}
+#| filename: script.py
 
 fav = "red"
 
@@ -154,12 +155,9 @@ print("My favourite colour is", fav)
 
 
 
-```python
-%run colour.py
+```{.bash filename="Terminal/Command Prompt"}
+run colour.py
 ```
-
-    My favourite colour is red
-
 
 ::: {.callout-tip title="Exercise 3" icon=false}
 
@@ -167,7 +165,7 @@ Edit `script.py` so that the two parts of the phrase are passed to `print` as se
 
 If you get strange output like `('Hello', 'Python')` rather than `Hello Python`, then try running your script with the `python3` command as described in [this video](https://www.youtube.com/watch?v=Fw6VYgsbJ4o).
 
-[<small>answer</small>](answer_multiple_print.ipynb)
+[<small>answer</small>](../answers/answer_multiple_print.qmd)
 :::
 
 ## Getting data into your script
@@ -179,13 +177,9 @@ The `print` function is how we get information out of our program, and the `inpu
 The `input` function will pause the program and wait for you to type something in. Whatever you type, followed by enter will be assigned to whatever variable name you put on the left hand side of the `=`.
 
 
-```python
-%load_ext interactive_system_magic
-```
-
-
-```python
-%%writefile colour.py
+```{python}
+#| filename: colour.py
+#| eval: false
 
 print("What is your favourite colour?")
 
@@ -194,41 +188,35 @@ fav = input()
 print("My favourite colour is", fav)
 ```
 
-    Overwriting colour.py
-
 
 Now, if we run this script, it will print the first message, and then wait for you to type something. If you type "red" and then press enter, it will assign "red" to the variable `fav` and then use that variable in the final `print` function:
 
 
-```python
-%%run_python_script -i colour.py
+```
+What is your favourite colour? 
 red
+My favourite colour is red
 ```
 
-
-
-
-    What is your favourite colour?
-    red
-    My favourite colour is red
 
 
 
 Likewise, you can run the script one more time and give a different answer and get a different output:
 
 
-```python
-%%run_python_script -i colour.py
-blue
+```{.bash}
+run colour.py
 ```
 
+```{python}
+#| echo: false
 
+print("What is your favourite colour?")
 
+fav = 'blue'
 
-    What is your favourite colour?
-    blue
-    My favourite colour is blue
-
+print("My favourite colour is", fav)
+```
 
 
 ### The prompt
@@ -236,23 +224,27 @@ blue
 One small improvement we can make is that instead of printing our message "What is your favourite colour?", prompting the user of the script to type something, we can do this directly with the `input` function by giving the prompt as an argument:
 
 
-```python
-%%writefile colour.py
-
+```{python}
+#| filename: colour.py
+#| eval: false
 fav = input("What is your favourite colour? ")
 
 print("My favourite colour is", fav)
 ```
 
-    Overwriting colour.py
-
-
 Note that there is a space after the question mark so that when you're typing in your answer it's not butting directly against the character:
 
 
-```python
-%%run_python_script -i colour.py
-red
+```{.bash filename="Terminal/Command Prompt"} 
+python colour.py
+
+```
+
+```{python}
+#| echo: false
+fav = 'red'
+
+print("My favourite colour is", fav)
 ```
 
 
@@ -263,7 +255,7 @@ red
 
 
 
-::: {.callout-tip title="Exercise 4" icon=false}
+::: {.callout-tip title="Exercise 4" icon=false} 
 
 Edit `script.py` so the value of the variable `name` is set using the `input` function. Be sure to set a prompt as well so that the user know that they should type something.
 
@@ -286,5 +278,5 @@ What is your name? Matt
 Hello Matt
 ```
 
-[<small>answer</small>](answer_hello_input.ipynb)
+[<small>answer</small>](../answers/answer_hello_input.qmd)
 :::

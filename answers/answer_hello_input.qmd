@@ -1,0 +1,27 @@
+
+```{python}
+#| filename: script.py
+#| eval: false
+greeting = "Hello"
+name = input("What is your name? ")
+
+print(greeting, name)
+```
+
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python script.py
+```
+```{python}
+#| echo: false
+#| eval: false
+greeting = "Hello"
+name = input("What is your name? ")
+
+print(greeting, name)
+```
+
+[Return to course](../pages/02-data-types.qmd)
+
+
