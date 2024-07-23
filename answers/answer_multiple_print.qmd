@@ -2,16 +2,8 @@ The variables `first_phrase` and `second_phrase` are almost unchanged. The only 
 
 We pass these two variables as two arguments to `print()`, separating them by commas. `print()` will automatically add spaces between each argument when displaying the output.
 
-
-```{python}
-#| filename: script.py
-#| eval: false
-greeting = "Hello"
-name = "Matt"
-
-print(greeting, name)
+```{.python include="../scripts/script4.py" filename="script.py"}
 ```
-
 
 Once more, when we run our code, the output has not changed, as expected:
 
@@ -21,12 +13,9 @@ run script.py
 ```
 
 ```{python}
-#| filename: script.py
 #| echo: false
-greeting = "Hello"
-name = "Matt"
 
-print(greeting, name)
+%run ../scripts/script4.py
 ```
 
 [Return to course](../pages/02-data-types.qmd)

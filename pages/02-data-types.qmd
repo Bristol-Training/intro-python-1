@@ -87,17 +87,8 @@ So, for a variable which contains a number representing a distance in miles, avo
 
 These two can be combined into a full Python script:
 
-```{python}
-#| echo: false
-#| output: false
-%%writefile variables.py
-pi = 3.14159
-print(pi)
-```
 
-
-
-```{.python include="variables.py" filename="variables.py"}
+```{.python include="../scripts/variables1.py" filename="variables.py"}
 ```
 
 and run with:
@@ -108,7 +99,7 @@ python variables.py
 ```
 ```{python}
 #| echo: false
-%run variables.py
+%run ../scripts/variables1.py
 ```
 
 
@@ -124,19 +115,20 @@ Edit your `script.py` to split it over two lines. The first line should create a
 Variables are more that just a way of labelling data, they also make it easier to *do* things with your data. If you have some numbers you can add, subtract, multiply and divide them as you would expect. The symbol for multiplication is `*` and the symbol for division is `/`.
 
 ```{python}
-#| filename: script.py
+#| output: false
 distance_in_miles = 30
 distance_in_km = distance_in_miles * 1.60934
 
 print(distance_in_km)
 ```
 
+
 Here we created a variable `distance_in_miles` with the value of `30`. Then we used that variable in line two and multiplied it by a number (`distance_in_miles * 1.60934`) and assigned the result of that calculation to a new variable called `distance_in_km`. Finally, we printed out the new variable.
 
 Likewise we can do addition:
 
 ```{python}
-#| filename: script.py
+#| output: false
 temperature_in_celcius = 25.1
 temperature_in_kelvin = temperature_in_celcius + 273.15
 
@@ -148,20 +140,17 @@ print(temperature_in_kelvin)
 So far we've been giving the `print` function a single argument to print a single thing but we can print many things at once if we give it multiple arguments. Arguments to functions in Python are separated by commas. The `print` function is designed so that it will print each of the arguments it was provided with, one after another on the same line, separated by spaces.
 
 
-```{python}
-#| filename: script.py
 
-fav = "red"
-
-print("My favourite colour is", fav)
+```{.python include="../scripts/colour1.py" filename="colour.py"}
 ```
 
-    Overwriting colour.py
-
-
-
 ```{.bash filename="Terminal/Command Prompt"}
-run colour.py
+python colour.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/colour1.py
 ```
 
 ::: {.callout-tip title="Exercise 3" icon=false}
@@ -182,59 +171,43 @@ The `print` function is how we get information out of our program, and the `inpu
 The `input` function will pause the program and wait for you to type something in. Whatever you type, followed by enter will be assigned to whatever variable name you put on the left hand side of the `=`.
 
 
-```{python}
-#| filename: colour.py
-#| eval: false
 
-print("What is your favourite colour?")
-
-fav = input()
-
-print("My favourite colour is", fav)
+```{.python include="../scripts/colour2.py" start-line=8 end-line=12 filename="colour.py"}
 ```
+
 
 
 Now, if we run this script, it will print the first message, and then wait for you to type something. If you type "red" and then press enter, it will assign "red" to the variable `fav` and then use that variable in the final `print` function:
 
+```{.bash filename="Terminal/Command Prompt"}
+python colour.py
+```
 
+```{python}
+#| echo: false
+%run ../scripts/colour2.py {'red'}
 ```
-What is your favourite colour? 
-red
-My favourite colour is red
-```
+
 
 
 
 
 Likewise, you can run the script one more time and give a different answer and get a different output:
 
-
-```{.bash}
-run colour.py
+```{.bash filename="Terminal/Command Prompt"}
+python colour.py
 ```
 
 ```{python}
 #| echo: false
-
-print("What is your favourite colour?")
-
-fav = 'blue'
-
-print("My favourite colour is", fav)
+%run ../scripts/colour2.py {'green'}
 ```
-
 
 ### The prompt
 
 One small improvement we can make is that instead of printing our message "What is your favourite colour?", prompting the user of the script to type something, we can do this directly with the `input` function by giving the prompt as an argument:
 
-
-```{python}
-#| filename: colour.py
-#| eval: false
-fav = input("What is your favourite colour? ")
-
-print("My favourite colour is", fav)
+```{.python include="../scripts/colour3.py" start-line=8 end-line=10 filename="colour.py"}
 ```
 
 Note that there is a space after the question mark so that when you're typing in your answer it's not butting directly against the character:
@@ -242,23 +215,12 @@ Note that there is a space after the question mark so that when you're typing in
 
 ```{.bash filename="Terminal/Command Prompt"} 
 python colour.py
-
 ```
 
 ```{python}
 #| echo: false
-fav = 'red'
-
-print("My favourite colour is", fav)
+%run ../scripts/colour3.py {'red'}
 ```
-
-
-
-
-    What is your favourite colour? red
-    My favourite colour is red
-
-
 
 ::: {.callout-tip title="Exercise 4" icon=false} 
 

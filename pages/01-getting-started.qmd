@@ -9,17 +9,8 @@ A Python script is a simple text file containing a set of instructions. As long 
 To create our script, go to the text editor pane in JupyterLab and type into it:
 
 
-```{python}
-#| echo: false
-#| output: false
-%%writefile ../scripts/script.py
-print("Hello from Python")
+```{.python include="../scripts/script1.py" filename="script.py"} 
 ```
-
-```{.python include="../scripts/script.py" filename="script.py"} 
-```
-
-
 
 Then go to *File → Save File* and you'll see the small black circle next to the words "untitled.txt" in the tab change to a cross.
 
@@ -42,7 +33,7 @@ If you do that you should see, printed to the terminal:
 
 ```{python}
 #| echo: false
-%run ../scripts/script.py
+%run ../scripts/script1.py
 ```
 
 Congratulations, you've just written and executed your very first Python programme!
@@ -69,14 +60,8 @@ Important things to remember for this section are:
 
 In these notes, any time that we're seeing a full Python script, we'll see it written like the following:
 
-```{python}
-#| output: false
-#| echo: false
-%%writefile ../scripts/script.py
-print("Hello from Python!")
-```
 
-```{.python include="../scripts/script.py" filename="script.py"} 
+```{.python include="../scripts/script1.py" filename="script.py"} 
 ```
 
 Here, the name that we give the file (`script.py`) is above the code block, and the contents of the file (`print("Hello from Python")`) are below it.
@@ -96,7 +81,7 @@ By contrast, any time we're just showing you a small snippet of code, for exampl
 
 ```{python}
 #| echo: false
-%run ../scripts/script.py
+%run ../scripts/script1.py
 ```
 
 

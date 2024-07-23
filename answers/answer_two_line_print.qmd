@@ -1,11 +1,8 @@
 We have moved the string out of the parentheses and into a named variable, `words`. We then pass this variable to the function:
 
 
-```{python}
-#| filename: script.py
-words = "Hello Matt"
 
-print(words)
+```{.python include="../scripts/script3.py" filename="script.py"}
 ```
 
 
@@ -18,9 +15,7 @@ python script.py
 
 ```{python}
 #| echo: false
-words = "Hello Matt"
-
-print(words)
+%run ../scripts/script3.py
 ```
 
 [Return to course](../pages/02-data-types.qmd)

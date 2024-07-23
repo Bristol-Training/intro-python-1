@@ -29,5 +29,8 @@ format:
       - include-code-files
     # code-line-numbers: true
 
+execute:
+  freeze: auto
+
 
 
