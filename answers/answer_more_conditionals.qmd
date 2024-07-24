@@ -1,0 +1,54 @@
+
+**Less than:**
+
+```{.python include="../scripts/if3.py" filename="if.py" start-line=10 end-line=16}
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python if.py
+```
+
+```{python}
+#| echo: false
+
+%run -i ../scripts/if3.py {74}
+```
+
+<br/>
+
+**Equal to:**
+
+
+```{.python include="../scripts/if4.py" filename="if.py" start-line=10 end-line=16}
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python if.py
+```
+
+```{python}
+#| echo: false
+%run -i ../scripts/if4.py {74}
+```
+
+
+<br/>
+
+**Not equal to:**
+
+```{.python include="../scripts/if5.py" filename="if.py" start-line=10 end-line=16}
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python if.py
+```
+
+```{python}
+#| echo: false
+%run -i ../scripts/if5.py {74}
+```
+
+[Return to course](../pages/05-conditionals.qmd)

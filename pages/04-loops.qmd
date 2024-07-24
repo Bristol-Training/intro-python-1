@@ -1,3 +1,274 @@
 ---
 title: Loops
 ---
+
+
+In the introduction you were told that Python will read your script, starting at the top and running each line of code until it reaches the bottom. While largely true, it is possible to make Python repeat certain lines of code using *loops*.
+
+The ability to run a line of code multiple times is the first large step on your road to making your code *reusable*.
+
+Imagine we have two strings that we want to print. We could start by making a variable containing one of the words and then printing it:
+
+```{python}
+word = "Hello"
+
+print(word)
+```
+
+To print our second word, we could copy and paste those two lines to create a program which can print both words:
+
+
+```{.python include="../scripts/loops1.py" filename="loop.py"}
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops1.py
+```
+
+
+
+This printed the output we want. But we can see that this code is wasteful as the two `print` lines are identical to each other. They both print whatever the variable `word` is pointing at. If we can manage to write that line only once then we could save ourselves some typing!
+
+Let's start by making a container for our words. A Python `list` makes sense:
+
+```{python}
+my_words = ["Hello", "Python"]
+```
+
+we can now write a loop which will perform a task once for each word in our list:
+
+
+```{.python include="../scripts/loops2.py" filename="loop.py"}
+```
+
+Now, when we run it, we should see that it prints the same output as our previous example.
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops2.py
+```
+
+We've taken a script that was four lines of code and have reduced it to three lines. That might not seem like much of a reduction but the loop we wrote will work no matter how many items there are in the list `my_words`.
+
+Most loops in Python work by doing some set of actions for each item in the list. For this reason, this sort of loop is sometimes called a *for-each* loop.
+
+This maps to real life where you may want, for example, to buy each item on your shopping list. Another way of saying that could be "for each item on my shopping list, buy the item", or as you would write that in Python:
+
+```{.python}
+for item in shopping_list:
+    buy(item)
+```
+
+::: {.callout-tip title="Exercise 1" icon=false} 
+
+Edit `loop.py` to have a different number of words in the list.
+- Does it work if you put numbers (i.e. integers or floats) in there as well?
+- What happens if the list `my_words` is empty?
+  - hint: empty lists look like `[]`
+
+[<small>answer</small>](../answers/answer_first_loop.qmd)
+:::
+
+
+## Loop syntax breakdown
+
+Before we move on to other things we can do with loops, let's first make sure that we understand what's happening on those two lines of Python code that make up the loop.
+
+The first line is where most of the magic is hapenning and I like to break it down into five sections, three of fixed scaffolding and two where you as a programmer can have input.
+
+The scaffolding is the parts of the line which must always be the same and which Python uses to know that you're trying to make a loop. They're pointed out here as the word `for`, the word `in` and the colon (`:`) at the end of the line. These must always be there and in that order:
+
+<pre>
+ ↓        ↓         ↓
+<b style="color:darkred">for</b> word <b style="color:darkred">in</b> my_words<b style="color:darkred">:</b>
+    print(word)
+</pre>
+
+
+Once the scaffolding is in place, you can place between it the things that *you* care about. the first thing to think about is the object that you want to loop over. In our case we want to loop over the list `my_words` because we want to perform some action on every item in that list (we want to print the item):
+
+<pre>
+                ↓
+for word in <b style="color:darkred">my_words</b>:
+    print(word)
+</pre>
+
+Now we have decided what object we are looping over, we need to decide what name we want to give temporarily to each item as we get to it. As with any variable naming, it is important that we choose a good name which describe a single object from the list. For example, if we're looping over all students in a class then we could call the variable `student` or if we're looping over a list of ages then we could call the variable `age`. The actual choice of variable name here does not affect how the code runs. We could use the name `sausage` and the code would run identically.
+
+Here, since we're looping over a list of generic *words*, we name our variable `word`:
+
+<pre>
+      ↓
+for <b style="color:darkred">word</b> in my_words:
+    print(word)
+</pre>
+
+That's all that's required to tell Python that we're making a loop but if we want the loop to actually *do* something then we need to give the loop a *body*. The body is the lines of code that are going to be repeated. They can be any Python code but it is only within the body of the loop that we can refer to the loop variable `word`:
+
+<pre>
+for word in my_words:
+    <b style="color:darkred">print(word)</b>       ← body of loop
+</pre>
+
+Finally, we get to a peculiarity of Python in that it uses indentation to decide what is in the body of the loop and what is not. Remember that it will only repeat the code in the body. All code in the body must be indented relative to the word `for` by four spaces. A trick to help remember this is that every time you see a colon in Python you should start a new line and indent:
+
+<pre>
+                  <i>colon</i>
+                    ↓
+for word in my_words<b style="color:darkred">:</b>
+    print(word)
+  ↑
+<i>indentation</i>
+</pre>
+
+If we want to write code after the end of a loop, we have to make sure that it is *not* indented. So this code:
+
+
+```{.python include="../scripts/loops6.py" filename="loop.py"}
+```
+
+will print:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops6.py
+```
+
+
+but this code:
+
+
+```{.python include="../scripts/loops7.py" filename="loop.py"}
+```
+
+will print:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops7.py
+```
+
+
+See how the `...Goodbye` was repeated in the second example, this is because it was inside the body of the loop since it was indented.
+
+## Extended: What can we loop over
+
+A lot of the power of loops comes from being able to put a lot of different things in the place of `my_words`.
+
+Most simply, instead of putting a variable name there, you can put a list directly:
+
+
+```{python }
+#| filename: loop.py
+#| output: false
+for word in ["Hello", "Python"]:
+    print(word)
+```
+
+
+As well as lists we can put anything which Python considers *iterable*. For now we haven't come across many of those but as we keep learning we'll discover many more. One that we have already come across is strings:
+
+
+```{python }
+#| filename: loop.py
+#| output: false
+
+phrase = "Hello Python"
+
+for letter in phrase:
+    print(letter)
+```
+
+Looping over a string will always give you one letter at a time.
+
+::: {.callout-tip title="Exercise 2" icon=false} 
+
+Experiment with `loop.py` and make it loop over both lists and strings.
+
+[<small>answer</small>](../answers/answer_loop_list_string.qmd)
+:::
+
+## Extended: Ranges of numbers
+
+There's a built in function in Python called `range` which provides you with numbers in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an agument. We can put this call to the `range` function directly into our loop as the object to loop over:
+
+
+```{.python include="../scripts/loops10.py" filename="loop.py"}
+```
+
+will print:
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops10.py
+```
+
+The `range` function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:
+
+
+```{.python include="../scripts/loops11.py" filename="loop.py"}
+```
+
+
+printing:
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops11.py
+```
+
+## Extended: Enumerating
+
+When looping over a list we are provided with one element at a time which we give a name (`word` in our example earlier) to be used inside the loop body. However, we don't have any context about, for example, what the index of the item is from the list.
+
+To be able to loop over a list and keep track of both the index of the item and the item itself we can use the `enumerate` function. This function, if given a list, can give to the loop both pieces of information at once.
+
+<pre>
+                          ↓
+for index, word in <b style="color:darkred">enumerate(my_words)</b>:
+    print(word, "is at index", index)
+</pre>
+
+Since each time through the loop we are being given not just one piece of information (the element) but two (the index *and* the element) we need to provide two loop variable names. We do this by giving both names separated by commas in the usual place:
+
+<pre>
+      ↓     ↓
+for <b style="color:darkred">index, word</b> in enumerate(my_words):
+    print(word, "is at index", index)
+</pre>
+
+::: {.callout-tip title="Exercise 3" icon=false} 
+
+Write a script (`loop_exercise.py`) which creates a list of floats and loops over them, printing the index of the element as well as the value of the float.
+
+[<small>answer</small>](../answers/answer_loop_floats_enumerate.qmd)
+
+:::

@@ -1,0 +1,30 @@
+We have changed our list by adding two more items to the end of it. We add an integer, `7` and a new string, `"quail"`. Each is still separated by a comma:
+
+
+```{.python include="../scripts/list1.py"}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python list.py
+```
+```{python}
+#| echo: false
+%run ../scripts/list1.py
+```
+
+
+Here we edit our list so that the items are all in a different order:
+
+
+```{.python include="../scripts/list2.py"}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python list.py
+```
+```{python}
+#| echo: false
+%run ../scripts/list2.py
+```
+
+[Return to course](../pages/03-lists.qmd)

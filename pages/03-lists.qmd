@@ -1,3 +1,211 @@
 ---
 title: Lists
 ---
+
+Until now all the variables we have used have contained a single piece of information, for example, `a = 4` makes a variable a containing a single number, `4`. It’s very common in programming (and in fact real life) to want to refer to collections of this. For example a shopping list contains a list of items you want to buy, or a car park contains a set of cars.
+
+Create a new file by going to *File → New → Text File*. Rename it (using the left-hand file pane in JupyterLab with right-click *Rename*) to `list.py`. Inside that file write the following:
+
+```{python}
+#| output: false
+#| filename: list.py
+my_list = ["cat", "dog", "horse"]
+
+print(my_list)
+```
+
+
+Run this script in the terminal with `python list.py` and look at the output.
+
+This will create a Python `list` with three elements and assign it to the variable `my_list`. The square brackets `[` and `]` in this case mean "create a list" and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the `print()` function.
+
+You can have as many items in a list as you like, even zero items. An empty list could look like:
+
+```{python}
+my_list = []
+```
+
+And a list with six different numbers could look like:
+
+```{python}
+my_list = [32, 65, 3, 867, 3, -5]
+```
+
+You can even have a mixture of different type of data in a list:
+
+```{python}
+my_list = [5, 34.6, "Hello", -6]
+```
+
+::: {.callout-tip title="Exercise 1" icon=false} 
+
+Edit the list so that it has some more items in it. Try adding some different data types and even rearranging the items. Make sure you save the file and rerun it in the terminal and check that the output matches what you expect.
+
+[<small>answer</small>](../answers/answer_first_list.qmd)
+:::
+
+## Indexing
+
+The power of Python's lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called *indexing*. Indexing a list in Python is done using the square brackets `[]`. This is a different use of the square brackets to that which we saw above for *making* a list.
+
+To get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:
+
+```{python filename="list.py"}
+#| output: false
+#| filename: list.py
+
+my_list = ["cat", "dog", "horse"]
+
+my_element = my_list[1]
+
+print(my_element)
+```
+
+The code `my_list[1]` means "give me the number 1 element of the list `my_list`". Run this code and see what you get. Is it what you expect?
+
+You'll probably notice that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used by most programming languages.
+
+::: {.callout-tip title="Exercise 2" icon=false} 
+
+Try accessing some different elements from the list by putting in different number between the square brackets.
+
+[<small>answer</small>](../answers/answer_first_indexing.qmd)
+:::
+
+## Reverse indexing
+
+Putting a single positive number in the square brackets gives us back the element which is that distance from the start of the list, but what if we wanted the *last* element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, `2`), but perhaps we don't know (or don't want to have to check) how long the list is.
+
+In this case we can use Python's reverse indexing by placing a negative integer in the square brackets:
+
+
+```{python}
+#| output: false
+#| filename: list.py 
+my_list = ["cat", "dog", "horse"]
+
+my_element = my_list[-1]
+
+print(my_element)
+```
+
+
+
+If you run this code then you will see that it prints `horse` which is the last item in the list. Using negative numbers allows you to count backwards from the end of the list so that `-1` is the last item, `-2` is the second-last item etc.
+
+## Python errors
+
+Indexing lists is likely the first time you will see a Python error. Seing Python errors (also sometimes called *exceptions*) is not a sign that you're a bad programmer or that you're doing something terrible. All Python programmers, even those that have been using it for 20 years will still see Python errors on their screen.
+
+They are in fact a very useful feedback mechanism from the computer to the programmer but that can be a bit daunting when you first see them. Let's look at an example and I will explain how to read it. Let's start by creating an error.
+
+A Python list with three elements will not have an element at index `6` (the highest index in that case would be `2`) so let's have a look at what happens if we ask for it anyway:
+
+
+```{.python include="../scripts/list4.py" filename="list.py"}
+```
+
+
+
+Running this you will see the following printed to the screen:
+
+```
+Traceback (most recent call last):
+  File "/home/matt/tmp/beginning_python/list.py", line 3, in <module>
+    my_element = my_list[6]
+IndexError: list index out of range
+```
+
+which a very dense collection of information. I always start by reading the *last* line of an error as that is usually where the most useful information is.
+
+The last line is `IndexError: list index out of range` which has two parts to it. The first is the word before the colon which tells you the type of the exception is an `IndexError`, i.e. an error when *indexing*. The second part of that line is usually a slightly more descriptive message, in this case telling us that the specific problem was that the index was "out of range", i.e. too high or too low.
+
+Moving to the line above that, we see printed the line of code, copied from our script, at which the exception occured. This, along with the line above that which gives the file name and line number within that file, are essential in larger scripts to track down where the problem came from.
+
+Take your time to read the error messages when they are printied to the screen, they will most likely help you solve the issue. If you think that you've fixed the problem but the error persists, make sure that you've saved the script file and rerun your code afterwards.
+
+## Adding things to lists
+
+Lists in Python are *dynamic*, meaning that they can change size during your script. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we've used so far (like `print` and `range`) in that it is a part of the `list` data type so we use it like:
+
+```{python filename="list.py"}
+#| output: false
+my_list = ["cat", "dog", "horse"]
+
+my_list.append("quokka")
+
+print(my_list)
+```
+
+
+Here you see we gave the name of our list (`my_list`) followed it by a dot (`.`) and then the name of the function that we wanted to call (`append`). Functions which are part of data types like this are sometimes called *methods*.
+
+We might describe the middle line here as "calling the `append` method on the object `my_list`".
+
+## Extended: Slicing
+
+As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called *slicing*. Slicing starts out the same way as standard indexing (i.e. with square brackets) but instead of putting a single number between them, you put multiple numbers separated by colons.
+
+Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index `2` to index `4`, you do:
+
+
+```{python filename="list.py"}
+#| output: false
+
+my_list = [3, 5, "green", 5.3, "house", 100, 1]
+
+my_slice = my_list[2:5]
+
+print(my_slice)
+```
+
+Run this code and look at the output.
+
+You see that is printed `['green', 5.3, 'house']` which is index `2` (`'green'`), index `3` (`5.3`) and index `4` (`'house'`). Notice that it did not give us the element at index `5` and that is because with slicing, Python will give you the elements from the starting index up to, *but not including*, the end index.
+
+This can be confusing at first but a trick that I use to keep it straight is to count the commas in the list and treat the indexes as referring to those. So from the example here:
+
+```{python}
+#| output: false
+[3, 5, "green", 5.3, "house", 100, 1]
+```
+```
+  ↑  ↑        ↑    ↑        ↑    ↑
+  1  2        3    4        5    6
+```
+
+so `my_list[2:5]` will make a cut at index `2` and index `5`:
+
+
+```{python}
+#| output: false
+
+[3, 5, "green", 5.3, "house", 100, 1]
+```
+```
+     ↑                      ↑
+     2                      5
+```
+
+and only give you the things between them:
+
+```python
+[    , "green", 5.3, "house",       ]
+```
+```
+     ↑                      ↑
+     2                      5
+```
+
+so we end up with:
+
+```python
+['green', 5.3, 'house']
+```
+
+::: {.callout-tip title="Exercise 3" icon=false} 
+
+Edit your script to print various slices of your list. If you get an error printed, make sure you understand what it is telling you.
+
+[<small>answer</small>](../answers/answer_first_slicing.qmd)
+:::

@@ -1,0 +1,24 @@
+
+
+
+```{.python include='../scripts/if2.py' filename='if.py'}
+```
+
+
+If `my_number` is smaller than 100 then the expression is false and so the `if` does not trigger and nothing is printed:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python if.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/if2.py {42}
+
+```
+
+
+[Return to course](../pages/05-conditionals.qmd)
+
+

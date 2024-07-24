@@ -1,0 +1,343 @@
+---
+engine: jupyter
+---
+
+`calc.py` could look like:
+
+```{python}
+#| filename: calc.py
+#| eval: false
+
+calculation = input("> ")
+
+parts = calculation.split()  # Split e.g. "4 * 6" into ["4", "*", "6"]
+lhs = int(parts[0])  # Extract e.g. "4" and turn it into 4
+operation = parts[1]  # Extract e.g. "*"
+rhs = int(parts[2])  # Extract e.g. "6" and turn it into 6
+
+if operation == "+":
+    print(calculation, "is", lhs + rhs)
+elif operation == "-":
+    print(calculation, "is", lhs - rhs)
+elif operation == "*":
+    print(calculation, "is", lhs * rhs)
+elif operation == "/":
+    print(calculation, "is", lhs / rhs)
+```
+
+```{python}
+#| echo: false
+
+def calculator(calculation):
+    print("> " + calculation)
+    parts = calculation.split()  # Split e.g. "4 * 6" into ["4", "*", "6"]
+    lhs = int(parts[0])  # Extract e.g. "4" and turn it into 4
+    operation = parts[1]  # Extract e.g. "*"
+    rhs = int(parts[2])  # Extract e.g. "6" and turn it into 6
+
+    if operation == "+":
+        print(calculation, "is", lhs + rhs)
+    elif operation == "-":
+        print(calculation, "is", lhs - rhs)
+    elif operation == "*":
+        print(calculation, "is", lhs * rhs)
+    elif operation == "/":
+        print(calculation, "is", lhs / rhs)
+```
+
+
+
+```{bash}
+#| filename: "Terminal/Command Prompt"
+python calc.py
+4 * 6
+```
+
+```{python}
+#| echo: false
+calculation = "4 * 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 5 + 6
+```
+```{python}
+#| echo: false
+calculation = "5 + 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 457 - 75
+```
+```{python}
+#| echo: false
+
+calculation = "457 - 75"
+calculator(calculation)
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 54 / 3
+```
+```{python}
+#| echo: false
+calculation = "54 / 3"
+calculator(calculation)
+```
+
+
+
+## Possible improvements
+
+The code above works fine, but there's always more than one way to approach a problem like this.
+
+### Separating calculation from output
+
+One thing that we could improve would be the repetition in the `print` lines. Each of them are almost the same as each other and if we wanted to change the output from
+
+```
+4 * 6 is 24
+```
+to something like
+```
+4 * 6 = 24
+```
+then we'd have to edit all four lines of code.
+
+Remembering our three-part pattern from earlier in the course of input→calculation→output, it's a good idea to split out the calculation of data from the printing and display of data. In our case  we could change it to look like:
+
+
+```{python}
+#| filename: calc.py
+#| eval: false
+
+calculation = input("> ")
+
+# Prepare the parts
+parts = calculation.split()
+lhs = int(parts[0])
+operation = parts[1]
+rhs = int(parts[2])
+
+# Calculate the answer
+if operation == "+":
+    result = lhs + rhs
+elif operation == "-":
+    result = lhs - rhs
+elif operation == "*":
+    result = lhs * rhs
+elif operation == "/":
+    result = lhs / rhs
+
+# Output the result
+print(calculation, "is", result)
+```
+
+
+```{python}
+#| filename: calc.py
+#| echo: false
+
+def calculator(calculation):
+
+    print("> " + calculation)
+    # Prepare the parts
+    parts = calculation.split()
+    lhs = int(parts[0])
+    operation = parts[1]
+    rhs = int(parts[2])
+
+    # Calculate the answer
+    if operation == "+":
+        result = lhs + rhs
+    elif operation == "-":
+        result = lhs - rhs
+    elif operation == "*":
+        result = lhs * rhs
+    elif operation == "/":
+        result = lhs / rhs
+
+    # Output the result
+    print(calculation, "is", result)
+```
+
+```{bash}
+#| filename: "Terminal/Command Prompt"
+python calc.py
+4 * 6
+```
+
+```{python}
+#| echo: false
+calculation = "4 * 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 5 + 6
+```
+```{python}
+#| echo: false
+calculation = "5 + 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 457 - 75
+```
+```{python}
+#| echo: false
+
+calculation = "457 - 75"
+calculator(calculation)
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 54 / 3
+```
+```{python}
+#| echo: false
+calculation = "54 / 3"
+calculator(calculation)
+```
+
+
+
+### Advanced: Using the `operator` module
+
+We haven't covered using extra modules in this course so far, but you might have come across these if you've done some Python before. We cover this in more detail in the [Intermediate Python chapter *Using Functions*](https://milliams.com/courses/intermediate_python/Using%20functions.html). I'm showing you this way to solve the problem, not because I expect you to able to do this already, but so that when you look back at these notes in the future you see how you might solve the problem differently.
+
+
+```{python}
+#| filename: calc.py
+#| eval: false
+import operator
+
+# Make a dictioanry that maps from
+# the operator string passed in and
+# a function which does the operation
+operators = {
+    "+": operator.add,
+    "-": operator.sub,
+    "*": operator.mul,
+    "/": operator.truediv,
+}
+
+calculation = input("> ")
+
+# Prepare the parts
+parts = calculation.split()
+lhs = int(parts[0])
+operation = parts[1]
+rhs = int(parts[2])
+
+# We extract the operator function from the operators dictionary
+# allowing us to then call the function with the round brackets
+result = operators[operation](lhs, rhs)
+
+# Output the result
+print(calculation, "is", result)
+```
+
+
+```{python}
+# %%run_python_script -i calc.py
+
+```
+
+
+```python
+# %%run_python_script -i calc.py
+4 * 6
+```
+
+```{python}
+#| filename: calc.py
+#| echo: false
+import operator
+
+# Make a dictioanry that maps from
+# the operator string passed in and
+# a function which does the operation
+def calculator(calculation):
+
+    print("> " + calculation)
+    
+    operators = {
+        "+": operator.add,
+        "-": operator.sub,
+        "*": operator.mul,
+        "/": operator.truediv,
+    }
+
+    # Prepare the parts
+    parts = calculation.split()
+    lhs = int(parts[0])
+    operation = parts[1]
+    rhs = int(parts[2])
+
+    # We extract the operator function from the operators dictionary
+    # allowing us to then call the function with the round brackets
+    result = operators[operation](lhs, rhs)
+
+    # Output the result
+    print(calculation, "is", result)
+```
+
+
+```{bash}
+#| filename: "Terminal/Command Prompt"
+python calc.py
+4 * 6
+```
+
+```{python}
+#| echo: false
+calculation = "4 * 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 5 + 6
+```
+```{python}
+#| echo: false
+calculation = "5 + 6"
+calculator(calculation)
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 457 - 75
+```
+```{python}
+#| echo: false
+
+calculation = "457 - 75"
+calculator(calculation)
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python calc.py
+> 54 / 3
+```
+```{python}
+#| echo: false
+calculation = "54 / 3"
+calculator(calculation)
+```

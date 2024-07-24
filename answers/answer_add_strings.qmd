@@ -1,0 +1,36 @@
+We make two strings. One called `first_phrase` and second called `second_phrase`. We then make a third variable called `message` by adding together (using the `+` symbol) the other two. This combines the strings together into a new, longer string:
+
+
+```{python}
+#| filename: script.py
+#| output: false
+
+first_phrase = "The Battle of Hastings "
+second_phrase = "was in 1066"
+
+message = first_phrase + second_phrase
+
+print(message)
+```
+
+
+Again, when we run our code, the output has not changed, as expected:
+
+
+```{.bash filename="Terminal/Command Prompt"}
+run script.py
+```
+
+```{python}
+#| filename: script.py
+#| echo: false
+
+first_phrase = "The Battle of Hastings "
+second_phrase = "was in 1066"
+
+message = first_phrase + second_phrase
+
+print(message)
+```
+
+[Return to course](../pages/02-data-types.qmd)

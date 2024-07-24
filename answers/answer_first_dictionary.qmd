@@ -1,0 +1,49 @@
+```{.python include='../scripts/dict2.py' filename='dict.py'}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python dict.py
+```
+
+```{python}
+#|echo: false
+%run ../scripts/dict2.py
+```
+
+
+
+If we edit our script so that it asks for a key that doesn't exist, we will see an error being produced:
+
+
+```{.python include='../scripts/dict3.py' filename='dict.py'}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python dict.py
+```
+
+```{python}
+#|echo: false
+#|error: true
+#| output: false
+%run ../scripts/dict3.py
+```
+
+
+    ---------------------------------------------------------------------------
+
+    KeyError                                  Traceback (most recent call last)
+
+    ~/courses/beginning_python/dict.py in <module>
+          2 sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+          3 
+    ----> 4 fish_sound = sounds["fish"]
+          5 
+          6 print(fish_sound)
+
+
+    KeyError: 'fish'
+
+
+[Return to course](../pages/06-dictionaries.qmd)
+

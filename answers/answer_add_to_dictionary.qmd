@@ -1,0 +1,13 @@
+```{.python include="../scripts/dict5.py" filename="dict.py"}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python dict.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/dict5.py
+```
+
+[Return to course](../pages/06-dictionaries.qmd)

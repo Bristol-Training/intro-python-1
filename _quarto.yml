@@ -13,7 +13,7 @@ website:
     border: true
     contents: 
       - index.qmd
-      - auto: "pages/*"
+      - auto: "pages/*qmd"
 
   page-footer:
     left: "Course delivered by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/) [our contributors](/AUTHORS.md)"  
@@ -27,6 +27,8 @@ format:
     shift-heading-level-by: 1
     filters:
       - include-code-files
+    highlight-style: github
+
     # code-line-numbers: true
 
 execute:

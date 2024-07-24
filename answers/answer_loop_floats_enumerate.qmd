@@ -1,0 +1,13 @@
+```{.python include="../scripts/loops12.py" filename=loops.py}
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python loop.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/loops12.py
+```
+
+[Return to course](../pages/04-loops.qmd)

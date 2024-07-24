@@ -1,0 +1,42 @@
+We make a list and then select a few slices of it:
+
+
+```{.python include="../scripts/list5.py" filename="list.py"}
+
+```
+
+This selects everything from the number 2 index up to, but not including the number 4 index, i.e. the 2 and 3 indexes:
+
+```python
+[2:4]
+```
+
+This starts at index 3 and goe as far as index -2 (which is the same as index 5 in this list):
+
+```python
+[3:-2]
+```
+
+This starts at the beginning of the list and stops before index 1, giving us a list with just one item:
+
+```python
+[0:1]
+```
+
+This starts at index -4 (i.e. index 3) and goes until index -1 (i.e. index 6):
+
+```python
+[-4:-1]
+```
+
+
+```{.bash filename="Terminal/Command Prompt"}
+python list.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/list5.py
+```
+
+[Return to course](../pages/03-lists.qmd)

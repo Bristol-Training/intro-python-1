@@ -1,0 +1,51 @@
+Adding more items to the list makes the loop go around more times:
+
+
+```{python include=""../scripts/loops3.py"}
+```
+
+
+```{.bash}
+python loop.py
+```
+
+```{python}
+#|echo: false
+%run ../scripts/loops3.py
+```
+
+
+A list with a mixture of data types can be printed witout issue:
+
+
+```{python include=""../scripts/loops4.py"}
+```
+
+
+```{.bash}
+python loop.py
+```
+
+```{python}
+#|echo: false
+%run ../scripts/loops4.py
+```
+
+Looping over an empty list does not print anything:
+
+
+```{python include=""../scripts/loops5.py"}
+```
+
+
+```{.bash}
+python loop.py
+```
+
+```{python}
+#|echo: false
+%run ../scripts/loops5.py
+```
+
+
+[Return to course](../pages/04-loops.qmd)

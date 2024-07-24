@@ -1,0 +1,31 @@
+As well as setting `my_element` to the "0th" element of the list, we also then create a variable called `my_other_element` which we fill from the value at index 2:
+
+
+```{.python include="../scripts/list3.py" filename="list.py"}
+
+my_list = ["cat", "dog", "horse"]
+
+my_element = my_list[0]
+
+print(my_element)
+
+my_other_element = my_list[2]
+
+print(my_other_element)
+```
+
+When run we see that it prints the zeroth and index-2 elements:
+
+```{.bash filename="Terminal/Command Prompt"}
+python list.py
+```
+
+```{python}
+#| echo: false
+%run ../scripts/list3.py
+```
+
+[Return to course](../pages/03-lists.qmd)
+
+
+
