@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_two_line_print – Beginning Python</title>
+<title>answer_if_leap_year – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,6 +101,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -111,8 +140,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#yes-if-divisible-by-4" id="toc-yes-if-divisible-by-4" class="nav-link active" data-scroll-target="#yes-if-divisible-by-4">Yes if divisible by <span class="math inline">\(4\)</span></a></li>
+  <li><a href="#but-not-if-divisible-by-100" id="toc-but-not-if-divisible-by-100" class="nav-link" data-scroll-target="#but-not-if-divisible-by-100">But not if divisible by <span class="math inline">\(100\)</span></a></li>
+  <li><a href="#but-yes-if-divisible-by-400" id="toc-but-yes-if-divisible-by-400" class="nav-link" data-scroll-target="#but-yes-if-divisible-by-400">But yes if divisible by <span class="math inline">\(400\)</span></a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_if_leap_year.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -120,30 +157,183 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>We have moved the string out of the parentheses and into a named variable, <code>words</code>. We then pass this variable to the function:</p>
+<p>Whenever solving a problem like this, it’s always good to build it up one step at a time. You’ll be tempted to jump right to the solution but it’s much easier to take very small steps. It might seem extreme but the first step in a solution should do almost nothing. I tend to start by simply outputting the input of my program to make sure that at least the input is being read correctly, before trying to do any logic with it:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
+<pre><strong>leap_year.py</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> <span class="st">"Hello Matt"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-filename="leap_year.py" data-startfrom="9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 8;"><span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a year: "</span>))</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(year)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>When we run our script we see that the output has not changed, as expected:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="922a73a6" class="cell" data-execution_count="1">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="19ebcc78" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello Matt</code></pre>
+<pre><code>Enter a year: 2024
+2024</code></pre>
 </div>
 </div>
-<p><a href="../pages/02-data-types.html">Return to course</a></p>
+<p>Now we know that the year is being read in correctly (note that since we’re reading in a number, we explicitly convert it with <code>int()</code>).</p>
+<section id="yes-if-divisible-by-4" class="level3">
+<h3 class="anchored" data-anchor-id="yes-if-divisible-by-4">Yes if divisible by <span class="math inline">\(4\)</span></h3>
+<p>The first step is to implement the simplest of the logical checks: is the year divisible by <span class="math inline">\(4\)</span>? If it is, print out an appropriate message:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>leap_year.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="leap_year.py" data-startfrom="9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 8;"><span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a year: "</span>))</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>and check that it works for a know leap year.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="29d84e96" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2024
+2024 is a leap year</code></pre>
+</div>
+</div>
+<p>For a year that we know is not a leap year, what do we get:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a2ea121d" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2023</code></pre>
+</div>
+</div>
+<p>We get no output, so let’s fix that next, by adding an <code>else</code>:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>leap_year.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb9" data-filename="leap_year.py" data-startfrom="9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 8;"><span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a year: "</span>))</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is a leap year"</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="95cc16a4" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2024
+2024 is a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="829f0dc6" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2023
+2023 is not a leap year</code></pre>
+</div>
+</div>
+<p>So far it’s looking like it’s doing the right thing. We have a working leap year calculator which covers most cases correctly.</p>
+</section>
+<section id="but-not-if-divisible-by-100" class="level3">
+<h3 class="anchored" data-anchor-id="but-not-if-divisible-by-100">But not if divisible by <span class="math inline">\(100\)</span></h3>
+<p>Let’s check the next corner case: what happens if the year is divisible by 100. The rules say that this should not be a leap year:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ab861918" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 100
+100 is a leap year</code></pre>
+</div>
+</div>
+<p>So it’s currently getting this wrong. We need to add in a check to see if the year is divisible by 100 and set it to be labelled as not a leap year.</p>
+<p>Here we need to be careful as any number which is divisible by <span class="math inline">\(100\)</span> is also divisible by <span class="math inline">\(4\)</span> but we want a special thing to happen in the former case. The divisible-by-<span class="math inline">\(100\)</span> check is more specific than the divisible-by<span class="math inline">\(4\)</span> check, so it must come first in the <code>if</code>/<code>elif</code>/<code>else</code> chain:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>leap_year.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb16" data-filename="leap_year.py" data-startfrom="9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 8;"><span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a year: "</span>))</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> year <span class="op">%</span> <span class="dv">100</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is a leap year"</span>)</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="a710303e" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2024
+2024 is a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4e051131" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2023
+2023 is not a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="d75035b7" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 1900
+1900 is not a leap year</code></pre>
+</div>
+</div>
+</section>
+<section id="but-yes-if-divisible-by-400" class="level3">
+<h3 class="anchored" data-anchor-id="but-yes-if-divisible-by-400">But yes if divisible by <span class="math inline">\(400\)</span></h3>
+<p>The code is working for all those cases correctly, however, the last condition to think about is what happens for the year 2000:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="7684cba9" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2000
+2000 is not a leap year</code></pre>
+</div>
+</div>
+<p>This year should be a leap year as it is divisible by <span class="math inline">\(400\)</span>. Again this is more specific than the previous two so must be added before them in the chain:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>leap_year.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb25" data-filename="leap_year.py" data-startfrom="9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 8;"><span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>year <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a year: "</span>))</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> year <span class="op">%</span> <span class="dv">400</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is a leap year"</span>)</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> year <span class="op">%</span> <span class="dv">100</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is a leap year"</span>)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="e0cda3fd" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2024
+2024 is a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c2e0b395" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2023
+2023 is not a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5282b30a" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 1900
+1900 is not a leap year</code></pre>
+</div>
+</div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="f0f28039" class="cell" data-execution_count="14">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a year: 2000
+2000 is a leap year</code></pre>
+</div>
+</div>
+<p><a href="../pages/05-conditionals.html">Return to course</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -574,7 +764,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_two_line_print.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_if_leap_year.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

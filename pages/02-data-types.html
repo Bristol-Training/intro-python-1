@@ -266,16 +266,16 @@ window.Quarto = {
 <section id="strings" class="level2">
 <h2 class="anchored" data-anchor-id="strings">Strings</h2>
 <p>In the last chapter we introduced the idea of “strings”. They are a way of representing normal human words inside a Python script. Strings start and end with double quotes (<code>"</code>) e.g.,</p>
-<div id="dcc6c00f" class="cell" data-execution_count="1">
+<div id="de09150e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">"Hello from Python!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is a string with three words and an exclamation mark as content.</p>
 <p>Strings can contain numbers as well:</p>
-<div id="5e259658" class="cell" data-execution_count="2">
+<div id="66ae3e0b" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">"The Battle of Hastings was in 1066"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>and they can even be empty:</p>
-<div id="7ca53c7f" class="cell" data-execution_count="3">
+<div id="acaa982d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">""</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>It is possible in Python to also use single quotes (<code>'</code>) to make strings, as long as the string starts and ends with the same type of quote, but it is convention to prefer double quotes.</p>
@@ -302,11 +302,11 @@ Exercise 1
 <li><strong>Integers</strong> are for representing whole numbers</li>
 </ul>
 <p>When creating numbers in Python, you do not use quotes, you write the number directly. So:</p>
-<div id="53fbb4ec" class="cell" data-execution_count="4">
+<div id="98ac1758" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fl">3.14159</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is a float and</p>
-<div id="80e4bb1e" class="cell" data-execution_count="5">
+<div id="83083180" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">42</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is an integer.</p>
@@ -315,24 +315,22 @@ Exercise 1
 <section id="variables" class="level3">
 <h3 class="anchored" data-anchor-id="variables">Variables</h3>
 <p>Of course, it not much use to have numbers and strings floating about with no connection to each other. We want to be able to give them names and combine them together. We assign names to data using the <code>=</code> sign. For example if we want to make some data and give it a name we can do it like:</p>
-<div id="211ed2f7" class="cell" data-execution_count="6">
+<div id="d6f6212f" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This has created a number <code>3.14159</code> and given it a name, <code>pi</code>. We can now use this name in other parts of the program to refer to that piece of data:</p>
-<div id="8b969e81" class="cell" data-execution_count="7">
+<div id="4d9bc9eb" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Names in Python can contain upper and lower case letters, numbers and underscores (but can’t start with a number). Chosing the correct name for a particular variable is an important task as a non-descriptive name (or worse, an incorrect name) will be very confusing for you and anyone reading your code. It is common in Python to name your variables with all lower case letters and use underscores to separate words.</p>
 <p>So, for a variable which contains a number representing a distance in miles, avoid shortened names like <code>dm</code>, <code>distm</code> or <code>d</code> and instead use a name like <code>distance_in_miles</code>. Remember, code will be written once but read many times so make it easy to read.</p>
 <p>These two can be combined into a full Python script:</p>
-<div id="f1e30138" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>variables.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
+<div class="sourceCode" id="cb9" data-filename="variables.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="fl">3.14159</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </div>
 <p>and run with:</p>
 <div class="code-with-filename">
@@ -341,7 +339,7 @@ Exercise 1
 </div>
 <div class="sourceCode" id="cb10" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> variables.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1459a0b2" class="cell" data-execution_count="9">
+<div id="addc8a5d" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>3.14159</code></pre>
 </div>
@@ -364,59 +362,42 @@ Exercise 2
 <section id="combining-variables" class="level3">
 <h3 class="anchored" data-anchor-id="combining-variables">Combining variables</h3>
 <p>Variables are more that just a way of labelling data, they also make it easier to <em>do</em> things with your data. If you have some numbers you can add, subtract, multiply and divide them as you would expect. The symbol for multiplication is <code>*</code> and the symbol for division is <code>/</code>.</p>
-<div id="9d89db2c" class="cell" data-execution_count="10">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
-</div>
+<div id="956f0548" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>distance_in_miles <span class="op">=</span> <span class="dv">30</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>distance_in_km <span class="op">=</span> distance_in_miles <span class="op">*</span> <span class="fl">1.60934</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(distance_in_km)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code>48.2802</code></pre>
-</div>
-</div>
 <p>Here we created a variable <code>distance_in_miles</code> with the value of <code>30</code>. Then we used that variable in line two and multiplied it by a number (<code>distance_in_miles * 1.60934</code>) and assigned the result of that calculation to a new variable called <code>distance_in_km</code>. Finally, we printed out the new variable.</p>
 <p>Likewise we can do addition:</p>
-<div id="0ceb9e39" class="cell" data-execution_count="11">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>temperature_in_celcius <span class="op">=</span> <span class="fl">25.1</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>temperature_in_kelvin <span class="op">=</span> temperature_in_celcius <span class="op">+</span> <span class="fl">273.15</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature_in_kelvin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>298.25</code></pre>
-</div>
+<div id="88e28a54" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>temperature_in_celcius <span class="op">=</span> <span class="fl">25.1</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>temperature_in_kelvin <span class="op">=</span> temperature_in_celcius <span class="op">+</span> <span class="fl">273.15</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temperature_in_kelvin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="printing-multiple-things" class="level3">
 <h3 class="anchored" data-anchor-id="printing-multiple-things">Printing multiple things</h3>
 <p>So far we’ve been giving the <code>print</code> function a single argument to print a single thing but we can print many things at once if we give it multiple arguments. Arguments to functions in Python are separated by commas. The <code>print</code> function is designed so that it will print each of the arguments it was provided with, one after another on the same line, separated by spaces.</p>
-<div id="2742e6fe" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
+<pre><strong>colour.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="st">"red"</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14" data-filename="colour.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="st">"red"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell-output cell-output-stdout">
-<pre><code>My favourite colour is red</code></pre>
-</div>
-</div>
-<pre><code>Overwriting colour.py</code></pre>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb19" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">run</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="6555a101" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-stdout">
+<pre><code>My favourite colour is red</code></pre>
+</div>
 </div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 3">
 <div class="callout-header d-flex align-content-center">
@@ -439,57 +420,69 @@ Exercise 3
 <p>So far, all the code we’ve run is somewhat static. Every time we run the script, the output will always be the same. What if your favourite colour is not red? The power of programming is that it is dynamic and we can write code which responds and reacts. We’ll see a lot more of this throughout this workshop, but for now we’ll introduce one more function that Python provides, <a href="https://docs.python.org/3/library/functions.html#input"><code>input</code></a>.</p>
 <p>The <code>print</code> function is how we get information out of our program, and the <code>input</code> function is how we get data <em>into</em> it.</p>
 <p>The <code>input</code> function will pause the program and wait for you to type something in. Whatever you type, followed by enter will be assigned to whatever variable name you put on the left hand side of the <code>=</code>.</p>
-<div id="198e53f6" class="cell" data-execution_count="13">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>colour.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"What is your favourite colour?"</span>)</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="bu">input</span>()</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb17" data-filename="colour.py" data-startfrom="8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 7;"><span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"What is your favourite colour?"</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="bu">input</span>()</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, if we run this script, it will print the first message, and then wait for you to type something. If you type “red” and then press enter, it will assign “red” to the variable <code>fav</code> and then use that variable in the final <code>print</code> function:</p>
-<pre><code>What is your favourite colour? 
-red
-My favourite colour is red</code></pre>
-<p>Likewise, you can run the script one more time and give a different answer and get a different output:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">run</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="feb90523" class="cell" data-execution_count="14">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb18" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="d8b26d28" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>What is your favourite colour?
-My favourite colour is blue</code></pre>
+red
+My favourite colour is red</code></pre>
+</div>
+</div>
+<p>Likewise, you can run the script one more time and give a different answer and get a different output:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="7199883e" class="cell" data-execution_count="13">
+<div class="cell-output cell-output-stdout">
+<pre><code>What is your favourite colour?
+green
+My favourite colour is green</code></pre>
 </div>
 </div>
 <section id="the-prompt" class="level4">
 <h4 class="anchored" data-anchor-id="the-prompt">The prompt</h4>
 <p>One small improvement we can make is that instead of printing our message “What is your favourite colour?”, prompting the user of the script to type something, we can do this directly with the <code>input</code> function by giving the prompt as an argument:</p>
-<div id="658baa49" class="cell" data-execution_count="15">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>colour.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your favourite colour? "</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb22" data-filename="colour.py" data-startfrom="8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 7;"><span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>fav <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your favourite colour?"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Note that there is a space after the question mark so that when you’re typing in your answer it’s not butting directly against the character:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb25" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> colour.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f8251b9c" class="cell" data-execution_count="16">
+<div id="521855dc" class="cell" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
-<pre><code>My favourite colour is red</code></pre>
-</div>
-</div>
-<pre><code>What is your favourite colour? red
+<pre><code>What is your favourite colour?
+red
 My favourite colour is red</code></pre>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 4">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">

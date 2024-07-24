@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_two_line_print – Beginning Python</title>
+<title>appendix_files – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,8 +111,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#files" id="toc-files" class="nav-link active" data-scroll-target="#files">Files</a>
+  <ul class="collapse">
+  <li><a href="#data-type-conversion" id="toc-data-type-conversion" class="nav-link" data-scroll-target="#data-type-conversion">Data type conversion</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/appendix_files.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -120,30 +129,119 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>We have moved the string out of the parentheses and into a named variable, <code>words</code>. We then pass this variable to the function:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> <span class="st">"Hello Matt"</span></span>
+<section id="files" class="level2">
+<h2 class="anchored" data-anchor-id="files">Files</h2>
+<p>Everything we’ve done so far has been completely self-contained in the script and every time we run any of them we will get exactly the same output. The power of programming is to be able to take the same piece of code and apply it to different data to get different results. One common way in which this is done is writing a script which can analyse a data file. To do that we need to learn how to open files.</p>
+<p>The simplest this we can do with files is read a file in and print it to the screen. Make a new script called <code>file.py</code> and put the following in it:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="bu">file</span>.py</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>When we run our script we see that the output has not changed, as expected:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="922a73a6" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello Matt</code></pre>
-</div>
-</div>
-<p><a href="../pages/02-data-types.html">Return to course</a></p>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"file.py"</span>) <span class="im">as</span> f:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(line, end<span class="op">=</span><span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Overwriting file.py</code></pre>
+<p>When you run it, you will see the following:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run <span class="bu">file</span>.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>with open("file.py") as f:
+    for line in f:
+        print(line, end="")</code></pre>
+<p>which is (somewhat recursively) the contents of the file <code>file.py</code>.</p>
+<p>There are a few new things here so let’s go through them in turn. The first thing is to open the file. You open files using the <code>open</code> function. The part <code>open("file.py")</code> says to open the file <code>file.py</code>. This returns a <em>file handle</em> which is assigned to the variable <code>f</code>. If the file does not exist, or is not readable then the script will exit with an error (have a try and see what the error looks like!). The use of a <code>with</code> statement means that when the code inside the <code>with</code> block has finished running the file will be closed automatically.</p>
+<p>In the next line (<code>for line in f:</code>) we are looping over the lines of the file. This loop looks just like those we used when looping over lists a few chapters previously. When looping over a list you get each of the <em>elements</em> in turn but when looping over an open file you get each of the <em>lines</em> in turn. We assign the string containing the line from the file to the variable <code>line</code>.</p>
+<p>Finally, we print the string <code>line</code>. Each line in the file already ends with a “new-line” character so when it is printed, it will print the new-line too. By default the <code>print</code> function will also add its own new-line so we disable that by using <code>end=""</code>.</p>
+<section id="exercise" class="level4">
+<h4 class="anchored" data-anchor-id="exercise">Exercise</h4>
+<ul>
+<li><p>Printing out Python code isn’t the most useful so let’s make a data file to read instead. Make a new file called <code>data.txt</code> and put inside it:</p>
+<pre><code>12
+54
+7
+332
+54
+1
+0</code></pre></li>
+<li><p>Edit <code>file.py</code> so that it prints out the contents of <code>data.txt</code> instead.</p></li>
+</ul>
+<!-- [<small>answer</small>](answer_first_read_data.ipynb) -->
+</section>
+<section id="data-type-conversion" class="level3">
+<h3 class="anchored" data-anchor-id="data-type-conversion">Data type conversion</h3>
+<p>Simply reading the data and printing it isn’t very useful. Let’s take a first step towards some data analysis and pretend that the task we’re trying to do is to read in data from the file and add 17 to each value.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="bu">file</span>.py</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data.txt"</span>) <span class="im">as</span> f:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        new_number <span class="op">=</span> line <span class="op">+</span> <span class="dv">17</span>  <span class="co"># Here is where we do our "data analysis"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(new_number, end<span class="op">=</span><span class="st">""</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Overwriting file.py</code></pre>
+<p>If you edit <code>file.py</code> to contain this code and run it you should see an error:</p>
+<pre><code>Traceback (most recent call last):
+  File "file.py", line 3, in &lt;module&gt;
+    new_number = line + 17
+TypeError: can only concatenate str (not "int") to str</code></pre>
+<p>This is telling us that there is an error occuring when trying to add 17 to the data read in from the line in the file. The <em>type</em> of the error is <code>TypeError</code> which tells us the problem is likely due to incorrect data types (i.e.&nbsp;string, float, int, list etc.). The error message says <code>can only concatenate str (not "int") to str</code> which implies that the computer believes that we’re trying to concatenate (join together) something with a string. The only two things involved in this operation are <code>line</code> and <code>17</code>. We know that <code>17</code> is an integer so <code>line</code> must be a string!</p>
+<p>When reading from a file like this, everything it gives you will <em>always</em> be a string, even if the string only contains digits like <code>"12"</code>. If we know that the file only contains integers then we can convert each number as it comes in using <a href="https://docs.python.org/3/library/functions.html#int">the <code>int</code> function</a>. Also, since we’re now printing integers, we no longer need the <code>end=""</code> tweak:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile data.txt</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">12</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="dv">54</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="dv">7</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="dv">332</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dv">54</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Overwriting data.txt</code></pre>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile <span class="bu">file</span>.py</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data.txt"</span>) <span class="im">as</span> f:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        number <span class="op">=</span> <span class="bu">int</span>(line)  <span class="co"># Here we do the type conversion</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>        new_number <span class="op">=</span> number <span class="op">+</span> <span class="dv">17</span>  <span class="co"># Here is where we do our "data analysis"</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(new_number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Overwriting file.py</code></pre>
+<p>Running this new script will now print out our “processed” data:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>run <span class="bu">file</span>.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>29
+71
+24
+349
+71
+18
+17</code></pre>
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise</h4>
+<ul>
+<li>Change <code>file.py</code> to multiply the data by 10 instead of adding 17.</li>
+</ul>
+<!-- [<small>answer</small>](answer_multiply_data.ipynb) -->
+<ul>
+<li>After looping though the data, print out the sum of all the data values seen.
+<ul>
+<li><p>hint: Make an integer before the loop, initially set to zero and add to it each time around the loop</p></li>
+<li><p>hint: You can increase an integer by an amount using <code>+=</code> like:</p>
+<pre><code>num = 3
+num += 4
+print(num)  # `num` will now be 7</code></pre>
+<!-- - [<small>answer</small>](answer_data_sum.ipynb) --></li>
+</ul></li>
+<li>Print out the count of the number of data points seen as well.</li>
+</ul>
+<!-- [<small>answer</small>](answer_data_sum_count.ipynb) -->
+<ul>
+<li>Print out the mean average of the data in the file.</li>
+</ul>
+<!-- [<small>answer</small>](answer_data_mean.ipynb) -->
+<ul>
+<li>See what happens if you run the script after deleting the contents of <code>data.txt</code>. Add an <code>if</code> statement to fix it.</li>
+</ul>
+<!-- [<small>answer</small>](answer_divide_zero.ipynb) -->
+<ul>
+<li>Collect the statistics into a summary dictionary with keys <code>"sum"</code>, <code>"count"</code> and <code>"mean"</code>.</li>
+</ul>
+<!-- [<small>answer</small>](answer_data_summary_dict.ipynb) -->
 
 
+</section>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -574,7 +672,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_two_line_print.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/appendix_files.md" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

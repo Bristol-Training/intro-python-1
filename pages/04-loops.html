@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -162,8 +196,17 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#loop-syntax-breakdown" id="toc-loop-syntax-breakdown" class="nav-link active" data-scroll-target="#loop-syntax-breakdown">Loop syntax breakdown</a></li>
+  <li><a href="#extended-what-can-we-loop-over" id="toc-extended-what-can-we-loop-over" class="nav-link" data-scroll-target="#extended-what-can-we-loop-over">Extended: What can we loop over</a></li>
+  <li><a href="#extended-ranges-of-numbers" id="toc-extended-ranges-of-numbers" class="nav-link" data-scroll-target="#extended-ranges-of-numbers">Extended: Ranges of numbers</a></li>
+  <li><a href="#extended-enumerating" id="toc-extended-enumerating" class="nav-link" data-scroll-target="#extended-enumerating">Extended: Enumerating</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/04-loops.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -187,8 +230,300 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>In the introduction you were told that Python will read your script, starting at the top and running each line of code until it reaches the bottom. While largely true, it is possible to make Python repeat certain lines of code using <em>loops</em>.</p>
+<p>The ability to run a line of code multiple times is the first large step on your road to making your code <em>reusable</em>.</p>
+<p>Imagine we have two strings that we want to print. We could start by making a variable containing one of the words and then printing it:</p>
+<div id="e7e3060f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello</code></pre>
+</div>
+</div>
+<p>To print our second word, we could copy and paste those two lines to create a program which can print both words:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb3" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">"Python"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="90a1857e" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+Python</code></pre>
+</div>
+</div>
+<p>This printed the output we want. But we can see that this code is wasteful as the two <code>print</code> lines are identical to each other. They both print whatever the variable <code>word</code> is pointing at. If we can manage to write that line only once then we could save ourselves some typing!</p>
+<p>Let’s start by making a container for our words. A Python <code>list</code> makes sense:</p>
+<div id="2331e01b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>we can now write a loop which will perform a task once for each word in our list:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now, when we run it, we should see that it prints the same output as our previous example.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="7ed33bb6" class="cell" data-execution_count="4">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+Python</code></pre>
+</div>
+</div>
+<p>We’ve taken a script that was four lines of code and have reduced it to three lines. That might not seem like much of a reduction but the loop we wrote will work no matter how many items there are in the list <code>my_words</code>.</p>
+<p>Most loops in Python work by doing some set of actions for each item in the list. For this reason, this sort of loop is sometimes called a <em>for-each</em> loop.</p>
+<p>This maps to real life where you may want, for example, to buy each item on your shopping list. Another way of saying that could be “for each item on my shopping list, buy the item”, or as you would write that in Python:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> item <span class="kw">in</span> shopping_list:</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    buy(item)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit <code>loop.py</code> to have a different number of words in the list. - Does it work if you put numbers (i.e.&nbsp;integers or floats) in there as well? - What happens if the list <code>my_words</code> is empty? - hint: empty lists look like <code>[]</code></p>
+<p><a href="../answers/answer_first_loop.html"><small>answer</small></a></p>
+</div>
+</div>
+<section id="loop-syntax-breakdown" class="level3">
+<h3 class="anchored" data-anchor-id="loop-syntax-breakdown">Loop syntax breakdown</h3>
+<p>Before we move on to other things we can do with loops, let’s first make sure that we understand what’s happening on those two lines of Python code that make up the loop.</p>
+<p>The first line is where most of the magic is hapenning and I like to break it down into five sections, three of fixed scaffolding and two where you as a programmer can have input.</p>
+<p>The scaffolding is the parts of the line which must always be the same and which Python uses to know that you’re trying to make a loop. They’re pointed out here as the word <code>for</code>, the word <code>in</code> and the colon (<code>:</code>) at the end of the line. These must always be there and in that order:</p>
+<pre> ↓        ↓         ↓
+<b style="color:darkred">for</b> word <b style="color:darkred">in</b> my_words<b style="color:darkred">:</b>
+    print(word)
+</pre>
+<p>Once the scaffolding is in place, you can place between it the things that <em>you</em> care about. the first thing to think about is the object that you want to loop over. In our case we want to loop over the list <code>my_words</code> because we want to perform some action on every item in that list (we want to print the item):</p>
+<pre>                ↓
+for word in <b style="color:darkred">my_words</b>:
+    print(word)
+</pre>
+<p>Now we have decided what object we are looping over, we need to decide what name we want to give temporarily to each item as we get to it. As with any variable naming, it is important that we choose a good name which describe a single object from the list. For example, if we’re looping over all students in a class then we could call the variable <code>student</code> or if we’re looping over a list of ages then we could call the variable <code>age</code>. The actual choice of variable name here does not affect how the code runs. We could use the name <code>sausage</code> and the code would run identically.</p>
+<p>Here, since we’re looping over a list of generic <em>words</em>, we name our variable <code>word</code>:</p>
+<pre>      ↓
+for <b style="color:darkred">word</b> in my_words:
+    print(word)
+</pre>
+<p>That’s all that’s required to tell Python that we’re making a loop but if we want the loop to actually <em>do</em> something then we need to give the loop a <em>body</em>. The body is the lines of code that are going to be repeated. They can be any Python code but it is only within the body of the loop that we can refer to the loop variable <code>word</code>:</p>
+<pre>for word in my_words:
+    <b style="color:darkred">print(word)</b>       ← body of loop
+</pre>
+<p>Finally, we get to a peculiarity of Python in that it uses indentation to decide what is in the body of the loop and what is not. Remember that it will only repeat the code in the body. All code in the body must be indented relative to the word <code>for</code> by four spaces. A trick to help remember this is that every time you see a colon in Python you should start a new line and indent:</p>
+<pre>                  <i>colon</i>
+                    ↓
+for word in my_words<b style="color:darkred">:</b>
+    print(word)
+  ↑
+<i>indentation</i>
+</pre>
+<p>If we want to write code after the end of a loop, we have to make sure that it is <em>not</em> indented. So this code:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb11" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"...Goodbye"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>will print:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb12" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="574df944" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+Python
+...Goodbye</code></pre>
+</div>
+</div>
+<p>but this code:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb14" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"...Goodbye"</span>)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>will print:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="0151c737" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello
+...Goodbye
+Python
+...Goodbye</code></pre>
+</div>
+</div>
+<p>See how the <code>...Goodbye</code> was repeated in the second example, this is because it was inside the body of the loop since it was indented.</p>
+</section>
+<section id="extended-what-can-we-loop-over" class="level3">
+<h3 class="anchored" data-anchor-id="extended-what-can-we-loop-over">Extended: What can we loop over</h3>
+<p>A lot of the power of loops comes from being able to put a lot of different things in the place of <code>my_words</code>.</p>
+<p>Most simply, instead of putting a variable name there, you can put a list directly:</p>
+<div id="cc75526d" class="cell" data-execution_count="7">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]:</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>As well as lists we can put anything which Python considers <em>iterable</em>. For now we haven’t come across many of those but as we keep learning we’ll discover many more. One that we have already come across is strings:</p>
+<div id="56e65b74" class="cell" data-execution_count="8">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>phrase <span class="op">=</span> <span class="st">"Hello Python"</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> phrase:</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(letter)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Looping over a string will always give you one letter at a time.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Experiment with <code>loop.py</code> and make it loop over both lists and strings.</p>
+<p><a href="../answers/answer_loop_list_string.html"><small>answer</small></a></p>
+</div>
+</div>
+</section>
+<section id="extended-ranges-of-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="extended-ranges-of-numbers">Extended: Ranges of numbers</h3>
+<p>There’s a built in function in Python called <code>range</code> which provides you with numbers in a range. If given one number as an argument it will give you integers, starting from zero and going up to, <em>but not including</em>, the number you gave as an agument. We can put this call to the <code>range</code> function directly into our loop as the object to loop over:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb19" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(number)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>will print:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="c221cb31" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-stdout">
+<pre><code>0
+1
+2
+3
+4</code></pre>
+</div>
+</div>
+<p>The <code>range</code> function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>loop.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb22" data-filename="loop.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">13</span>):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(number)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>printing:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb23" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="14531849" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-stdout">
+<pre><code>10
+11
+12</code></pre>
+</div>
+</div>
+</section>
+<section id="extended-enumerating" class="level3">
+<h3 class="anchored" data-anchor-id="extended-enumerating">Extended: Enumerating</h3>
+<p>When looping over a list we are provided with one element at a time which we give a name (<code>word</code> in our example earlier) to be used inside the loop body. However, we don’t have any context about, for example, what the index of the item is from the list.</p>
+<p>To be able to loop over a list and keep track of both the index of the item and the item itself we can use the <code>enumerate</code> function. This function, if given a list, can give to the loop both pieces of information at once.</p>
+<pre>                          ↓
+for index, word in <b style="color:darkred">enumerate(my_words)</b>:
+    print(word, "is at index", index)
+</pre>
+<p>Since each time through the loop we are being given not just one piece of information (the element) but two (the index <em>and</em> the element) we need to provide two loop variable names. We do this by giving both names separated by commas in the usual place:</p>
+<pre>      ↓     ↓
+for <b style="color:darkred">index, word</b> in enumerate(my_words):
+    print(word, "is at index", index)
+</pre>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Write a script (<code>loop_exercise.py</code>) which creates a list of floats and loops over them, printing the index of the element as well as the value of the float.</p>
+<p><a href="../answers/answer_loop_floats_enumerate.html"><small>answer</small></a></p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -631,7 +966,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/04-loops.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/04-loops.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

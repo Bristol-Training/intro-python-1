@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>summary – Beginning Python</title>
+<title>Summary – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,18 +166,92 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#bonus-topics" id="toc-bonus-topics" class="nav-link active" data-scroll-target="#bonus-topics">Bonus topics</a></li>
+  <li><a href="#worksheet" id="toc-worksheet" class="nav-link" data-scroll-target="#worksheet">Worksheet</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/99-summary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Summary</h1>
+</div>
 
 
 
-<section id="summary" class="level2">
-<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Well done for getting this far! We’ve covered a lot in this course:</p>
+<ul>
+<li>JupyterLab</li>
+<li>The <code>print()</code> function</li>
+<li>Basic data types: strings, floats and integers</li>
+<li>Indexing, slicing and appending to lists</li>
+<li>Reading Python errors</li>
+<li>Branching logic using <code>if</code> statements</li>
+<li>Looping over different data structures such as lists and dictionaries</li>
+<li>Creating, modifying and accessing dictionaries</li>
+</ul>
+<p>You’re not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practise that you will become confident. These notes will remain online so feel free to refer back to them at any time.</p>
+<section id="bonus-topics" class="level3">
+<h3 class="anchored" data-anchor-id="bonus-topics">Bonus topics</h3>
+<p>There are some topics which are included here as optional extra chapter, if you are interested:</p>
+<!-- - [File reading](appendix_files.md) -->
+</section>
+<section id="worksheet" class="level3">
+<h3 class="anchored" data-anchor-id="worksheet">Worksheet</h3>
+<p>To give you something to take away with you to practise with, there is a <!--[worksheet with questions](appendix_practice_questions.md)-->. If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.</p>
+<section id="one-last-challenge" class="level4">
+<h4 class="anchored" data-anchor-id="one-last-challenge">One last challenge</h4>
+<p>Let’s end this session with a more difficult challenge. We’re going to make a calculator which can read numerical operations from the input and print the answers to the screen.</p>
+<p>For example, it should print out an input prompt like</p>
+<pre><code>&gt;</code></pre>
+<p>into which you can type a calculation as</p>
+<pre><code>&gt; 4 * 6</code></pre>
+<p>and it should then print out the answer like</p>
+<pre><code>&gt; 4 * 6
+4 * 6 is 24</code></pre>
+<p>Examples of inputs it should be able to accept are:</p>
+<pre><code>4 * 6
+5 + 6
+457 - 75
+54 / 3
+4 + 6</code></pre>
+<p>Notice that all the input strings have spaces around the operator, this will make your life much easier if you assume this.</p>
+<p>One extra function you will need to do this is <a href="https://docs.python.org/3/library/stdtypes.html#str.split">the <code>split</code> function</a> which takes a string and returns a list containing the string, split by spaces. Also, remember the <code>int</code> function which can convert a string into an integer.</p>
+<!-- [<small>answer</small>](answer_calculator.qmd) -->
+<section id="bonus" class="level5">
+<h5 class="anchored" data-anchor-id="bonus">Bonus</h5>
+<ul>
+<li>The examples only have integers in them, can you adjust your program so that it can accept floating point numbers as well?</li>
+<li>Can you adapt your program so that it can support code with or without spaces either side of the operator? This is a more challenging exercise so feel free to ask for some some help and be sure to show one of the instructors your answer once you’ve got it working.</li>
+</ul>
+<p>If you’d like to learn more Python take a look at either:</p>
+<ul>
+<li><a href="https://milliams.com/courses/intermediate_python/">Intermediate Python</a> for more information about Python and how to make your code modular and reusable.</li>
+<li><a href="https://milliams.com/courses/data_analysis_python/">Introduction to Data Analysis in Python</a> to learn about how Python can aid your data analyses.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="credits" class="level3">
+<h3 class="anchored" data-anchor-id="credits">Credits</h3>
+<p>This course was originally written by Christopher Woods and published at https://chryswoods.com/beginning_python/. Some changes were made by the ACRC at the University of Bristol. The course was revised by Matt Williams.</p>
+<p>All text is published under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a> with all code snippets licensed as MIT.</p>
+<p>The source for the material can be found on <a href="https://gitlab.com/milliams/beginning_python">GitLab</a> where fixes are welcome.</p>
 
 
 </section>

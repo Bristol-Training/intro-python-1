@@ -234,16 +234,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="writing-our-first-script">Writing our first script</h2>
 <p>A Python script is a simple text file containing a set of instructions. As long as these instructions are written in the “Python Programming Language” then the computer will be able to understand them and perform the tasks we’ve asked.</p>
 <p>To create our script, go to the text editor pane in JupyterLab and type into it:</p>
-<div id="1f93577c" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello from Python</code></pre>
-</div>
+<div class="sourceCode" id="cb1" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Then go to <em>File → Save File</em> and you’ll see the small black circle next to the words “untitled.txt” in the tab change to a cross.</p>
 <p>We’ve just saved our Python script with the name “untitled.txt” but we should give it a more descriptive name. In the far left pane you will see a list of files. Right click on “untitled.txt” and select <em>Rename</em>. Python files end in the extension “.py” so change its name to “script.py”.</p>
@@ -257,10 +252,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb3" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do that you should see, printed to the terminal:</p>
-<div id="56840b9e" class="cell" data-execution_count="2">
+<div id="ed769779" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello from Python</code></pre>
 </div>
@@ -287,16 +282,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="how-to-read-these-notes" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-read-these-notes">How to read these notes</h2>
 <p>In these notes, any time that we’re seeing a full Python script, we’ll see it written like the following:</p>
-<div id="2b100b44" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>script.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello from Python!</code></pre>
-</div>
+<div class="sourceCode" id="cb4" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Here, the name that we give the file (<code>script.py</code>) is above the code block, and the contents of the file (<code>print("Hello from Python")</code>) are below it.</p>
 <p>We’ll denote “run in the Terminal” with a <code>Terminal/Command Prompt</code> sign at the top of the block. So when we ask you to run your script, it will look like this:</p>
@@ -304,17 +294,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb7" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">run</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="4d3230f4" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello from Python!</code></pre>
-</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And we see the expected output displayed below it.</p>
 <p>By contrast, any time we’re just showing you a small snippet of code, for example to demonstrate a point, it will be shown like:</p>
-<div id="024b1b66" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello from Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="ddef5fab" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello from Python</code></pre>
+</div>
 </div>
 
 

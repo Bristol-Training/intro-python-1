@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_two_line_print – Beginning Python</title>
+<title>answer_more_conditionals – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -120,28 +120,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>We have moved the string out of the parentheses and into a named variable, <code>words</code>. We then pass this variable to the function:</p>
+<p><strong>Less than:</strong></p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>script.py</strong></pre>
+<pre><strong>if.py</strong></pre>
 </div>
-<div class="sourceCode" id="cb1" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> <span class="st">"Hello Matt"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(words)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1" data-filename="if.py" data-startfrom="10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 9;"><span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))  <span class="co"># We can nest function calls directly</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"is less than 100"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>When we run our script we see that the output has not changed, as expected:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="922a73a6" class="cell" data-execution_count="1">
+<div id="684bd84e" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello Matt</code></pre>
+<pre><code>Enter a number: 74
+74 is less than 100</code></pre>
 </div>
 </div>
-<p><a href="../pages/02-data-types.html">Return to course</a></p>
+<p><br></p>
+<p><strong>Equal to:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>if.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb4" data-filename="if.py" data-startfrom="10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 9;"><span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">==</span> <span class="dv">100</span>:</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"== 100"</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">==</span> <span class="dv">74</span>:</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"== 74"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="57d340f1" class="cell" data-execution_count="2">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a number: 74
+74 == 74</code></pre>
+</div>
+</div>
+<p><br></p>
+<p><strong>Not equal to:</strong></p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>if.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="if.py" data-startfrom="10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python" style="counter-reset: source-line 9;"><span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">!=</span> <span class="dv">100</span>:</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"!= 100"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">!=</span> <span class="dv">74</span>:</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"!= 74"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="4b4f7817" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a number: 74
+74 != 100</code></pre>
+</div>
+</div>
+<p><a href="../pages/05-conditionals.html">Return to course</a></p>
 
 
 
@@ -574,7 +628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_two_line_print.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_more_conditionals.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

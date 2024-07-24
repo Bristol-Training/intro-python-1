@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -162,8 +196,18 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#indexing" id="toc-indexing" class="nav-link active" data-scroll-target="#indexing">Indexing</a></li>
+  <li><a href="#reverse-indexing" id="toc-reverse-indexing" class="nav-link" data-scroll-target="#reverse-indexing">Reverse indexing</a></li>
+  <li><a href="#python-errors" id="toc-python-errors" class="nav-link" data-scroll-target="#python-errors">Python errors</a></li>
+  <li><a href="#adding-things-to-lists" id="toc-adding-things-to-lists" class="nav-link" data-scroll-target="#adding-things-to-lists">Adding things to lists</a></li>
+  <li><a href="#extended-slicing" id="toc-extended-slicing" class="nav-link" data-scroll-target="#extended-slicing">Extended: Slicing</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/03-lists.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -187,8 +231,183 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>Until now all the variables we have used have contained a single piece of information, for example, <code>a = 4</code> makes a variable a containing a single number, <code>4</code>. It’s very common in programming (and in fact real life) to want to refer to collections of this. For example a shopping list contains a list of items you want to buy, or a car park contains a set of cars.</p>
+<p>Create a new file by going to <em>File → New → Text File</em>. Rename it (using the left-hand file pane in JupyterLab with right-click <em>Rename</em>) to <code>list.py</code>. Inside that file write the following:</p>
+<div id="b3201252" class="cell" data-execution_count="1">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>list.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>Run this script in the terminal with <code>python list.py</code> and look at the output.</p>
+<p>This will create a Python <code>list</code> with three elements and assign it to the variable <code>my_list</code>. The square brackets <code>[</code> and <code>]</code> in this case mean “create a list” and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the <code>print()</code> function.</p>
+<p>You can have as many items in a list as you like, even zero items. An empty list could look like:</p>
+<div id="8586dbc4" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And a list with six different numbers could look like:</p>
+<div id="bded4959" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">32</span>, <span class="dv">65</span>, <span class="dv">3</span>, <span class="dv">867</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can even have a mixture of different type of data in a list:</p>
+<div id="0dbdf51e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">5</span>, <span class="fl">34.6</span>, <span class="st">"Hello"</span>, <span class="op">-</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit the list so that it has some more items in it. Try adding some different data types and even rearranging the items. Make sure you save the file and rerun it in the terminal and check that the output matches what you expect.</p>
+<p><a href="../answers/answer_first_list.html"><small>answer</small></a></p>
+</div>
+</div>
+<section id="indexing" class="level3">
+<h3 class="anchored" data-anchor-id="indexing">Indexing</h3>
+<p>The power of Python’s lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called <em>indexing</em>. Indexing a list in Python is done using the square brackets <code>[]</code>. This is a different use of the square brackets to that which we saw above for <em>making</em> a list.</p>
+<p>To get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:</p>
+<div id="bfa37a35" class="cell" data-execution_count="5">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>list.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="dv">1</span>]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>The code <code>my_list[1]</code> means “give me the number 1 element of the list <code>my_list</code>”. Run this code and see what you get. Is it what you expect?</p>
+<p>You’ll probably notice that it prints <code>dog</code> whereas you may have expected it to print <code>cat</code>. This is because in Python you count from zero when indexing lists and so index <code>1</code> refers to the second item in the list. To get the first item you must use the index <code>0</code>. This <a href="https://en.wikipedia.org/wiki/Zero-based_numbering">“zero-indexing”</a> is very common and is used by most programming languages.</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try accessing some different elements from the list by putting in different number between the square brackets.</p>
+<p><a href="../answers/answer_first_indexing.html"><small>answer</small></a></p>
+</div>
+</div>
+</section>
+<section id="reverse-indexing" class="level3">
+<h3 class="anchored" data-anchor-id="reverse-indexing">Reverse indexing</h3>
+<p>Putting a single positive number in the square brackets gives us back the element which is that distance from the start of the list, but what if we wanted the <em>last</em> element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, <code>2</code>), but perhaps we don’t know (or don’t want to have to check) how long the list is.</p>
+<p>In this case we can use Python’s reverse indexing by placing a negative integer in the square brackets:</p>
+<div id="ac144987" class="cell" data-execution_count="6">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>list.py</strong></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>If you run this code then you will see that it prints <code>horse</code> which is the last item in the list. Using negative numbers allows you to count backwards from the end of the list so that <code>-1</code> is the last item, <code>-2</code> is the second-last item etc.</p>
+</section>
+<section id="python-errors" class="level3">
+<h3 class="anchored" data-anchor-id="python-errors">Python errors</h3>
+<p>Indexing lists is likely the first time you will see a Python error. Seing Python errors (also sometimes called <em>exceptions</em>) is not a sign that you’re a bad programmer or that you’re doing something terrible. All Python programmers, even those that have been using it for 20 years will still see Python errors on their screen.</p>
+<p>They are in fact a very useful feedback mechanism from the computer to the programmer but that can be a bit daunting when you first see them. Let’s look at an example and I will explain how to read it. Let’s start by creating an error.</p>
+<p>A Python list with three elements will not have an element at index <code>6</code> (the highest index in that case would be <code>2</code>) so let’s have a look at what happens if we ask for it anyway:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>list.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb7" data-filename="list.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="dv">6</span>]</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Running this you will see the following printed to the screen:</p>
+<pre><code>Traceback (most recent call last):
+  File "/home/matt/tmp/beginning_python/list.py", line 3, in &lt;module&gt;
+    my_element = my_list[6]
+IndexError: list index out of range</code></pre>
+<p>which a very dense collection of information. I always start by reading the <em>last</em> line of an error as that is usually where the most useful information is.</p>
+<p>The last line is <code>IndexError: list index out of range</code> which has two parts to it. The first is the word before the colon which tells you the type of the exception is an <code>IndexError</code>, i.e.&nbsp;an error when <em>indexing</em>. The second part of that line is usually a slightly more descriptive message, in this case telling us that the specific problem was that the index was “out of range”, i.e.&nbsp;too high or too low.</p>
+<p>Moving to the line above that, we see printed the line of code, copied from our script, at which the exception occured. This, along with the line above that which gives the file name and line number within that file, are essential in larger scripts to track down where the problem came from.</p>
+<p>Take your time to read the error messages when they are printied to the screen, they will most likely help you solve the issue. If you think that you’ve fixed the problem but the error persists, make sure that you’ve saved the script file and rerun your code afterwards.</p>
+</section>
+<section id="adding-things-to-lists" class="level3">
+<h3 class="anchored" data-anchor-id="adding-things-to-lists">Adding things to lists</h3>
+<p>Lists in Python are <em>dynamic</em>, meaning that they can change size during your script. You can add items to the end of your list by using the <code>append</code> function. The <code>append</code> function is a little different to other functions that we’ve used so far (like <code>print</code> and <code>range</code>) in that it is a part of the <code>list</code> data type so we use it like:</p>
+<div id="c2dd6283" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>my_list.append(<span class="st">"quokka"</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here you see we gave the name of our list (<code>my_list</code>) followed it by a dot (<code>.</code>) and then the name of the function that we wanted to call (<code>append</code>). Functions which are part of data types like this are sometimes called <em>methods</em>.</p>
+<p>We might describe the middle line here as “calling the <code>append</code> method on the object <code>my_list</code>”.</p>
+</section>
+<section id="extended-slicing" class="level3">
+<h3 class="anchored" data-anchor-id="extended-slicing">Extended: Slicing</h3>
+<p>As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called <em>slicing</em>. Slicing starts out the same way as standard indexing (i.e.&nbsp;with square brackets) but instead of putting a single number between them, you put multiple numbers separated by colons.</p>
+<p>Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index <code>2</code> to index <code>4</code>, you do:</p>
+<div id="e17029b5" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>my_slice <span class="op">=</span> my_list[<span class="dv">2</span>:<span class="dv">5</span>]</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_slice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Run this code and look at the output.</p>
+<p>You see that is printed <code>['green', 5.3, 'house']</code> which is index <code>2</code> (<code>'green'</code>), index <code>3</code> (<code>5.3</code>) and index <code>4</code> (<code>'house'</code>). Notice that it did not give us the element at index <code>5</code> and that is because with slicing, Python will give you the elements from the starting index up to, <em>but not including</em>, the end index.</p>
+<p>This can be confusing at first but a trick that I use to keep it straight is to count the commas in the list and treat the indexes as referring to those. So from the example here:</p>
+<div id="812e6724" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>  ↑  ↑        ↑    ↑        ↑    ↑
+  1  2        3    4        5    6</code></pre>
+<p>so <code>my_list[2:5]</code> will make a cut at index <code>2</code> and index <code>5</code>:</p>
+<div id="bc0f4f6f" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>     ↑                      ↑
+     2                      5</code></pre>
+<p>and only give you the things between them:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>[    , <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>,       ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>     ↑                      ↑
+     2                      5</code></pre>
+<p>so we end up with:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">'green'</span>, <span class="fl">5.3</span>, <span class="st">'house'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit your script to print various slices of your list. If you get an error printed, make sure you understand what it is telling you.</p>
+<p><a href="../answers/answer_first_slicing.html"><small>answer</small></a></p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -631,7 +850,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/03-lists.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/03-lists.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
