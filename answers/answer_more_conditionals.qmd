@@ -1,7 +1,13 @@
 
 **Less than:**
 
-```{.python include="../scripts/if3.py" filename="if.py" start-line=10 end-line=16}
+```{python}
+#| eval: false
+#| filename: if.py
+my_number = int(input("Enter a number: "))  # We can nest function calls directly
+
+if my_number < 100:
+    print(my_number, "is less than 100")
 ```
 
 
@@ -11,8 +17,12 @@ python if.py
 
 ```{python}
 #| echo: false
+my_number = 74 # We can nest function calls directly
 
-%run -i ../scripts/if3.py {74}
+print("Enter a number: ", my_number)
+
+if my_number < 100:
+    print(my_number, "is less than 100")
 ```
 
 <br/>
@@ -20,7 +30,16 @@ python if.py
 **Equal to:**
 
 
-```{.python include="../scripts/if4.py" filename="if.py" start-line=10 end-line=16}
+```{python}
+#| eval: false
+#| filename: if.py
+
+my_number = int(input("Enter a number: "))  # We can nest function calls directly
+
+if my_number == 100:
+    print(my_number, "== 100")
+if my_number == 74:
+    print(my_number, "== 74")
 ```
 
 
@@ -30,7 +49,14 @@ python if.py
 
 ```{python}
 #| echo: false
-%run -i ../scripts/if4.py {74}
+my_number = 74 # We can nest function calls directly
+
+print("Enter a number: ", my_number)
+
+if my_number == 100:
+    print(my_number, "== 100")
+if my_number == 74:
+    print(my_number, "== 74")
 ```
 
 
@@ -38,7 +64,17 @@ python if.py
 
 **Not equal to:**
 
-```{.python include="../scripts/if5.py" filename="if.py" start-line=10 end-line=16}
+```{python}
+#| eval: false
+#| filename: if.py
+
+my_number = int(input("Enter a number: "))  # We can nest function calls directly
+
+if my_number != 100:
+    print(my_number, "!= 100")
+
+if my_number != 74:
+    print(my_number, "!= 74")
 ```
 
 
@@ -48,7 +84,15 @@ python if.py
 
 ```{python}
 #| echo: false
-%run -i ../scripts/if5.py {74}
+my_number = 74 # We can nest function calls directly
+
+print("Enter a number: ", my_number)
+
+if my_number != 100:
+    print(my_number, "!= 100")
+
+if my_number != 74:
+    print(my_number, "!= 74")
 ```
 
-[Return to course](../pages/05-conditionals.qmd)
+[Return to course](../pages/05-conditionals.qmd#exercise-2)

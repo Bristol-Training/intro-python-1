@@ -1,7 +1,14 @@
 Whenever solving a problem like this, it's always good to build it up one step at a time. You'll be tempted to jump right to the solution but it's much easier to take very small steps. It might seem extreme but the first step in a solution should do almost nothing. I tend to start by simply outputting the input of my program to make sure that at least the input is being read correctly, before trying to do any logic with it:
 
 
-```{.python include="../scripts/leap_year1.py" filename="leap_year.py" start-line=9 end-line=11}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+print(year)
+
+
 ```
 
 
@@ -10,9 +17,13 @@ Whenever solving a problem like this, it's always good to build it up one step a
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year1.py {2024}
+year = 2024
 
+print("Enter a year:", year)
+
+print(year)
 ```
 
 
@@ -23,7 +34,13 @@ Now we know that the year is being read in correctly (note that since we're read
 The first step is to implement the simplest of the logical checks: is the year divisible by $4$? If it is, print out an appropriate message:
 
 
-```{.python include="../scripts/leap_year2.py" filename="leap_year.py" start-line=9 end-line=12}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+if year % 4 == 0:
+    print(year, "is a leap year")
 ```
 
 
@@ -34,9 +51,14 @@ and check that it works for a know leap year.
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year2.py {2024}
+year = 2024
 
+print("Enter a year:", year)
+
+if year % 4 == 0:
+    print(year, "is a leap year")
 ```
 
 
@@ -48,14 +70,28 @@ For a year that we know is not a leap year, what do we get:
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year2.py {2023}
+year = 2023
+
+print("Enter a year:", year)
+
+if year % 4 == 0:
+    print(year, "is a leap year")
 ```
 
 We get no output, so let's fix that next, by adding an `else`:
 
 
-```{.python include="../scripts/leap_year3.py" filename="leap_year.py" start-line=9 end-line=14}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+if year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -64,9 +100,16 @@ We get no output, so let's fix that next, by adding an `else`:
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year3.py {2024}
+year = 2024
 
+print("Enter a year:", year)
+
+if year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -75,9 +118,16 @@ python leap_year.py
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year3.py {2023}
+year = 2023
 
+print("Enter a year:", year)
+
+if year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -91,8 +141,16 @@ Let's check the next corner case: what happens if the year is divisible by 100. 
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year3.py {100}
+year = 100
+
+print("Enter a year:", year)
+
+if year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -102,15 +160,35 @@ So it's currently getting this wrong. We need to add in a check to see if the ye
 Here we need to be careful as any number which is divisible by $100$ is also divisible by $4$ but we want a special thing to happen in the former case. The divisible-by-$100$ check is more specific than the divisible-by$4$ check, so it must come first in the `if`/`elif`/`else` chain:
 
 
-```{.python include="../scripts/leap_year4.py" filename="leap_year.py" start-line=9 end-line=16}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+if year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 ```{.bash}
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year4.py {2024}
+year = 2024
+
+print("Enter a year:", year)
+
+if year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -119,17 +197,38 @@ python leap_year.py
 ```
 
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year4.py {2023}
+year = 2023
+
+print("Enter a year:", year)
+
+if year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
+
 
 ```{.bash}
 python leap_year.py
 ```
 
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year4.py {1900}
+year = 1900
+
+print("Enter a year:", year)
+
+if year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -145,23 +244,57 @@ python leap_year.py
 ```
 
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year4.py {2000}
+year = 2000
+
+print("Enter a year:", year)
+
+if year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
 This year should be a leap year as it is divisible by $400$. Again this is more specific than the previous two so must be added before them in the chain:
 
 
-```{.python include="../scripts/leap_year5.py" filename="leap_year.py" start-line=9 end-line=18}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+if year % 400 == 0:
+    print(year, "is a leap year")
+elif year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 ```{.bash}
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year5.py {2024}
+year = 2024
+
+print("Enter a year:", year)
+
+if year % 400 == 0:
+    print(year, "is a leap year")
+elif year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -169,8 +302,20 @@ python leap_year.py
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year5.py {2023}
+year = 2023
+
+print("Enter a year:", year)
+
+if year % 400 == 0:
+    print(year, "is a leap year")
+elif year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -178,8 +323,20 @@ python leap_year.py
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year5.py {1900}
+year = 1900
+
+print("Enter a year:", year)
+
+if year % 400 == 0:
+    print(year, "is a leap year")
+elif year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
@@ -188,11 +345,23 @@ python leap_year.py
 python leap_year.py
 ```
 ```{python}
+#| filename: leap_year.py
 #| echo: false
-%run ../scripts/leap_year5.py {2000}
+year = 2000
+
+print("Enter a year:", year)
+
+if year % 400 == 0:
+    print(year, "is a leap year")
+elif year % 100 == 0:
+    print(year, "is not a leap year")
+elif year % 4 == 0:
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
 ```
 
 
 
 
-[Return to course](../pages/05-conditionals.qmd)
+[Return to course](../pages/05-conditionals.qmd#exercise-3)

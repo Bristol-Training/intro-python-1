@@ -6,7 +6,39 @@ We've seen loops are one way of changing the default "top to bottom" reading of 
 
 The simplest place to start is the `if` statement. This lets you only run a block of code if a certain condition is true. Copy the following code into a file called `if.py` and run it with `python if.py` in the terminal:
 
-```{.python include="../scripts/if1.py" filename="if.py"}
+```{python }
+#| filename: if.py
+#| output: false
+my_number = 128
+
+if my_number > 100:
+    print(my_number, "is large")
+```
+
+```{.bash filename="Terminal/Command Prompt"}
+python if.py
+```
+
+```{python  filename="if.py"}
+#| filename: if.py
+#| echo: false
+my_number = 128
+
+if my_number > 100:
+    print(my_number, "is large")
+```
+
+
+To explore the behaviour of the `if` statement, we could edit the `if.py` script to change the value of `my_number`, but instead let's change it to that it's set via an `input` function call. The `input` function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the [`int`](https://docs.python.org/3/library/functions.html#int) function:
+
+
+```{python}
+#| filename: if.py
+#| eval: false
+my_number = int(input("Enter a number: "))  # We can nest function calls directly
+
+if my_number > 100:
+    print(my_number, "is large")
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -14,27 +46,19 @@ python if.py
 ```
 
 ```{python}
+#| filename: if.py
 #| echo: false
-%run ../scripts/if1.py
-```
+my_number = 128
 
+print("Enter a number: ", my_number)
 
-To explore the behaviour of the `if` statement, we could edit the `if.py` script to change the value of `my_number`, but instead let's change it to that it's set via an `input` function call. The `input` function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the [`int`](https://docs.python.org/3/library/functions.html#int) function:
-
-
-```{.python include="../scripts/if2.py" filename="if.py" start-line=10 end-line=13}
-```
-
-
-
-```{python}
-%run ../scripts/if2.py {128}
+if my_number > 100:
+    print(my_number, "is large")
 ```
 
 
 
-
-::: {.callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 Run the program with different inputs. Does it give you what you expect? What happens if the input is smaller than 100?
 
@@ -108,7 +132,7 @@ Notice that when *comparing* two values, we use a double equals sign (`==`), whe
 
 We also used a `#` symbol in this code to denote a "comment". Comments are ignored by Python when running your code which means you can use them to explain to other humans reading your code what it's doing. This is a good idea if there's anything non-obvious in your code.
 
-::: {.callout-tip title="Exercise 2" icon=false} 
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 
 Experiment with editing `if.py` to use some different boolean statements. Make sure you remember to save the file after each change before running it.
 
@@ -121,15 +145,17 @@ Experiment with editing `if.py` to use some different boolean statements. Make s
 We've just seen that the body of an `if` statement will only run if the conditional is `True`. But what if we want to do one thing if it's true, but another if it's false? We can do this by attaching an `else` statement to the `if` statement:
 
 
-```{.python include="../scripts/if6.py" filename="if.py" start-line=10 end-line=15}
-```
-
 ```{python}
-#| echo: false
-#| output: false
-%run ../scripts/if6.py {128}
-```
+#| filename: if.py
+#| eval: false
+my_number = int(input("Enter a number: "))
 
+if my_number > 100:
+    print(my_number, "is large")
+else:
+    print(my_number, "is not large")
+    
+```
 
 
 The `else` statement must be at the same level of indentation as the `if` keyword and does not have any option for the user to provide a boolean statement to it. In this case, you can guarantee that *one* and *only one* of the two bodies will run.
@@ -138,13 +164,16 @@ The `else` statement must be at the same level of indentation as the `if` keywor
 
 If you *do* want to provide a boolean statement to an `else` then you can use an `elif` instead. It stands for "else, if ..." and it allows you to refine the questions you are asking:
 
-
-```{.python include="../scripts/if7.py" filename="if.py" start-line=10 end-line=16}
-```
 ```{python}
-#| echo: false
-#| output: false
-%run ../scripts/if7.py {128}
+#| filename: if.py
+#| eval: false
+
+if my_number > 100:
+    print(my_number, "is large")
+elif my_number < 0:
+    print(my_number, "is negative")
+else:
+    print(my_number, "is not large")
 ```
 
 
@@ -156,13 +185,17 @@ When working out which lines of code will be run, Python will work down the list
 
 For example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:
 
-```{.python include="../scripts/if8.py" filename="if.py" start-line=9 end-line=16}
-```
-
 ```{python}
-#| echo: false
-#| output: false
-%run ../scripts/if8.py {128}
+#| filename: if.py
+#| eval: false
+my_number = int(input("Enter a number: "))
+
+if my_number > 100:
+    print(my_number, "is large")
+elif my_number > 1:
+    print(my_number, "is positive")
+else:
+    print(my_number, "negative")
 ```
 
 ## Combining questions
@@ -176,7 +209,7 @@ if my_number < 10 and my_number != 0:
 
 These combined checks can be used is both `if` and `elif` statements.
 
-::: {.callout-tip title="Exercise 3" icon=false} 
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
 
 Create a file `leap_year.py` which calculates, for a given year, whether it is a leap year and prints out the answer. You might want to read the year in using `input`, or you could hard-code it in the program.
 
