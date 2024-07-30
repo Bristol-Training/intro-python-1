@@ -1,0 +1,38 @@
+Starting with creating our data file `data.txt`:
+
+```{.txt filename="data.txt"}
+12
+54
+7
+332
+54
+1
+0
+```
+
+We have changed just one line so that it now has * 10 rather than + 17:
+
+```{python}
+#| filename: file.py
+#| eval: false
+with open("data.txt") as f:
+    for line in f:
+        number = int(line)
+        new_number = number * 10
+        print(new_number)
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| echo: false
+with open("../data/data.txt") as f:
+    for line in f:
+        number = int(line)
+        new_number = number * 10
+        print(new_number)
+```
+
+[Return to course](../appendix/appendix_files.qmd#exercise-2)

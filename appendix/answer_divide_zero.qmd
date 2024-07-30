@@ -1,0 +1,48 @@
+
+
+Start by deleting all the lines inside the file data.txt.
+
+We then edit the end of the script where it calculates the mean so that it only runs if the count is greater than zero:
+
+```{python}
+#| filename: file.py
+#| eval: false
+total = 0
+count = 0
+
+with open("data.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+        count += 1
+
+print("Sum of all", count, "values is:", total)
+
+if count > 0:
+    mean = total / count
+    print("The mean is", mean)
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| echo: false
+total = 0
+count = 0
+
+with open("../data/data2.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+        count += 1
+
+print("Sum of all", count, "values is:", total)
+
+if count > 0:
+    mean = total / count
+    print("The mean is", mean)
+```
+
+[Return to course](../appendix/appendix_files.qmd#exercise-2)

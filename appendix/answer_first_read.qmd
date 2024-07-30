@@ -1,0 +1,35 @@
+Starting with creating our data file `data.txt`:
+
+```{.txt filename="data.txt"}
+12
+54
+7
+332
+54
+1
+0
+```
+
+We then write a short script to open the data file, loop over its lines and print each in-turn. The only thing that has been changed here is the argument being passed to `open()`:
+
+```{python}
+#| filename: file.py
+#| eval: false
+with open("data.txt") as f:
+    for line in f:
+        print(line, end="")
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| filename: file.py
+#| echo: false
+with open("../data/data.txt") as f:
+    for line in f:
+        print(line, end="")
+```
+
+[Return to course](../appendix/appendix_files.qmd#exercise-1)

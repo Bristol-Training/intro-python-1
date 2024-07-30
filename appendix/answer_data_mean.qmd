@@ -1,0 +1,55 @@
+Starting with creating our data file `data.txt`:
+
+```{.txt filename="data.txt"}
+12
+54
+7
+332
+54
+1
+0
+```
+
+Here the loop itself has not changed, we've just created a new variable afterwards, `mean` which is calculated from `total` and `count`:
+
+```{python}
+#| filename: file.py
+#| eval: false
+total = 0
+count = 0
+
+with open("data.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+        count += 1
+
+mean = total / count
+
+print("Sum of all", count, "values is:", total)
+print("The mean is", mean)
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| echo: false
+total = 0
+count = 0
+
+with open("../data/data.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+        count += 1
+
+mean = total / count
+
+print("Sum of all", count, "values is:", total)
+print("The mean is", mean)
+
+```
+
+[Return to course](../appendix/appendix_files.qmd#exercise-2)

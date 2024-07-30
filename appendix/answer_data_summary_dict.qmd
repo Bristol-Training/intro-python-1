@@ -1,0 +1,54 @@
+
+
+Starting with creating our data file `data.txt`:
+
+```{.txt filename="data.txt"}
+12
+54
+7
+332
+54
+1
+0
+```
+
+The logic in this script is identical but instead of having `total`, `count` and `mean` as separate variables, we have collected them into a single dictionary:
+
+```{python}
+#| filename: file.py
+#| eval: false
+stats = {"sum": 0, "count": 0}
+
+with open("data.txt") as f:
+    for line in f:
+        number = int(line)
+        stats["sum"] += number
+        stats["count"] += 1
+
+if stats["count"] > 0:
+    stats["mean"] = stats["sum"] / stats["count"]
+
+print(stats)
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| filename: file.py
+#| eval: false
+stats = {"sum": 0, "count": 0}
+
+with open("../data/data.txt") as f:
+    for line in f:
+        number = int(line)
+        stats["sum"] += number
+        stats["count"] += 1
+
+if stats["count"] > 0:
+    stats["mean"] = stats["sum"] / stats["count"]
+
+print(stats)
+```
+

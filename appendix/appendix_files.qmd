@@ -5,28 +5,28 @@ Everything we've done so far has been completely self-contained in the script an
 The simplest this we can do with files is read a file in and print it to the screen. Make a new script called `file.py` and put the following in it:
 
 
-```python
-%%writefile file.py
-
+```{python}
+#| filename: file.py
+#| eval: false
 with open("file.py") as f:
     for line in f:
         print(line, end="")
 ```
 
-    Overwriting file.py
-
-
 When you run it, you will see the following:
 
 
-```python
-%run file.py
+```{.bash}
+python file.py
 ```
 
-    
-    with open("file.py") as f:
-        for line in f:
-            print(line, end="")
+```{python}
+#| filename: file.py
+#| echo: false
+with open("../data/file.py") as f:
+    for line in f:
+        print(line, end="")
+```
 
 
 which is (somewhat recursively) the contents of the file `file.py`.
@@ -37,8 +37,7 @@ In the next line (`for line in f:`) we are looping over the lines of the file. T
 
 Finally, we print the string `line`. Each line in the file already ends with a "new-line" character so when it is printed, it will print the new-line too. By default the `print` function will also add its own new-line so we disable that by using `end=""`.
 
-### Exercise #
-
+::: {#exercise-1 .callout-tip icon=false title='Exercise 1'} 
 - Printing out Python code isn't the most useful so let's make a data file to read instead. Make a new file called `data.txt` and put inside it:
 
   ```
@@ -50,25 +49,23 @@ Finally, we print the string `line`. Each line in the file already ends with a "
   1
   0
   ```
-- Edit `file.py` so that it prints out the contents of `data.txt` instead. 
-
-<!-- [<small>answer</small>](answer_first_read_data.ipynb) -->
+  <!-- Please note that have to link to raw html output, as this  -->
+- Edit `file.py` so that it prints out the contents of `data.txt` instead. [<small>answer</small>](answer_first_read.qmd)
+:::
 
 ## Data type conversion
 
 Simply reading the data and printing it isn't very useful. Let's take a first step towards some data analysis and pretend that the task we're trying to do is to read in data from the file and add 17 to each value.
 
 
-```python
-%%writefile file.py
-
+```{python}
+#| filename: file.py
+#| eval: false
 with open("data.txt") as f:
     for line in f:
         new_number = line + 17  # Here is where we do our "data analysis"
         print(new_number, end="")
 ```
-
-    Overwriting file.py
 
 
 If you edit `file.py` to contain this code and run it you should see an error:
@@ -85,23 +82,12 @@ This is telling us that there is an error occuring when trying to add 17 to the 
 When reading from a file like this, everything it gives you will *always* be a string, even if the string only contains digits like `"12"`. If we know that the file only contains integers then we can convert each number as it comes in using [the `int` function](https://docs.python.org/3/library/functions.html#int). Also, since we're now printing integers, we no longer need the `end=""` tweak:
 
 
-```python
-%%writefile data.txt
-12
-54
-7
-332
-54
-1
-0
-```
-
-    Overwriting data.txt
 
 
 
-```python
-%%writefile file.py
+```{python}
+#| filename: file.py
+#| eval: false
 
 with open("data.txt") as f:
     for line in f:
@@ -110,30 +96,29 @@ with open("data.txt") as f:
         print(new_number)
 ```
 
-    Overwriting file.py
-
 
 Running this new script will now print out our "processed" data:
 
-
-```python
-%run file.py
+```{.bash}
+python file.py
 ```
 
-    29
-    71
-    24
-    349
-    71
-    18
-    17
+```{python}
+#| filename: file.py
+#| echo: false
+
+with open("../data/data.txt") as f:
+    for line in f:
+        number = int(line)  # Here we do the type conversion
+        new_number = number + 17  # Here is where we do our "data analysis"
+        print(new_number)
+```
 
 
-### Exercise #
 
-- Change `file.py` to multiply the data by 10 instead of adding 17. 
+::: {#exercise-2 .callout-tip icon=false title='Exercise 2'} 
 
-<!-- [<small>answer</small>](answer_multiply_data.ipynb) -->
+- Change `file.py` to multiply the data by 10 instead of adding 17. [<small>answer</small>](answer_multiply_data.qmd)
 - After looping though the data, print out the sum of all the data values seen.
   - hint: Make an integer before the loop, initially set to zero and add to it each time around the loop
   - hint: You can increase an integer by an amount using `+=` like:
@@ -142,16 +127,9 @@ Running this new script will now print out our "processed" data:
     num += 4
     print(num)  # `num` will now be 7
     ```
-  <!-- - [<small>answer</small>](answer_data_sum.ipynb) -->
-- Print out the count of the number of data points seen as well. 
-
-<!-- [<small>answer</small>](answer_data_sum_count.ipynb) -->
-- Print out the mean average of the data in the file. 
-
-<!-- [<small>answer</small>](answer_data_mean.ipynb) -->
-- See what happens if you run the script after deleting the contents of `data.txt`. Add an `if` statement to fix it. 
-
-<!-- [<small>answer</small>](answer_divide_zero.ipynb) -->
-- Collect the statistics into a summary dictionary with keys `"sum"`, `"count"` and `"mean"`. 
-
-<!-- [<small>answer</small>](answer_data_summary_dict.ipynb) -->
+  - [<small>answer</small>](answer_data_sum.qmd)
+- Print out the count of the number of data points seen as well. [<small>answer</small>](answer_data_sum_count.qmd)
+- Print out the mean average of the data in the file. [<small>answer</small>](answer_data_mean.qmd)
+- See what happens if you run the script after deleting the contents of `data.txt`. Add an `if` statement to fix it. [<small>answer</small>](answer_divide_zero.qmd)
+- Collect the statistics into a summary dictionary with keys `"sum"`, `"count"` and `"mean"`. [<small>answer</small>](answer_data_summary_dict.qmd)
+:::

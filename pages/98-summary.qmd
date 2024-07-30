@@ -18,7 +18,7 @@ You're not expected to have committed all of this to memory already, learning an
 
 There are some topics which are included here as optional extra chapter, if you are interested:
 
-<!-- - [File reading](appendix_files.md) -->
+- [File reading](../appendix/appendix_files.qmd)
 
 ## Worksheet
 

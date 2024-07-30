@@ -18,7 +18,7 @@ You can jump ahead to any chapter:
 4. [Loops](./pages/04-loops.qmd)
 5. [Conditionals](./pages/05-conditionals.qmd)
 6. [Dictionaries](./pages/06-dictionaries.qmd)
-7. [Summary](./pages/99-summary.qmd)
+7. [Summary](./pages/98-summary.qmd)
 
 ## Setting up your workspace
 

@@ -1,0 +1,54 @@
+Starting with creating our data file `data.txt`:
+
+```{.txt filename="data.txt"}
+12
+54
+7
+332
+54
+1
+0
+```
+
+
+
+We start by defining an integer, `total` to be zero before the loop. Inside the loop we add the line of code `total += number` which increases the variable `total` by the value in the variable `number`.
+
+Finally we print the total:
+
+```{python}
+#| filename: file.py
+#| eval: false
+
+
+total = 0
+
+with open("data.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+
+print("Sum of all values is:", total)
+```
+
+```{.bash}
+python file.py
+```
+
+```{python}
+#| echo: false
+
+
+total = 0
+
+with open("../data/data.txt") as f:
+    for line in f:
+        number = int(line)
+        total += number
+
+print("Sum of all values is:", total)
+
+
+```
+
+[Return to course](../appendix/appendix_files.qmd#exercise-2)
