@@ -1,4 +1,13 @@
-```{.python include="../scripts/dict5.py" filename="dict.py"}
+```{python}
+#| filename: dict.py
+#| output: false
+sounds = {"cat": "meow", "dog": "woof"}
+
+sounds["horse"] = "neigh"
+sounds["cow"] = "moo"
+
+print(sounds)
+
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -6,8 +15,14 @@ python dict.py
 ```
 
 ```{python}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict5.py
+sounds = {"cat": "meow", "dog": "woof"}
+
+sounds["horse"] = "neigh"
+sounds["cow"] = "moo"
+
+print(sounds)
 ```
 
-[Return to course](../pages/06-dictionaries.qmd)
+[Return to course](../pages/06-dictionaries.qmd#exercise-2)

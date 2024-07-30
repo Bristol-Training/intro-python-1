@@ -1,4 +1,16 @@
-```{.python include="../scripts/dict9.py" filename="dict.py"}
+```{python}
+#| filename: dict.py
+#| output: false
+capitals = {
+    "France": "Paris",
+    "United Kingdom": "London",
+    "USA": "Washington DC",
+    "Kenya": "Nairobi"
+}
+
+for country, capital in capitals.items():
+    print("The capital of", country, "is", capital)
+
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -6,8 +18,18 @@ python dict.py
 ```
 
 ```{python}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict9.py
+capitals = {
+    "France": "Paris",
+    "United Kingdom": "London",
+    "USA": "Washington DC",
+    "Kenya": "Nairobi"
+}
+
+for country, capital in capitals.items():
+    print("The capital of", country, "is", capital)
+
 ```
 
-[Return to course](../pages/06-dictionaries.qmd)
+[Return to course](../pages/06-dictionaries.qmd#exercise-3)

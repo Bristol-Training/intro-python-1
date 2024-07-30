@@ -1,13 +1,31 @@
-```{.python include='../scripts/dict2.py' filename='dict.py'}
+
+```{python}
+#| output: false
+#| filename: dict.py
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+dog_sound = sounds["dog"]
+horse_sound = sounds["horse"]
+
+print("Dog goes", dog_sound)
+print("Horse goes", horse_sound)
 ```
+
 
 ```{.bash filename="Terminal/Command Prompt"}
 python dict.py
 ```
 
 ```{python}
-#|echo: false
-%run ../scripts/dict2.py
+#| echo: false
+#| filename: dict.py
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+dog_sound = sounds["dog"]
+horse_sound = sounds["horse"]
+
+print("Dog goes", dog_sound)
+print("Horse goes", horse_sound)
 ```
 
 
@@ -15,7 +33,14 @@ python dict.py
 If we edit our script so that it asks for a key that doesn't exist, we will see an error being produced:
 
 
-```{.python include='../scripts/dict3.py' filename='dict.py'}
+```{python}
+#| eval: false
+#| filename: dict.py
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+fish_sound = sounds["fish"]
+
+print(fish_sound)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -23,10 +48,15 @@ python dict.py
 ```
 
 ```{python}
-#|echo: false
-#|error: true
+#| echo: false
 #| output: false
-%run ../scripts/dict3.py
+#| filename: dict.py
+#| error: true
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+fish_sound = sounds["fish"]
+
+print(fish_sound)
 ```
 
 
@@ -45,5 +75,5 @@ python dict.py
     KeyError: 'fish'
 
 
-[Return to course](../pages/06-dictionaries.qmd)
+[Return to course](../pages/06-dictionaries.qmd#exercise-1)
 

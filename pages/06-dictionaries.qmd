@@ -6,16 +6,28 @@ Lists let you store lots of variables, and to access them by their location in t
 
 Dictionaries in Python are created using curly brackets. Make a new file called `dict.py` and put this in it:
 
-```{.python include="../scripts/dict1.py" filename="dict.py"}
+```{python }
+#| filename: dict.py
+#| output: false
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+cat_sound = sounds["cat"]
+
+print(cat_sound)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
 python dict.py
 ```
 
-```{python}
+```{python }
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict1.py
+sounds = {"cat": "meow", "dog": "woof", "horse": "neigh"}
+
+cat_sound = sounds["cat"]
+
+print(cat_sound)
 ```
 
 
@@ -27,7 +39,8 @@ On the next line we access the data in the dictionary `sounds`. Again, like list
 Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:
 
 
-```{python}
+```{python }
+#| filename: dict.py
 #| output: false
 sounds = {
     "cat": "meow",
@@ -42,7 +55,7 @@ print(cat_sound)
 
 
 
-::: {.callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 Edit `dict.py` to ask for the sound for the dog and the horse.
 - What happens if you ask for an animal that isn't in the dictionary?
@@ -58,7 +71,19 @@ As with lists, dictionaries are dynamic so we can add entries into a dictionary.
 Let's say that we want to add in a new sound for a cow into our `sounds` dictionary. The key that the data will have will be `"cow"` and the value will be `"moo"`. To do so we put `sounds["cow"]` on the left-hand side of a variable assignment expression, as if we're making a new variable. On the right goes the data that we want to put into the dictionary:
 
 
-```{.python include="../scripts/dict4.py" filename="dict.py"}
+```{python}
+#| filename: dict.py
+#| output: false
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+sounds["cow"] = "moo"
+
+print(sounds)
+
 ```
 
 
@@ -73,12 +98,21 @@ python dict.py
 ```
 
 ```{python}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict4.py
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+sounds["cow"] = "moo"
+
+print(sounds)
 ```
 
 
-::: {.callout-tip title="Exercise 2" icon=false} 
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 
 Edit `dict.py` so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.
 
@@ -92,26 +126,54 @@ When discussing `for` loops you were told that Python allows you to loop over lo
 
 To discover how it works, let's do the naïve thing first and just see what happens when we loop over a dictionary:
 
-```{.python include="../scripts/dict6.py" filename="dict.py"}
+```{python include="../scripts/dict6.py" filename="dict.py"}
+#| filename: dict.py
+#| output: false
+
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for thing in sounds:
+    print(thing)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
 python dict.py
 ```
 
-```{python}
+```{python include="../scripts/dict6.py" filename="dict.py"}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict6.py
+
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for thing in sounds:
+    print(thing)
 ```
-
-
 
 Hopefully, you recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the *keys*.
 
 What if, for example, you wanted to loop over the *values* instead. Well, there is a method on dictionaries called `values` which gives you just those so that you can loop over them:
 
 
-```{.python include="../scripts/dict7.py" filename="dict.py"}
+```{python}
+#| filename: dict.py
+#| output: false
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for sound in sounds.values():
+    print(sound)    
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -119,15 +181,31 @@ python dict.py
 ```
 
 ```{python}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict7.py
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for sound in sounds.values():
+    print(sound) 
 ```
-
-
 
 If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
 
-```{.python include="../scripts/dict8.py" filename="dict.py"}
+```{python}
+#| filename: dict.py
+#| output: false
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for animal, sound in sounds.items():
+    print(animal, "goes", sound)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -135,10 +213,17 @@ python dict.py
 ```
 
 ```{python}
+#| filename: dict.py
 #| echo: false
-%run ../scripts/dict8.py
-```
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
 
+for animal, sound in sounds.items():
+    print(animal, "goes", sound)
+```
 
 The `items` method gives us two pieces of data where the first is always the key and the second if always the value. We give the keys the name `animal` and the values the name `sound`. We can then use both those variables in the loop body.
 
@@ -164,7 +249,7 @@ bookshelf = {
 }
 ```
 
-::: {.callout-tip title="Exercise 3" icon=false} 
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
 
 Make a dictionary with the keys being the name of countries and the value being the country's capital city. Loop over the dictionary and print something like `"The capital of France is Paris"` for each item.
 
