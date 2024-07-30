@@ -1,6 +1,9 @@
 Here we change the line of code in our script to have the string `"Hello Matt"` instead of `"Hello from Python!"`.
 
-```{.python include="../scripts/script2.py" filename="script.py"}
+```{python}
+#| output: false
+#| filename: "script.py"
+print("Hello Matt")
 ```
 
 When we run our changed script we see that it now prints our new string to the screen:
@@ -11,7 +14,7 @@ python script.py
 
 ```{python}
 #| echo: false
-%run ../scripts/script2.py
+print("Hello Matt")
 ```
 
-[Return to course](../pages/02-data-types.qmd)
+[Return to course](../pages/02-data-types.qmd#exercise-1)

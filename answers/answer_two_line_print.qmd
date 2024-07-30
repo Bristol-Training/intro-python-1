@@ -2,7 +2,12 @@ We have moved the string out of the parentheses and into a named variable, `word
 
 
 
-```{.python include="../scripts/script3.py" filename="script.py"}
+```{python}
+#| filename: "script.py"
+#| output: false
+words = "Hello Matt"
+
+print(words)
 ```
 
 
@@ -14,8 +19,11 @@ python script.py
 ```
 
 ```{python}
+#| filename: "script.py"
 #| echo: false
-%run ../scripts/script3.py
+words = "Hello Matt"
+
+print(words)
 ```
 
-[Return to course](../pages/02-data-types.qmd)
+[Return to course](../pages/02-data-types.qmd#exercise-2)

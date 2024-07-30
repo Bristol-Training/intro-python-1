@@ -1,5 +1,9 @@
 
-```{.python include="../scripts/script5.py" start-line=7 end-line=10 filename="script.py"}
+```{.python filename="script.py"}
+greeting = "Hello"
+name = input("What is your name? ")
+
+print(greeting, name)
 ```
 
 
@@ -7,11 +11,16 @@
 python script.py
 ```
 
-```{python}
+```{python filename="script.py"}
 #| echo: false
-%run ../scripts/script5.py {'Matt'}
+greeting = "Hello"
+name = "Matt"
+
+print("What is your name?", name)
+
+print(greeting, name)
 ```
 
-[Return to course](../pages/02-data-types.qmd)
+[Return to course](../pages/02-data-types.qmd#exercise-4)
 
 

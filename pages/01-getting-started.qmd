@@ -9,7 +9,11 @@ A Python script is a simple text file containing a set of instructions. As long 
 To create our script, go to the text editor pane in JupyterLab and type into it:
 
 
-```{.python include="../scripts/script1.py" filename="script.py"} 
+```{python}
+#| filename: "script.py" 
+#| output: false 
+
+print("Hello from Python")
 ```
 
 Then go to *File → Save File* and you'll see the small black circle next to the words "untitled.txt" in the tab change to a cross.
@@ -32,8 +36,9 @@ If you do that you should see, printed to the terminal:
 
 
 ```{python}
+#| filename: "script.py" 
 #| echo: false
-%run ../scripts/script1.py
+print("Hello from Python")
 ```
 
 Congratulations, you've just written and executed your very first Python programme!
@@ -61,7 +66,10 @@ Important things to remember for this section are:
 In these notes, any time that we're seeing a full Python script, we'll see it written like the following:
 
 
-```{.python include="../scripts/script1.py" filename="script.py"} 
+```{python}
+#| filename: "script.py" 
+#| output: false
+print("Hello from Python")
 ```
 
 Here, the name that we give the file (`script.py`) is above the code block, and the contents of the file (`print("Hello from Python")`) are below it.
@@ -73,6 +81,12 @@ We'll denote "run in the Terminal" with a `Terminal/Command Prompt` sign at the 
 python script.py
 ```
 
+```{python}
+#| filename: "script.py" 
+#| echo: false
+#| output: false
+print("Hello from Python")
+```
 
 
 And we see the expected output displayed below it.
@@ -80,8 +94,7 @@ And we see the expected output displayed below it.
 By contrast, any time we're just showing you a small snippet of code, for example to demonstrate a point, it will be shown like:
 
 ```{python}
-#| echo: false
-%run ../scripts/script1.py
+print("Hello from Python")
 ```
 
 

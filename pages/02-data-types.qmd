@@ -29,7 +29,7 @@ and they can even be empty:
 
 It is possible in Python to also use single quotes (`'`) to make strings, as long as the string starts and ends with the same type of quote, but it is convention to prefer double quotes.
 
-::: {.callout-tip title="Exercise 1" icon=false}
+::: {#exercise-1 .callout-tip icon=false title='Exercise 1'}
 
 Edit the file `script.py` to print out your name so that when it's run it shows something like:
 
@@ -88,7 +88,11 @@ So, for a variable which contains a number representing a distance in miles, avo
 These two can be combined into a full Python script:
 
 
-```{.python include="../scripts/variables1.py" filename="variables.py"}
+```{python}
+#| output: false
+#| filename: "variables.py"
+pi = 3.14159
+print(pi)
 ```
 
 and run with:
@@ -99,11 +103,12 @@ python variables.py
 ```
 ```{python}
 #| echo: false
-%run ../scripts/variables1.py
+pi = 3.14159
+print(pi)
 ```
 
 
-::: {.callout-tip title="Exercise 2" icon=false}
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false}
 
 Edit your `script.py` to split it over two lines. The first line should create a string and give it a variable name and the second line should use that name to print. Make sure you save the file and rerun it in the terminal.
 
@@ -141,7 +146,11 @@ So far we've been giving the `print` function a single argument to print a singl
 
 
 
-```{.python include="../scripts/colour1.py" filename="colour.py"}
+```{python}
+#| output: false
+#| filename: "colour.py"
+fav = "red"
+print("My favourite colour is", fav)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -150,10 +159,11 @@ python colour.py
 
 ```{python}
 #| echo: false
-%run ../scripts/colour1.py
+fav = "red"
+print("My favourite colour is", fav)
 ```
 
-::: {.callout-tip title="Exercise 3" icon=false}
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false}
 
 Edit `script.py` so that the two parts of the phrase are passed to `print` as separate arguments. Make sure you save the file and rerun it in the terminal.
 
@@ -172,7 +182,12 @@ The `input` function will pause the program and wait for you to type something i
 
 
 
-```{.python include="../scripts/colour2.py" start-line=8 end-line=12 filename="colour.py"}
+```{.python filename="colour.py"}
+print("What is your favourite colour?")
+
+fav = input()
+
+print("My favourite colour is", fav)
 ```
 
 
@@ -185,7 +200,12 @@ python colour.py
 
 ```{python}
 #| echo: false
-%run ../scripts/colour2.py {'red'}
+print("What is your favourite colour?")
+
+fav = 'red'
+print(fav)
+
+print("My favourite colour is", fav)
 ```
 
 
@@ -200,14 +220,22 @@ python colour.py
 
 ```{python}
 #| echo: false
-%run ../scripts/colour2.py {'green'}
+print("What is your favourite colour?")
+
+fav = 'green'
+print(fav)
+
+print("My favourite colour is", fav)
 ```
 
 ### The prompt
 
 One small improvement we can make is that instead of printing our message "What is your favourite colour?", prompting the user of the script to type something, we can do this directly with the `input` function by giving the prompt as an argument:
 
-```{.python include="../scripts/colour3.py" start-line=8 end-line=10 filename="colour.py"}
+```{.python filename="colour.py"}
+fav = input("What is your favourite colour?")
+
+print("My favourite colour is", fav)
 ```
 
 Note that there is a space after the question mark so that when you're typing in your answer it's not butting directly against the character:
@@ -217,12 +245,15 @@ Note that there is a space after the question mark so that when you're typing in
 python colour.py
 ```
 
-```{python}
+```{python filename="colour.py"}
 #| echo: false
-%run ../scripts/colour3.py {'red'}
+fav = 'red'
+print("What is your favourite colour?", fav)
+
+print("My favourite colour is", fav)
 ```
 
-::: {.callout-tip title="Exercise 4" icon=false} 
+::: {#exercise-4 .callout-tip title="Exercise 4" icon=false} 
 
 Edit `script.py` so the value of the variable `name` is set using the `input` function. Be sure to set a prompt as well so that the user know that they should type something.
 

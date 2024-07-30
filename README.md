@@ -11,9 +11,9 @@ This course is currently under development
 
 # Dependencies
 
-* Full dependencies managed in conda. Can be found in requirements.txt.
+Install quarto [here](https://quarto.org/docs/get-started/)
 
-* Dependencies for github actions can be found in `requirements-actions.txt`
+
 
 ## Notes
 
