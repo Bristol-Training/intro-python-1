@@ -1,0 +1,83 @@
+---
+title: Summary
+---
+Well done for getting this far! We've covered a lot in this course:
+
+- JupyterLab
+- The `print()` function
+- Basic data types: strings, floats and integers
+- Indexing, slicing and appending to lists
+- Reading Python errors
+- Branching logic using `if` statements
+- Looping over different data structures such as lists and dictionaries
+- Creating, modifying and accessing dictionaries
+
+You're not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practise that you will become confident. These notes will remain online so feel free to refer back to them at any time.
+
+## Bonus topics
+
+There are some topics which are included here as optional extra chapter, if you are interested:
+
+<!-- - [File reading](appendix_files.md) -->
+
+## Worksheet
+
+ To give you something to take away with you to practise with, there is a <!--[worksheet with questions](appendix_practice_questions.md)-->. If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.
+
+### One last challenge
+
+Let's end this session with a more difficult challenge. We're going to make a calculator which can read numerical operations from the input and print the answers to the screen.
+
+For example, it should print out an input prompt like
+
+```
+>
+```
+
+into which you can type a calculation as
+
+```
+> 4 * 6
+```
+
+and it should then print out the answer like
+
+```
+> 4 * 6
+4 * 6 is 24
+```
+
+Examples of inputs it should be able to accept are:
+
+```
+4 * 6
+5 + 6
+457 - 75
+54 / 3
+4 + 6
+```
+
+Notice that all the input strings have spaces around the operator, this will make your life much easier if you assume this.
+
+One extra function you will need to do this is [the `split` function](https://docs.python.org/3/library/stdtypes.html#str.split) which takes a string and returns a list containing the string, split by spaces. Also, remember the `int` function which can convert a string into an integer.
+
+<!-- [<small>answer</small>](answer_calculator.qmd) -->
+
+#### Bonus
+
+- The examples only have integers in them, can you adjust your program so that it can accept floating point numbers as well?
+- Can you adapt your program so that it can support code with or without spaces either side of the operator? This is a more challenging exercise so feel free to ask for some some help and be sure to show one of the instructors your answer once you've got it working.
+
+If you'd like to learn more Python take a look at either:
+
+- [Intermediate Python](https://milliams.com/courses/intermediate_python/) for more information about Python and how to make your code modular and reusable.
+- [Introduction to Data Analysis in Python](https://milliams.com/courses/data_analysis_python/) to learn about how Python can aid your data analyses.
+
+## Credits
+
+This course was originally written by Christopher Woods and published at https://chryswoods.com/beginning_python/. Some changes were made by the ACRC at the University of Bristol. The course was revised by Matt Williams.
+
+All text is published under a [Creative Commons Attribution 4.0 International
+License](https://creativecommons.org/licenses/by/4.0/) with all code snippets licensed as MIT.
+
+The source for the material can be found on [GitLab](https://gitlab.com/milliams/beginning_python) where fixes are welcome.
