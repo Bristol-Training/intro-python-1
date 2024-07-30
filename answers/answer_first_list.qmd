@@ -1,7 +1,12 @@
 We have changed our list by adding two more items to the end of it. We add an integer, `7` and a new string, `"quail"`. Each is still separated by a comma:
 
 
-```{.python include="../scripts/list1.py"}
+```{python}
+#| filename: list.py
+#| output: false
+my_list = ["cat", "dog", "horse", 7, "quail"]
+
+print(my_list)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -9,14 +14,19 @@ python list.py
 ```
 ```{python}
 #| echo: false
-%run ../scripts/list1.py
+my_list = ["cat", "dog", "horse", 7, "quail"]
+print(my_list)
 ```
 
 
 Here we edit our list so that the items are all in a different order:
 
 
-```{.python include="../scripts/list2.py"}
+```{python}
+#| filename: list.py
+#| output: false
+my_list = ["quail", "cat", 7, "dog", "horse"]
+print(my_list)
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -24,7 +34,8 @@ python list.py
 ```
 ```{python}
 #| echo: false
-%run ../scripts/list2.py
+my_list = ["quail", "cat", 7, "dog", "horse"]
+print(my_list)
 ```
 
-[Return to course](../pages/03-lists.qmd)
+[Return to course](../pages/03-lists.qmd#exercise-1)

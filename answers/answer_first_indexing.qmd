@@ -25,7 +25,7 @@ python list.py
 %run ../scripts/list3.py
 ```
 
-[Return to course](../pages/03-lists.qmd)
+[Return to course](../pages/03-lists.qmd#exercise-2)
 
 
 

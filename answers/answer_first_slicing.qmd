@@ -1,7 +1,15 @@
 We make a list and then select a few slices of it:
 
 
-```{.python include="../scripts/list5.py" filename="list.py"}
+```{python}
+#| filename: list.py
+#| output: false
+my_list = [3, 5, "green", 5.3, "house", 100, 1]
+
+print(my_list[2:4])
+print(my_list[3:-2])
+print(my_list[0:1])
+print(my_list[-4:-1])
 
 ```
 
@@ -35,8 +43,15 @@ python list.py
 ```
 
 ```{python}
+#| filename: list.py
 #| echo: false
-%run ../scripts/list5.py
+my_list = [3, 5, "green", 5.3, "house", 100, 1]
+
+print(my_list[2:4])
+print(my_list[3:-2])
+print(my_list[0:1])
+print(my_list[-4:-1])
+
 ```
 
-[Return to course](../pages/03-lists.qmd)
+[Return to course](../pages/03-lists.qmd#exercise-3)

@@ -37,7 +37,7 @@ You can even have a mixture of different type of data in a list:
 my_list = [5, 34.6, "Hello", -6]
 ```
 
-::: {.callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 Edit the list so that it has some more items in it. Try adding some different data types and even rearranging the items. Make sure you save the file and rerun it in the terminal and check that the output matches what you expect.
 
@@ -65,7 +65,7 @@ The code `my_list[1]` means "give me the number 1 element of the list `my_list`"
 
 You'll probably notice that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used by most programming languages.
 
-::: {.callout-tip title="Exercise 2" icon=false} 
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 
 Try accessing some different elements from the list by putting in different number between the square brackets.
 
@@ -102,7 +102,16 @@ They are in fact a very useful feedback mechanism from the computer to the progr
 A Python list with three elements will not have an element at index `6` (the highest index in that case would be `2`) so let's have a look at what happens if we ask for it anyway:
 
 
-```{.python include="../scripts/list4.py" filename="list.py"}
+```{python}
+#| output: false
+#| filename: list.py
+#| error: true
+
+my_list = ["cat", "dog", "horse"]
+
+my_element = my_list[6]
+
+print(my_element)
 ```
 
 
@@ -203,7 +212,7 @@ so we end up with:
 ['green', 5.3, 'house']
 ```
 
-::: {.callout-tip title="Exercise 3" icon=false} 
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
 
 Edit your script to print various slices of your list. If you get an error printed, make sure you understand what it is telling you.
 
