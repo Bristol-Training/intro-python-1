@@ -18,7 +18,16 @@ print(word)
 To print our second word, we could copy and paste those two lines to create a program which can print both words:
 
 
-```{.python include="../scripts/loops1.py" filename="loop.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+word = "Hello"
+
+print(word)
+
+word = "Python"
+
+print(word)
 ```
 
 
@@ -27,8 +36,15 @@ python loop.py
 ```
 
 ```{python}
+#| filename: loop.py
 #| echo: false
-%run ../scripts/loops1.py
+word = "Hello"
+
+print(word)
+
+word = "Python"
+
+print(word)
 ```
 
 
@@ -44,7 +60,14 @@ my_words = ["Hello", "Python"]
 we can now write a loop which will perform a task once for each word in our list:
 
 
-```{.python include="../scripts/loops2.py" filename="loop.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+    
 ```
 
 Now, when we run it, we should see that it prints the same output as our previous example.
@@ -54,8 +77,13 @@ python loop.py
 ```
 
 ```{python}
+#| filename: loop.py
 #| echo: false
-%run ../scripts/loops2.py
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+    
 ```
 
 We've taken a script that was four lines of code and have reduced it to three lines. That might not seem like much of a reduction but the loop we wrote will work no matter how many items there are in the list `my_words`.
@@ -69,7 +97,7 @@ for item in shopping_list:
     buy(item)
 ```
 
-::: {.callout-tip title="Exercise 1" icon=false} 
+::: {#exercise-1 .callout-tip title="Exercise 1" icon=false} 
 
 Edit `loop.py` to have a different number of words in the list.
 - Does it work if you put numbers (i.e. integers or floats) in there as well?
@@ -134,7 +162,15 @@ for word in my_words<b style="color:darkred">:</b>
 If we want to write code after the end of a loop, we have to make sure that it is *not* indented. So this code:
 
 
-```{.python include="../scripts/loops6.py" filename="loop.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+print("...Goodbye")
 ```
 
 will print:
@@ -146,7 +182,12 @@ python loop.py
 
 ```{python}
 #| echo: false
-%run ../scripts/loops6.py
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+print("...Goodbye")
 ```
 
 
@@ -154,6 +195,14 @@ but this code:
 
 
 ```{.python include="../scripts/loops7.py" filename="loop.py"}
+#| filename: loop.py
+#| output: false
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+    print("...Goodbye")
 ```
 
 will print:
@@ -163,9 +212,14 @@ will print:
 python loop.py
 ```
 
-```{python}
+```{python }
 #| echo: false
-%run ../scripts/loops7.py
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+    print("...Goodbye")
 ```
 
 
@@ -201,7 +255,7 @@ for letter in phrase:
 
 Looping over a string will always give you one letter at a time.
 
-::: {.callout-tip title="Exercise 2" icon=false} 
+::: {#exercise-2 .callout-tip title="Exercise 2" icon=false} 
 
 Experiment with `loop.py` and make it loop over both lists and strings.
 
@@ -213,7 +267,11 @@ Experiment with `loop.py` and make it loop over both lists and strings.
 There's a built in function in Python called `range` which provides you with numbers in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an agument. We can put this call to the `range` function directly into our loop as the object to loop over:
 
 
-```{.python include="../scripts/loops10.py" filename="loop.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+for number in range(5):
+    print(number)
 ```
 
 will print:
@@ -223,14 +281,20 @@ python loop.py
 ```
 
 ```{python}
+#| filename: loop.py
 #| echo: false
-%run ../scripts/loops10.py
+for number in range(5):
+    print(number)
 ```
 
 The `range` function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:
 
 
-```{.python include="../scripts/loops11.py" filename="loop.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+for number in range(10, 13):
+    print(number)
 ```
 
 
@@ -241,8 +305,10 @@ python loop.py
 ```
 
 ```{python}
+#| filename: loop.py
 #| echo: false
-%run ../scripts/loops11.py
+for number in range(10, 13):
+    print(number)
 ```
 
 ## Extended: Enumerating
@@ -265,7 +331,7 @@ for <b style="color:darkred">index, word</b> in enumerate(my_words):
     print(word, "is at index", index)
 </pre>
 
-::: {.callout-tip title="Exercise 3" icon=false} 
+::: {#exercise-3 .callout-tip title="Exercise 3" icon=false} 
 
 Write a script (`loop_exercise.py`) which creates a list of floats and loops over them, printing the index of the element as well as the value of the float.
 

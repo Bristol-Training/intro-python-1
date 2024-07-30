@@ -1,4 +1,10 @@
-```{.python include="../scripts/loops12.py" filename=loops.py}
+```{python}
+#| filename: loop.py
+#| output: false
+my_numbers = [4.5, 3.7, 8.9, 2.3, 3.14159, 4.0]
+
+for index, value in enumerate(my_numbers):
+    print(index, ":", value) 
 ```
 
 ```{.bash filename="Terminal/Command Prompt"}
@@ -6,8 +12,12 @@ python loop.py
 ```
 
 ```{python}
+#| filename: loop.py
 #| echo: false
-%run ../scripts/loops12.py
+my_numbers = [4.5, 3.7, 8.9, 2.3, 3.14159, 4.0]
+
+for index, value in enumerate(my_numbers):
+    print(index, ":", value) 
 ```
 
-[Return to course](../pages/04-loops.qmd)
+[Return to course](../pages/04-loops.qmd#exercise-3)

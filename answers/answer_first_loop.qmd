@@ -1,7 +1,14 @@
 Adding more items to the list makes the loop go around more times:
 
 
-```{python include=""../scripts/loops3.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+my_words = ["Hello", "Python", "Goodbye", "Python"]
+
+for word in my_words:
+    print(word)
+    
 ```
 
 
@@ -10,8 +17,12 @@ python loop.py
 ```
 
 ```{python}
-#|echo: false
-%run ../scripts/loops3.py
+#| filename: loop.py
+#| echo: false
+my_words = ["Hello", "Python", "Goodbye", "Python"]
+
+for word in my_words:
+    print(word)
 ```
 
 
@@ -19,6 +30,13 @@ A list with a mixture of data types can be printed witout issue:
 
 
 ```{python include=""../scripts/loops4.py"}
+#| filename: loop.py
+#| output: false
+
+my_words = ["Hello", "Python", 404, "Goodbye", "Python", 42]
+
+for word in my_words:
+    print(word)
 ```
 
 
@@ -26,15 +44,26 @@ A list with a mixture of data types can be printed witout issue:
 python loop.py
 ```
 
-```{python}
-#|echo: false
-%run ../scripts/loops4.py
+```{python include=""../scripts/loops4.py"}
+#| filename: loop.py
+#| echo: false
+
+my_words = ["Hello", "Python", 404, "Goodbye", "Python", 42]
+
+for word in my_words:
+    print(word)
 ```
 
 Looping over an empty list does not print anything:
 
 
-```{python include=""../scripts/loops5.py"}
+```{python}
+#| filename: loop.py
+#| output: false
+my_words = []
+
+for word in my_words:
+    print(word)
 ```
 
 
@@ -43,9 +72,14 @@ python loop.py
 ```
 
 ```{python}
-#|echo: false
-%run ../scripts/loops5.py
+#| filename: loop.py
+#| echo: false
+my_words = []
+
+for word in my_words:
+    print(word)
 ```
 
 
-[Return to course](../pages/04-loops.qmd)
+
+[Return to course](../pages/04-loops.qmd#exercise-1)
