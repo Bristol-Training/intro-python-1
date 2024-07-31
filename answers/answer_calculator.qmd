@@ -47,12 +47,9 @@ def calculator(calculation):
 
 
 
-```{bash}
-#| filename: "Terminal/Command Prompt"
+```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-4 * 6
 ```
-
 ```{python}
 #| echo: false
 calculation = "4 * 6"
@@ -62,7 +59,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 5 + 6
 ```
 ```{python}
 #| echo: false
@@ -73,7 +69,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 457 - 75
 ```
 ```{python}
 #| echo: false
@@ -84,14 +79,12 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 54 / 3
 ```
 ```{python}
 #| echo: false
 calculation = "54 / 3"
 calculator(calculation)
 ```
-
 
 
 ## Possible improvements
@@ -168,10 +161,8 @@ def calculator(calculation):
     print(calculation, "is", result)
 ```
 
-```{bash}
-#| filename: "Terminal/Command Prompt"
+```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-4 * 6
 ```
 
 ```{python}
@@ -183,7 +174,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 5 + 6
 ```
 ```{python}
 #| echo: false
@@ -194,7 +184,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 457 - 75
 ```
 ```{python}
 #| echo: false
@@ -205,7 +194,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 54 / 3
 ```
 ```{python}
 #| echo: false
@@ -215,7 +203,7 @@ calculator(calculation)
 
 
 
-### Advanced: Using the `operator` module
+## Advanced: Using the `operator` module
 
 We haven't covered using extra modules in this course so far, but you might have come across these if you've done some Python before. We cover this in more detail in the [Intermediate Python chapter *Using Functions*](https://milliams.com/courses/intermediate_python/Using%20functions.html). I'm showing you this way to solve the problem, not because I expect you to able to do this already, but so that when you look back at these notes in the future you see how you might solve the problem differently.
 
@@ -253,17 +241,6 @@ print(calculation, "is", result)
 
 
 ```{python}
-# %%run_python_script -i calc.py
-
-```
-
-
-```python
-# %%run_python_script -i calc.py
-4 * 6
-```
-
-```{python}
 #| filename: calc.py
 #| echo: false
 import operator
@@ -297,10 +274,8 @@ def calculator(calculation):
 ```
 
 
-```{bash}
-#| filename: "Terminal/Command Prompt"
+```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-4 * 6
 ```
 
 ```{python}
@@ -312,7 +287,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 5 + 6
 ```
 ```{python}
 #| echo: false
@@ -323,7 +297,6 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 457 - 75
 ```
 ```{python}
 #| echo: false
@@ -334,10 +307,11 @@ calculator(calculation)
 
 ```{.bash filename="Terminal/Command Prompt"}
 python calc.py
-> 54 / 3
 ```
 ```{python}
 #| echo: false
 calculation = "54 / 3"
 calculator(calculation)
 ```
+
+[Return to course](../pages/98-summary.qmd#exercise-1)

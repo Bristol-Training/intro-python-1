@@ -22,9 +22,9 @@ There are some topics which are included here as optional extra chapter, if you 
 
 ## Worksheet
 
- To give you something to take away with you to practise with, there is a <!--[worksheet with questions](appendix_practice_questions.md)-->. If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.
+ To give you something to take away with you to practise with, there is a [worksheet with questions](../appendix/appendix_practice_questions.qmd). If you get to this point in the session then feel free to start now, otherwise work on them between this session and the next.
 
-### One last challenge
+::: {#exercise-1 .callout-tip title="One Last Challenge" icon=false} 
 
 Let's end this session with a more difficult challenge. We're going to make a calculator which can read numerical operations from the input and print the answers to the screen.
 
@@ -61,7 +61,7 @@ Notice that all the input strings have spaces around the operator, this will mak
 
 One extra function you will need to do this is [the `split` function](https://docs.python.org/3/library/stdtypes.html#str.split) which takes a string and returns a list containing the string, split by spaces. Also, remember the `int` function which can convert a string into an integer.
 
-<!-- [<small>answer</small>](answer_calculator.qmd) -->
+[<small>answer</small>](../asnwers//answer_calculator.qmd)
 
 #### Bonus
 
@@ -73,11 +73,4 @@ If you'd like to learn more Python take a look at either:
 - [Intermediate Python](https://milliams.com/courses/intermediate_python/) for more information about Python and how to make your code modular and reusable.
 - [Introduction to Data Analysis in Python](https://milliams.com/courses/data_analysis_python/) to learn about how Python can aid your data analyses.
 
-## Credits
-
-This course was originally written by Christopher Woods and published at https://chryswoods.com/beginning_python/. Some changes were made by the ACRC at the University of Bristol. The course was revised by Matt Williams.
-
-All text is published under a [Creative Commons Attribution 4.0 International
-License](https://creativecommons.org/licenses/by/4.0/) with all code snippets licensed as MIT.
-
-The source for the material can be found on [GitLab](https://gitlab.com/milliams/beginning_python) where fixes are welcome.
+:::

@@ -133,3 +133,5 @@ with open("../data/data.txt") as f:
 - See what happens if you run the script after deleting the contents of `data.txt`. Add an `if` statement to fix it. [<small>answer</small>](answer_divide_zero.qmd)
 - Collect the statistics into a summary dictionary with keys `"sum"`, `"count"` and `"mean"`. [<small>answer</small>](answer_data_summary_dict.qmd)
 :::
+
+[Return to summary](../pages/98-summary.qmd#bonus-topics)
