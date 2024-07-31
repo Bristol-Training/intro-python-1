@@ -194,7 +194,7 @@ print("...Goodbye")
 but this code:
 
 
-```{.python include="../scripts/loops7.py" filename="loop.py"}
+```{.python filename="loop.py"}
 #| filename: loop.py
 #| output: false
 my_words = ["Hello", "Python"]

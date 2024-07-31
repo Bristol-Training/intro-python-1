@@ -61,7 +61,7 @@ Notice that all the input strings have spaces around the operator, this will mak
 
 One extra function you will need to do this is [the `split` function](https://docs.python.org/3/library/stdtypes.html#str.split) which takes a string and returns a list containing the string, split by spaces. Also, remember the `int` function which can convert a string into an integer.
 
-[<small>answer</small>](../asnwers//answer_calculator.qmd)
+[<small>answer</small>](../answers//answer_calculator.qmd)
 
 #### Bonus
 
