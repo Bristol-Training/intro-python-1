@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_country_dictionary – Beginning Python</title>
+<title>appendix_practice_questions – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,6 +101,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -111,8 +140,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link active" data-scroll-target="#practice-questions">Practice questions</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/appendix/appendix_practice_questions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -120,39 +155,97 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="e166abd1" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>dict.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>capitals <span class="op">=</span> {</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"France"</span>: <span class="st">"Paris"</span>,</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"United Kingdom"</span>: <span class="st">"London"</span>,</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"USA"</span>: <span class="st">"Washington DC"</span>,</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kenya"</span>: <span class="st">"Nairobi"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> country, capital <span class="kw">in</span> capitals.items():</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The capital of"</span>, country, <span class="st">"is"</span>, capital)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="25982b95" class="cell" data-filename="dict.py" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>The capital of France is Paris
-The capital of United Kingdom is London
-The capital of USA is Washington DC
-The capital of Kenya is Nairobi</code></pre>
-</div>
-</div>
-<p><a href="../pages/06-dictionaries.html#exercise-3">Return to course</a></p>
+<section id="practice-questions" class="level2">
+<h2 class="anchored" data-anchor-id="practice-questions">Practice questions</h2>
+<p>This page contains a number of questions and exercises to give you a chance to practise what you have learned this session.</p>
+<p>You should create a new <code>.py</code> Python file for each exercise.</p>
+<section id="exercise-1" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<p>Create a list containing 5 different animal types, for example: - cat - dog - elephant - minnow - beaver</p>
+<p>Print out the list to the screen.</p>
+</section>
+<section id="exercise-2" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
+<p>Start by copying the code that you used to create the list of animals in the last exercise. Write a loop which will print out each of the animals, prefixed with <code>Species:</code>. For example the output could look like:</p>
+<pre><code>Species: cat
+Species: dog
+Species: elephant
+Species: minnow
+Species: beaver</code></pre>
+</section>
+<section id="exercise-3" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-3">Exercise 3</h4>
+<p>Create a list containing 10 different numbers, ranging from 0 to 100. For example: <span class="math inline">\(65, 54, 17, 78, 66, 24, 32, 80, 79, 95\)</span>.</p>
+<p>Write a loop which will print out only those numbers which are larger than 50.</p>
+</section>
+<section id="exercise-4" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-4">Exercise 4</h4>
+<p>Create a loop which iterates over the numbers from 1 to 20 (inclusive). Inside the loop: - if the number is divisible by three then print “ook”, - if the number is divisible by both three and five then print “foo”, - and if the number is not divisible by either then just print the number.</p>
+<p><small><button onclick="var x = document.getElementById('hint-ghrndo');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-ghrndo" style="display: none;"> You can use the <code>%</code> operator to <a href="https://docs.python.org/3/reference/expressions.html#index-68">find the remainder from a division</a>. Also, take care in the order that you do your <code>if</code>/<code>elif</code>.</span></small></p>
+</section>
+<section id="exercise-5" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-5">Exercise 5</h4>
+<p>Make a dictionary from the following table of data. The keys of the dictionary should be the names of the paintings and the values should be name of the artist.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Painting</th>
+<th>Artist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Sunflowers</td>
+<td>van Gogh</td>
+</tr>
+<tr class="even">
+<td>The Starry Night</td>
+<td>van Gogh</td>
+</tr>
+<tr class="odd">
+<td>The Night Watch</td>
+<td>Rembrandt</td>
+</tr>
+<tr class="even">
+<td>The Two Fridas</td>
+<td>Kahlo</td>
+</tr>
+<tr class="odd">
+<td>Balloon Girl</td>
+<td>Banksy</td>
+</tr>
+<tr class="even">
+<td>Devolved Parliament</td>
+<td>Banksy</td>
+</tr>
+<tr class="odd">
+<td>Going to Work</td>
+<td>Lowry</td>
+</tr>
+</tbody>
+</table>
+<p>Write some code which will print out the work of art and the name of the artist if: 1. the artist’s name has an “h” in it, 2. or the name of the artwork is longer than 13 letters.</p>
+<p><small><button onclick="var x = document.getElementById('hint-ghtuid');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-ghtuid" style="display: none;"> There is an <a href="https://docs.python.org/3/reference/expressions.html#membership-test-details"><code>in</code> operator</a> for searching inside strings and a <a href="https://docs.python.org/3/library/functions.html#len"><code>len</code> function</a> for seeing how long something is.</span></small></p>
+</section>
+<section id="exercise-6" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-6">Exercise 6</h4>
+<p>Make a dictionary of the same information as the last question, but the other way around this time. The key in the dictionary should be the name of the artist, and the value should be a list of names of their paintings.</p>
+<p>Write some code which will check <em>every painting</em> in the data set. Print out the work of art and the name of the artist if: 1. the artist has more than one painting 2. and the name of the painting has more than one word.</p>
+<p><small><button onclick="var x = document.getElementById('hint-jgntug');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-jgntug" style="display: none;"> Some artists only have one work of art here. Consider putting their single artwork in a single-item list, rather than just as a string.</span></small></p>
+</section>
+<section id="exercise-7" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-7">Exercise 7</h4>
+<p>Create a list with some words in it, making sure some words are repeated.</p>
+<p>The task is to fill up a dictionary so that it contains the count of the number of times each word appears in the list.</p>
+<p>So, for example if your word list looks like:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>word_list <span class="op">=</span> [<span class="st">"to"</span>, <span class="st">"be"</span>, <span class="st">"or"</span>, <span class="st">"not"</span>, <span class="st">"to"</span>, <span class="st">"be"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>then the output dictionary would look like:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>{<span class="st">"to"</span>: <span class="dv">2</span>, <span class="st">"be"</span>: <span class="dv">2</span>, <span class="st">"or"</span>: <span class="fl">1.</span> <span class="st">"not"</span>: <span class="dv">1</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><small><button onclick="var x = document.getElementById('hint-ownfue');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-ownfue" style="display: none;"> You can check whether a dictionary already has a particular key in it using the <code>in</code> operator.</span></small></p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -583,7 +676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_country_dictionary.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/appendix/appendix_practice_questions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

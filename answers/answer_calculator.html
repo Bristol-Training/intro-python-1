@@ -117,6 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#possible-improvements" id="toc-possible-improvements" class="nav-link active" data-scroll-target="#possible-improvements">Possible improvements</a></li>
+  <li><a href="#advanced-using-the-operator-module" id="toc-advanced-using-the-operator-module" class="nav-link" data-scroll-target="#advanced-using-the-operator-module">Advanced: Using the <code>operator</code> module</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_calculator.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -127,7 +128,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><code>calc.py</code> could look like:</p>
-<div id="b327a808" class="cell" data-execution_count="1">
+<div id="f6b3c4e2" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>calc.py</strong></pre>
@@ -149,10 +150,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(calculation, <span class="st">"is"</span>, lhs <span class="op">/</span> rhs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<pre class="{bash}"><code>#| filename: "Terminal/Command Prompt"
-python calc.py
-4 * 6</code></pre>
-<div id="0a8e7410" class="cell" data-execution_count="3">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="10250ed0" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 4 * 6
 4 * 6 is 24</code></pre>
@@ -162,10 +166,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 5 <span class="ex">+</span> 6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="2db5f1d0" class="cell" data-execution_count="4">
+<div id="2bb79bc0" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 5 + 6
 5 + 6 is 11</code></pre>
@@ -175,10 +178,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 457 <span class="ex">-</span> 75</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cb506755" class="cell" data-execution_count="5">
+<div id="36d3eeb7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 457 - 75
 457 - 75 is 382</code></pre>
@@ -188,10 +190,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 54 <span class="ex">/</span> 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="232a99a7" class="cell" data-execution_count="6">
+<div id="d7809e0d" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 54 / 3
 54 / 3 is 18.0</code></pre>
@@ -208,7 +209,7 @@ python calc.py
 <pre><code>4 * 6 = 24</code></pre>
 <p>then we’d have to edit all four lines of code.</p>
 <p>Remembering our three-part pattern from earlier in the course of input→calculation→output, it’s a good idea to split out the calculation of data from the printing and display of data. In our case we could change it to look like:</p>
-<div id="14d4cf11" class="cell" data-execution_count="7">
+<div id="da0d5d05" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>calc.py</strong></pre>
@@ -235,10 +236,13 @@ python calc.py
 <span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calculation, <span class="st">"is"</span>, result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<pre class="{bash}"><code>#| filename: "Terminal/Command Prompt"
-python calc.py
-4 * 6</code></pre>
-<div id="f0040355" class="cell" data-execution_count="9">
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb13" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a4367514" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 4 * 6
 4 * 6 is 24</code></pre>
@@ -248,10 +252,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 5 <span class="ex">+</span> 6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1ab01ba3" class="cell" data-execution_count="10">
+<div id="1155ed09" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 5 + 6
 5 + 6 is 11</code></pre>
@@ -261,10 +264,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb17" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 457 <span class="ex">-</span> 75</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8d402183" class="cell" data-execution_count="11">
+<div id="b97bfd0c" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 457 - 75
 457 - 75 is 382</code></pre>
@@ -274,20 +276,20 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb19" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 54 <span class="ex">/</span> 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d51679a4" class="cell" data-execution_count="12">
+<div id="01150a45" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 54 / 3
 54 / 3 is 18.0</code></pre>
 </div>
 </div>
 </section>
-<section id="advanced-using-the-operator-module" class="level4">
-<h4 class="anchored" data-anchor-id="advanced-using-the-operator-module">Advanced: Using the <code>operator</code> module</h4>
+</section>
+<section id="advanced-using-the-operator-module" class="level3">
+<h3 class="anchored" data-anchor-id="advanced-using-the-operator-module">Advanced: Using the <code>operator</code> module</h3>
 <p>We haven’t covered using extra modules in this course so far, but you might have come across these if you’ve done some Python before. We cover this in more detail in the <a href="https://milliams.com/courses/intermediate_python/Using%20functions.html">Intermediate Python chapter <em>Using Functions</em></a>. I’m showing you this way to solve the problem, not because I expect you to able to do this already, but so that when you look back at these notes in the future you see how you might solve the problem differently.</p>
-<div id="55bfa3e8" class="cell" data-execution_count="13">
+<div id="4f9f43f5" class="cell" data-execution_count="13">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>calc.py</strong></pre>
@@ -320,15 +322,13 @@ python calc.py
 <span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(calculation, <span class="st">"is"</span>, result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="53641dc0" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %%run_python_script -i calc.py</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %%run_python_script -i calc.py</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="dv">4</span> <span class="op">*</span> <span class="dv">6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<pre class="{bash}"><code>#| filename: "Terminal/Command Prompt"
-python calc.py
-4 * 6</code></pre>
-<div id="fc3579a5" class="cell" data-execution_count="16">
+<div class="sourceCode" id="cb22" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8a550dea" class="cell" data-execution_count="15">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 4 * 6
 4 * 6 is 24</code></pre>
@@ -338,10 +338,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb26" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 5 <span class="ex">+</span> 6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1c7b4082" class="cell" data-execution_count="17">
+<div id="5327d4d4" class="cell" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 5 + 6
 5 + 6 is 11</code></pre>
@@ -351,10 +350,9 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb28" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 457 <span class="ex">-</span> 75</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="decc1f0d" class="cell" data-execution_count="18">
+<div id="b91fb327" class="cell" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 457 - 75
 457 - 75 is 382</code></pre>
@@ -364,18 +362,17 @@ python calc.py
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
-<div class="sourceCode" id="cb30" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;</span> 54 <span class="ex">/</span> 3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f2410c30" class="cell" data-execution_count="19">
+<div id="ce760bd5" class="cell" data-execution_count="18">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 54 / 3
 54 / 3 is 18.0</code></pre>
 </div>
 </div>
+<p><a href="../pages/98-summary.html#exercise-1">Return to course</a></p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -803,7 +800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a> <a href="../AUTHORS.html">our contributors</a></p>
+<p>Course delivered by the <a href="https://www.bristol.ac.uk/golding/">Jean Golding Institute</a><br>© <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY 4.0</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
