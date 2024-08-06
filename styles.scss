@@ -18,22 +18,31 @@ $font-size-root: 19px;
     color: #fff;
 }
 
-pre code:not(.sourceCode){   
+.cell-output {   
 
-
-    border-left: 2px solid #34568B;
-     padding-top: 10px;
-     padding-bottom: 10px;
-     padding-left: 15px;
-    
+     border-left: 0.25em solid #34568B;
+     padding-left: 0.75em;
 
 }
 
-.column-margin.column-container{
+.column-margin.column-container {
     margin-top: 30px;
 }
 
+pre.sourceCode.bash {
+    background-color: #4a4a4a;
+    &, & * {
+        color: white !important;
+        font-weight: normal !important;
+    }
+}
 
+// .code-with-filename:has(pre.sourceCode.bash) .code-with-filename-file {
+//     background-color: #999;
+//     &, & * {
+//         color: white !important;
+//         font-weight: normal !important;
+//     }}
 
 // pre.numberSource.bash code > span > a:first-child::before {
 //     content: "$";
