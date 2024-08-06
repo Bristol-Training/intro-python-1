@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -158,7 +158,7 @@ window.Quarto = {
 
 
 <p>Whenever solving a problem like this, it’s always good to build it up one step at a time. You’ll be tempted to jump right to the solution but it’s much easier to take very small steps. It might seem extreme but the first step in a solution should do almost nothing. I tend to start by simply outputting the input of my program to make sure that at least the input is being read correctly, before trying to do any logic with it:</p>
-<div id="76ce860e" class="cell" data-execution_count="1">
+<div id="66f092d0" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -169,7 +169,7 @@ window.Quarto = {
 </div>
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="97b21076" class="cell" data-filename="leap_year.py" data-execution_count="2">
+<div id="93c65162" class="cell" data-filename="leap_year.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024</code></pre>
@@ -179,7 +179,7 @@ window.Quarto = {
 <section id="yes-if-divisible-by-4" class="level3">
 <h3 class="anchored" data-anchor-id="yes-if-divisible-by-4">Yes if divisible by <span class="math inline">\(4\)</span></h3>
 <p>The first step is to implement the simplest of the logical checks: is the year divisible by <span class="math inline">\(4\)</span>? If it is, print out an appropriate message:</p>
-<div id="be4bfbaa" class="cell" data-execution_count="3">
+<div id="234622a8" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -192,7 +192,7 @@ window.Quarto = {
 </div>
 <p>and check that it works for a know leap year.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="094f16a7" class="cell" data-filename="leap_year.py" data-execution_count="4">
+<div id="3c22ecb8" class="cell" data-filename="leap_year.py" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
@@ -200,13 +200,13 @@ window.Quarto = {
 </div>
 <p>For a year that we know is not a leap year, what do we get:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="efab0bad" class="cell" data-filename="leap_year.py" data-execution_count="5">
+<div id="3c3ba081" class="cell" data-filename="leap_year.py" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023</code></pre>
 </div>
 </div>
 <p>We get no output, so let’s fix that next, by adding an <code>else</code>:</p>
-<div id="57595050" class="cell" data-execution_count="6">
+<div id="5b4bfac0" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -220,14 +220,14 @@ window.Quarto = {
 </div>
 </div>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="dde01ec9" class="cell" data-filename="leap_year.py" data-execution_count="7">
+<div id="426c4879" class="cell" data-filename="leap_year.py" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="2f2b2aa1" class="cell" data-filename="leap_year.py" data-execution_count="8">
+<div id="04f70dd3" class="cell" data-filename="leap_year.py" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
@@ -239,7 +239,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="but-not-if-divisible-by-100">But not if divisible by <span class="math inline">\(100\)</span></h3>
 <p>Let’s check the next corner case: what happens if the year is divisible by 100. The rules say that this should not be a leap year:</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="d6ff7c4e" class="cell" data-filename="leap_year.py" data-execution_count="9">
+<div id="0572f92d" class="cell" data-filename="leap_year.py" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 100
 100 is a leap year</code></pre>
@@ -247,7 +247,7 @@ window.Quarto = {
 </div>
 <p>So it’s currently getting this wrong. We need to add in a check to see if the year is divisible by 100 and set it to be labelled as not a leap year.</p>
 <p>Here we need to be careful as any number which is divisible by <span class="math inline">\(100\)</span> is also divisible by <span class="math inline">\(4\)</span> but we want a special thing to happen in the former case. The divisible-by-<span class="math inline">\(100\)</span> check is more specific than the divisible-by<span class="math inline">\(4\)</span> check, so it must come first in the <code>if</code>/<code>elif</code>/<code>else</code> chain:</p>
-<div id="d60f1528" class="cell" data-execution_count="10">
+<div id="d2ebef76" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -263,21 +263,21 @@ window.Quarto = {
 </div>
 </div>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="a5891a39" class="cell" data-filename="leap_year.py" data-execution_count="11">
+<div id="60703220" class="cell" data-filename="leap_year.py" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="bbbcbeef" class="cell" data-filename="leap_year.py" data-execution_count="12">
+<div id="e41b0ae7" class="cell" data-filename="leap_year.py" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb21"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="74b8e571" class="cell" data-filename="leap_year.py" data-execution_count="13">
+<div id="d1215527" class="cell" data-filename="leap_year.py" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is not a leap year</code></pre>
@@ -288,14 +288,14 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="but-yes-if-divisible-by-400">But yes if divisible by <span class="math inline">\(400\)</span></h3>
 <p>The code is working for all those cases correctly, however, the last condition to think about is what happens for the year 2000:</p>
 <div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="be677ee9" class="cell" data-filename="leap_year.py" data-execution_count="14">
+<div id="8af2d9bd" class="cell" data-filename="leap_year.py" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2000
 2000 is not a leap year</code></pre>
 </div>
 </div>
 <p>This year should be a leap year as it is divisible by <span class="math inline">\(400\)</span>. Again this is more specific than the previous two so must be added before them in the chain:</p>
-<div id="5a4f8661" class="cell" data-execution_count="15">
+<div id="da59e486" class="cell" data-execution_count="15">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -313,28 +313,28 @@ window.Quarto = {
 </div>
 </div>
 <div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="802182e5" class="cell" data-filename="leap_year.py" data-execution_count="16">
+<div id="6edbfec3" class="cell" data-filename="leap_year.py" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="9b24b09b" class="cell" data-filename="leap_year.py" data-execution_count="17">
+<div id="417608f3" class="cell" data-filename="leap_year.py" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="82cb130d" class="cell" data-filename="leap_year.py" data-execution_count="18">
+<div id="2a77b822" class="cell" data-filename="leap_year.py" data-execution_count="18">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is not a leap year</code></pre>
 </div>
 </div>
 <div class="sourceCode" id="cb32"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="5366ddc6" class="cell" data-filename="leap_year.py" data-execution_count="19">
+<div id="f703bf36" class="cell" data-filename="leap_year.py" data-execution_count="19">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2000
 2000 is a leap year</code></pre>

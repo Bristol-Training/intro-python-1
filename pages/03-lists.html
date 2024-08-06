@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -239,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Until now all the variables we have used have contained a single piece of information, for example, <code>a = 4</code> makes a variable a containing a single number, <code>4</code>. It’s very common in programming (and in fact real life) to want to refer to collections of this. For example a shopping list contains a list of items you want to buy, or a car park contains a set of cars.</p>
 <p>Create a new file by going to <em>File → New → Text File</em>. Rename it (using the left-hand file pane in JupyterLab with right-click <em>Rename</em>) to <code>list.py</code>. Inside that file write the following:</p>
-<div id="334649d9" class="cell" data-execution_count="1">
+<div id="714c0828" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -252,15 +252,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Run this script in the terminal with <code>python list.py</code> and look at the output.</p>
 <p>This will create a Python <code>list</code> with three elements and assign it to the variable <code>my_list</code>. The square brackets <code>[</code> and <code>]</code> in this case mean “create a list” and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the <code>print()</code> function.</p>
 <p>You can have as many items in a list as you like, even zero items. An empty list could look like:</p>
-<div id="3e45513c" class="cell" data-execution_count="2">
+<div id="5ba0128c" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>And a list with six different numbers could look like:</p>
-<div id="0a626a33" class="cell" data-execution_count="3">
+<div id="c1d559f6" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">32</span>, <span class="dv">65</span>, <span class="dv">3</span>, <span class="dv">867</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can even have a mixture of different type of data in a list:</p>
-<div id="3d3e2aa6" class="cell" data-execution_count="4">
+<div id="cd2cf444" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">5</span>, <span class="fl">34.6</span>, <span class="st">"Hello"</span>, <span class="op">-</span><span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exercise-1" class="callout callout-style-default callout-tip no-icon callout-titled" title="Exercise 1">
@@ -281,7 +281,7 @@ Exercise 1
 <h3 class="anchored" data-anchor-id="indexing">Indexing</h3>
 <p>The power of Python’s lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called <em>indexing</em>. Indexing a list in Python is done using the square brackets <code>[]</code>. This is a different use of the square brackets to that which we saw above for <em>making</em> a list.</p>
 <p>To get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:</p>
-<div id="a9725cbe" class="cell" data-execution_count="5">
+<div id="11229184" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -314,7 +314,7 @@ Exercise 2
 <h3 class="anchored" data-anchor-id="reverse-indexing">Reverse indexing</h3>
 <p>Putting a single positive number in the square brackets gives us back the element which is that distance from the start of the list, but what if we wanted the <em>last</em> element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, <code>2</code>), but perhaps we don’t know (or don’t want to have to check) how long the list is.</p>
 <p>In this case we can use Python’s reverse indexing by placing a negative integer in the square brackets:</p>
-<div id="e8b55701" class="cell" data-execution_count="6">
+<div id="a94cc9cd" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -333,7 +333,7 @@ Exercise 2
 <p>Indexing lists is likely the first time you will see a Python error. Seing Python errors (also sometimes called <em>exceptions</em>) is not a sign that you’re a bad programmer or that you’re doing something terrible. All Python programmers, even those that have been using it for 20 years will still see Python errors on their screen.</p>
 <p>They are in fact a very useful feedback mechanism from the computer to the programmer but that can be a bit daunting when you first see them. Let’s look at an example and I will explain how to read it. Let’s start by creating an error.</p>
 <p>A Python list with three elements will not have an element at index <code>6</code> (the highest index in that case would be <code>2</code>) so let’s have a look at what happens if we ask for it anyway:</p>
-<div id="889acf0e" class="cell" data-execution_count="7">
+<div id="41e1d931" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -358,7 +358,7 @@ IndexError: list index out of range</code></pre>
 <section id="adding-things-to-lists" class="level3">
 <h3 class="anchored" data-anchor-id="adding-things-to-lists">Adding things to lists</h3>
 <p>Lists in Python are <em>dynamic</em>, meaning that they can change size during your script. You can add items to the end of your list by using the <code>append</code> function. The <code>append</code> function is a little different to other functions that we’ve used so far (like <code>print</code> and <code>range</code>) in that it is a part of the <code>list</code> data type so we use it like:</p>
-<div id="2a84dace" class="cell" data-execution_count="8">
+<div id="5470b814" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>my_list.append(<span class="st">"quokka"</span>)</span>
@@ -372,7 +372,7 @@ IndexError: list index out of range</code></pre>
 <h3 class="anchored" data-anchor-id="extended-slicing">Extended: Slicing</h3>
 <p>As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called <em>slicing</em>. Slicing starts out the same way as standard indexing (i.e.&nbsp;with square brackets) but instead of putting a single number between them, you put multiple numbers separated by colons.</p>
 <p>Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index <code>2</code> to index <code>4</code>, you do:</p>
-<div id="aa391ba3" class="cell" data-execution_count="9">
+<div id="ee707fdb" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>my_slice <span class="op">=</span> my_list[<span class="dv">2</span>:<span class="dv">5</span>]</span>
@@ -382,13 +382,13 @@ IndexError: list index out of range</code></pre>
 <p>Run this code and look at the output.</p>
 <p>You see that is printed <code>['green', 5.3, 'house']</code> which is index <code>2</code> (<code>'green'</code>), index <code>3</code> (<code>5.3</code>) and index <code>4</code> (<code>'house'</code>). Notice that it did not give us the element at index <code>5</code> and that is because with slicing, Python will give you the elements from the starting index up to, <em>but not including</em>, the end index.</p>
 <p>This can be confusing at first but a trick that I use to keep it straight is to count the commas in the list and treat the indexes as referring to those. So from the example here:</p>
-<div id="6add3846" class="cell" data-execution_count="10">
+<div id="8121788b" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>  ↑  ↑        ↑    ↑        ↑    ↑
   1  2        3    4        5    6</code></pre>
 <p>so <code>my_list[2:5]</code> will make a cut at index <code>2</code> and index <code>5</code>:</p>
-<div id="3e81d9da" class="cell" data-execution_count="11">
+<div id="c6e135b9" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>     ↑                      ↑
