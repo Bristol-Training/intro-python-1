@@ -1,3 +1,6 @@
+---
+title: "Beginning Python (single page view)"
+---
 
 {{< ./index.qmd >}}
 ---
