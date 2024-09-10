@@ -1,0 +1,17 @@
+{{< ./main.qmd >}}
+---
+{{< ./pages/01-getting-started.qmd >}}
+---
+{{< ./pages/02-data-types.qmd >}}
+---
+{{< ./pages/03-lists.qmd >}}
+---
+{{< ./pages/04-loops.qmdd >}}
+---
+{{< ./pages/05-conditionals.qmd >}}
+---
+{{< ./pages/06-dictionaries.qmd >}}
+---
+{{< ./pages/06-dictionaries.qmd >}}
+---
+{{< ./pages/98-summary.qmd >}}
