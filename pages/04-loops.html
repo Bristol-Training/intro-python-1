@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -239,7 +239,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In the introduction you were told that Python will read your script, starting at the top and running each line of code until it reaches the bottom. While largely true, it is possible to make Python repeat certain lines of code using <em>loops</em>.</p>
 <p>The ability to run a line of code multiple times is the first large step on your road to making your code <em>reusable</em>.</p>
 <p>Imagine we have two strings that we want to print. We could start by making a variable containing one of the words and then printing it:</p>
-<div id="2aa38d7b" class="cell" data-execution_count="1">
+<div id="7d85e756" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>word <span class="op">=</span> <span class="st">"Hello"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>To print our second word, we could copy and paste those two lines to create a program which can print both words:</p>
-<div id="79e34d5f" class="cell" data-execution_count="2">
+<div id="d27acb53" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -268,7 +268,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb4" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="dad09bbd" class="cell" data-filename="loop.py" data-execution_count="3">
+<div id="e36093c6" class="cell" data-filename="loop.py" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 Python</code></pre>
@@ -276,11 +276,11 @@ Python</code></pre>
 </div>
 <p>This printed the output we want. But we can see that this code is wasteful as the two <code>print</code> lines are identical to each other. They both print whatever the variable <code>word</code> is pointing at. If we can manage to write that line only once then we could save ourselves some typing!</p>
 <p>Let’s start by making a container for our words. A Python <code>list</code> makes sense:</p>
-<div id="27139916" class="cell" data-execution_count="4">
+<div id="6ab75c83" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>we can now write a loop which will perform a task once for each word in our list:</p>
-<div id="3cb6aab5" class="cell" data-execution_count="5">
+<div id="02f8ab50" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -298,7 +298,7 @@ Python</code></pre>
 </div>
 <div class="sourceCode" id="cb8" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="5be7e4c6" class="cell" data-filename="loop.py" data-execution_count="6">
+<div id="169897bb" class="cell" data-filename="loop.py" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 Python</code></pre>
@@ -356,7 +356,7 @@ for word in my_words<b style="color:darkred">:</b>
 <i>indentation</i>
 </pre>
 <p>If we want to write code after the end of a loop, we have to make sure that it is <em>not</em> indented. So this code:</p>
-<div id="d0fdac53" class="cell" data-execution_count="7">
+<div id="7d039481" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -376,7 +376,7 @@ for word in my_words<b style="color:darkred">:</b>
 </div>
 <div class="sourceCode" id="cb12" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d325fe3e" class="cell" data-execution_count="8">
+<div id="4f58c43d" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 Python
@@ -404,7 +404,7 @@ Python
 </div>
 <div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="6b26a3b3" class="cell" data-execution_count="9">
+<div id="1afbd8ef" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 ...Goodbye
@@ -418,7 +418,7 @@ Python
 <h3 class="anchored" data-anchor-id="extended-what-can-we-loop-over">Extended: What can we loop over</h3>
 <p>A lot of the power of loops comes from being able to put a lot of different things in the place of <code>my_words</code>.</p>
 <p>Most simply, instead of putting a variable name there, you can put a list directly:</p>
-<div id="03d7b2d9" class="cell" data-execution_count="10">
+<div id="abef880c" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -428,7 +428,7 @@ Python
 </div>
 </div>
 <p>As well as lists we can put anything which Python considers <em>iterable</em>. For now we haven’t come across many of those but as we keep learning we’ll discover many more. One that we have already come across is strings:</p>
-<div id="b7c10926" class="cell" data-execution_count="11">
+<div id="0686ce9e" class="cell" data-execution_count="11">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -458,7 +458,7 @@ Exercise 2
 <section id="extended-ranges-of-numbers" class="level3">
 <h3 class="anchored" data-anchor-id="extended-ranges-of-numbers">Extended: Ranges of numbers</h3>
 <p>There’s a built in function in Python called <code>range</code> which provides you with numbers in a range. If given one number as an argument it will give you integers, starting from zero and going up to, <em>but not including</em>, the number you gave as an agument. We can put this call to the <code>range</code> function directly into our loop as the object to loop over:</p>
-<div id="b200f96b" class="cell" data-execution_count="12">
+<div id="9753fa3f" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -474,7 +474,7 @@ Exercise 2
 </div>
 <div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="fb171d79" class="cell" data-filename="loop.py" data-execution_count="13">
+<div id="e8f5f6d9" class="cell" data-filename="loop.py" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>0
 1
@@ -484,7 +484,7 @@ Exercise 2
 </div>
 </div>
 <p>The <code>range</code> function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:</p>
-<div id="91840981" class="cell" data-execution_count="14">
+<div id="f17db1a3" class="cell" data-execution_count="14">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -500,7 +500,7 @@ Exercise 2
 </div>
 <div class="sourceCode" id="cb23" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="073fad3b" class="cell" data-filename="loop.py" data-execution_count="15">
+<div id="1b9f18ac" class="cell" data-filename="loop.py" data-execution_count="15">
 <div class="cell-output cell-output-stdout">
 <pre><code>10
 11
@@ -632,7 +632,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/uob-training\.github\.io\/beginning-python\/");
+      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/beginning-python\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
