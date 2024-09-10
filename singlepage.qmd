@@ -10,7 +10,7 @@ title: "Beginning Python (single page view)"
 ---
 {{< include pages/03-lists.qmd >}}
 ---
-{{< include pages/04-loops.qmdd >}}
+{{< include pages/04-loops.qmd >}}
 ---
 {{< include pages/05-conditionals.qmd >}}
 ---
