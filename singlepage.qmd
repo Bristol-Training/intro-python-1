@@ -2,20 +2,20 @@
 title: "Beginning Python (single page view)"
 ---
 
-{{< include _index.qmd >}}
+{{< include index.qmd >}}
 ---
-{{< include _pages/01-getting-started.qmd >}}
+{{< include pages/01-getting-started.qmd >}}
 ---
-{{< include _pages/02-data-types.qmd >}}
+{{< include pages/02-data-types.qmd >}}
 ---
-{{< include _pages/03-lists.qmd >}}
+{{< include pages/03-lists.qmd >}}
 ---
-{{< include _pages/04-loops.qmdd >}}
+{{< include pages/04-loops.qmdd >}}
 ---
-{{< include _pages/05-conditionals.qmd >}}
+{{< include pages/05-conditionals.qmd >}}
 ---
-{{< include _pages/06-dictionaries.qmd >}}
+{{< include pages/06-dictionaries.qmd >}}
 ---
-{{< include _pages/06-dictionaries.qmd >}}
+{{< include pages/06-dictionaries.qmd >}}
 ---
-{{< include _pages/98-summary.qmd >}}
+{{< include pages/98-summary.qmd >}}
