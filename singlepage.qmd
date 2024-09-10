@@ -1,4 +1,5 @@
-{{< ./main.qmd >}}
+
+{{< ./index.qmd >}}
 ---
 {{< ./pages/01-getting-started.qmd >}}
 ---
