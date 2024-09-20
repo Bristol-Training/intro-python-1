@@ -117,11 +117,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Adding more items to the list makes the loop go around more times</h1>
+</div>
 
 
 
-<p>Adding more items to the list makes the loop go around more times:</p>
-<div id="0cfbbd93" class="cell" data-execution_count="1">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="d70c80c5" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -133,7 +148,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="57e9feb8" class="cell" data-filename="loop.py" data-execution_count="2">
+<div id="16ed806d" class="cell" data-filename="loop.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 Python
@@ -141,8 +156,9 @@ Goodbye
 Python</code></pre>
 </div>
 </div>
-<p>A list with a mixture of data types can be printed witout issue:</p>
-<div id="64ebc2d5" class="cell" data-execution_count="3">
+<section id="a-list-with-a-mixture-of-data-types-can-be-printed-witout-issue" class="level5">
+<h5 class="anchored" data-anchor-id="a-list-with-a-mixture-of-data-types-can-be-printed-witout-issue">A list with a mixture of data types can be printed witout issue</h5>
+<div id="e647df68" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
@@ -152,9 +168,6 @@ Python</code></pre>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="f9a276ea" class="cell" data-filename="loop.py" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello
 Python
@@ -164,22 +177,23 @@ Python
 42</code></pre>
 </div>
 </div>
-<p>Looping over an empty list does not print anything:</p>
-<div id="418ee20f" class="cell" data-execution_count="5">
+</section>
+<section id="looping-over-an-empty-list-does-not-print-anything" class="level5">
+<h5 class="anchored" data-anchor-id="looping-over-an-empty-list-does-not-print-anything">Looping over an empty list does not print anything</h5>
+<div id="7922d277" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>loop.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> []</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> []</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> loop.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><a href="../pages/04-loops.html#exercise-1">Return to course</a></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -145,7 +145,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link active" data-scroll-target="#practice-questions">Practice questions</a></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link active" data-scroll-target="#practice-questions">Practice questions</a>
+  <ul class="collapse">
+  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5">Exercise 5</a></li>
+  <li><a href="#exercise-6" id="toc-exercise-6" class="nav-link" data-scroll-target="#exercise-6">Exercise 6</a></li>
+  <li><a href="#exercise-7" id="toc-exercise-7" class="nav-link" data-scroll-target="#exercise-7">Exercise 7</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/appendix/appendix_practice_questions.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -155,17 +164,17 @@ window.Quarto = {
 
 
 
-<section id="practice-questions" class="level2">
-<h2 class="anchored" data-anchor-id="practice-questions">Practice questions</h2>
+<section id="practice-questions" class="level1">
+<h1>Practice questions</h1>
 <p>This page contains a number of questions and exercises to give you a chance to practise what you have learned this session.</p>
 <p>You should create a new <code>.py</code> Python file for each exercise.</p>
-<section id="exercise-1" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-1">Exercise 1</h4>
+<section id="exercise-1" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
 <p>Create a list containing 5 different animal types, for example: - cat - dog - elephant - minnow - beaver</p>
 <p>Print out the list to the screen.</p>
 </section>
-<section id="exercise-2" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-2">Exercise 2</h4>
+<section id="exercise-2" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
 <p>Start by copying the code that you used to create the list of animals in the last exercise. Write a loop which will print out each of the animals, prefixed with <code>Species:</code>. For example the output could look like:</p>
 <pre><code>Species: cat
 Species: dog
@@ -173,18 +182,18 @@ Species: elephant
 Species: minnow
 Species: beaver</code></pre>
 </section>
-<section id="exercise-3" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-3">Exercise 3</h4>
+<section id="exercise-3" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
 <p>Create a list containing 10 different numbers, ranging from 0 to 100. For example: <span class="math inline">\(65, 54, 17, 78, 66, 24, 32, 80, 79, 95\)</span>.</p>
 <p>Write a loop which will print out only those numbers which are larger than 50.</p>
 </section>
-<section id="exercise-4" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-4">Exercise 4</h4>
+<section id="exercise-4" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
 <p>Create a loop which iterates over the numbers from 1 to 20 (inclusive). Inside the loop: - if the number is divisible by three then print “ook”, - if the number is divisible by both three and five then print “foo”, - and if the number is not divisible by either then just print the number.</p>
 <p><small><button onclick="var x = document.getElementById('hint-ghrndo');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-ghrndo" style="display: none;"> You can use the <code>%</code> operator to <a href="https://docs.python.org/3/reference/expressions.html#index-68">find the remainder from a division</a>. Also, take care in the order that you do your <code>if</code>/<code>elif</code>.</span></small></p>
 </section>
-<section id="exercise-5" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-5">Exercise 5</h4>
+<section id="exercise-5" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-5">Exercise 5</h3>
 <p>Make a dictionary from the following table of data. The keys of the dictionary should be the names of the paintings and the values should be name of the artist.</p>
 <table class="caption-top table">
 <thead>
@@ -227,14 +236,14 @@ Species: beaver</code></pre>
 <p>Write some code which will print out the work of art and the name of the artist if: 1. the artist’s name has an “h” in it, 2. or the name of the artwork is longer than 13 letters.</p>
 <p><small><button onclick="var x = document.getElementById('hint-ghtuid');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-ghtuid" style="display: none;"> There is an <a href="https://docs.python.org/3/reference/expressions.html#membership-test-details"><code>in</code> operator</a> for searching inside strings and a <a href="https://docs.python.org/3/library/functions.html#len"><code>len</code> function</a> for seeing how long something is.</span></small></p>
 </section>
-<section id="exercise-6" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-6">Exercise 6</h4>
+<section id="exercise-6" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-6">Exercise 6</h3>
 <p>Make a dictionary of the same information as the last question, but the other way around this time. The key in the dictionary should be the name of the artist, and the value should be a list of names of their paintings.</p>
 <p>Write some code which will check <em>every painting</em> in the data set. Print out the work of art and the name of the artist if: 1. the artist has more than one painting 2. and the name of the painting has more than one word.</p>
 <p><small><button onclick="var x = document.getElementById('hint-jgntug');if (x.style.display === 'none') {x.style.display = 'inline';} else {x.style.display = 'none';}">Hint: </button><span id="hint-jgntug" style="display: none;"> Some artists only have one work of art here. Consider putting their single artwork in a single-item list, rather than just as a string.</span></small></p>
 </section>
-<section id="exercise-7" class="level4">
-<h4 class="anchored" data-anchor-id="exercise-7">Exercise 7</h4>
+<section id="exercise-7" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-7">Exercise 7</h3>
 <p>Create a list with some words in it, making sure some words are repeated.</p>
 <p>The task is to fill up a dictionary so that it contains the count of the number of times each word appears in the list.</p>
 <p>So, for example if your word list looks like:</p>

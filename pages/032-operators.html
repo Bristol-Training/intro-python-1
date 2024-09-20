@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_first_slicing – Beginning Python</title>
+<title>Operators – Beginning Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,6 +64,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../pages/033-data-structures.html" rel="next">
+<link href="../pages/031-basic-data-types.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -104,56 +106,395 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body>
+<body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/032-operators.html">Operators</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Beginning Python</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace setup</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/020-hello-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hello, Python!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/030-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables and data types</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/031-basic-data-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic data types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/032-operators.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/033-data-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../pages/050-control-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control structures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/051-conditionals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional if</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/052-for.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/053-while.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">While loop</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/060-modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using modules</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/070-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Worksheet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/980-summary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Summary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/990-contributors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contributors</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#arithmetic-operators" id="toc-arithmetic-operators" class="nav-link active" data-scroll-target="#arithmetic-operators">Arithmetic Operators</a></li>
+  <li><a href="#comparison-operators" id="toc-comparison-operators" class="nav-link" data-scroll-target="#comparison-operators">Comparison Operators</a></li>
+  <li><a href="#logical-operators" id="toc-logical-operators" class="nav-link" data-scroll-target="#logical-operators">Logical Operators</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/032-operators.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/032-operators.html">Operators</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Operators</h1>
+</div>
 
 
 
-<p>We make a list and then select a few slices of it:</p>
-<div id="2d2d9839" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>list.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">2</span>:<span class="dv">4</span>])</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">3</span>:<span class="op">-</span><span class="dv">2</span>])</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="op">-</span><span class="dv">4</span>:<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">33</span>:<span class="dv">37</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<p>The first <code>print</code> selects every element from index-2 up to, but not including, the index-4, i.e.&nbsp;the 2nd and 3rd elements.</p>
-<p>The second <code>print</code> starts at index 3 and goe as far as index -2 (which is the same as index 5 in this list).</p>
-<p>The next <code>print</code> starts at index -4 (i.e.&nbsp;index 3) and goes until index -1 (i.e.&nbsp;index 6).</p>
-<p>Last, <code>print(my_list[33:37])</code> tries to access elements of a range that do not exist, but the behaviour of Python is different than when accessing a single element as we saw before. In this case, it returns and empty list instead of showing an error message. This wrapping of <em>slicing</em> calls give us some flexibility when accessing a <code>list</code>, but will requiere us to check, in most cases, that the output is not an empty list.</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>Terminal/Command Prompt</strong></pre>
-</div>
-<div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> list.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="b00a42d1" class="cell" data-filename="list.py" data-execution_count="2">
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.</p>
+<section id="arithmetic-operators" class="level3">
+<h3 class="anchored" data-anchor-id="arithmetic-operators">Arithmetic Operators</h3>
+<p>Arithmetic operators can be used with numerical variables such as <code>int</code> and <code>float</code>.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Operator</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Addition</td>
+<td>+</td>
+<td>a + b</td>
+</tr>
+<tr class="even">
+<td>Subtraction</td>
+<td>-</td>
+<td>a - b</td>
+</tr>
+<tr class="odd">
+<td>Multiplication</td>
+<td>*</td>
+<td>a * b</td>
+</tr>
+<tr class="even">
+<td>Division</td>
+<td>/</td>
+<td>a / b</td>
+</tr>
+<tr class="odd">
+<td>Floor Division</td>
+<td>//</td>
+<td>a // b</td>
+</tr>
+<tr class="even">
+<td>Modulo</td>
+<td>%</td>
+<td>a % b</td>
+</tr>
+<tr class="odd">
+<td>Exponentiation</td>
+<td>**</td>
+<td>a ** b</td>
+</tr>
+</tbody>
+</table>
+<div id="fa88a49f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Subtraction:'</span>, a <span class="op">-</span> b)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Division:'</span>, a <span class="op">/</span> b)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Floor Division:'</span>, a <span class="op">//</span> b)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Modulo:'</span>, a <span class="op">%</span> b)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Power:'</span>, a <span class="op">**</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>['green', 5.3]
-[5.3, 'house']
-[5.3, 'house', 100]
-[]</code></pre>
+<pre><code>Subtraction: 7
+Division: 4.5
+Floor Division: 4
+Modulo: 1
+Power: 81</code></pre>
+</div>
+</div>
+</section>
+<section id="comparison-operators" class="level3">
+<h3 class="anchored" data-anchor-id="comparison-operators">Comparison Operators</h3>
+<p>We can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Operator</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Equal To</td>
+<td>==</td>
+<td>a == b</td>
+</tr>
+<tr class="even">
+<td>Not Equal To</td>
+<td>!=</td>
+<td>a != b</td>
+</tr>
+<tr class="odd">
+<td>Greater Than</td>
+<td>&gt;</td>
+<td>a &gt; b</td>
+</tr>
+<tr class="even">
+<td>Less Than</td>
+<td>&lt;</td>
+<td>a &lt; b</td>
+</tr>
+<tr class="odd">
+<td>Greater Than or Equal To</td>
+<td>&gt;=</td>
+<td>a &gt;= b</td>
+</tr>
+<tr class="even">
+<td>Less Than or Equal To</td>
+<td>&lt;=</td>
+<td>a &lt;= b</td>
+</tr>
+</tbody>
+</table>
+<div id="50b03cce" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Equal To:"</span>, a <span class="op">==</span> b)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Less Than:"</span>, a <span class="op">&gt;</span> b)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Not Equal To:"</span>, a <span class="op">!=</span> b)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Greater Than:"</span>, a <span class="op">&lt;</span> b)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Equal To: False
+Less Than: True
+Not Equal To: True
+Greater Than: False</code></pre>
+</div>
+</div>
+</section>
+<section id="logical-operators" class="level3">
+<h3 class="anchored" data-anchor-id="logical-operators">Logical Operators</h3>
+<p>Logical operators are used to combine conditional statements or negate them, and can only be applied to booleans.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Description</th>
+<th>Operator</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Logical AND</td>
+<td>and</td>
+<td>(a == b) and (a &gt; c)</td>
+</tr>
+<tr class="even">
+<td>Logical OR</td>
+<td>or</td>
+<td>(a &gt; b) or (a &lt; c)</td>
+</tr>
+<tr class="odd">
+<td>Logical NOT</td>
+<td>not</td>
+<td>not (a &gt; b)</td>
+</tr>
+</tbody>
+</table>
+<div id="17dcfdcb" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"(a == b) and (a &gt; c)"</span>, (a <span class="op">==</span> b) <span class="kw">and</span> (a <span class="op">&gt;</span> c))</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"(a &gt; b) or (a &lt; c)"</span>, (a <span class="op">&gt;</span> b) <span class="kw">or</span> (a <span class="op">&lt;</span> c))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"not (a &gt; b):"</span>, <span class="kw">not</span> (a <span class="op">&gt;</span> b))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(a == b) and (a &gt; c) False
+(a &gt; b) or (a &lt; c) True
+not (a &gt; b): False</code></pre>
+</div>
+</div>
+<div id="exercise" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Define two strings <code>str1="Tuesday"</code> and <code>str2="Wednesday"</code>, and compare them (e.g.&nbsp;equal, greater and less than).</p>
+</div>
+</div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="7e5ae343" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>str1<span class="op">=</span><span class="st">"Tuesday"</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>str2<span class="op">=</span><span class="st">"Wednesday"</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(str1,<span class="st">"equal to"</span>,str2,<span class="st">":"</span>,str1<span class="op">==</span>str2)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(str1,<span class="st">"greater than"</span>,str2,<span class="st">":"</span>,str1<span class="op">&gt;</span>str2)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(str1,<span class="st">"less than"</span>,str2,<span class="st">":"</span>,str1<span class="op">&lt;</span>str2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Tuesday equal to Wednesday : False
+Tuesday greater than Wednesday : False
+Tuesday less than Wednesday : True</code></pre>
+</div>
+</div>
+<p>It is easy undersand that the operator <code>==</code> returns <code>True</code> if two strings are the same. But what do <code>&gt;</code> and <code>&lt;</code>?</p>
+<p>Python doesn’t understand the meaning of works “Tuesday” and “Wednesday”, they are just two chains of characters. The operator <code>&gt;</code> will return <code>True</code> if the string <code>str1</code> comes after alphabetically than <code>str2</code>, and <code>&lt;</code> will return <code>True</code> if the string <code>str1</code> comes before alphabetically than <code>str2</code>.</p>
+</div>
 </div>
 </div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -576,6 +917,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../pages/031-basic-data-types.html" class="pagination-link" aria-label="Basic data types">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Basic data types</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../pages/033-data-structures.html" class="pagination-link" aria-label="Data structures">
+        <span class="nav-page-text">Data structures</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
@@ -584,7 +937,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/answers/answer_first_slicing.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/032-operators.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

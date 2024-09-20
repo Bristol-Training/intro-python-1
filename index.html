@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,7 +64,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pages/01-getting-started.html" rel="next">
+<link href="./pages/010-workspace-setup.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -93,9 +127,9 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./assets/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="./assets/UoB_RGB_24.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Beginning Python</a> 
@@ -116,49 +150,95 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/01-getting-started.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Getting Started</span></a>
+  <a href="./pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Workspace setup</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/02-data-types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Types</span></a>
+  <a href="./pages/020-hello-python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hello, Python!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./pages/030-variables.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Variables and data types</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/031-basic-data-types.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Basic data types</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/032-operators.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Operators</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/033-data-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data structures</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./pages/050-control-structures.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Control structures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/051-conditionals.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Conditional if</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/052-for.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">For loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/053-while.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">While loop</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pages/060-modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Using modules</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/03-lists.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lists</span></a>
+  <a href="./pages/070-practical.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Worksheet</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/04-loops.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Loops</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/05-conditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditionals</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/06-dictionaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Dictionaries</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./pages/98-summary.html" class="sidebar-item-text sidebar-link">
+  <a href="./pages/980-summary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Summary</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pages/99-contributors.html" class="sidebar-item-text sidebar-link">
+  <a href="./pages/990-contributors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Contributors</span></a>
   </div>
 </li>
@@ -172,7 +252,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#setting-up-your-workspace" id="toc-setting-up-your-workspace" class="nav-link active" data-scroll-target="#setting-up-your-workspace">Setting up your workspace</a></li>
+  <li><a href="#intended-learning-outcomes" id="toc-intended-learning-outcomes" class="nav-link active" data-scroll-target="#intended-learning-outcomes">Intended learning outcomes</a></li>
+  <li><a href="#how-to-read-this-documentation" id="toc-how-to-read-this-documentation" class="nav-link" data-scroll-target="#how-to-read-this-documentation">How to read this documentation</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -198,61 +279,96 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Python is a programming language which allows us to give instructions to the computer. These instructions can be as simple as “add together these two numbers” or as complex as “give me the average CO<sub>2</sub> concentration for 2020”. For the former we will be able to complete the task using only a single instruction but for the latter, we may have to write a larger program containing hundreds or thousands of instructions.</p>
-<p>This course is going to start from the beginning, showing you to talk to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex programmes.</p>
-<p>Python is a well-established language, with the current version (version 3) released in 2008 and it is installed by default on nearly all modern Linux systems. Python is also available for MacOS and Windows.</p>
-<p>This workshop is going to introduce you to the basics of the Python programming language with more advanced topics being covered by later workshops.</p>
-<p>You can jump ahead to any chapter:</p>
-<ol type="1">
-<li><a href="./pages/01-getting-started.html">Getting started</a></li>
-<li><a href="./pages/02-data-types.html">Data types</a></li>
-<li><a href="./pages/03-lists.html">Lists</a></li>
-<li><a href="./pages/04-loops.html">Loops</a></li>
-<li><a href="./pages/05-conditionals.html">Conditionals</a></li>
-<li><a href="./pages/06-dictionaries.html">Dictionaries</a></li>
-<li><a href="./pages/98-summary.html">Summary</a></li>
-</ol>
-<section id="setting-up-your-workspace" class="level3">
-<h3 class="anchored" data-anchor-id="setting-up-your-workspace">Setting up your workspace</h3>
-<p>There are lots of different ways to run Python code and many tools to help you write it. You don’t require any special tools to create a Python script, a simple text editor like Notepad on Windows is sufficient. More advanced tools include things like Jupyter Notebooks and IDEs like PyCharm or Visual Studio Code.</p>
-<p>For this workshop we will be keeping things as simple as possible in order to allow us to focus on the topics we’re learning without having to learn too many extra tools along the way.</p>
-<p>For the purpose of this course we will be using a free tool called JupyterLab which provides you with a local editor in your web browser where you can write and run Python code. The easiest way to get access to JupyterLab is to <a href="https://www.anaconda.com/products/individual#Downloads">install Anaconda</a> which is a piece of software which includes Python along with lots of other tools. It is freely available for Windows, MacOS and Linux.</p>
-<p>Anaconda can be installed into your home area on your computer so if you are on a work laptop, for example, you will not need any special permissions. Once Anaconda is installed, start “Anaconda Navigator” and press the JupyterLab button on the main screen:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/navigator.png" title="Anaconda Navigator" class="img-fluid figure-img"></p>
-<figcaption>Anaconda Navigator</figcaption>
-</figure>
+<p>Welcome to Beginning Python course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile <em>programming languages</em> today.</p>
+<p>A programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.</p>
+<p>Python is known for its simple syntax, which makes it an excellent choice for beginners. This course is going to show you to give instructions to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.</p>
+<section id="intended-learning-outcomes" class="level3">
+<h3 class="anchored" data-anchor-id="intended-learning-outcomes">Intended learning outcomes</h3>
+<p>By the end of this course, you will:</p>
+<ul>
+<li>Understand what a programming language is.</li>
+<li>Know how to execute instructions, or commands, in Python.</li>
+<li>Have the skills to create a simple Python script.</li>
+<li>Feel more confident to embark on your programming journey!</li>
+</ul>
+</section>
+<section id="how-to-read-this-documentation" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-this-documentation">How to read this documentation</h2>
+<p>In this documentation, any time that we are seeing a small snippet of Python code, we’ll see it written in a grey box like the following:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:</p>
+<div id="d2a9bf43" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello, Python!</code></pre>
 </div>
-<p>This will open JupyterLab in your default web browser and will look something like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/jupyterlab1.png" title="JupyterLab" class="img-fluid figure-img"></p>
-<figcaption>JupyterLab</figcaption>
-</figure>
 </div>
-<p>The way that we will be setting up the space is to have a text editor on the left-hand side of the screen and a terminal on the right hand side. We’ll use the editor to write our code and the terminal to run it.</p>
-<p>In the launcher tab, scoll down to the “Text File” entry and click that. It will turn the editor into a text editor. Then go to File → New and select “Terminal”. It will now have two tabs inside the interface, one labelled “untitled.txt” and the other labelled “Terminal 1”:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/jupyterlab2.png" title="JupyterLab" class="img-fluid figure-img"></p>
-<figcaption>JupyterLab</figcaption>
-</figure>
+<p>By contrast, you will see larger pices of code as scripts with a given name, e.g.&nbsp;<code>script.py</code>, in a code block with darker header:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>script.py</strong></pre>
 </div>
-<p>The contents of the Terminal tab will likely be a little different on your computer, compared to what is shown in thise images but that is ok.</p>
-<p>To make our lives easier, let’s rearange things so that we can see the text editor at the same time as the terminal. Do this by pressing and holding down the left mouse button on the tab that says “Terminal 1” and slowly dragging it to the right-hand side of the window. You’ll see a blue outline like this:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/jupyterlab3.png" title="JupyterLab" class="img-fluid figure-img"></p>
-<figcaption>JupyterLab</figcaption>
-</figure>
+<div class="sourceCode" id="cb4" data-filename="script.py"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">"Hello"</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name? "</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greeting, name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Release the mouse button and you’ll end up with the two showing side-by-side:</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="./assets/jupyterlab4.png" title="JupyterLab" class="img-fluid figure-img"></p>
-<figcaption>JupyterLab</figcaption>
-</figure>
+<p>We may ask you to run a script using the <code>Command Prompt</code> (Windows) or <code>Terminal</code> (Mac and Linux). We will show you what commands to run and will look like this:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal/Command Prompt</strong></pre>
+</div>
+<div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> script.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Please note that sometimes we will skip showing the execution of scripts on the Terminal/Command Prompt box, but we will assume you to run the script on your.</strong></p>
+<p>In some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:</p>
+<pre><code>FOR EACH sample IN my_study
+    IF (sample.value &gt; 100)
+        DO SOMETHING
+    OTHERWISE
+        DO SOMETHING ELSE</code></pre>
+<p>There are some exercices along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution.</p>
+<div id="exampleN" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This is an exercise. You will need to click in the below box to see the answer.</p>
+</div>
+</div>
+<div id="answerN" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer (click to open)">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer (click to open)
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is the answer.</p>
+</div>
+</div>
+</div>
+<p>Last, we will highlight important points using green boxes like this one:</p>
+<div id="keypointsN" class="callout callout-style-default callout-tip no-icon callout-titled" title="Key points">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Key points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These are important concepts and technical notes.</p>
+</div>
 </div>
 <p>We’re now ready to get started!</p>
 
@@ -684,8 +800,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pages/01-getting-started.html" class="pagination-link" aria-label="Getting Started">
-        <span class="nav-page-text">Getting Started</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./pages/010-workspace-setup.html" class="pagination-link" aria-label="Workspace setup">
+        <span class="nav-page-text">Workspace setup</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

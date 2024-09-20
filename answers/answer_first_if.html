@@ -120,30 +120,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div id="2db59f05" class="cell" data-execution_count="1">
+<div id="570943d6" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
 </div>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))  <span class="co"># We can nest function calls directly</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">&gt;</span> <span class="dv">100</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"is large"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># We can nest function calls directly</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>my_number <span class="op">=</span> <span class="bu">int</span>(<span class="bu">input</span>(<span class="st">"Enter a number: "</span>))  </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> my_number <span class="op">&gt;</span> <span class="dv">100</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"is large"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<p>If <code>my_number</code> is smaller than 100 then the expression is false and so the <code>if</code> does not trigger and nothing is printed:</p>
+<p>If <code>my_number</code> is smaller than 100 then the expression is false and so <code>if</code> does not trigger and nothing is printed:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>Terminal/Command Prompt</strong></pre>
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="44c283b6" class="cell" data-filename="if.py" data-execution_count="2">
+<div id="8770d3ca" class="cell" data-filename="if.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  42</code></pre>
 </div>
 </div>
-<p><a href="../pages/05-conditionals.html#exercise-1">Return to course</a></p>
+<div id="6f4cf7c5" class="cell" data-filename="if.py" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Enter a number:  128
+128 is large</code></pre>
+</div>
+</div>
 
 
 
