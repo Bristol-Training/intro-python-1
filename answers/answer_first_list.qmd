@@ -24,18 +24,7 @@ Here we edit our list so that the items are all in a different order:
 
 ```{python}
 #| filename: list.py
-#| output: false
 my_list = ["quail", "cat", 7, "dog", "horse"]
 print(my_list)
 ```
 
-```{.bash filename="Terminal/Command Prompt"}
-python list.py
-```
-```{python}
-#| echo: false
-my_list = ["quail", "cat", 7, "dog", "horse"]
-print(my_list)
-```
-
-[Return to course](../pages/03-lists.qmd#exercise-1)

@@ -1,5 +1,4 @@
-Adding more items to the list makes the loop go around more times:
-
+##### Adding more items to the list makes the loop go around more times
 
 ```{python}
 #| filename: loop.py
@@ -26,12 +25,11 @@ for word in my_words:
 ```
 
 
-A list with a mixture of data types can be printed witout issue:
+##### A list with a mixture of data types can be printed witout issue
 
 
-```{python include=""../scripts/loops4.py"}
+```{python}
 #| filename: loop.py
-#| output: false
 
 my_words = ["Hello", "Python", 404, "Goodbye", "Python", 42]
 
@@ -40,26 +38,11 @@ for word in my_words:
 ```
 
 
-```{.bash}
-python loop.py
-```
-
-```{python include=""../scripts/loops4.py"}
-#| filename: loop.py
-#| echo: false
-
-my_words = ["Hello", "Python", 404, "Goodbye", "Python", 42]
-
-for word in my_words:
-    print(word)
-```
-
-Looping over an empty list does not print anything:
-
+##### Looping over an empty list does not print anything
 
 ```{python}
 #| filename: loop.py
-#| output: false
+#| 
 my_words = []
 
 for word in my_words:
@@ -67,19 +50,3 @@ for word in my_words:
 ```
 
 
-```{.bash}
-python loop.py
-```
-
-```{python}
-#| filename: loop.py
-#| echo: false
-my_words = []
-
-for word in my_words:
-    print(word)
-```
-
-
-
-[Return to course](../pages/04-loops.qmd#exercise-1)

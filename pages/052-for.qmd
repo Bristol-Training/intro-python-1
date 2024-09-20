@@ -1,0 +1,176 @@
+---
+title: For loops
+---
+
+It is possible to make Python repeat certain lines of code using *loops*. The ability to run a line of code multiple times is the first large step on your road to making your code more *structured* and *reusable*.
+
+Imagine we have three strings in a `list` that we want to print. We could start by calling `print` three times to create a program like:
+
+```{python}
+#| filename: loop.py
+my_words = ["Jean", "Golding", "Institute"]
+print(my_words[0])
+print(my_words[1])
+print(my_words[2])
+```
+
+This printed the output we want. But you may feel that repeating the same call to `print` is *wasteful* code, particularly if we want to repeat the same operation for many elements. If we can manage to write that line only once then we could save ourselves some typing and potentially make the code easier to read!
+
+```
+FOR EACH word IN my_words
+    DO SOMETHING WITH word    
+```
+
+We can write a `for` loop in Python which will perform a task once for each word in our list:
+
+```{python}
+#| filename: loop.py
+my_words = ["Jean", "Golding", "Institute"]
+
+for word in my_words:
+    print(word)
+```
+
+Even in this tiny example, we have ve taken a script that was four lines of code and have reduced it to three lines, and more interestingly the same loop will work no matter how many items there are in the list `my_words`.
+
+This maps to real life where you may want, for example, to pay for each item on your shopping list. Another way of saying that could be "for each item on my shopping list, add its price to my total", or as you would write that in Python:
+
+```{.python}
+total = 0
+for item in shopping_list:s
+    total = total + item.price
+```
+
+::: {#exercise1 .callout-note title="Exercise 1" icon=false} 
+Edit `loop.py` to have a different number of words in the list.
+
+- Does it work if you put numbers (i.e. integers or floats) in there as well?
+- What happens if the list `my_words` is empty? (**hint**: empty lists look like `[]`)
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_first_loop.qmd >}}
+:::
+
+
+::: {#keypoints .callout-tip icon=false title='`for` statement syntax'}
+
+A `for` statement has an scaffolding, the parts of the line which must always be the same and tell Python that you're trying to make a loop, composed by the word `for`, the word `in` and the colon (`:`) at the end of the line. These must always be there and in that order:
+<pre>
+ ↓        ↓         ↓
+<b style="color:darkred">for</b> word <b style="color:darkred">in</b> my_words<b style="color:darkred">:</b>
+    print(word)
+</pre>
+
+Once the scaffolding is in place, you can place between it the things that *you* care about. The first thing to think about is the variable that you want to loop over. In our case we want to loop over the list `my_words` because we want to print every item in that list:
+<pre>
+                ↓
+for word in <b style="color:darkred">my_words</b>:
+    print(word)
+</pre>
+
+Now we need to decide what name we want to give temporarily to each item as we get to it. As with any variable naming, it is important that we choose a good name which describe a single object from the list. For example, if we're looping over all students in a class then we could call the variable `student` or if we're looping over a list of ages then we could call the variable `age`. Here, since we're looping over a list of generic *words*, we name our variable `word`:
+<pre>
+      ↓
+for <b style="color:darkred">word</b> in my_words:
+    print(word)
+</pre>
+
+Finally, if we want the loop to actually *do* something then we need to give the loop a *body*. The body is the lines of code that are going to be repeated. They can be any Python code but it is only within the body of the loop that we can refer to the loop variable `word`. As with `if`, Python  uses indentation to decide what is in the body of the loop and what is not. Remember that it will only repeat the code in the body. All code in the body must be indented relative to the word `for` by four spaces.
+<pre>
+for word in my_words<b style="color:darkred">:</b>
+    print(word)
+  ↑
+<i style="color:gray">indentation</i>
+</pre>
+
+:::
+
+
+If we want to write more code after the end of a loop, we have to make sure that it is *not* indented. So this code:
+
+```{python}
+#| filename: loop.py
+#| output: false
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+print("...Goodbye")
+```
+
+will print:
+
+```{python}
+#| echo: false
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+print("...Goodbye")
+```
+
+
+On the contrary, the below code will print `...Goodbye` in each iteration. This is because it was inside the body of the loop since it was indented.
+```{python }
+my_words = ["Hello", "Python"]
+
+for word in my_words:
+    print(word)
+
+    print("...Goodbye")
+```
+
+
+
+## What can we loop over?
+
+A lot of the power of loops comes from being able to put a lot of different types of data.
+
+Most simply, instead of putting a variable name there, you can put a list directly:
+```{python }
+#| filename: loop.py
+#| output: false
+for word in ["Hello", "Python"]:
+    print(word)
+```
+
+
+As well as lists we can put anything which Python considers *iterable*. For now we haven't come across many of those but as we keep learning we'll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.
+```{python }
+#| filename: loop.py
+#| output: false
+
+phrase = "Hello Python"
+
+for letter in phrase:
+    print(letter)
+```
+
+
+::: {#exercise .callout-tip title="Exercise" icon=false} 
+Experiment with `loop.py` and make it loop over both lists and strings.
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_loop_list_string.qmd >}}
+:::
+
+
+## Loop over a range of numbers
+
+There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an agument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
+
+```{python}
+for number in range(5):
+    print(number)
+```
+
+
+The `range` function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:
+```{python}
+for number in range(10, 13):
+    print(number)
+```

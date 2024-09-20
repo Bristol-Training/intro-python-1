@@ -1,0 +1,84 @@
+---
+title: Hello, Python!
+---
+
+Python is a scripting language, meaning that commands are interpreted at runtime rather than translated into machine code (compiled) beforehand. The simplest way to run a command in Python is making use of the Python command line. Follow these steps:
+
+- Open a Command Prompt (Windows) or Terminal (MacOS or Linux) on your computer.
+- Type `python` or `python3` and press *Enter* to start the Python interpreter. You should see the Python prompt (`>>>`).
+
+```{.bash filename="Terminal/Command Prompt"} 
+python3
+```
+```{python filename="Terminal/Command Prompt"}
+#| echo: false
+print("Python 3.12.5 (v3.12.5:ff3bc82f7c9, Aug  7 2024, 05:32:06) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin")
+print("Type \"help\", \"copyright\", \"credits\" or \"license\" for more information.")
+print(">>>") 
+```
+
+- At the prompt, type a simple Python command like `print("Hello, Python!")`. Press *Enter* to execute the command. You should see "Hello, Python!" printed on the screen.
+```{python}
+print("Hello, Python!")
+```
+
+To exit the Python interpreter, type `exit()`.
+
+
+
+## Scripts
+
+
+A Python script is a simple text file containing a set of instructions. Scripts allow us to save instructions to automate repetitive tasks, streamline processes, and perform specific functions without manual intervention. This is called batch processing. Python will read your script, starting at the top and running each line of code until it reaches the bottom.
+
+You can write script files using any text editor. Here we are going to use **JupyterLab**, so let's start by going to the text editor panel in JupyterLab and type into it:
+
+```{.python}
+print("Hello, Python!")
+```
+
+Then go to *File → Save File* and you'll see the small black circle next to the words "untitled.txt" in the tab change to a cross.
+
+We've just saved our Python script with the name "untitled.txt" but we should give it a more descriptive name. In the far left pane you will see a list of files. Right click on "untitled.txt" and select *Rename*. Python files end in the extension ".py" so change its name to "script.py".
+You should now see that the name of the text editor tab reads `script.py`.
+
+To run the script that we've just written and saved, we move to the pane on the right with the label "Terminal 1". This pane gives us access to a command line interface to our computer. This is the same interface that you have in a Command Prompt in Windows or a Terminal on MacOS or Linux. We type commands in here and the computer runs the programmes we ask it to.
+
+::: {#keypoints-N .callout-tip icon=false title='Note that'}
+- Always give your Python scripts a ".py" extension
+- In JupyterLab, Python *code* goes in the text editor window while you *run* the script from the terminal window
+:::
+
+The only command we need to know about here is `python` (or `python3`) which we run by typing `python` in that window, followed by a space, followed by the name of our script file (including the ".py" extension) and then pressing *Enter*:
+
+```{.bash filename="Terminal/Command Prompt"} 
+python3 script.py
+```
+
+If you do that you should see, printed to the terminal:
+
+```{python}
+#| filename: "script.py" 
+print("Hello, Python!")
+```
+
+Congratulations, you've just written and executed your very first Python script!
+
+
+## Commenting your script
+
+It is **good practice** to add comments to your code so it is easy to understand by other programmers or even yourself after a few months. This is particularly important if there's anything non-obvious in your code. To add a comments you can use a `#` symbol at any position in your script, what is behind '#' will be ignored by Python when running that line of code. 
+
+```{.python filename="colour.py"}
+# This script asks for your favourite colour
+fav = input("What is your favourite colour?")
+
+# print("Don't print me!") 
+
+print("My favourite colour is", fav) # print my favourite colour
+```
+
+
+
+
+

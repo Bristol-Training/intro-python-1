@@ -74,6 +74,3 @@ print(fish_sound)
 
     KeyError: 'fish'
 
-
-[Return to course](../pages/06-dictionaries.qmd#exercise-1)
-

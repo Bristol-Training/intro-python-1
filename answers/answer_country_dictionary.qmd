@@ -31,5 +31,3 @@ for country, capital in capitals.items():
     print("The capital of", country, "is", capital)
 
 ```
-
-[Return to course](../pages/06-dictionaries.qmd#exercise-3)

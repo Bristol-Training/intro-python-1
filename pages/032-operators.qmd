@@ -1,0 +1,95 @@
+---
+title: Operators
+---
+
+Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.
+
+### Arithmetic Operators
+
+Arithmetic operators can be used with numerical variables such as `int` and `float`.
+
+Description                 | Operator | Example 
+----------------------------|----------|----------------
+Addition                    | +        | a + b
+Subtraction                 | -        | a - b
+Multiplication              | *        | a * b
+Division                    | /        | a / b
+Floor Division              | //       | a // b
+Modulo                      | %        | a % b
+Exponentiation              | **       | a ** b
+
+```{python}
+a = 9
+b = 2
+print('Subtraction:', a - b)
+print('Division:', a / b)
+print('Floor Division:', a // b)
+print('Modulo:', a % b)
+print('Power:', a ** b)
+```
+
+
+### Comparison Operators
+
+We can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.
+
+Description                 | Operator | Example 
+----------------------------|----------|----------------
+Equal To                    | ==       | a == b
+Not Equal To                | !=       | a != b
+Greater Than                | >        | a > b
+Less Than                   | <        | a < b
+Greater Than or Equal To    | >=       | a >= b
+Less Than or Equal To       | <=       | a <= b
+
+```{python}
+a = 5
+b = 2
+print("Equal To:", a == b)
+print("Less Than:", a > b)
+print("Not Equal To:", a != b)
+print("Greater Than:", a < b)
+```
+
+
+### Logical Operators
+
+Logical operators are used to combine conditional statements or negate them, and can only be applied to booleans.
+
+Description                 | Operator | Example 
+----------------------------|----------|----------------
+Logical AND                 | and      | (a == b) and (a > c)
+Logical OR                  | or       | (a > b) or (a < c)
+Logical NOT                 | not      | not (a > b)
+
+```{python}
+a = 5
+b = 2
+c = 4
+print("(a == b) and (a > c)", (a == b) and (a > c))
+print("(a > b) or (a < c)", (a > b) or (a < c))
+print("not (a > b):", not (a > b))
+```
+
+
+
+::: {#exercise .callout-note title="Exercise" icon=false} 
+
+Define two strings `str1="Tuesday"` and `str2="Wednesday"`, and compare them (e.g. equal, greater and less than).
+
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+str1="Tuesday"
+str2="Wednesday"
+
+print(str1,"equal to",str2,":",str1==str2)
+print(str1,"greater than",str2,":",str1>str2)
+print(str1,"less than",str2,":",str1<str2)
+```
+
+It is easy undersand that the operator `==` returns `True` if two strings are the same. But what do `>` and `<`? 
+
+Python doesn't understand the meaning of works "Tuesday" and "Wednesday", they are just two chains of characters. The operator `>` will return `True` if the string `str1` comes after alphabetically than `str2`, and `<` will return `True` if the string `str1` comes before alphabetically than `str2`.
+:::

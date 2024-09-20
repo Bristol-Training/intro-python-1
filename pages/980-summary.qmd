@@ -1,0 +1,15 @@
+---
+title: Summary
+---
+Well done for getting this far! We've covered a lot in this course:
+
+- How to set up a Python workspace with JupyterLab
+- Using the `print()` function
+- Basic data types (integers, floats, strings, boolean)
+- Introduction to data structures
+- Working with lists
+- Conditional branching using `if` statements
+- Looping with `for` and `while`
+- Reading `csv` files
+
+You're not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practise that you will become confident. These notes will remain online so feel free to refer back to them at any time.

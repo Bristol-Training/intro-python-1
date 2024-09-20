@@ -4,7 +4,7 @@
 ```{python}
 #| eval: false
 #| filename: if.py
-my_number = int(input("Enter a number: "))  # We can nest function calls directly
+my_number = int(input("Enter a number: ")) 
 
 if my_number < 100:
     print(my_number, "is less than 100")
@@ -17,7 +17,7 @@ python if.py
 
 ```{python}
 #| echo: false
-my_number = 74 # We can nest function calls directly
+my_number = 74 
 
 print("Enter a number: ", my_number)
 
@@ -34,7 +34,7 @@ if my_number < 100:
 #| eval: false
 #| filename: if.py
 
-my_number = int(input("Enter a number: "))  # We can nest function calls directly
+my_number = int(input("Enter a number: "))  
 
 if my_number == 100:
     print(my_number, "== 100")
@@ -42,14 +42,9 @@ if my_number == 74:
     print(my_number, "== 74")
 ```
 
-
-```{.bash filename="Terminal/Command Prompt"}
-python if.py
-```
-
 ```{python}
 #| echo: false
-my_number = 74 # We can nest function calls directly
+my_number = 74 
 
 print("Enter a number: ", my_number)
 
@@ -68,7 +63,7 @@ if my_number == 74:
 #| eval: false
 #| filename: if.py
 
-my_number = int(input("Enter a number: "))  # We can nest function calls directly
+my_number = int(input("Enter a number: ")) 
 
 if my_number != 100:
     print(my_number, "!= 100")
@@ -77,14 +72,9 @@ if my_number != 74:
     print(my_number, "!= 74")
 ```
 
-
-```{.bash filename="Terminal/Command Prompt"}
-python if.py
-```
-
 ```{python}
 #| echo: false
-my_number = 74 # We can nest function calls directly
+my_number = 74
 
 print("Enter a number: ", my_number)
 
@@ -94,5 +84,3 @@ if my_number != 100:
 if my_number != 74:
     print(my_number, "!= 74")
 ```
-
-[Return to course](../pages/05-conditionals.qmd#exercise-2)

@@ -24,5 +24,3 @@ sounds["cow"] = "moo"
 
 print(sounds)
 ```
-
-[Return to course](../pages/06-dictionaries.qmd#exercise-2)

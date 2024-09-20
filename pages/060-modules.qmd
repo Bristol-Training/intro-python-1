@@ -1,0 +1,90 @@
+---
+title: Using modules
+---
+
+We have seen how to use several built-in functions in Python such as `print` and `input`. If we think that these functions have been written by somebody else and we don't need to worry about their implementation, it is easy to imagine how functions simplify our programming making our code smaller, more readable and with less errors.
+
+However, Python's built-in functionality can be greatly extended through the use of **modules**. Python modules can be thought of as code libraries, they are files containing code that define functions, classes, and variables and provide additional functionalities.
+Many modules come pre-installed with Python, such as `os`, `random` and `datetime`, but other third-party modules can be installed using package managers like `pip`.
+In the next session we will explore how you can create modules yourself to organize and reuse your code.
+
+To use a module in your Python script, you need to import it with `import`. For example:
+```{python}
+import math
+print(math.pi)
+```
+
+Note above that to call objects and functions that are defined in a module we will use the module name (`math`), followed by a dot (`.`), and then the object or function name(`pi`).
+
+Below you will learn how to use a module to read data files in CSV format.
+
+
+
+### CSV module : reading CSV files
+
+We have previously explored how to obtain user input via the terminal, but for data analysis you will mostly need extracting data from files. Python offers various libraries to facilitate this process, each tailored to specific file formats. We can use the `csv` module to read data from *Comma-Separated Values* (CSV) files.
+
+The `csv` module is a library designed specifically for working with CSV files. It provides functionality to both *read from* and *write to* CSV files efficiently. The script below shows it's basic syntax:
+
+```{python}
+#| filename: read_csv.py
+import csv
+
+with open('../assets/sample.csv', 'r') as file:
+    # create a csv.reader object
+    csv_reader = csv.reader(file)
+    for row in csv_reader:
+        print(row[2])
+```
+
+
+In this example we used the function `open()` to open a file in read mode (this is a Python built-in function), and created a `csv.reader` object to iterate through the rows of the file. Note that there is also a new statement [with](https://docs.python.org/3/reference/compound_stmts.html#with), what we will not cover in this session.
+
+
+
+
+::: {#keypoints .callout-tip icon=false title='What is your current working directory?'}
+
+When you read or write files without specifying a full path, the operating system assumes you're referring to files in the working directory. It is therefore very important knowing that we are in the same directory that the data file we want to read. We can use the module `os` to do so:
+
+```{.python}
+import os
+
+current_directory = os.getcwd()
+print("CWD:", current_directory)
+```
+```{python}
+#| echo: false
+print("CWD: /Users/USER/Training/Beginning Python/beginning-python/pages")
+```
+
+:::
+
+
+::: {#exercise .callout-note title="Exercise" icon=false} 
+
+Using the CSV file [sample.csv](../assets/sample.csv), modify `read_csv.py` to print only the average of the numbers in the first column.
+
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+#| filename: read_csv.py
+import csv
+
+sum = 0.0
+count = 0
+
+with open('../assets/sample.csv', 'r') as file:
+    # create a csv.reader object
+    csv_reader = csv.reader(file)
+    for row in csv_reader:
+        sum = sum + float(row[0])
+        count = count + 1        
+
+print("Average:", sum/count)
+```
+:::
+
+
+

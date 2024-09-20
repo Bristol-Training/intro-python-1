@@ -1,0 +1,20 @@
+---
+title: Control structures
+---
+
+Earlier you were told that Python will read your script starting at the top and running each line of code until it reaches the bottom. While largely true, real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.
+
+![Adapted from: *This Is A Book*, by Demetri Martin](../assets/path.jpg "Non-linear path")
+
+
+Imagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:
+```
+LOOP FOR EACH sample IN my_study
+    IF  sample value > 100
+        DO SOMETHING
+    OTHERWISE
+        DO SOMETHING ELSE
+```
+
+In essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as `if`, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as `for` and `while`, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.
+

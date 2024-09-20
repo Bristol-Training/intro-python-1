@@ -1,0 +1,94 @@
+---
+title: Variables and data types
+---
+
+
+We call variable to a symbolic name that refers to an object. They act as memory containers for storing data values and are created when you assign a value to them using the assignment operator `=`. For example, `x = 5` assigns the integer value 5 to the variable `x`.
+
+The value stored in a variable can change or vary throughout your program and can be any data type such as integers, strings, or lists. You will see different data types further in this section.
+
+```{.python}
+name = "Jean Golding"
+age = 27
+weight = 76.4
+```
+
+Chosing the correct name for a particular variable is an important task as a non-descriptive name (or worse, an incorrect name) will be very confusing for you and anyone reading your code. For instance, for a variable which contains a number representing a distance in miles, avoid shortened names like `dm`, `distm` or `d` and instead use a name like `distance_miles`. Remember, code will be written once but read many times so make it easy to read.
+
+::: {#keypoints-N .callout-tip icon=false title='Key points'}
+
+When naming variables in Python, there are specific rules to follow:
+
+- Variable names can include letters (both uppercase and lowercase), digits, and underscores (`_`), but they cannot start with a digit. Examples of valid variable names include `my_var` and `var_2`; **invalid** examples would be `2var` (starts with a digit) or `my-var` (contains a hyphen).
+- Variable names are case-sensitive, meaning `myVariable`, `MyVariable`, and `MYVARIABLE` would be considered different variables.
+:::
+
+
+
+## Getting data into your script
+
+So far, all the code we've run is somewhat static. Variables get assinged a value in the script and very time we run it, the output is always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, [`input`](https://docs.python.org/3/library/functions.html#input).
+
+The `print` function is how we get information *out* of our program, and the `input` function is a way of getting data *into* it. The function will pause the program and wait for you to type something in followed by *Enter*, and assign your input to a variable on the left hand side of the `=`.
+
+```{.python filename="colour.py"}
+fav = input("What is your favourite colour?")
+print("My favourite colour is", fav)
+```
+
+Now, if we run this script, it will print the message specified and wait for you to type something. If you type "red" and then press enter, it will assign "red" to the variable `fav` and then use that variable in the final `print` function:
+
+```{.bash filename="Terminal/Command Prompt"}
+python3 colour.py
+```
+
+```{python}
+#| echo: false
+print("What is your favourite colour? red")
+
+fav = 'red'
+
+print("My favourite colour is", fav)
+```
+
+
+::: {#exercise .callout-note title="Exercise" icon=false} 
+
+Create a script `myname.py` so the value a the variable `name` is set using the `input` function. Be sure to set a prompt as well so that the user know that they should type something.
+
+The script should, when run with `python3 myname.py`, print out:
+
+```
+What is your name?
+```
+
+wait for you to type your name and press *Enter*, then print out:
+
+```
+What is your name? Jean
+Hello Jean
+```
+:::
+
+::: {#answer-N .callout-caution icon=false title='Answer' collapse="true"}
+```{.python filename="myname.py"}
+greeting = "Hello"
+
+name = input("What is your name? ")
+
+print(greeting, name)
+```
+
+```{python}
+#| filename: if.py
+#| echo: false
+
+greeting = "Hello"
+name = "Jean"
+
+print("What is your name? Jean")
+print(greeting, name)
+```
+:::
+
+

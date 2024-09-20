@@ -1,0 +1,75 @@
+---
+title: While loop
+---
+
+We have seen that `for` loops can repeatedly execute a block of code for each element specified. We can think of another scenario where we only want to continue executing a block of code as long as a given condition is `True`. The basic idea is:
+```
+    WHILE there is money in my account
+        have lunch out
+        update my bank statement
+```
+
+
+In `while` loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is `True`. The basic syntax in Python which has a similar scaffolding to an `if` clause:
+```{.python}
+while condition:
+    # code to execute while condition is True
+```
+
+
+To ensure that the condition will eventually become `False`, it is common usage to increment/decrement a counter variable in the loop body:
+
+```{python}
+count = 0
+while count < 5:
+    print(count)
+    count = count + 1
+```
+
+There are some extra flow control instructions in `while` loops that we are not going to see here in detail but it is important to mention them. They are:
+
+- `break`: exits the loop immediately
+- `continue`: skips the rest of the current iteration and moves to the next
+- `else`: executes when the loop condition becomes `False`
+
+```{.python}
+while True:
+    user_input = input("Enter 'q' to quit: ")
+    if user_input == 'q':
+        break
+```
+
+::: {#exercise1 .callout-note title="Exercise" icon=false} 
+Given a list of students **sorted** by name
+
+```{.python}
+students = ["Alice", "Bob", "Charlie", "Frank", "George", "Hannah", "Julia", "Mia", "Noah", "Olivia"]
+```
+
+create a script `while.py` that prints the names of students starting with letters before 'M' in the alphabet. 
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+
+Note in the below script that the `while` loop needs to take into account two different conditions:
+
+- That the student's name starts with a letter before 'M'
+- That we don't try to index an element out of range in `students`
+
+```{python}
+students = ["Alice", "Bob", "Charlie", "Frank", "George", "Hannah", "Julia", "Mia", "Noah", "Olivia"]
+
+# Initialize the index
+i = 0
+
+# While loop to print names before 'M'
+while i < len(students) and students[i][0] < 'M':
+    print(students[i])
+    i = i + 1
+```
+
+:::
+
+
+
+

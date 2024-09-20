@@ -25,6 +25,3 @@ name = "Matt"
 
 print(greeting, name)
 ```
-
-[Return to course](../pages/02-data-types.qmd#exercise-3)
-

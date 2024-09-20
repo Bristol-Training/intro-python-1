@@ -1,18 +1,15 @@
 
-
-
 ```{python}
 #| filename: if.py
 #| eval: false
-my_number = int(input("Enter a number: "))  # We can nest function calls directly
+# We can nest function calls directly
+my_number = int(input("Enter a number: "))  
 
 if my_number > 100:
     print(my_number, "is large")
 ```
 
-
-If `my_number` is smaller than 100 then the expression is false and so the `if` does not trigger and nothing is printed:
-
+If `my_number` is smaller than 100 then the expression is false and so `if` does not trigger and nothing is printed:
 
 ```{.bash filename="Terminal/Command Prompt"}
 python if.py
@@ -29,7 +26,13 @@ if my_number > 100:
     print(my_number, "is large")
 ```
 
+```{python}
+#| filename: if.py
+#| echo: false
+my_number = 128
 
-[Return to course](../pages/05-conditionals.qmd#exercise-1)
+print("Enter a number: ", my_number)
 
-
+if my_number > 100:
+    print(my_number, "is large")
+```

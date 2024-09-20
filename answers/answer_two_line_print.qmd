@@ -25,5 +25,3 @@ words = "Hello Matt"
 
 print(words)
 ```
-
-[Return to course](../pages/02-data-types.qmd#exercise-2)

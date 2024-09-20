@@ -32,5 +32,3 @@ message = first_phrase + second_phrase
 
 print(message)
 ```
-
-[Return to course](../pages/02-data-types.qmd)

@@ -1,0 +1,152 @@
+---
+title: Worksheet
+
+---
+
+
+This page contains a number of exercises to give you a chance to practise what you have learned this session. You should create a new `.py` Python file for each of them.
+
+
+::: {#exercise1 .callout-note title="Exercise 1" icon=false} 
+
+Create a list containing 5 different animal types, for example:
+
+- cat
+- dog
+- elephant
+- minnow
+- beaver
+
+Print out the list to the screen.
+
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+#| filename: exercise1.py
+animal_list = ["cat", "dog", "elephant", "minnow", "beaver"]
+
+print(animal_list)
+```
+:::
+
+
+
+::: {#exercise2 .callout-note title="Exercise 2" icon=false} 
+
+Start by copying the code that you used to create the list of animals in the last exercise. Write a loop which will print out each of the animals, prefixed with `Species: `. For example the output could look like:
+```
+Species: cat
+Species: dog
+Species: elephant
+Species: minnow
+Species: beaver
+```
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+#| filename: exercise2.py
+animal_list = ["cat", "dog", "elephant", "minnow", "beaver"]
+
+for animal in animal_list:
+    print("Species:", animal)
+```
+:::
+
+::: {#exercise3 .callout-note title="Exercise 3" icon=false} 
+
+Create a list containing 10 different numbers, ranging from 0 to 100. For example: 65, 54, 17, 78, 66, 24, 32, 80, 79, 95.
+
+Write a loop which will print out only those numbers which are larger than 50.
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+#| filename: exercise3.py
+my_numbers = [65, 54, 17, 78, 66, 24, 32, 80, 79, 95]
+
+for num in my_numbers:
+    if num > 50:
+        print(num)
+```
+:::
+
+
+
+::: {#exercise4 .callout-note title="Exercise 4" icon=false} 
+
+Create a loop which iterates over the numbers from 1 to 20 (inclusive). Inside the loop:
+- if the number is divisible by three then print "ook",
+- if the number is divisible by both three and five then print "foo",
+- and if the number is not divisible by either then just print the number.
+
+*Hint: You can use the `%` operator to find the remainder from a division. Also, take care in the order that you do your `if`-`else`.*
+
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+
+When creating a chain of `if`-`elif`-`else`, you should put the most specific checks first. Otherwise they will be swamped by the more general checks.
+
+```{python}
+#| filename: exercise4.py
+
+for i in range(1, 21):
+    if i % 3 == 0 and i % 5 == 0:
+        print("foo")
+    elif i % 3 == 0:
+        print("ook")
+    else:
+        print(i)
+```
+:::
+
+
+
+::: {#exercise5 .callout-note title="Exercise 5" icon=false} 
+
+Let's end this session with a more difficult challenge. We're going to make a calculator which can read numerical operations from the input and print the answers to the screen.
+
+For example, it should print out an input prompt like
+
+```
+>
+```
+
+into which you can type a calculation as
+
+```
+> 4 * 6
+```
+
+and it should then print out the answer like
+
+```
+> 4 * 6
+4 * 6 is 24
+```
+
+Examples of inputs it should be able to accept are:
+
+```
+4 * 6
+5 + 6
+457 - 75
+54 / 3
+4 + 6
+```
+
+Notice that all the input strings have spaces around the operator, this will make your life much easier if you assume this.
+
+One extra function you will need to do this is [the `split` function](https://docs.python.org/3/library/stdtypes.html#str.split) which takes a string and returns a list containing the string, split by spaces. Also, remember the `int` function which can convert a string into an integer.
+
+- The examples only have integers in them, can you adjust your program so that it can accept floating point numbers as well?
+- Can you adapt your program so that it can support code with or without spaces either side of the operator? This is a more challenging exercise so feel free to ask for some some help and be sure to show one of the instructors your answer once you've got it working.
+
+:::
+
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_calculator.qmd >}}
+:::

@@ -1,0 +1,94 @@
+---
+title: Basic data types
+---
+
+In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.
+
+::: {#keypoints2 .callout-tip icon=false title='Key points'}
+- Python is dynamically typed, meaning you don't need to declare the type of a variable explicitly.
+- You can use the `type()` function to check the data type of a variable.
+- Data types determine what operations can be performed on the data.
+- You can convert between different data types using built-in functions like `int()`, `float()` and `str()`
+:::
+
+### Numeric Types
+
+Description                       | Type     | Example 
+----------------------------------|----------|----------------
+integers or whole numbers         | int      | a = int(12)
+floating-point numbers            | float    | b = float(7.3)
+complex numbers                   | complex  | c = complex(a, b)
+
+
+```{python}
+a = 12
+b = 7.3
+c = complex(a, b)
+print("A:", a, type(a))
+print("B:", b, type(b))
+print("C:", c, type(c))
+```
+
+### Text Types
+
+Description                       | Type     | Example 
+----------------------------------|----------|----------------
+textual data (strings)            | str      | a = "Jean Golding"
+
+```{python}
+name = "Jean Golding"
+print("Name:", name, type(name))
+```
+
+::: {#keypoint1 .callout-tip icon=false title="Note that"}
+It’s important that when writing numbers in your scripts, you do not put quotation marks around them, otherwise they will be recognized by the Python interpreter as strings. There is a difference between 3.14159 and "3.14159", the first is a number and the second is just a pair of characters.
+
+```{python}
+pi = 3.14159
+print("pi:", pi, type(pi))
+```
+```{python}
+pi = "3.14159"
+print("pi:", pi, type(pi))
+```
+:::
+
+
+### Boolean Types
+
+Description                       | Type     | Example 
+----------------------------------|----------|----------------
+boolean values (True or False)    | bool      | a = True
+
+```{python}
+a = 23
+b = 2
+c = a != b
+print("C:", c, type(c))
+```
+
+
+
+::: {#exercise-1 .callout-note title="Exercise" icon=false} 
+
+Without using Python, can you tell what is the data type of these variables?
+```{.python}
+x = 32
+number_of_participants = "1017"
+Friday = True
+y = float(1)
+a = 10<8
+```
+:::
+
+::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
+`x` is an integer
+
+`number_of_participants` is a string
+
+`Friday` is a boolean
+
+`y` is a float 
+
+`a` is a boolean
+:::

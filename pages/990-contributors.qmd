@@ -1,0 +1,10 @@
+---
+title: Contributors
+---
+
+This course has been developed by the [Jean Golding Insitute](https://www.bristol.ac.uk/golding/).
+
+The materials were originally written by Christopher Woods [https://chryswoods.com/beginning_python/](https://chryswoods.com/beginning_python/), and revised by Matt Williams [https://milliams.com/courses/beginning_python/](https://milliams.com/courses/beginning_python/).
+
+
+

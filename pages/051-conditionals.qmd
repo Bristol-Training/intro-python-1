@@ -1,0 +1,235 @@
+---
+title: Conditional if
+---
+
+Conditional `if` statements allow programs to make decisions and execute different code based on whether certain conditions are `True` or `False`. For instance, we may want to perform a different action when a study participant is an adult or not:
+
+```
+IF (participant_age >= 18)
+    DO SOMETHING
+OTHERWISE
+    DO SOMETHING ELSE
+```
+
+The basic syntax for conditional statements is `if condition:`, where `condition` is an expression that evaluates to either `True` or `False`, i.e. a boolean. If it's `True`, the indented code block under the if statement will run. If `False`, it will be skipped. For example, the below code will print "You are an adult" if age is 18 or higher.
+```{python}
+age = 18
+if age >= 18:
+    print("You are an adult")
+```
+
+You can also add an `else` clause to specify code to run if the condition is `False`:
+
+```{python}
+age = 17
+if age >= 18:
+    print("You are an adult")
+else:
+    print("You are not an adult")
+```
+
+For multiple conditions, you can use `elif` (else if) clauses to execute the first matching block.
+
+```{python}
+age = 14
+if age < 13:
+    print("You are a child") 
+elif age < 18:
+    print("You are a teenager")
+else:
+    print("You are an adult")
+```
+
+
+::: {#keypoints .callout-tip icon=false title='`if` statement syntax'}
+
+An `if` statement has scaffolding as well as user-supplied parts. The scafolding is the word `if` and the colon `:` as shown below.
+<pre>
+ ↓                ↓
+<b style="color:darkred">if</b> my_number > 100<b style="color:darkred">:</b>
+    print(my_number, "is large")
+</pre>
+
+The user-supplied part is the conditional:
+<pre>
+          ↓
+if <b style="color:darkred">my_number > 100</b>:
+    print(my_number, "is large")
+</pre>
+
+As before, the body must be indented by four spaces:
+<pre>
+if my_number > 100<b style="color:darkred">:</b>
+    print(my_number, "is large")
+  ↑
+<i style="color:gray">indentation</i>
+</pre>
+
+You can chain multiple conditions with `elif` using the same syntax. On the contrary, `else` provides a default case if no conditions are `True` and do not requiere a condition.
+
+:::
+
+
+::: {#exercise1 .callout-note title="Exercise" icon=false} 
+
+To explore the behaviour of the `if` statement, we could edit the below `if.py` script to change the value of `my_number` via an `input` function call. **The `input` function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the [`int`](https://docs.python.org/3/library/functions.html#int) function**.
+
+```{python}
+#| filename: if.py
+#| eval: false
+my_number = int(input("Enter a number: "))  # We can nest function calls directly
+
+if my_number > 100:
+    print(my_number, "is large")
+```
+
+Run the program with different inputs. Does it give you what you expect? What happens if the input is smaller than 100?
+:::
+
+::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_first_if.qmd >}}
+:::
+
+
+
+::: {#exercise2 .callout-note title="Exercise 2" icon=false} 
+
+Experiment with editing `if.py` to use some different boolean statements. Make sure you remember to save the file after each change before running it.
+
+:::
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_more_conditionals.qmd >}}
+:::
+
+
+## Ordering your options
+
+When working out which lines of code will be run, Python will work down the list of `if`, `elif`s and `else` and will run the *first one* that matches. Once it's matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.
+
+For example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:
+
+```{python}
+#| filename: if.py
+#| eval: false
+my_number = int(input("Enter a number: "))
+
+if my_number > 100:
+    print(my_number, "is large")
+elif my_number > 1:
+    print(my_number, "is positive")
+else:
+    print(my_number, "negative")
+```
+
+
+
+::: {#exercise3 .callout-tip title="Exercise" icon=false} 
+
+Create a file `leap_year.py` which calculates, for a given year, whether it is a leap year and prints out the answer. You might want to read the year in using `input`, or you could hard-code it in the program.
+
+The rules to follow are:
+
+1. if the year is divisible by 400 then it's a leap year,
+2. otherwise, if the year is divisible by 100 then it's not,
+3. otherwise, if the year is divisible by 4 then it's a leap year,
+4. otherwise, it's not.
+
+To simplify the writing of the program, you might find it easier to start with the divisible-by-4 condition, then add in the divisible-by-100 check and then add in the divisible-by-400 calculation.
+
+For reference, here are some years for you to check against:
+
+- 2023 - not a leap year as it's not divisible by 4
+- 2024 - a leap year as it's divisible by 4 (and not by 100)
+- 1900 - not a leap year as it's divisible by 100 (and not by 400)
+- 2000 - a leap year as it's divisible by 400
+
+:::
+
+::: {#answer3 .callout-caution icon=false title='Answer' collapse="true"}
+{{< include ../answers/answer_if_leap_year.qmd >}}
+:::
+
+
+
+## Combining questions
+
+It is possible to ask two or more questions in one go by combining them with `and` and `or`. So, if you want to check is a number is smaller than ten (`my_number < 10`) and is not equal to zero (`my_number != 0`), you can use:
+
+```{.python}
+if my_number < 10 and my_number != 0:
+    ...
+```
+
+These combined checks can be used is both `if` and `elif` statements.
+
+
+::: {#exercise4 .callout-tip title="Exercise" icon=false} 
+Could you figure out how to rewrite `leap_year.py` with a single `if`-`else` statement?
+:::
+
+::: {#answer4 .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+#| filename: leap_year.py
+#| eval: false
+year = int(input("Enter a year: "))
+
+if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
+```
+
+```{python}
+#| filename: leap_year.py
+#| echo: false
+year = 2024
+
+print("Enter a year:", year)
+
+if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 4 == 0) ) :
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
+```
+
+```{python}
+#| filename: leap_year.py
+#| echo: false
+year = 2023
+
+print("Enter a year:", year)
+
+if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
+```
+```{python}
+#| filename: leap_year.py
+#| echo: false
+year = 1900
+
+print("Enter a year:", year)
+
+if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
+```
+```{python}
+#| filename: leap_year.py
+#| echo: false
+year = 2000
+
+print("Enter a year:", year)
+
+if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
+    print(year, "is a leap year")
+else:
+    print(year, "is not a leap year")
+```
+
+:::
+
+
+

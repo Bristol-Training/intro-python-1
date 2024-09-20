@@ -1,56 +1,20 @@
-We start with the same list we had in the chapter.
+Starting with the same list we used before, each item in the list gets printed on its own line.
 
 ```{python }
 #| filename: loop.py
-#| output: false
 words = ["Hello", "Python"]
 
 for word in words:
     print(word)
 ```
 
-Each item in the list gets printed on its own line:
 
-
-```{.bash filename="Terminal/Command Prompt"}
-python loop.py
-```
-
+On the contrary, if we loop over a string we see that each character gets printed on its own line.
 ```{python}
 #| filename: loop.py
-#| echo: false
-words = ["Hello", "Python"]
-
-for word in words:
-    print(word)
-```
-
-If we loop over a string:
-
-
-```{python}
-#| filename: loop.py
-#| output: false
 phrase = "Hello Python"
 
 for letter in phrase:
     print(letter)
 
 ```
-
-We see that each character in the string gets printed on its own line:
-
-```{.bash filename="Terminal/Command Prompt"}
-python loop.py
-```
-```{python}
-#| filename: loop.py
-#| echo: false
-phrase = "Hello Python"
-
-for letter in phrase:
-    print(letter)
-    
-```
-
-[Return to course](../pages/04-loops.qmd#exercise-2)
