@@ -7,29 +7,50 @@ website:
 
   sidebar: 
     title: "Beginning Python"
-    logo: "assets/logo.png"
+    logo: "assets/UoB_RGB_24.png"
+    #logo: "assets/logos.png"
+    align: center
     logo-alt: "Jean Golding Institute Logo"
     style: "docked"
     border: true
     contents: 
-      - index.qmd
-      - auto: "pages/*qmd"
+      - "index.qmd"
+      - "pages/010-workspace-setup.qmd"
+      - "pages/020-hello-python.qmd"
+      - section: "pages/030-variables.qmd"
+        contents:
+          - "pages/031-basic-data-types.qmd"
+          - "pages/032-operators.qmd"
+          - "pages/033-data-structures.qmd"
+      - section: "pages/050-control-structures.qmd"
+        contents:
+          - "pages/051-conditionals.qmd"
+          - "pages/052-for.qmd"
+          - "pages/053-while.qmd"
+      - "pages/060-modules.qmd"
+      - "pages/070-practical.qmd"
+      - "pages/980-summary.qmd"
+      - "pages/990-contributors.qmd"
+
+      #- auto: "pages/*qmd"
 
   page-footer:
-    left: "Course delivered by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"  
+    left: "Course delivered by the [Jean Golding Institute](https://www.bristol.ac.uk/golding/)<br>© [CC-BY 4.0](http://creativecommons.org/licenses/by/4.0/)"
   repo-url: https://github.com/uob-training/beginning-python
   repo-actions: [edit, issue]
 
 format:
   html:
-    theme: [cosmo, styles.scss]
+    #theme: [cosmo, styles.scss]
+    theme: [cosmo, style.scss]
     toc: true
-    shift-heading-level-by: 1
-    filters:
-      - include-code-files
-    highlight-style: github
+    #shift-heading-level-by: 1
+    #filters:
+    #  - include-code-files
+    #highlight-style: github
 
     # code-line-numbers: true
+
 
 execute:
   freeze: auto
