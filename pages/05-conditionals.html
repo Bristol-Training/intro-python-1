@@ -178,7 +178,7 @@ window.Quarto = {
 
 <p>We’ve seen loops are one way of changing the default “top to bottom” reading of Python scripts. Loops are an example of <em>control flow</em> statements. Another very useful tool in Python is the <em>conditional</em>. This, rather than allowing you to <em>repeat</em> parts of the program, gives you the ability to <em>skip</em> parts depending on certain conditions.</p>
 <p>The simplest place to start is the <code>if</code> statement. This lets you only run a block of code if a certain condition is true. Copy the following code into a file called <code>if.py</code> and run it with <code>python if.py</code> in the terminal:</p>
-<div id="f827436a" class="cell" data-execution_count="1">
+<div id="f2ca2719" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -195,13 +195,13 @@ window.Quarto = {
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="cfca3b7a" class="cell" data-filename="if.py" data-execution_count="2">
+<div id="8757b4a2" class="cell" data-filename="if.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>128 is large</code></pre>
 </div>
 </div>
 <p>To explore the behaviour of the <code>if</code> statement, we could edit the <code>if.py</code> script to change the value of <code>my_number</code>, but instead let’s change it to that it’s set via an <code>input</code> function call. The <code>input</code> function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the <a href="https://docs.python.org/3/library/functions.html#int"><code>int</code></a> function:</p>
-<div id="a291696a" class="cell" data-execution_count="3">
+<div id="ff98a0b3" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -218,7 +218,7 @@ window.Quarto = {
 </div>
 <div class="sourceCode" id="cb5" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="983205d5" class="cell" data-filename="if.py" data-execution_count="4">
+<div id="4ad9fefa" class="cell" data-filename="if.py" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  128
 128 is large</code></pre>
@@ -263,17 +263,17 @@ if my_number &gt; 100<b style="color:darkred">:</b>
 <h2 class="anchored" data-anchor-id="booleans">Booleans</h2>
 <p>If we take a closer look at that user-supplied conditional we’ll see it’s made up of three parts, some data on either side of a greater-than sign (<code>&gt;</code>). In Python this means “is <code>my_number</code> more than <code>100</code>?”. It’s asking a question and in Python the answer to a question like this can be either <code>True</code> or <code>False</code>.</p>
 <p>For example,</p>
-<div id="b4a66269" class="cell" data-execution_count="5">
+<div id="a5cbcf8f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="dv">128</span> <span class="op">&gt;</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is <code>True</code>, and:</p>
-<div id="c6f891fa" class="cell" data-execution_count="6">
+<div id="b2471789" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="dv">56</span> <span class="op">&gt;</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>is <code>False</code>.</p>
 <p>The results of these questions are <em>booleans</em>. <code>True</code> and <code>False</code> are values in the same way that <code>12</code> and <code>"Hello"</code> are values but belong to their own data type.</p>
 <p>Other boolean operations we can perform are:</p>
-<div id="60cca939" class="cell" data-execution_count="7">
+<div id="00d49848" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dv">334</span> <span class="op">&lt;</span> <span class="dv">98</span>  <span class="co"># Less than</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="dv">76</span> <span class="op">==</span> <span class="dv">70</span> <span class="op">+</span> <span class="dv">6</span>  <span class="co"># Are they equal to each other?</span></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="fl">3.14159</span> <span class="op">!=</span> <span class="dv">3</span>  <span class="co"># Are they *not* equal to each other</span></span>
@@ -300,7 +300,7 @@ Exercise 2
 <section id="else" class="level2">
 <h2 class="anchored" data-anchor-id="else"><code>else</code></h2>
 <p>We’ve just seen that the body of an <code>if</code> statement will only run if the conditional is <code>True</code>. But what if we want to do one thing if it’s true, but another if it’s false? We can do this by attaching an <code>else</code> statement to the <code>if</code> statement:</p>
-<div id="a0220d5f" class="cell" data-execution_count="8">
+<div id="9f03b09a" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -318,7 +318,7 @@ Exercise 2
 <section id="elif" class="level2">
 <h2 class="anchored" data-anchor-id="elif"><code>elif</code></h2>
 <p>If you <em>do</em> want to provide a boolean statement to an <code>else</code> then you can use an <code>elif</code> instead. It stands for “else, if …” and it allows you to refine the questions you are asking:</p>
-<div id="809413a5" class="cell" data-execution_count="9">
+<div id="5a54d78c" class="cell" data-execution_count="9">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -337,7 +337,7 @@ Exercise 2
 <h2 class="anchored" data-anchor-id="ordering-your-options">Ordering your options</h2>
 <p>When working out which lines of code will be run, Python will work down the list of <code>if</code>, <code>elif</code>s and <code>else</code> and will run the <em>first one</em> that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.</p>
 <p>For example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:</p>
-<div id="5eb0668d" class="cell" data-execution_count="10">
+<div id="397be8f7" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>

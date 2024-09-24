@@ -315,7 +315,7 @@ window.Quarto = {
 OTHERWISE
     DO SOMETHING ELSE</code></pre>
 <p>The basic syntax for conditional statements is <code>if condition:</code>, where <code>condition</code> is an expression that evaluates to either <code>True</code> or <code>False</code>, i.e.&nbsp;a boolean. If it’s <code>True</code>, the indented code block under the if statement will run. If <code>False</code>, it will be skipped. For example, the below code will print “You are an adult” if age is 18 or higher.</p>
-<div id="28e30cda" class="cell" data-execution_count="1">
+<div id="e634777b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">18</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You are an adult"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -324,7 +324,7 @@ OTHERWISE
 </div>
 </div>
 <p>You can also add an <code>else</code> clause to specify code to run if the condition is <code>False</code>:</p>
-<div id="ce4690d5" class="cell" data-execution_count="2">
+<div id="86f64537" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">17</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> age <span class="op">&gt;=</span> <span class="dv">18</span>:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You are an adult"</span>)</span>
@@ -335,7 +335,7 @@ OTHERWISE
 </div>
 </div>
 <p>For multiple conditions, you can use <code>elif</code> (else if) clauses to execute the first matching block.</p>
-<div id="53e1e796" class="cell" data-execution_count="3">
+<div id="8229b155" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">14</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> age <span class="op">&lt;</span> <span class="dv">13</span>:</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"You are a child"</span>) </span>
@@ -387,7 +387,7 @@ Exercise
 </div>
 <div class="callout-body-container callout-body">
 <p>To explore the behaviour of the <code>if</code> statement, we could edit the below <code>if.py</code> script to change the value of <code>my_number</code> via an <code>input</code> function call. <strong>The <code>input</code> function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the <a href="https://docs.python.org/3/library/functions.html#int"><code>int</code></a> function</strong>.</p>
-<div id="6ffc883b" class="cell" data-execution_count="4">
+<div id="d0f48c5d" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -413,7 +413,7 @@ Answer
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="77c7e426" class="cell" data-execution_count="5">
+<div id="3344a64e" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -432,12 +432,12 @@ Answer
 </div>
 <div class="sourceCode" id="cb10" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8556247c" class="cell" data-filename="if.py" data-execution_count="6">
+<div id="a0782ded" class="cell" data-filename="if.py" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  42</code></pre>
 </div>
 </div>
-<div id="cb8f94e6" class="cell" data-filename="if.py" data-execution_count="7">
+<div id="cf001332" class="cell" data-filename="if.py" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  128
 128 is large</code></pre>
@@ -472,7 +472,7 @@ Answer
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>Less than:</strong></p>
-<div id="dd9f3216" class="cell" data-execution_count="8">
+<div id="7a343513" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -489,7 +489,7 @@ Answer
 </div>
 <div class="sourceCode" id="cb14" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> if.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="34bdfeb6" class="cell" data-execution_count="9">
+<div id="84c76206" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  74
 74 is less than 100</code></pre>
@@ -497,7 +497,7 @@ Answer
 </div>
 <p><br></p>
 <p><strong>Equal to:</strong></p>
-<div id="267880e1" class="cell" data-execution_count="10">
+<div id="6272eb35" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -510,7 +510,7 @@ Answer
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"== 74"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="74d60385" class="cell" data-execution_count="11">
+<div id="efe0acf8" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  74
 74 == 74</code></pre>
@@ -518,7 +518,7 @@ Answer
 </div>
 <p><br></p>
 <p><strong>Not equal to:</strong></p>
-<div id="fcb9eda1" class="cell" data-execution_count="12">
+<div id="6c2db39d" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -532,7 +532,7 @@ Answer
 <span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(my_number, <span class="st">"!= 74"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="a620ec42" class="cell" data-execution_count="13">
+<div id="e3497a00" class="cell" data-execution_count="13">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a number:  74
 74 != 100</code></pre>
@@ -545,7 +545,7 @@ Answer
 <h2 class="anchored" data-anchor-id="ordering-your-options">Ordering your options</h2>
 <p>When working out which lines of code will be run, Python will work down the list of <code>if</code>, <code>elif</code>s and <code>else</code> and will run the <em>first one</em> that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.</p>
 <p>For example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:</p>
-<div id="bed7c716" class="cell" data-execution_count="14">
+<div id="1ff492e6" class="cell" data-execution_count="14">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>if.py</strong></pre>
@@ -604,7 +604,7 @@ Answer
 <section id="divisible-by-4" class="level4">
 <h4 class="anchored" data-anchor-id="divisible-by-4">Divisible by 4</h4>
 <p>The first step is to implement the simplest of the logical checks: is the year divisible by <span class="math inline">\(4\)</span>? If it is, print out an appropriate message:</p>
-<div id="1a4760b5" class="cell" data-execution_count="15">
+<div id="fbb2f271" class="cell" data-execution_count="15">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -622,20 +622,20 @@ Answer
 </div>
 <div class="sourceCode" id="cb22" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> leap_year.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8b60e6a3" class="cell" data-filename="leap_year.py" data-execution_count="16">
+<div id="42d15456" class="cell" data-filename="leap_year.py" data-execution_count="16">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
 <p>For a year that we know is not a leap year, what do we get:</p>
-<div id="a7c49ce8" class="cell" data-filename="leap_year.py" data-execution_count="17">
+<div id="2d36a4c0" class="cell" data-filename="leap_year.py" data-execution_count="17">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023</code></pre>
 </div>
 </div>
 <p>We get no output, so let’s fix that next, by adding an <code>else</code>:</p>
-<div id="eb2ed834" class="cell" data-execution_count="18">
+<div id="fc8b4151" class="cell" data-execution_count="18">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -648,7 +648,7 @@ Answer
 <span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="14014335" class="cell" data-filename="leap_year.py" data-execution_count="19">
+<div id="3c3e88f3" class="cell" data-filename="leap_year.py" data-execution_count="19">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
@@ -659,7 +659,7 @@ Answer
 <section id="divisible-by-100" class="level4">
 <h4 class="anchored" data-anchor-id="divisible-by-100">Divisible by 100</h4>
 <p>Let’s check the next corner case: what happens if the year is divisible by 100. The rules say that this should not be a leap year:</p>
-<div id="9c842d2e" class="cell" data-filename="leap_year.py" data-execution_count="20">
+<div id="b3986974" class="cell" data-filename="leap_year.py" data-execution_count="20">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is a leap year</code></pre>
@@ -667,7 +667,7 @@ Answer
 </div>
 <p>So it’s currently getting this wrong. We need to add in a check to see if the year is divisible by 100 and set it to be labelled as not a leap year.</p>
 <p>Here we need to be careful as any number which is divisible by 100 is also divisible by 4 but we want a special thing to happen in the former case. The divisible-by-100 check is more specific than the divisible-by<span class="math inline">\(4\)</span> check, so it must come first in the <code>if</code>-<code>elif</code>-<code>else</code> chain:</p>
-<div id="a480206f" class="cell" data-execution_count="21">
+<div id="61bc31fd" class="cell" data-execution_count="21">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -682,19 +682,19 @@ Answer
 <span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="0a932158" class="cell" data-filename="leap_year.py" data-execution_count="22">
+<div id="8248ad7f" class="cell" data-filename="leap_year.py" data-execution_count="22">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
-<div id="66f3ab44" class="cell" data-filename="leap_year.py" data-execution_count="23">
+<div id="96f08747" class="cell" data-filename="leap_year.py" data-execution_count="23">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
 </div>
 </div>
-<div id="d3a22331" class="cell" data-filename="leap_year.py" data-execution_count="24">
+<div id="46d0e776" class="cell" data-filename="leap_year.py" data-execution_count="24">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is not a leap year</code></pre>
@@ -704,14 +704,14 @@ Answer
 <section id="divisible-by-400" class="level4">
 <h4 class="anchored" data-anchor-id="divisible-by-400">Divisible by 400</h4>
 <p>The code is working for all those cases correctly, however, the last condition to think about is what happens for the year 2000:</p>
-<div id="a132d2dd" class="cell" data-filename="leap_year.py" data-execution_count="25">
+<div id="6517933e" class="cell" data-filename="leap_year.py" data-execution_count="25">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2000
 2000 is not a leap year</code></pre>
 </div>
 </div>
 <p>This year should be a leap year as it is divisible by 400. Again this is more specific than the previous two so must be added before them in the chain:</p>
-<div id="83bf3c14" class="cell" data-execution_count="26">
+<div id="42ea9c3c" class="cell" data-execution_count="26">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -728,25 +728,25 @@ Answer
 <span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="e4b87fca" class="cell" data-filename="leap_year.py" data-execution_count="27">
+<div id="d490f30e" class="cell" data-filename="leap_year.py" data-execution_count="27">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
-<div id="348e5f98" class="cell" data-filename="leap_year.py" data-execution_count="28">
+<div id="87a0b139" class="cell" data-filename="leap_year.py" data-execution_count="28">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
 </div>
 </div>
-<div id="b750c62f" class="cell" data-filename="leap_year.py" data-execution_count="29">
+<div id="4976480a" class="cell" data-filename="leap_year.py" data-execution_count="29">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is not a leap year</code></pre>
 </div>
 </div>
-<div id="1b8b4ff0" class="cell" data-filename="leap_year.py" data-execution_count="30">
+<div id="ea9fcb14" class="cell" data-filename="leap_year.py" data-execution_count="30">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2000
 2000 is a leap year</code></pre>
@@ -788,7 +788,7 @@ Answer
 </div>
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="07d4129f" class="cell" data-execution_count="31">
+<div id="4d031f85" class="cell" data-execution_count="31">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>leap_year.py</strong></pre>
@@ -801,25 +801,25 @@ Answer
 <span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(year, <span class="st">"is not a leap year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div id="2ea75f4c" class="cell" data-filename="leap_year.py" data-execution_count="32">
+<div id="56e70361" class="cell" data-filename="leap_year.py" data-execution_count="32">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2024
 2024 is a leap year</code></pre>
 </div>
 </div>
-<div id="d10b2732" class="cell" data-filename="leap_year.py" data-execution_count="33">
+<div id="23a7cdc3" class="cell" data-filename="leap_year.py" data-execution_count="33">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2023
 2023 is not a leap year</code></pre>
 </div>
 </div>
-<div id="1cbe2859" class="cell" data-filename="leap_year.py" data-execution_count="34">
+<div id="dc656ecd" class="cell" data-filename="leap_year.py" data-execution_count="34">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 1900
 1900 is not a leap year</code></pre>
 </div>
 </div>
-<div id="95041cfd" class="cell" data-filename="leap_year.py" data-execution_count="35">
+<div id="b7439525" class="cell" data-filename="leap_year.py" data-execution_count="35">
 <div class="cell-output cell-output-stdout">
 <pre><code>Enter a year: 2000
 2000 is a leap year</code></pre>
