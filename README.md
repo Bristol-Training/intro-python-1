@@ -1,8 +1,8 @@
 # Beginning Python Course
 
-This repository contains a reformatted
-edition of [Matt Williams](milliams.com)
-beginning python course.
+This repository contains an updated
+version of [Matt Williams](milliams.com)
+Beginning Python course.
 
 🛑🛑🛑🛑🛑🛑🛑🛑
 This course is currently under development
