@@ -74,5 +74,3 @@ Last, we will highlight important points using green boxes like this one:
 These are important concepts and technical notes.
 :::
 
-We're now ready to get started!
-
