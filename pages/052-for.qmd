@@ -37,7 +37,7 @@ This maps to real life where you may want, for example, to pay for each item on 
 
 ```{.python}
 total = 0
-for item in shopping_list:s
+for item in shopping_list:
     total = total + item.price
 ```
 
