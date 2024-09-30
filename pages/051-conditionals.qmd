@@ -123,7 +123,7 @@ else:
 
 
 
-::: {#exercise3 .callout-tip title="Exercise" icon=false} 
+::: {#exercise3 .callout-note title="Exercise" icon=false} 
 
 Create a file `leap_year.py` which calculates, for a given year, whether it is a leap year and prints out the answer. You might want to read the year in using `input`, or you could hard-code it in the program.
 
