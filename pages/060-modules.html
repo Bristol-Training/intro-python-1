@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b085beecbf98fb5616ade3f11332d75d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -255,7 +255,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#csv-module-reading-csv-files" id="toc-csv-module-reading-csv-files" class="nav-link active" data-scroll-target="#csv-module-reading-csv-files">CSV module : reading CSV files</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/060-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/060-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -282,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We have seen how to use several built-in functions in Python such as <code>print</code> and <code>input</code>. If we think that these functions have been written by somebody else and we don’t need to worry about their implementation, it is easy to imagine how functions simplify our programming making our code smaller, more readable and with less errors.</p>
 <p>However, Python’s built-in functionality can be greatly extended through the use of <strong>modules</strong>. Python modules can be thought of as code libraries, they are files containing code that define functions, classes, and variables and provide additional functionalities. Many modules come pre-installed with Python, such as <code>os</code>, <code>random</code> and <code>datetime</code>, but other third-party modules can be installed using package managers like <code>pip</code>. In the next session we will explore how you can create modules yourself to organize and reuse your code.</p>
 <p>To use a module in your Python script, you need to import it with <code>import</code>. For example:</p>
-<div id="9a07a74b" class="cell" data-execution_count="1">
+<div id="c742e6d4" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(math.pi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -295,7 +295,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="csv-module-reading-csv-files">CSV module : reading CSV files</h3>
 <p>We have previously explored how to obtain user input via the terminal, but for data analysis you will mostly need extracting data from files. Python offers various libraries to facilitate this process, each tailored to specific file formats. We can use the <code>csv</code> module to read data from <em>Comma-Separated Values</em> (CSV) files.</p>
 <p>The <code>csv</code> module is a library designed specifically for working with CSV files. It provides functionality to both <em>read from</em> and <em>write to</em> CSV files efficiently. The script below shows it’s basic syntax:</p>
-<div id="12157b9c" class="cell" data-execution_count="2">
+<div id="d80f5064" class="cell" data-execution_count="2">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>read_csv.py</strong></pre>
@@ -335,7 +335,7 @@ What is your current working directory?
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>current_directory <span class="op">=</span> os.getcwd()</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"CWD:"</span>, current_directory)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="e8615e3a" class="cell" data-execution_count="3">
+<div id="512d3764" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>CWD: /Users/USER/Training/Beginning Python/beginning-python/pages</code></pre>
 </div>
@@ -367,7 +367,7 @@ Answer
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="9bacacff" class="cell" data-execution_count="4">
+<div id="aebf4038" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>read_csv.py</strong></pre>
@@ -480,8 +480,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -490,7 +488,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/beginning-python\/");
+      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/intro-python-1\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -592,7 +590,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -838,7 +835,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/060-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/060-modules.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

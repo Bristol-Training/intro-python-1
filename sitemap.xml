@@ -1,167 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/033-data-structures.html</loc>
-    <lastmod>2024-09-26T01:06:03.361Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_data_sum.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/031-basic-data-types.html</loc>
-    <lastmod>2024-09-26T01:06:03.361Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_multiply_data.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/051-conditionals.html</loc>
-    <lastmod>2025-03-18T12:58:34.472Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_first_read.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/050-control-structures.html</loc>
-    <lastmod>2024-09-26T01:06:03.361Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_data_mean.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/070-practical.html</loc>
-    <lastmod>2024-09-26T01:06:03.363Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_divide_zero.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/980-summary.html</loc>
-    <lastmod>2024-09-26T01:06:03.363Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/052-for.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/053-while.html</loc>
-    <lastmod>2024-09-26T01:06:03.362Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/06-dictionaries.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/052-for.html</loc>
-    <lastmod>2025-03-18T12:58:34.475Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/032-operators.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_more_conditionals.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/990-contributors.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_first_slicing.html</loc>
-    <lastmod>2024-09-26T01:06:03.350Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/031-basic-data-types.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_calculator.html</loc>
-    <lastmod>2024-09-26T01:06:03.349Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/051-conditionals.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_practice_questions.html</loc>
-    <lastmod>2024-09-26T01:06:03.352Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/060-modules.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_multiple_print.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/index.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_print_different_string.html</loc>
-    <lastmod>2024-09-26T01:06:03.352Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_if_leap_year.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_hello_input.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_practice_questions.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_two_line_print.html</loc>
-    <lastmod>2024-09-26T01:06:03.352Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_calculator.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_multiply_data.html</loc>
-    <lastmod>2024-09-26T01:06:03.353Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_print_different_string.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_data_sum.html</loc>
-    <lastmod>2024-09-26T01:06:03.352Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_two_line_print.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_divide_zero.html</loc>
-    <lastmod>2024-09-26T01:06:03.353Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_loop_list_string.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_first_read.html</loc>
-    <lastmod>2024-09-26T01:06:03.353Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_hello_input.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_data_sum_count.html</loc>
-    <lastmod>2024-09-26T01:06:03.353Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_loop_floats_enumerate.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/appendix_practice_questions.html</loc>
-    <lastmod>2024-09-26T01:06:03.354Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_more_conditionals.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_data_mean.html</loc>
-    <lastmod>2024-09-26T01:06:03.352Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_first_slicing.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/answer_data_summary_dict.html</loc>
-    <lastmod>2024-09-26T01:06:03.353Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_multiple_print.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/appendix/appendix_files.html</loc>
-    <lastmod>2024-09-26T01:06:03.354Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_first_list.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_loop_list_string.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_add_strings.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_add_strings.html</loc>
-    <lastmod>2024-09-26T01:06:03.348Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_first_loop.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_if_leap_year.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_first_indexing.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_first_list.html</loc>
-    <lastmod>2024-09-26T01:06:03.350Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/answers/answer_first_if.html</loc>
+    <lastmod>2025-03-18T13:13:11.580Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_loop_floats_enumerate.html</loc>
-    <lastmod>2024-09-26T01:06:03.351Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/010-workspace-setup.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_first_indexing.html</loc>
-    <lastmod>2024-09-26T01:06:03.350Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/053-while.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_first_loop.html</loc>
-    <lastmod>2024-09-26T01:06:03.350Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/980-summary.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/answers/answer_first_if.html</loc>
-    <lastmod>2024-09-26T01:06:03.349Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/033-data-structures.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/index.html</loc>
-    <lastmod>2025-03-18T13:00:42.020Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/030-variables.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/020-hello-python.html</loc>
-    <lastmod>2024-09-26T01:06:03.360Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/070-practical.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/030-variables.html</loc>
-    <lastmod>2024-09-26T01:06:03.361Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/020-hello-python.html</loc>
+    <lastmod>2025-03-18T13:13:11.586Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/032-operators.html</loc>
-    <lastmod>2024-09-26T01:06:03.361Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/pages/050-control-structures.html</loc>
+    <lastmod>2025-03-18T13:13:11.587Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/990-contributors.html</loc>
-    <lastmod>2024-09-26T01:06:03.363Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/appendix_practice_questions.html</loc>
+    <lastmod>2025-03-18T13:13:11.582Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/010-workspace-setup.html</loc>
-    <lastmod>2024-09-26T01:06:03.360Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_data_summary_dict.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/060-modules.html</loc>
-    <lastmod>2024-09-26T01:06:03.362Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/answer_data_sum_count.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
   <url>
-    <loc>https://Bristol-Training.github.io/beginning-python/pages/06-dictionaries.html</loc>
-    <lastmod>2024-09-26T01:06:03.362Z</lastmod>
+    <loc>https://Bristol-Training.github.io/intro-python-1/appendix/appendix_files.html</loc>
+    <lastmod>2025-03-18T13:13:11.581Z</lastmod>
   </url>
 </urlset>

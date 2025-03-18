@@ -1,1 +1,1 @@
-Sitemap: https://Bristol-Training.github.io/beginning-python/sitemap.xml
+Sitemap: https://Bristol-Training.github.io/intro-python-1/sitemap.xml

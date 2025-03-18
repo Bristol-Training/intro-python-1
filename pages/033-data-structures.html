@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -71,10 +71,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b085beecbf98fb5616ade3f11332d75d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -259,7 +259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#errors-while-working-with-lists" id="toc-errors-while-working-with-lists" class="nav-link" data-scroll-target="#errors-while-working-with-lists">Errors while working with lists</a></li>
   <li><a href="#adding-elements-to-lists" id="toc-adding-elements-to-lists" class="nav-link" data-scroll-target="#adding-elements-to-lists">Adding elements to lists</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/033-data-structures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/033-data-structures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -286,7 +286,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Until now all the variables we have used have contained a single piece of information, for example, <code>a = 4</code> makes a variable a containing a single number, 4. It’s very common to want to refer to collections of data. You can think, for example, of a bank statement that contains the list of expenses you had last month.</p>
 <p>Python has several build-in data structures that facilitate working with this common kind of data. In this beginners course we will only see <code>list</code>, but keep in mind there are other built-in data structures.</p>
 <p>A <code>list</code> is a data type that stores an ordered sequence of elements and can be created using square brackets <code>[]</code>, with elements separated by commas <code>,</code>. Let’s create a new script named <code>list.py</code> with the following code:</p>
-<div id="1044c7fb" class="cell" data-execution_count="1">
+<div id="671900a4" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -297,17 +297,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>This will create a Python <code>list</code> with three elements and assign it to the variable <code>my_list</code>. The square brackets <code>[</code> and <code>]</code> in this case mean “create a list” and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the <code>print()</code> function. Run this script in the terminal with <code>python list.py</code> and look at the output.</p>
-<div id="5a5760e9" class="cell" data-filename="list.py" data-execution_count="2">
+<div id="0fb8e09e" class="cell" data-filename="list.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>['cat', 'dog', 'horse']</code></pre>
 </div>
 </div>
 <p>You can have as many items in a list as you like, even zero items as in:</p>
-<div id="585c852d" class="cell" data-execution_count="3">
+<div id="859791b3" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can even have a mixture of different type of data types:</p>
-<div id="b7c861f4" class="cell" data-execution_count="4">
+<div id="1542b5ed" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">5</span>, <span class="fl">34.6</span>, <span class="st">"Hello"</span>, <span class="op">-</span><span class="dv">6</span>, <span class="va">False</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exercise1" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
@@ -336,7 +336,7 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We have changed our list by adding two more items to the end of it. We add an integer, <code>7</code> and a new string, <code>"quail"</code>. Each is still separated by a comma:</p>
-<div id="5f399b4e" class="cell" data-execution_count="5">
+<div id="0c1ceea9" class="cell" data-execution_count="5">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -352,13 +352,13 @@ Answer
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> list.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="64584c1f" class="cell" data-execution_count="6">
+<div id="fb609bc4" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>['cat', 'dog', 'horse', 7, 'quail']</code></pre>
 </div>
 </div>
 <p>Here we edit our list so that the items are all in a different order:</p>
-<div id="76d1998c" class="cell" data-execution_count="7">
+<div id="dd77ccd6" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -377,7 +377,7 @@ Answer
 <h2 class="anchored" data-anchor-id="indexing">Indexing</h2>
 <p>The power of Python’s lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called <em>indexing</em>. Indexing a list in Python is done using the square brackets <code>[]</code>. This is a different use of the square brackets to that which we saw above for <em>making</em> a list.</p>
 <p>To get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:</p>
-<div id="6f0e4bb0" class="cell" data-execution_count="8">
+<div id="1cef8f10" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.pys</strong></pre>
@@ -418,7 +418,7 @@ Answer
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>As well as setting <code>my_element</code> to the “0th” element of the list, we also print the value of the element at index 2:</p>
-<div id="ea495334" class="cell" data-execution_count="9">
+<div id="97ee6b70" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="dv">0</span>]</span>
@@ -438,7 +438,7 @@ horse</code></pre>
 <h2 class="anchored" data-anchor-id="reverse-indexing">Reverse indexing</h2>
 <p>Putting a single positive number in the square brackets gives us back the element which is at that distance from the start of the list, but what if we want the <em>last</em> element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, <code>2</code>), but perhaps we don’t know how long the list is (or we don’t want to check it).</p>
 <p>In this case we can use Python’s reverse indexing by placing a negative integer in the square brackets:</p>
-<div id="5ce564a8" class="cell" data-execution_count="10">
+<div id="befd853f" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -457,7 +457,7 @@ horse</code></pre>
 <h2 class="anchored" data-anchor-id="slicing">Slicing</h2>
 <p>As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called <em>slicing</em>. Slicing starts out the same way as standard indexing (i.e.&nbsp;with square brackets) but instead of putting a single number between them, you put multiple numbers separated by a colon.</p>
 <p>Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index <code>2</code> to index <code>4</code>, you do:</p>
-<div id="94d72854" class="cell" data-execution_count="11">
+<div id="ce01aedd" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>my_slice <span class="op">=</span> my_list[<span class="dv">2</span>:<span class="dv">5</span>]</span>
@@ -473,7 +473,7 @@ horse</code></pre>
 <h2 class="anchored" data-anchor-id="errors-while-working-with-lists">Errors while working with lists</h2>
 <p>It is very likely that indexing lists is the first time you will see a Python error. Seing Python errors (also sometimes called <em>exceptions</em>) is not a sign that you’re a bad programmer or that you’re doing something terrible. Even experienced programmers see Python errors on their screen.</p>
 <p>Error messages are in fact a very useful feedback mechanism for the programmer but that can be a bit daunting when you first see them. Let’s recreate a typical error message: a list with three elements will not have an element at index <code>6</code> (the highest index in that case would be <code>2</code>) and produce an error if we ask for it.</p>
-<div id="bfdc77b2" class="cell" data-execution_count="12">
+<div id="f855a1b3" class="cell" data-execution_count="12">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -527,7 +527,7 @@ Answer
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We make a list and then select a few slices of it:</p>
-<div id="cef0299d" class="cell" data-execution_count="13">
+<div id="091e908c" class="cell" data-execution_count="13">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>list.py</strong></pre>
@@ -550,7 +550,7 @@ Answer
 </div>
 <div class="sourceCode" id="cb20" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> list.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="1e553742" class="cell" data-filename="list.py" data-execution_count="14">
+<div id="f59fc7e3" class="cell" data-filename="list.py" data-execution_count="14">
 <div class="cell-output cell-output-stdout">
 <pre><code>['green', 5.3]
 [5.3, 'house']
@@ -565,7 +565,7 @@ Answer
 <section id="adding-elements-to-lists" class="level2">
 <h2 class="anchored" data-anchor-id="adding-elements-to-lists">Adding elements to lists</h2>
 <p>Lists in Python are <em>dynamic</em>, meaning that they can change in size during your script execution. You can add items to the end of your list by using the <code>append</code> function. The <code>append</code> function is a little different to other functions that we have used so far (like <code>print</code> and <code>range</code>) in that it is a part of the <code>list</code> data type so we use it in a slighlty different way.</p>
-<div id="fb069610" class="cell" data-execution_count="15">
+<div id="e3f0a868" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>my_list.append(<span class="st">"quokka"</span>)</span>
@@ -663,8 +663,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -673,7 +671,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/beginning-python\/");
+      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/intro-python-1\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -775,7 +773,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -1021,7 +1018,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/beginning-python/edit/main/pages/033-data-structures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/beginning-python/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/033-data-structures.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
