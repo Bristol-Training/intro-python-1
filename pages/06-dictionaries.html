@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b085beecbf98fb5616ade3f11332d75d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -146,7 +146,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you want to store lots of variables, but access them using more complex relationships. One example is a <em>dictionary</em>, which lets you store variables and access them using a <em>key</em>.</p>
 <p>Dictionaries in Python are created using curly brackets. Make a new file called <code>dict.py</code> and put this in it:</p>
-<div id="ee1663f8" class="cell" data-execution_count="1">
+<div id="c9f11175" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="b7964512" class="cell" data-filename="dict.py" data-execution_count="2">
+<div id="e51dd0fd" class="cell" data-filename="dict.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>meow</code></pre>
 </div>
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What we did here was create a dictionary on the first line. A dictionary is created using curly brackets (<code>{}</code>), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a <em>key</em> and a <em>value</em>. The <em>value</em> is the real data that we want to keep hold of and the <em>key</em> is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.</p>
 <p>On the next line we access the data in the dictionary <code>sounds</code>. Again, like lists we use the square brackets to ask questions of our data. In this case we’re asking the dictionary to give us the value associated with the key <code>"cat"</code> and so it will return to us <code>"meow"</code>.</p>
 <p>Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:</p>
-<div id="d4f28f47" class="cell" data-execution_count="3">
+<div id="c06b431f" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -199,14 +199,14 @@ Exercise 1
 </div>
 <div class="callout-body-container callout-body">
 <p>Edit <code>dict.py</code> to ask for the sound for the dog and the horse. - What happens if you ask for an animal that isn’t in the dictionary?</p>
-<p><a href="../answers/answer_first_dictionary.html"><small>answer</small></a></p>
+<p><a href="../answers/answer_first_dictionary.qmd"><small>answer</small></a></p>
 </div>
 </div>
 <section id="adding-new-data-into-dictionaries" class="level2">
 <h2 class="anchored" data-anchor-id="adding-new-data-into-dictionaries">Adding new data into dictionaries</h2>
 <p>As with lists, dictionaries are dynamic so we can add entries into a dictionary.</p>
 <p>Let’s say that we want to add in a new sound for a cow into our <code>sounds</code> dictionary. The key that the data will have will be <code>"cow"</code> and the value will be <code>"moo"</code>. To do so we put <code>sounds["cow"]</code> on the left-hand side of a variable assignment expression, as if we’re making a new variable. On the right goes the data that we want to put into the dictionary:</p>
-<div id="f0e493bb" class="cell" data-execution_count="4">
+<div id="9349b9a1" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -230,7 +230,7 @@ Exercise 1
 </div>
 <div class="sourceCode" id="cb6" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="77cd7cc8" class="cell" data-filename="dict.py" data-execution_count="5">
+<div id="e2fcef71" class="cell" data-filename="dict.py" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}</code></pre>
 </div>
@@ -246,7 +246,7 @@ Exercise 2
 </div>
 <div class="callout-body-container callout-body">
 <p>Edit <code>dict.py</code> so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.</p>
-<p><a href="../answers/answer_add_to_dictionary.html"><small>answer</small></a></p>
+<p><a href="../answers/answer_add_to_dictionary.qmd"><small>answer</small></a></p>
 </div>
 </div>
 </section>
@@ -254,7 +254,7 @@ Exercise 2
 <h2 class="anchored" data-anchor-id="looping-over-dictionaries">Looping over dictionaries</h2>
 <p>When discussing <code>for</code> loops you were told that Python allows you to loop over lots of different types of data such as lists, strings and <code>range</code>s. We can add dictionaries to that set.</p>
 <p>To discover how it works, let’s do the naïve thing first and just see what happens when we loop over a dictionary:</p>
-<div id="2678dd0e" class="cell" data-execution_count="6">
+<div id="23860353" class="cell" data-execution_count="6">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -275,7 +275,7 @@ Exercise 2
 </div>
 <div class="sourceCode" id="cb9" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="94069216" class="cell" data-filename="dict.py" data-execution_count="7">
+<div id="ccb65171" class="cell" data-filename="dict.py" data-execution_count="7">
 <div class="cell-output cell-output-stdout">
 <pre><code>cat
 dog
@@ -284,7 +284,7 @@ horse</code></pre>
 </div>
 <p>Hopefully, you recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the <em>keys</em>.</p>
 <p>What if, for example, you wanted to loop over the <em>values</em> instead. Well, there is a method on dictionaries called <code>values</code> which gives you just those so that you can loop over them:</p>
-<div id="475b804f" class="cell" data-execution_count="8">
+<div id="542dd4bd" class="cell" data-execution_count="8">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -305,7 +305,7 @@ horse</code></pre>
 </div>
 <div class="sourceCode" id="cb12" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9319c6b2" class="cell" data-filename="dict.py" data-execution_count="9">
+<div id="b3eb5d50" class="cell" data-filename="dict.py" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>meow
 woof
@@ -313,7 +313,7 @@ neigh</code></pre>
 </div>
 </div>
 <p>If we want to loop over the dictionary and get both the keys <em>and</em> the values, there is a method called <code>items</code>. Since it will be giving us two things each loop iteration, we’ll have to use the same trick as we did with <code>enumerate</code> and give two variable names in the <code>for</code> loop declaration:</p>
-<div id="8817f113" class="cell" data-execution_count="10">
+<div id="ae61ea8c" class="cell" data-execution_count="10">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>dict.py</strong></pre>
@@ -334,7 +334,7 @@ neigh</code></pre>
 </div>
 <div class="sourceCode" id="cb15" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> dict.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="4ec450a3" class="cell" data-filename="dict.py" data-execution_count="11">
+<div id="9091e1dc" class="cell" data-filename="dict.py" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>cat goes meow
 dog goes woof
@@ -346,7 +346,7 @@ horse goes neigh</code></pre>
 <section id="uses-for-dictionaries" class="level2">
 <h2 class="anchored" data-anchor-id="uses-for-dictionaries">Uses for dictionaries</h2>
 <p>Dictionaries can be used for any key-value mapping. The example above was a mapping of an animal species (as a string) to an animal sound ( as a string). You can use any data type you wish as the value in a dictionary. For example you might make a dictionary containing the population of some cities in millions (as a float):</p>
-<div id="b824de9c" class="cell" data-execution_count="12">
+<div id="11445415" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>census <span class="op">=</span> {</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"London"</span>: <span class="fl">8.615</span>,</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Paris"</span>: <span class="fl">2.244</span>,</span>
@@ -354,7 +354,7 @@ horse goes neigh</code></pre>
 <span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>or one which contains a list of authors as the key (as a string) and their books (as a list of strings):</p>
-<div id="7a40c05a" class="cell" data-execution_count="13">
+<div id="6c52c8a8" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>bookshelf <span class="op">=</span> {</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terry Pratchett"</span>: [<span class="st">"Mort"</span>, <span class="st">"Jingo"</span>, <span class="st">"Truckers"</span>],</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Jane Austen"</span>: [<span class="st">"Sense and Sensibility"</span>, <span class="st">"Pride and Prejudice"</span>],</span>
@@ -372,7 +372,7 @@ Exercise 3
 </div>
 <div class="callout-body-container callout-body">
 <p>Make a dictionary with the keys being the name of countries and the value being the country’s capital city. Loop over the dictionary and print something like <code>"The capital of France is Paris"</code> for each item.</p>
-<p><a href="../answers/answer_country_dictionary.html"><small>answer</small></a></p>
+<p><a href="../answers/answer_country_dictionary.qmd"><small>answer</small></a></p>
 </div>
 </div>
 <p>To summarise the different things we can pass to loops and the data that we get given each iteration:</p>
@@ -472,8 +472,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -584,7 +582,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

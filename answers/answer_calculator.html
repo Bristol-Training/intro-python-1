@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -69,10 +69,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-b085beecbf98fb5616ade3f11332d75d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -115,13 +115,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
 <p><code>calc.py</code> could look like:</p>
-<div id="e2af44b5" class="cell" data-execution_count="1">
+<div id="7ea6d6cf" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>calc.py</strong></pre>
@@ -149,25 +149,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb2" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0f9f1cc7" class="cell" data-execution_count="3">
+<div id="80c05bf9" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 4 * 6
 4 * 6 is 24</code></pre>
 </div>
 </div>
-<div id="cd46902e" class="cell" data-execution_count="4">
+<div id="638e9c4d" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 5 + 6
 5 + 6 is 11</code></pre>
 </div>
 </div>
-<div id="e1bd7c9d" class="cell" data-execution_count="5">
+<div id="3beb2a6c" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 457 - 75
 457 - 75 is 382</code></pre>
 </div>
 </div>
-<div id="cfa4c9da" class="cell" data-execution_count="6">
+<div id="7e1c4c4e" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 54 / 3
 54 / 3 is 18.0</code></pre>
@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>4 * 6 = 24</code></pre>
 <p>then we’d have to edit all four lines of code.</p>
 <p>Remembering our three-part pattern from earlier in the course of input→calculation→output, it’s a good idea to split out the calculation of data from the printing and display of data. In our case we could change it to look like:</p>
-<div id="ac82d138" class="cell" data-execution_count="7">
+<div id="4bc19388" class="cell" data-execution_count="7">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>calc.py</strong></pre>
@@ -215,25 +215,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="sourceCode" id="cb10" data-filename="Terminal/Command Prompt"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> calc.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="d7c29ff7" class="cell" data-execution_count="9">
+<div id="e3734e4c" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 4 * 6
 4 * 6 is 24</code></pre>
 </div>
 </div>
-<div id="9bfe985d" class="cell" data-execution_count="10">
+<div id="431f8d76" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 5 + 6
 5 + 6 is 11</code></pre>
 </div>
 </div>
-<div id="75b608cb" class="cell" data-execution_count="11">
+<div id="4b618a05" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 457 - 75
 457 - 75 is 382</code></pre>
 </div>
 </div>
-<div id="5c605e6b" class="cell" data-execution_count="12">
+<div id="e2b1568c" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-stdout">
 <pre><code>&gt; 54 / 3
 54 / 3 is 18.0</code></pre>
@@ -326,8 +326,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -438,7 +436,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
