@@ -2,7 +2,7 @@
 
 This repository contains an updated
 version of [Matt Williams](milliams.com)
-Beginning Python course.
+Introduction to Python (part 1) course.
 
 🛑🛑🛑🛑🛑🛑🛑🛑
 This course is currently under development

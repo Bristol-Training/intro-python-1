@@ -2,7 +2,7 @@
 title: "Introduction"
 ---
 
-Welcome to Beginning Python course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile *programming languages* today.
+Welcome to Introduction to Python (part 1) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile *programming languages* today.
 
 A programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.
 
