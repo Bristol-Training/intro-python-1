@@ -21,7 +21,7 @@
         "\n",
         "Then, to run the cell click the button (▶) in the toolbar at the top or press Ctrl-Enter or Shift-Enter with the cursor inside. The output will appear below when the cell is run:\n"
       ],
-      "id": "45811ad6"
+      "id": "632d58f0"
     },
     {
       "cell_type": "code",
@@ -29,7 +29,7 @@
       "source": [
         "print(\"Hello, Python!\")"
       ],
-      "id": "aa2782d6",
+      "id": "3b7bd6e9",
       "execution_count": null,
       "outputs": []
     },
@@ -42,7 +42,7 @@
         "\n",
         "Python have special integration with Jupyter Notebooks and so can display their output directly into the page. For example `pandas` will format tables of data nicely and `matplotlib` will embed graphs directly. Try copying the below code into a new cell and run it (**we don't expect you to understand it**):\n"
       ],
-      "id": "9b7e526d"
+      "id": "2bbf8b28"
     },
     {
       "cell_type": "code",
@@ -56,7 +56,7 @@
         ")\n",
         "temp"
       ],
-      "id": "2e9af227",
+      "id": "b264abf9",
       "execution_count": null,
       "outputs": []
     },
@@ -66,7 +66,7 @@
       "source": [
         "temp.plot()"
       ],
-      "id": "7b0a703a",
+      "id": "c18121ec",
       "execution_count": null,
       "outputs": []
     },
@@ -78,7 +78,7 @@
         "\n",
         "It is **good practice** to add comments to your code so it is easy to understand by other programmers or even yourself after a few months. This is particularly important if there's anything non-obvious in your code. To add a comments you can use a `#` symbol at any position in your script, what is behind '#' will be ignored by Python when running that line of code. \n"
       ],
-      "id": "baff154e"
+      "id": "70648da5"
     },
     {
       "cell_type": "code",
@@ -90,7 +90,7 @@
         "\n",
         "print(\"My favourite colour is red\") # print my favourite colour"
       ],
-      "id": "1aaa39f8",
+      "id": "e5c9fb62",
       "execution_count": null,
       "outputs": []
     }
