@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Hello, Python! – Introduction to Python (part 1)</title>
+<title>Lists – Introduction to Python (part 1)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,15 +58,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/030-variables.html" rel="next">
-<link href="../pages/012-workspace-condaforge.html" rel="prev">
+<link href="../pages/034-dictionaries.html" rel="next">
+<link href="../pages/032-operators.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -104,9 +104,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
-
-<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -120,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/020-hello-python.html">Hello, Python!</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/033-lists.html">Lists</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -185,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/020-hello-python.html" class="sidebar-item-text sidebar-link active">
+  <a href="../pages/020-hello-python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Hello, Python!</span></a>
   </div>
 </li>
@@ -212,7 +209,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/033-lists.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/033-lists.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Lists</span></a>
   </div>
 </li>
@@ -287,16 +284,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#commenting-your-code" id="toc-commenting-your-code" class="nav-link active" data-scroll-target="#commenting-your-code">Commenting your code</a></li>
+  <li><a href="#lists" id="toc-lists" class="nav-link active" data-scroll-target="#lists">Lists</a></li>
+  <li><a href="#indexing" id="toc-indexing" class="nav-link" data-scroll-target="#indexing">Indexing</a></li>
+  <li><a href="#reverse-indexing" id="toc-reverse-indexing" class="nav-link" data-scroll-target="#reverse-indexing">Reverse indexing</a></li>
+  <li><a href="#slicing" id="toc-slicing" class="nav-link" data-scroll-target="#slicing">Slicing</a></li>
+  <li><a href="#errors-while-working-with-lists" id="toc-errors-while-working-with-lists" class="nav-link" data-scroll-target="#errors-while-working-with-lists">Errors while working with lists</a></li>
+  <li><a href="#adding-elements-to-lists" id="toc-adding-elements-to-lists" class="nav-link" data-scroll-target="#adding-elements-to-lists">Adding elements to lists</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/020-hello-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/033-lists.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/033-lists.html">Lists</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Hello, Python!</h1>
+<h1 class="title">Lists</h1>
 </div>
 
 
@@ -313,95 +315,250 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This course will use a tool called <em>Jupyter Notebooks</em> to run your Python code. Once Jupyter Lab is open, to open a Notebook go to <code>File</code> &gt; <code>New</code> &gt; <code>Notebook</code> or click the <code>Python 3</code> button under <code>Notebook</code> section in the <code>Launcher</code> tab.</p>
-<p>Once the notebook is launched, you will see a wide grey box with a blue <code>[ ]:</code> to the left. The grey box is an input cell where you type any Python code you want to run. For instance, type:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Then, to run the cell click the button (▶) in the toolbar at the top or press Ctrl-Enter or Shift-Enter with the cursor inside. The output will appear below when the cell is run:</p>
-<div id="7c431792" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, Python!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Until now all the variables we have used have contained a single piece of information, for example, <code>a = 4</code> makes a variable a containing a single number, 4. It’s very common to want to refer to collections of data. You can think, for example, of a bank statement that contains the list of expenses you had last month.</p>
+<p>Python has several build-in data structures that facilitate working with this common kind of data. In this beginners course we will see <code>list</code> and <code>dictionary</code>.</p>
+<section id="lists" class="level2">
+<h2 class="anchored" data-anchor-id="lists">Lists</h2>
+<p>A <code>list</code> is a data type that stores an ordered sequence of elements and can be created using square brackets <code>[]</code>, with elements separated by commas <code>,</code>. Let’s create a new notebook with the following code:</p>
+<div id="e781e93c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This will create a Python <code>list</code> with three elements and assign it to the variable <code>my_list</code>. The square brackets <code>[</code> and <code>]</code> in this case mean “create a list” and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the <code>print()</code> function. Run this code and look at the output.</p>
+<div id="a011568f" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
-<pre><code>Hello, Python!</code></pre>
+<pre><code>['cat', 'dog', 'horse']</code></pre>
 </div>
 </div>
-<p>Congratulations, you’ve just written and executed your very first Python code!</p>
-<p>Python have special integration with Jupyter Notebooks and so can display their output directly into the page. For example <code>pandas</code> will format tables of data nicely and <code>matplotlib</code> will embed graphs directly. Try copying the below code into a new cell and run it (<strong>we don’t expect you to understand it</strong>):</p>
-<div id="63cb1324" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> pd.DataFrame(</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    [<span class="fl">3.1</span>, <span class="fl">2.4</span>, <span class="fl">4.8</span>, <span class="fl">4.1</span>, <span class="fl">3.4</span>, <span class="fl">4.2</span>],</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    columns<span class="op">=</span>[<span class="st">"temp (°C)"</span>],</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    index<span class="op">=</span>pd.RangeIndex(<span class="dv">2000</span>, <span class="dv">2006</span>, name<span class="op">=</span><span class="st">"year"</span>)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>temp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">temp (°C)</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">year</th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2000</td>
-<td>3.1</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">2001</td>
-<td>2.4</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2002</td>
-<td>4.8</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">2003</td>
-<td>4.1</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2004</td>
-<td>3.4</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">2005</td>
-<td>4.2</td>
-</tr>
-</tbody>
-</table>
-
+<p>You can have as many items in a list as you like, even zero items as in:</p>
+<div id="041880be" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> []</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You can even have a mixture of different type of data types:</p>
+<div id="83748a8e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">5</span>, <span class="fl">34.6</span>, <span class="st">"Hello"</span>, <span class="op">-</span><span class="dv">6</span>, <span class="va">False</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="exercise1" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
 </div>
 </div>
-</div>
-<div id="d3dc5d0a" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>temp.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="020-hello-python_files/figure-html/cell-4-output-1.png" width="571" height="429" class="figure-img"></p>
-</figure>
+<div class="callout-body-container callout-body">
+<p>Edit <code>my_list</code> so it has some more items in it. Try adding some different data types or rearranging items. Check that the output matches what you expect.</p>
 </div>
 </div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
 </div>
-<section id="commenting-your-code" class="level2">
-<h2 class="anchored" data-anchor-id="commenting-your-code">Commenting your code</h2>
-<p>It is <strong>good practice</strong> to add comments to your code so it is easy to understand by other programmers or even yourself after a few months. This is particularly important if there’s anything non-obvious in your code. To add a comments you can use a <code>#</code> symbol at any position in your script, what is behind ‘#’ will be ignored by Python when running that line of code.</p>
-<div id="ac36f634" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># This script prints my favourite colour</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print("Don't print me!") </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is red"</span>) <span class="co"># print my favourite colour</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We have changed our list by adding two more items to the end of it. We add an integer, <code>7</code> and a new string, <code>"quail"</code>. Each is still separated by a comma:</p>
+<div id="f35bb541" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>, <span class="dv">7</span>, <span class="st">"quail"</span>]</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>My favourite colour is red</code></pre>
+<pre><code>['cat', 'dog', 'horse', 7, 'quail']</code></pre>
 </div>
 </div>
+<p>Here we edit our list so that the items are all in a different order:</p>
+<div id="008672cb" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"quail"</span>, <span class="st">"cat"</span>, <span class="dv">7</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['quail', 'cat', 7, 'dog', 'horse']</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="indexing" class="level2">
+<h2 class="anchored" data-anchor-id="indexing">Indexing</h2>
+<p>The power of Python’s lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called <em>indexing</em>. Indexing a list in Python is done using the square brackets <code>[]</code>. This is a different use of the square brackets to that which we saw above for <em>making</em> a list.</p>
+<p>To get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:</p>
+<div id="04e55a73" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>dog</code></pre>
+</div>
+</div>
+<p>The code <code>my_list[1]</code> means “give me the number 1 element of the list <code>my_list</code>”. Is the above output what you expected?</p>
+<p>Probably you noticed that it prints <code>dog</code> whereas you may have expected it to print <code>cat</code>. This is because in Python you count from zero when indexing lists and so index <code>1</code> refers to the second item in the list. To get the first item you must use the index <code>0</code>. This <a href="https://en.wikipedia.org/wiki/Zero-based_numbering">“zero-indexing”</a> is very common and is used in many programming languages.</p>
+<div id="exercise-2" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try accessing some different elements from the list by putting in different number between the square brackets.</p>
+</div>
+</div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As well as setting <code>my_element</code> to the “0th” element of the list, we also print the value of the element at index 2:</p>
+<div id="26eb4069" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="dv">0</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_element)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">2</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>cat
+horse</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="reverse-indexing" class="level2">
+<h2 class="anchored" data-anchor-id="reverse-indexing">Reverse indexing</h2>
+<p>Putting a single positive number in the square brackets gives us back the element which is at that distance from the start of the list, but what if we want the <em>last</em> element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, <code>2</code>), but perhaps we don’t know how long the list is (or we don’t want to check it).</p>
+<p>In this case we can use Python’s reverse indexing by placing a negative integer in the square brackets:</p>
+<div id="452cba61" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>horse</code></pre>
+</div>
+</div>
+<p>If you run this code then you will see that it prints <code>horse</code> which is the last item in the list. Using negative numbers allows you to count backwards from the end of the list so that <code>-1</code> is the last item, <code>-2</code> is the second-last item etc.</p>
+</section>
+<section id="slicing" class="level2">
+<h2 class="anchored" data-anchor-id="slicing">Slicing</h2>
+<p>As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called <em>slicing</em>. Slicing starts out the same way as standard indexing (i.e.&nbsp;with square brackets) but instead of putting a single number between them, you put multiple numbers separated by a colon.</p>
+<p>Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index <code>2</code> to index <code>4</code>, you do:</p>
+<div id="0f62513f" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>my_slice <span class="op">=</span> my_list[<span class="dv">2</span>:<span class="dv">5</span>]</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_slice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['green', 5.3, 'house']</code></pre>
+</div>
+</div>
+<p>You see that is printed <code>['green', 5.3, 'house']</code> which is index <code>2</code> (<code>'green'</code>), index <code>3</code> (<code>5.3</code>) and index <code>4</code> (<code>'house'</code>). Notice that it did not give us the element at index <code>5</code> and that is because with slicing, Python will give you the elements from the starting index up to, <strong>but not including</strong>, the end index.</p>
+</section>
+<section id="errors-while-working-with-lists" class="level2">
+<h2 class="anchored" data-anchor-id="errors-while-working-with-lists">Errors while working with lists</h2>
+<p>It is very likely that indexing lists is the first time you will see a Python error. Seing Python errors (also sometimes called <em>exceptions</em>) is not a sign that you’re a bad programmer or that you’re doing something terrible. Even experienced programmers see Python errors on their screen.</p>
+<p>Error messages are in fact a very useful feedback mechanism for the programmer but that can be a bit daunting when you first see them. Let’s recreate a typical error message: a list with three elements will not have an element at index <code>6</code> (the highest index in that case would be <code>2</code>) and produce an error if we ask for it.</p>
+<div id="b10c1e37" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>my_element <span class="op">=</span> my_list[<span class="dv">6</span>]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IndexError</span>                                Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[11], line 3</span>
+<span class="ansi-green-fg ansi-bold">      1</span> my_list <span style="color:rgb(98,98,98)">=</span> [<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">cat</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">dog</span><span style="color:rgb(175,0,0)">"</span>, <span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">horse</span><span style="color:rgb(175,0,0)">"</span>]
+<span class="ansi-green-fg">----&gt; 3</span> my_element <span style="color:rgb(98,98,98)">=</span> <span class="ansi-yellow-bg">my_list</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">6</span><span class="ansi-yellow-bg">]</span>
+<span class="ansi-green-fg ansi-bold">      5</span> <span style="color:rgb(0,135,0)">print</span>(my_element)
+
+<span class="ansi-red-fg">IndexError</span>: list index out of range</pre>
+</div>
+</div>
+</div>
+<p>Running this you will see the following printed to the screen:</p>
+<p>which a very dense collection of information. Usually is the the <em>last</em> line of an error as that is where the most useful information is. In this case, the last line reads <code>IndexError: list index out of range</code> which has two parts to it. The first is the word before the colon which tells you the type of the exception is an <code>IndexError</code>, i.e.&nbsp;an error when <em>indexing</em>. The second part of that line is usually a slightly more descriptive message, in this case telling us that the specific problem was that the index was “out of range”, i.e.&nbsp;too high or too low.</p>
+<p>Moving to the lines above that, we see printed the line of code at which the exception occurred along with the line number within the code. These are essential in larger work to track down where the problem came from.</p>
+<p>Take your time to read the error messages when they are printed to the screen, they will most likely help you solve the issue.</p>
+<div id="exercise3" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit your code to print various slices of a list. If you get an error printed, make sure you understand what it is telling you.</p>
+</div>
+</div>
+<div id="answer3" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We make a list and then select a few slices of it:</p>
+<div id="45a43adc" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">5</span>, <span class="st">"green"</span>, <span class="fl">5.3</span>, <span class="st">"house"</span>, <span class="dv">100</span>, <span class="dv">1</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">2</span>:<span class="dv">4</span>])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">3</span>:<span class="op">-</span><span class="dv">2</span>])</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="op">-</span><span class="dv">4</span>:<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list[<span class="dv">33</span>:<span class="dv">37</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['green', 5.3]
+[5.3, 'house']
+[5.3, 'house', 100]
+[]</code></pre>
+</div>
+</div>
+<p>The first <code>print</code> selects every element from index-2 up to, but not including, the index-4, i.e.&nbsp;the 2nd and 3rd elements.</p>
+<p>The second <code>print</code> starts at index 3 and goe as far as index -2 (which is the same as index 5 in this list).</p>
+<p>The next <code>print</code> starts at index -4 (i.e.&nbsp;index 3) and goes until index -1 (i.e.&nbsp;index 6).</p>
+<p>Last, <code>print(my_list[33:37])</code> tries to access elements of a range that do not exist, but the behavior of Python is different than when accessing a single element as we saw before. In this case, it returns and empty list instead of showing an error message. This wrapping of <em>slicing</em> calls give us some flexibility when accessing a <code>list</code>, but will require us to check, in most cases, that the output is not an empty list.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="adding-elements-to-lists" class="level2">
+<h2 class="anchored" data-anchor-id="adding-elements-to-lists">Adding elements to lists</h2>
+<p>Lists in Python are <em>dynamic</em>, meaning that they can change in size during execution. You can add items to the end of your list by using the <code>append</code> function. The <code>append</code> function is a little different to other functions that we have used so far (like <code>print</code> and <code>range</code>) in that it is a part of the <code>list</code> data type so we use it in a slighlty different way.</p>
+<div id="ef5bd32d" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>my_list <span class="op">=</span> [<span class="st">"cat"</span>, <span class="st">"dog"</span>, <span class="st">"horse"</span>]</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>my_list.append(<span class="st">"quokka"</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_list)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>['cat', 'dog', 'horse', 'quokka']</code></pre>
+</div>
+</div>
+<p>Here you see we gave the name of our list (<code>my_list</code>) followed it by a dot (<code>.</code>) and then the name of the function that we wanted to call (<code>append</code>). Functions which are part of data types like this are sometimes called <em>methods</em>. We might describe the middle line here as “calling the <code>append</code> method on the object <code>my_list</code>”.</p>
 
 
 </section>
@@ -808,13 +965,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/012-workspace-condaforge.html" class="pagination-link" aria-label="Conda-Forge">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Conda-Forge</span>
+      <a href="../pages/032-operators.html" class="pagination-link" aria-label="Operators">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Operators</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/030-variables.html" class="pagination-link" aria-label="Variables and data types">
-        <span class="nav-page-text">Variables and data types</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/034-dictionaries.html" class="pagination-link" aria-label="Dictionaries">
+        <span class="nav-page-text">Dictionaries</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -826,7 +983,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/020-hello-python.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/033-lists.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>

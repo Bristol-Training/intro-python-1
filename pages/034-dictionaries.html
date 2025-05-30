@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Workspace setup – Introduction to Python (part 1)</title>
+<title>Dictionaries – Introduction to Python (part 1)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/011-workspace-anaconda.html" rel="next">
-<link href="../pages/001-programming.html" rel="prev">
+<link href="../pages/050-control-structures.html" rel="next">
+<link href="../pages/033-lists.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -82,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/010-workspace-setup.html">Workspace setup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -124,7 +159,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link active">
+            <a href="../pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Workspace setup</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -180,7 +215,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../pages/034-dictionaries.html" class="sidebar-item-text sidebar-link">
+  <a href="../pages/034-dictionaries.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Dictionaries</span></a>
   </div>
 </li>
@@ -244,15 +279,22 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#adding-new-data-into-dictionaries" id="toc-adding-new-data-into-dictionaries" class="nav-link active" data-scroll-target="#adding-new-data-into-dictionaries">Adding new data into dictionaries</a></li>
+  <li><a href="#uses-for-dictionaries" id="toc-uses-for-dictionaries" class="nav-link" data-scroll-target="#uses-for-dictionaries">Uses for dictionaries</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/034-dictionaries.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Workspace setup</h1>
+<h1 class="title">Dictionaries</h1>
 </div>
 
 
@@ -269,12 +311,215 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.</p>
-<p>If you are new to Python and you don’t have it installed in your computer we recommend you to follow the <a href="../pages/012-workspace-condaforge.html">steps on how to install mini-conda</a>.</p>
-<p>Alternatively, you can follow these <a href="../pages/011-workspace-anaconda.html">steps to install Anaconda</a>, also a very popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.</p>
-<p>If you cannot install Python in your computer, you can try a free web browser-based service to write and execute Python code like Google Colab <a href="https://colab.research.google.com/" class="uri">https://colab.research.google.com/</a>. <strong>Please, do not upload any sensitive information in there</strong>.</p>
+<p>Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you want to store lots of variables, but access them using more complex relationships. One example is a <code>dictionary</code>, which lets you store variables and access them using a <em>key</em>.</p>
+<p>Dictionaries in Python are created using curly brackets. Make a new file called <code>dict.py</code> and put this in it:</p>
+<div id="ddfb14a0" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {<span class="st">"cat"</span>: <span class="st">"meow"</span>, <span class="st">"dog"</span>: <span class="st">"woof"</span>, <span class="st">"horse"</span>: <span class="st">"neigh"</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cat_sound <span class="op">=</span> sounds[<span class="st">"cat"</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cat_sound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>meow</code></pre>
+</div>
+</div>
+<p>What we did here was create a dictionary on the first line. A dictionary is created using curly brackets (<code>{}</code>), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a <em>key</em> and a <em>value</em>. The <em>value</em> is the real data that we want to keep hold of and the <em>key</em> is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.</p>
+<p>On the next line we access the data in the dictionary <code>sounds</code>. Again, like lists we use the square brackets to ask questions of our data. In this case we’re asking the dictionary to give us the value associated with the key <code>"cat"</code> and so it will return to us <code>"meow"</code>.</p>
+<p>Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:</p>
+<div id="73678c1f" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"horse"</span>: <span class="st">"neigh"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>cat_sound <span class="op">=</span> sounds[<span class="st">"cat"</span>]</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(cat_sound)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="exercise-1" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 1">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit your code to ask for the sound of a dog and a horse. What happens if you ask for an animal that isn’t in the dictionary?</p>
+</div>
+</div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="16b4344e" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"horse"</span>: <span class="st">"neigh"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sounds[<span class="st">"cat"</span>])</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sounds[<span class="st">"horse"</span>])</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sounds[<span class="st">"duck"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>meow
+neigh</code></pre>
+</div>
+<div class="cell-output cell-output-error">
+<div class="ansi-escaped-output">
+<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">KeyError</span>                                  Traceback (most recent call last)
+Cell <span class="ansi-green-fg">In[3], line 9</span>
+<span class="ansi-green-fg ansi-bold">      7</span> <span style="color:rgb(0,135,0)">print</span>(sounds[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">cat</span><span style="color:rgb(175,0,0)">"</span>])
+<span class="ansi-green-fg ansi-bold">      8</span> <span style="color:rgb(0,135,0)">print</span>(sounds[<span style="color:rgb(175,0,0)">"</span><span style="color:rgb(175,0,0)">horse</span><span style="color:rgb(175,0,0)">"</span>])
+<span class="ansi-green-fg">----&gt; 9</span> <span style="color:rgb(0,135,0)">print</span>(<span class="ansi-yellow-bg">sounds</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">duck</span><span style="color:rgb(175,0,0)" class="ansi-yellow-bg">"</span><span class="ansi-yellow-bg">]</span>)
+
+<span class="ansi-red-fg">KeyError</span>: 'duck'</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="adding-new-data-into-dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="adding-new-data-into-dictionaries">Adding new data into dictionaries</h2>
+<p>As with lists, dictionaries are dynamic so we can add entries into a dictionary.</p>
+<p>Let’s say that we want to add in a new sound for a cow into our <code>sounds</code> dictionary. The key that the data will have will be <code>"cow"</code> and the value will be <code>"moo"</code>. To do so we put <code>sounds["cow"]</code> on the left-hand side of a variable assignment expression, as if we’re making a new variable. On the right goes the data that we want to put into the dictionary:</p>
+<div id="7105901e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"horse"</span>: <span class="st">"neigh"</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>sounds[<span class="st">"cow"</span>] <span class="op">=</span> <span class="st">"moo"</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>This is saying that we want the value <code>"moo"</code> associated with the key <code>"cow"</code> in the dictionary <code>sounds</code>.</p>
+<p>Running it, we see:</p>
+<div id="cb0a9a00" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-stdout">
+<pre><code>{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}</code></pre>
+</div>
+</div>
+<div id="exercise-2" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 2">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Edit your code so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.</p>
+</div>
+</div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="377df35b" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>sounds[<span class="st">"horse"</span>] <span class="op">=</span> <span class="st">"neigh"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>sounds[<span class="st">"cow"</span>] <span class="op">=</span> <span class="st">"moo"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sounds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="uses-for-dictionaries" class="level2">
+<h2 class="anchored" data-anchor-id="uses-for-dictionaries">Uses for dictionaries</h2>
+<p>Dictionaries can be used for any key-value mapping. The example above was a mapping of an animal species (as a string) to an animal sound ( as a string). You can use any data type you wish as the value in a dictionary. For example you might make a dictionary containing the population of some cities in millions (as a float):</p>
+<div id="7ed2931f" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>census <span class="op">=</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"London"</span>: <span class="fl">8.615</span>,</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Paris"</span>: <span class="fl">2.244</span>,</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Rome"</span>: <span class="fl">2.627</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>or one which contains a list of authors as the key (as a string) and their books (as a list of strings):</p>
+<div id="04cd67e5" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bookshelf <span class="op">=</span> {</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terry Pratchett"</span>: [<span class="st">"Mort"</span>, <span class="st">"Jingo"</span>, <span class="st">"Truckers"</span>],</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Jane Austen"</span>: [<span class="st">"Sense and Sensibility"</span>, <span class="st">"Pride and Prejudice"</span>],</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Charles Dickens"</span>: [<span class="st">"Oliver Twist"</span>],</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="exercise-3" class="callout callout-style-default callout-note no-icon callout-titled" title="Exercise 3">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Exercise 3
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Make a dictionary with the keys being the name of countries and the value being the country’s capital city. Print something like <code>"The capital of France is Paris"</code> for any item.</p>
+</div>
+</div>
+<div id="answer" class="callout callout-style-default callout-caution no-icon callout-titled" title="Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div id="9f4f2028" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>capital <span class="op">=</span> {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"England"</span>: <span class="st">"London"</span>,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"France"</span> : <span class="st">"Paris"</span>,</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Italy"</span>: <span class="st">"Rome"</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The capital of France is"</span>, capital[<span class="st">"France"</span>])</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The capital of Italy is"</span>, capital[<span class="st">"Italy"</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The capital of France is Paris
+The capital of Italy is Rome</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -678,13 +923,13 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../pages/001-programming.html" class="pagination-link" aria-label="What is programming?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is programming?</span>
+      <a href="../pages/033-lists.html" class="pagination-link" aria-label="Lists">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lists</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/011-workspace-anaconda.html" class="pagination-link" aria-label="Anaconda">
-        <span class="nav-page-text">Anaconda</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/050-control-structures.html" class="pagination-link" aria-label="Control structures">
+        <span class="nav-page-text">Control structures</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -696,7 +941,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/010-workspace-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/034-dictionaries.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
