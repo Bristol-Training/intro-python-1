@@ -2,7 +2,7 @@
 title: Control structures
 ---
 
-Earlier you were told that Python will read your script starting at the top and running each line of code until it reaches the bottom. While largely true, real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.
+Earlier you were told that Python will read each one of your cells of code starting at the top and running each line of code until it reaches the bottom. While largely true, real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.
 
 ![Adapted from: *This Is A Book*, by Demetri Martin](../assets/path.jpg "Non-linear path")
 

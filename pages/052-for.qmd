@@ -7,7 +7,6 @@ It is possible to make Python repeat certain lines of code using *loops*. The ab
 Imagine we have three strings in a `list` that we want to print. We could start by calling `print` three times to create a program like:
 
 ```{python}
-#| filename: loop.py
 my_words = ["Jean", "Golding", "Institute"]
 print(my_words[0])
 print(my_words[1])
@@ -24,7 +23,6 @@ FOR EACH word IN my_words
 We can write a `for` loop in Python which will perform a task once for each word in our list:
 
 ```{python}
-#| filename: loop.py
 my_words = ["Jean", "Golding", "Institute"]
 
 for word in my_words:
@@ -42,14 +40,43 @@ for item in shopping_list:
 ```
 
 ::: {#exercise1 .callout-note title="Exercise 1" icon=false} 
-Edit `loop.py` to have a different number of words in the list.
+Edit your code to have a different number of words in the list.
 
 - Does it work if you put numbers (i.e. integers or floats) in there as well?
 - What happens if the list `my_words` is empty? (**hint**: empty lists look like `[]`)
 :::
 
 ::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
-{{< include ../answers/answer_first_loop.qmd >}}
+Adding more items to the list makes the loop go around more times
+
+```{python}
+my_words = ["Hello", "Python", "Goodbye", "Python"]
+
+for word in my_words:
+    print(word)
+```
+
+
+A list with a mixture of data types can be printed without issue
+
+```{python}
+
+my_words = ["Hello", "Python", 404, "Goodbye", "Python", 42]
+
+for word in my_words:
+    print(word)
+```
+
+
+Looping over an empty list does not print anything
+
+```{python}
+my_words = []
+
+for word in my_words:
+    print(word)
+```
+
 :::
 
 
@@ -87,23 +114,9 @@ for word in my_words<b style="color:darkred">:</b>
 :::
 
 
-If we want to write more code after the end of a loop, we have to make sure that it is *not* indented. So this code:
+If we want to write more code after the end of a loop, we have to make sure that it is *not* indented. So the below code will print:
 
 ```{python}
-#| filename: loop.py
-#| output: false
-my_words = ["Hello", "Python"]
-
-for word in my_words:
-    print(word)
-
-print("...Goodbye")
-```
-
-will print:
-
-```{python}
-#| echo: false
 my_words = ["Hello", "Python"]
 
 for word in my_words:
@@ -131,8 +144,6 @@ A lot of the power of loops comes from being able to put a lot of different type
 
 Most simply, instead of putting a variable name there, you can put a list directly:
 ```{python }
-#| filename: loop.py
-#| output: false
 for word in ["Hello", "Python"]:
     print(word)
 ```
@@ -140,9 +151,6 @@ for word in ["Hello", "Python"]:
 
 As well as lists we can put anything which Python considers *iterable*. For now we haven't come across many of those but as we keep learning we'll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.
 ```{python }
-#| filename: loop.py
-#| output: false
-
 phrase = "Hello Python"
 
 for letter in phrase:
@@ -150,18 +158,35 @@ for letter in phrase:
 ```
 
 
-::: {#exercise .callout-tip title="Exercise" icon=false} 
-Experiment with `loop.py` and make it loop over both lists and strings.
+::: {#exercise .callout-note title="Exercise 2" icon=false} 
+Experiment with your code and make it loop over both lists and strings.
 :::
 
-::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
-{{< include ../answers/answer_loop_list_string.qmd >}}
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+Starting with the same list we used before, each item in the list gets printed on its own line.
+
+```{python }
+words = ["Hello", "Python"]
+
+for word in words:
+    print(word)
+```
+
+
+On the contrary, if we loop over a string we see that each character gets printed on its own line.
+```{python}
+phrase = "Hello Python"
+
+for letter in phrase:
+    print(letter)
+
+```
 :::
 
 
 ## Loop over a range of numbers
 
-There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an agument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
+There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an argument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
 
 ```{python}
 for number in range(5):

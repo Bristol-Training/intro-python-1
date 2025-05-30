@@ -1,0 +1,67 @@
+
+### Conda-Forge
+
+#### Install Miniforge (Recommended for Conda-Forge)
+Miniforge is a lightweight installer that sets up Conda with the conda-forge channel (i.e. source of libraries) as the default that provides a robust environment for data science and machine learning workflows.
+
+Go to <https://conda-forge.org/download/> and download the latest version for your operating system.
+
+- **Windows**: Download the [Miniforge installer for Windows](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe). Run the installer and follow the prompts.
+
+
+- **Mac/Linux**: Download the appropriate [installer script (2021 and newer MacBooks)](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh) and and run:
+
+  ```{.bash filename="Terminal/Command Prompt"}
+  bash Miniforge3-MacOSX-arm64.sh
+  ```
+  Follow the on-screen instructions.
+
+#### Verify Installation
+After installation, open a command prompt/terminal and check if Conda is installed:
+
+```{.bash  filename="Terminal/Command Prompt"}
+conda --version
+```
+
+
+### Steps to Create and Activate an Environment
+
+#### Create a New Environment
+Open a command prompt or terminal. Use the following command to create an environment named `training` with Python 3.12, Jupyter Lab, Jupyter Notebook, Pandas and Scikit-Learn:
+
+```{.bash filename="Terminal/Command Prompt"}
+conda create -n training python=3.12 jupyterlab pandas scikit-learn
+```
+This installs all specified packages in one command.
+
+If you need to install packages individually after creating an environment, use:
+```{.bash filename="Terminal/Command Prompt"}
+conda install [PACKAGES]
+```
+
+For example:
+```{.bash filename="Terminal/Command Prompt"}
+conda install jupyterlab
+```
+
+#### Activate the Environment
+To activate the newly created environment type:
+
+```{.bash filename="Terminal/Command Prompt"}
+conda activate training
+```
+
+The terminal prompt will change to show `(training)` indicating the environment is active.
+
+Last, launch Jupyter Lab typing:
+```{.bash filename="Terminal/Command Prompt"}
+jupyter lab
+```
+
+Jupyter Lab interface should open on your local web browser:
+![JupyterLab](../assets/jupyterlab1.png "JupyterLab")
+
+
+We're now ready to get started!
+
+

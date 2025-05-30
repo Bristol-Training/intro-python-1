@@ -6,7 +6,7 @@ Operators are essential for performing various operations on variables and value
 
 ### Arithmetic Operators
 
-Arithmetic operators can be used with numerical variables such as `int` and `float`.
+Arithmetic operators can be used with numerical variables such as `int` and `float`. Some of them are:
 
 Description                 | Operator | Example 
 ----------------------------|----------|----------------
@@ -14,8 +14,6 @@ Addition                    | +        | a + b
 Subtraction                 | -        | a - b
 Multiplication              | *        | a * b
 Division                    | /        | a / b
-Floor Division              | //       | a // b
-Modulo                      | %        | a % b
 Exponentiation              | **       | a ** b
 
 ```{python}
@@ -23,8 +21,6 @@ a = 9
 b = 2
 print('Subtraction:', a - b)
 print('Division:', a / b)
-print('Floor Division:', a // b)
-print('Modulo:', a % b)
 print('Power:', a ** b)
 ```
 
@@ -70,7 +66,6 @@ print("(a == b) and (a > c)", (a == b) and (a > c))
 print("(a > b) or (a < c)", (a > b) or (a < c))
 print("not (a > b):", not (a > b))
 ```
-
 
 
 ::: {#exercise .callout-note title="Exercise" icon=false} 

@@ -1,0 +1,24 @@
+---
+title: What is programming?
+---
+
+
+## How a computer works
+
+Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.
+
+At the heart of this system are two essential components: 
+
+- **Central Processing Unit (CPU)** - It's primary role is to interpret and carry out instructions. It operates at remarkable speed, handling millions of instructions per second.
+
+- **Memory (RAM)** - It is the workspace where the computer temporarily stores the information and instructions the CPU needs to access. Unlike long-term storage (like a hard drive), memory is volatile and its contents are lost when the computer is turned off.
+
+Fundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that's performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, **sequential** steps.
+
+### Programming
+
+A program is, in essence, an algorithm: a step-by-step procedure for solving a problem or performing a task. The computer follows these instructions exactly as written, with no room for interpretation or assumption.
+
+A programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.
+
+Programming is the process of writing a precise sequence of instructions that tell the computer what to do.

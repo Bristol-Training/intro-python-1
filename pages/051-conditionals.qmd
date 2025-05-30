@@ -72,11 +72,9 @@ You can chain multiple conditions with `elif` using the same syntax. On the cont
 
 ::: {#exercise1 .callout-note title="Exercise" icon=false} 
 
-To explore the behaviour of the `if` statement, we could edit the below `if.py` script to change the value of `my_number` via an `input` function call. **The `input` function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the [`int`](https://docs.python.org/3/library/functions.html#int) function**.
+To explore the behaviour of the `if` statement, we could edit the below code to change the value of `my_number` via an `input` function call. **The `input` function will always return a string, even if you enter digits so we need to explicitly convert the input into an integer with the [`int`](https://docs.python.org/3/library/functions.html#int) function**.
 
-```{python}
-#| filename: if.py
-#| eval: false
+```{.python}
 my_number = int(input("Enter a number: "))  # We can nest function calls directly
 
 if my_number > 100:
@@ -87,7 +85,35 @@ Run the program with different inputs. Does it give you what you expect? What ha
 :::
 
 ::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
-{{< include ../answers/answer_first_if.qmd >}}
+```{.python}
+# We can nest function calls directly
+my_number = int(input("Enter a number: "))  
+
+if my_number > 100:
+    print(my_number, "is large")
+```
+
+If `my_number` is smaller than 100 then the expression is false and so `if` does not trigger and nothing is printed:
+
+```{python}
+#| echo: false
+my_number = 42
+
+print("Enter a number: ", my_number)
+
+if my_number > 100:
+    print(my_number, "is large")
+```
+
+```{python}
+#| echo: false
+my_number = 128
+
+print("Enter a number: ", my_number)
+
+if my_number > 100:
+    print(my_number, "is large")
+```
 :::
 
 
@@ -98,7 +124,82 @@ Experiment with editing `if.py` to use some different boolean statements. Make s
 
 :::
 ::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
-{{< include ../answers/answer_more_conditionals.qmd >}}
+
+**Less than:**
+
+```{python}
+#| eval: false
+my_number = int(input("Enter a number: ")) 
+
+if my_number < 100:
+    print(my_number, "is less than 100")
+```
+
+```{python}
+#| echo: false
+my_number = 74 
+
+print("Enter a number: ", my_number)
+
+if my_number < 100:
+    print(my_number, "is less than 100")
+```
+
+<br/>
+
+**Equal to:**
+
+```{python}
+#| eval: false
+#| filename: if.py
+
+my_number = int(input("Enter a number: "))  
+
+if my_number == 100:
+    print(my_number, "== 100")
+if my_number == 74:
+    print(my_number, "== 74")
+```
+
+```{python}
+#| echo: false
+my_number = 74 
+
+print("Enter a number: ", my_number)
+
+if my_number == 100:
+    print(my_number, "== 100")
+if my_number == 74:
+    print(my_number, "== 74")
+```
+
+
+<br/>
+
+**Not equal to:**
+```{python}
+#| eval: false
+#| filename: if.py
+
+my_number = int(input("Enter a number: ")) 
+
+if my_number != 100:
+    print(my_number, "!= 100")
+if my_number != 74:
+    print(my_number, "!= 74")
+```
+
+```{python}
+#| echo: false
+my_number = 74
+
+print("Enter a number: ", my_number)
+
+if my_number != 100:
+    print(my_number, "!= 100")
+if my_number != 74:
+    print(my_number, "!= 74")
+```
 :::
 
 
@@ -122,35 +223,6 @@ else:
 ```
 
 
-
-::: {#exercise3 .callout-note title="Exercise" icon=false} 
-
-Create a file `leap_year.py` which calculates, for a given year, whether it is a leap year and prints out the answer. You might want to read the year in using `input`, or you could hard-code it in the program.
-
-The rules to follow are:
-
-1. if the year is divisible by 400 then it's a leap year,
-2. otherwise, if the year is divisible by 100 then it's not,
-3. otherwise, if the year is divisible by 4 then it's a leap year,
-4. otherwise, it's not.
-
-To simplify the writing of the program, you might find it easier to start with the divisible-by-4 condition, then add in the divisible-by-100 check and then add in the divisible-by-400 calculation.
-
-For reference, here are some years for you to check against:
-
-- 2023 - not a leap year as it's not divisible by 4
-- 2024 - a leap year as it's divisible by 4 (and not by 100)
-- 1900 - not a leap year as it's divisible by 100 (and not by 400)
-- 2000 - a leap year as it's divisible by 400
-
-:::
-
-::: {#answer3 .callout-caution icon=false title='Answer' collapse="true"}
-{{< include ../answers/answer_if_leap_year.qmd >}}
-:::
-
-
-
 ## Combining questions
 
 It is possible to ask two or more questions in one go by combining them with `and` and `or`. So, if you want to check is a number is smaller than ten (`my_number < 10`) and is not equal to zero (`my_number != 0`), you can use:
@@ -160,76 +232,5 @@ if my_number < 10 and my_number != 0:
     ...
 ```
 
-These combined checks can be used is both `if` and `elif` statements.
-
-
-::: {#exercise4 .callout-tip title="Exercise" icon=false} 
-Could you figure out how to rewrite `leap_year.py` with a single `if`-`else` statement?
-:::
-
-::: {#answer4 .callout-caution icon=false title='Answer' collapse="true"}
-```{python}
-#| filename: leap_year.py
-#| eval: false
-year = int(input("Enter a year: "))
-
-if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
-```
-
-```{python}
-#| filename: leap_year.py
-#| echo: false
-year = 2024
-
-print("Enter a year:", year)
-
-if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 4 == 0) ) :
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
-```
-
-```{python}
-#| filename: leap_year.py
-#| echo: false
-year = 2023
-
-print("Enter a year:", year)
-
-if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
-```
-```{python}
-#| filename: leap_year.py
-#| echo: false
-year = 1900
-
-print("Enter a year:", year)
-
-if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
-```
-```{python}
-#| filename: leap_year.py
-#| echo: false
-year = 2000
-
-print("Enter a year:", year)
-
-if ( (not(year % 100 == 0) and (year % 4 == 0)) or (year % 400 == 0) ) :
-    print(year, "is a leap year")
-else:
-    print(year, "is not a leap year")
-```
-
-:::
-
-
+These combined checks can be used in both `if` and `elif` statements.
 

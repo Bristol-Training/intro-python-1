@@ -17,16 +17,13 @@ Description                       | Type     | Example
 ----------------------------------|----------|----------------
 integers or whole numbers         | int      | a = int(12)
 floating-point numbers            | float    | b = float(7.3)
-complex numbers                   | complex  | c = complex(a, b)
 
 
 ```{python}
 a = 12
 b = 7.3
-c = complex(a, b)
 print("A:", a, type(a))
 print("B:", b, type(b))
-print("C:", c, type(c))
 ```
 
 ### Text Types
@@ -58,7 +55,7 @@ print("pi:", pi, type(pi))
 
 Description                       | Type     | Example 
 ----------------------------------|----------|----------------
-boolean values (True or False)    | bool      | a = True
+boolean values (True or False)    | bool     | a = True
 
 ```{python}
 a = 23

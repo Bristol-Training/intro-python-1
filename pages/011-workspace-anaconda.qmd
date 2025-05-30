@@ -1,0 +1,34 @@
+---
+title: Anaconda
+---
+
+#### University-Managed Laptops
+
+If you're using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:
+
+1. Open the Company Portal (Windows) or Self Service (Mac) application on your laptop
+2. Search for "Anaconda"
+3. Click on the Anaconda package and follow the installation prompts
+
+#### Alternative Installation Method
+
+If you don't have access to Self Service or are using a personal computer, you can download and install Anaconda directly from the web:
+
+1. Visit the official Anaconda website (https://www.anaconda.com/download/)
+2. Download the appropriate version for your operating system (Windows, macOS, or Linux)
+3. Run the installer and follow the on-screen instructions
+
+---
+
+
+Once Anaconda is installed, start "Anaconda Navigator" and press the JupyterLab button on the main screen:
+
+![Anaconda Navigator](../assets/navigator.png "Anaconda Navigator")
+
+This will open JupyterLab in your default web browser and will look something like this:
+
+![JupyterLab](../assets/jupyterlab1.png "JupyterLab")
+
+
+We're now ready to get started!
+

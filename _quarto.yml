@@ -15,19 +15,24 @@ website:
     border: true
     contents: 
       - "index.qmd"
-      - "pages/010-workspace-setup.qmd"
+      - "pages/001-programming.qmd"
+      - section: "pages/010-workspace-setup.qmd"
+        contents:
+          - "pages/011-workspace-anaconda.qmd"
+          - "pages/012-workspace-condaforge.qmd"
       - "pages/020-hello-python.qmd"
       - section: "pages/030-variables.qmd"
         contents:
           - "pages/031-basic-data-types.qmd"
           - "pages/032-operators.qmd"
-          - "pages/033-data-structures.qmd"
+          - "pages/033-lists.qmd"
+          - "pages/034-dictionaries.qmd"
+
       - section: "pages/050-control-structures.qmd"
         contents:
           - "pages/051-conditionals.qmd"
           - "pages/052-for.qmd"
           - "pages/053-while.qmd"
-      - "pages/060-modules.qmd"
       - "pages/070-practical.qmd"
       - "pages/980-summary.qmd"
       - "pages/990-contributors.qmd"

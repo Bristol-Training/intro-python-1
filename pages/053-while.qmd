@@ -46,12 +46,12 @@ Given a list of students **sorted** by name
 students = ["Alice", "Bob", "Charlie", "Frank", "George", "Hannah", "Julia", "Mia", "Noah", "Olivia"]
 ```
 
-create a script `while.py` that prints the names of students starting with letters before 'M' in the alphabet. 
+write a Python code that prints the names of students starting with letters before 'M' in the alphabet. 
 :::
 
 ::: {#answer1 .callout-caution icon=false title='Answer' collapse="true"}
 
-Note in the below script that the `while` loop needs to take into account two different conditions:
+Note in the code below that the `while` loop needs to take into account two different conditions:
 
 - That the student's name starts with a letter before 'M'
 - That we don't try to index an element out of range in `students`
