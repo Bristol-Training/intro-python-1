@@ -1,5 +1,6 @@
-
-### Conda-Forge
+---
+title: Conda-Forge
+---
 
 #### Install Miniforge (Recommended for Conda-Forge)
 Miniforge is a lightweight installer that sets up Conda with the conda-forge channel (i.e. source of libraries) as the default that provides a robust environment for data science and machine learning workflows.
