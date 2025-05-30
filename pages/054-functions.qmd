@@ -1,0 +1,171 @@
+---
+title: Functions
+---
+
+In previous section we saw how to repeat a set of instructions inside loops. But if someone wants to make use that operations multiple times on your code, they will have to copy and paste your code every time.
+
+*Functions* provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in this materials, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.
+
+You can also bundle up your own code into functions, avoiding repeating yourself and making your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. 
+
+```{python}
+weight_in_ounces = 6
+
+weight_in_grams = weight_in_ounces * 28.3495
+
+print(f"{weight_in_grams} g")
+```
+
+You can see this script has three main parts:
+
+- The **set-up** where we define `weight_in_ounces`
+- The **data-processing** section where we read our inputs and create an output
+- The **output** section where we print our result to the screen
+
+The data processing section will work regardless of what data is inside the variable `weight_in_ounces` and so we can grab that bit of code and make it usable in other contexts quite easily, using functions.
+
+## Defining functions
+
+We can turn this into a function that can convert ounces to grams by using `def`. To do this, type:
+
+```{python}
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+```
+
+This has created a new function called `ounces_to_grams` which we can now call. In a similar fashion to other constructs in Python (like `for` loops and `if` statements) it has a rigid structure.
+
+First we must use the `def` keyword to start a function definition:
+
+<pre>
+ ↓
+<b style="color:darkred">def</b> ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Then we specify the name that we want to give the function. This is the name which we will use when *calling* the function. Like anything in Python, choose a descriptive name that describes what it does:
+
+<pre>
+           ↓
+def <b style="color:darkred">ounces_to_grams</b>(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Function definitions must then be followed by a pair of round brackets. This is a similar syntax to that used when *calling* a function and giving it arguments but here we're just defining it. Between those brackets go the names of the parameters we want the function to accept (can be zero or more parameters). Here we are defining one:
+
+<pre>
+                   ↓      ↓
+def ounces_to_grams<b style="color:darkred">(</b>weight<b style="color:darkred">)</b>:
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Finally, the line is completed with a colon. And since we've used a colon, we must indent the body of the function as we did with loops and conditional statements.
+
+<pre>
+                           ↓
+def ounces_to_grams(weight)<b style="color:darkred">:</b>
+    new_weight = weight * 28.3495
+    return new_weight
+</pre>
+
+Most functions will also want to return data back to the code that called it. You can choose what data is returned using the `return` keyword followed by the data you want to return:
+
+<pre>
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    <b style="color:darkred">return</b> new_weight
+      ↑
+</pre>
+
+Note that the body of the function has been copied from our script above with the only change being that the variables have different names and we added a `return` statement.
+
+
+## Calling functions
+
+You can now call the function using:
+
+```{python}
+def ounces_to_grams(weight):
+    new_weight = weight * 28.3495
+    return new_weight
+
+weight_in_ounces = 6
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+
+In this case you have called the function `ounces_to_grams` and passed in the argument `weight_in_ounces`. In the function, `weight_in_ounces` is copied to its internal variable, `weight`. The function `ounces_to_grams` then acts on `weight`, creating the new variable `new_weight`. It then returns `new_weight`, which is assigned to `weight_in_grams`.
+
+You can use your new `ounces_to_grams` function to convert any numbers. Try typing:
+
+```{python}
+weight_in_ounces = 999
+
+weight_in_grams = ounces_to_grams(weight_in_ounces)
+
+print(f"{weight_in_grams} g")
+```
+
+
+
+::: {#exercise2 .callout-note title="Exercise" icon=false} 
+Take the following code:
+
+```python
+my_list = [5, 7, 34, 5, 3, 545]
+
+big_numbers = []
+for num in my_list:
+    if num > 10:
+        big_numbers.append(num)
+
+print(big_numbers)
+```
+
+and convert the data-processing parts to a function called `big` which can be called like:
+
+```python
+my_list = [5, 7, 34, 5, 3, 545]
+
+large_numbers = big(my_list)
+
+print(large_numbers)
+```
+
+giving
+
+```
+[34, 545]
+```
+
+Be careful to pay attention to the indentation, ensuring that it is consistent with the original code. Particularly, note that the `return` statement will cause the function to exit, so make sure that it doesn't run until after the loop has finished.
+
+:::
+
+::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
+Starting from the initial code, we pull out the middle four lines, indent them, put `def big(numbers):` in front and add `return big_numbers` to the end, paying careful attention to the indentation of the `return` statement. Finally, we update the variable name used in the function to match the argument name `numbers`:
+
+```{python}
+def big(numbers):
+    big_numbers = []
+    for num in numbers:
+        if num > 10:
+            big_numbers.append(num)
+    return big_numbers
+
+
+my_list = [5, 7, 34, 5, 3, 545]
+
+large_numbers = big(my_list)
+
+print(large_numbers)
+```
+:::
+

@@ -119,10 +119,10 @@ if my_number > 100:
 
 
 ::: {#exercise2 .callout-note title="Exercise 2" icon=false} 
-
-Experiment with editing `if.py` to use some different boolean statements. Make sure you remember to save the file after each change before running it.
+Experiment with editing your code to use some different boolean statements.
 
 :::
+
 ::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
 
 **Less than:**
@@ -151,7 +151,6 @@ if my_number < 100:
 
 ```{python}
 #| eval: false
-#| filename: if.py
 
 my_number = int(input("Enter a number: "))  
 
@@ -179,7 +178,6 @@ if my_number == 74:
 **Not equal to:**
 ```{python}
 #| eval: false
-#| filename: if.py
 
 my_number = int(input("Enter a number: ")) 
 

@@ -184,7 +184,7 @@ for letter in phrase:
 :::
 
 
-## Loop over a range of numbers
+## Looping over a range of numbers
 
 There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an argument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
 
@@ -199,3 +199,73 @@ The `range` function can also be given two arguments, in which case, the first a
 for number in range(10, 13):
     print(number)
 ```
+
+
+
+## Looping over dictionaries
+
+Python also allows you to loop over dictionaries. To discover how it works, let's do the naïve thing first and just see what happens when we loop over a dictionary:
+
+```{python"}
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for animal in sounds:
+    print(animal)
+```
+
+You will recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the *keys*.
+
+What if, for example, you wanted to loop over the *values* instead. Well, there is a method on dictionaries called `values` which gives you just those so that you can loop over them:
+
+```{python}
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for sound in sounds.values():
+    print(sound)    
+```
+
+
+If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
+
+```{python}
+sounds = {
+    "cat": "meow",
+    "dog": "woof",
+    "horse": "neigh"
+}
+
+for animal, sound in sounds.items():
+    print(animal, "goes", sound)
+```
+
+The `items` method gives us two pieces of data where the first is always the key and the second if always the value. We give the keys the name `animal` and the values the name `sound`. We can then use both those variables in the loop body.
+
+
+::: {#exercise-4 .callout-note title="Exercise 4" icon=false} 
+
+Can you modify your code where you created a dictionary with country-capital pairs to loop over it and print something like `"The capital of France is Paris"` for all items?
+
+:::
+
+::: {#answer4 .callout-caution icon=false title='Answer' collapse="true"}
+```{python}
+capital = {
+    "England": "London",
+    "France" : "Paris",
+    "Italy": "Rome"
+}
+
+# note we use 'cap' and not 'capital', as it is used for the dictionary
+for country, cap in capital.items():
+    print("The capital of", country, "is", cap)
+
+```
+:::

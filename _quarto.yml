@@ -33,6 +33,7 @@ website:
           - "pages/051-conditionals.qmd"
           - "pages/052-for.qmd"
           - "pages/053-while.qmd"
+          - "pages/054-functions.qmd"
       - "pages/070-practical.qmd"
       - "pages/980-summary.qmd"
       - "pages/990-contributors.qmd"

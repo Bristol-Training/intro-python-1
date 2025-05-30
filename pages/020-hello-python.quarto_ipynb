@@ -11,7 +11,6 @@
         "\n",
         "\n",
         "\n",
-        "\n",
         "This course will use a tool called *Jupyter Notebooks* to run your Python code. Once Jupyter Lab is open, to open a Notebook go to `File` > `New` > `Notebook` or click the `Python 3` button under `Notebook` section in the `Launcher` tab.\n",
         "\n",
         "Once the notebook is launched, you will see a wide grey box with a blue `[ ]:` to the left. The grey box is an input cell where you type any Python code you want to run. For instance, type:\n",
@@ -22,7 +21,7 @@
         "\n",
         "Then, to run the cell click the button (▶) in the toolbar at the top or press Ctrl-Enter or Shift-Enter with the cursor inside. The output will appear below when the cell is run:\n"
       ],
-      "id": "2370b192"
+      "id": "45811ad6"
     },
     {
       "cell_type": "code",
@@ -30,7 +29,7 @@
       "source": [
         "print(\"Hello, Python!\")"
       ],
-      "id": "b0b9cf4c",
+      "id": "aa2782d6",
       "execution_count": null,
       "outputs": []
     },
@@ -43,7 +42,7 @@
         "\n",
         "Python have special integration with Jupyter Notebooks and so can display their output directly into the page. For example `pandas` will format tables of data nicely and `matplotlib` will embed graphs directly. Try copying the below code into a new cell and run it (**we don't expect you to understand it**):\n"
       ],
-      "id": "5f106794"
+      "id": "9b7e526d"
     },
     {
       "cell_type": "code",
@@ -57,7 +56,7 @@
         ")\n",
         "temp"
       ],
-      "id": "d556b9ae",
+      "id": "2e9af227",
       "execution_count": null,
       "outputs": []
     },
@@ -67,7 +66,7 @@
       "source": [
         "temp.plot()"
       ],
-      "id": "1fb1ef71",
+      "id": "7b0a703a",
       "execution_count": null,
       "outputs": []
     },
@@ -79,7 +78,7 @@
         "\n",
         "It is **good practice** to add comments to your code so it is easy to understand by other programmers or even yourself after a few months. This is particularly important if there's anything non-obvious in your code. To add a comments you can use a `#` symbol at any position in your script, what is behind '#' will be ignored by Python when running that line of code. \n"
       ],
-      "id": "a8d31bbb"
+      "id": "baff154e"
     },
     {
       "cell_type": "code",
@@ -91,7 +90,7 @@
         "\n",
         "print(\"My favourite colour is red\") # print my favourite colour"
       ],
-      "id": "a026d04c",
+      "id": "1aaa39f8",
       "execution_count": null,
       "outputs": []
     }

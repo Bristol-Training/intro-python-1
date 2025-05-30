@@ -8,3 +8,5 @@ If you are new to Python and you don't have it installed in your computer we rec
 
 Alternatively, you can follow these [steps to install Anaconda](./011-workspace-anaconda.qmd), also a very popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times. 
 
+If you cannot install Python in your computer, you can try a free web browser-based service to write and execute Python code like Google Colab 
+<https://colab.research.google.com/>. **Please, do not upload any sensitive information in there**.
