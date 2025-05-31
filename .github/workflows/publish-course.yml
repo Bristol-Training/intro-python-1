@@ -14,7 +14,7 @@ on:
       - main
 
 name: Render and Publish
-permissions: 
+permissions:
   contents: write
   pages: write
 
@@ -24,7 +24,7 @@ jobs:
     defaults:
       run:
         shell: bash -el {0} # Ensures you use the same shell for all commands
-  
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -41,10 +41,10 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          # To install LaTeX to build PDF book 
-          tinytex: true 
+          # To install LaTeX to build PDF book
+          tinytex: true
 
-      - name: Publish to GitHub Pages (and render) 
+      - name: Publish to GitHub Pages (and render)
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
