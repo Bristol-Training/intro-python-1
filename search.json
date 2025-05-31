@@ -77,36 +77,42 @@
     ]
   },
   {
-    "objectID": "pages/051-conditionals.html",
-    "href": "pages/051-conditionals.html",
-    "title": "Conditional if",
+    "objectID": "pages/012-workspace-anaconda.html",
+    "href": "pages/012-workspace-anaconda.html",
+    "title": "Anaconda",
     "section": "",
-    "text": "Conditional if statements allow programs to make decisions and execute different code based on whether certain conditions are True or False. For instance, we may want to perform a different action when a study participant is an adult or not:\nThe basic syntax for conditional statements is if condition:, where condition is an expression that evaluates to either True or False, i.e. a boolean. If it’s True, the indented code block under the if statement will run. If False, it will be skipped. For example, the below code will print “You are an adult” if age is 18 or higher.\nage = 18\nif age &gt;= 18:\n    print(\"You are an adult\")\n\nYou are an adult\nYou can also add an else clause to specify code to run if the condition is False:\nage = 17\nif age &gt;= 18:\n    print(\"You are an adult\")\nelse:\n    print(\"You are not an adult\")\n\nYou are not an adult\nFor multiple conditions, you can use elif (else if) clauses to execute the first matching block.\nage = 14\nif age &lt; 13:\n    print(\"You are a child\") \nelif age &lt; 18:\n    print(\"You are a teenager\")\nelse:\n    print(\"You are an adult\")\n\nYou are a teenager",
-    "crumbs": [
-      "Control structures",
-      "Conditional if"
-    ]
+    "text": "If you’re using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:\n\nOpen the Company Portal (Windows) or Self Service (Mac) application on your laptop\nSearch for “Anaconda”\nClick on the Anaconda package and follow the installation prompts"
   },
   {
-    "objectID": "pages/051-conditionals.html#ordering-your-options",
-    "href": "pages/051-conditionals.html#ordering-your-options",
-    "title": "Conditional if",
-    "section": "Ordering your options",
-    "text": "Ordering your options\nWhen working out which lines of code will be run, Python will work down the list of if, elifs and else and will run the first one that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.\nFor example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:\n\n\n\nif.py\n\nmy_number = int(input(\"Enter a number: \"))\n\nif my_number &gt; 100:\n    print(my_number, \"is large\")\nelif my_number &gt; 1:\n    print(my_number, \"is positive\")\nelse:\n    print(my_number, \"negative\")",
-    "crumbs": [
-      "Control structures",
-      "Conditional if"
-    ]
+    "objectID": "pages/012-workspace-anaconda.html#university-managed-laptops",
+    "href": "pages/012-workspace-anaconda.html#university-managed-laptops",
+    "title": "Anaconda",
+    "section": "",
+    "text": "If you’re using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:\n\nOpen the Company Portal (Windows) or Self Service (Mac) application on your laptop\nSearch for “Anaconda”\nClick on the Anaconda package and follow the installation prompts"
   },
   {
-    "objectID": "pages/051-conditionals.html#combining-questions",
-    "href": "pages/051-conditionals.html#combining-questions",
-    "title": "Conditional if",
-    "section": "Combining questions",
-    "text": "Combining questions\nIt is possible to ask two or more questions in one go by combining them with and and or. So, if you want to check is a number is smaller than ten (my_number &lt; 10) and is not equal to zero (my_number != 0), you can use:\nif my_number &lt; 10 and my_number != 0:\n    ...\nThese combined checks can be used in both if and elif statements.",
+    "objectID": "pages/012-workspace-anaconda.html#personal-laptops",
+    "href": "pages/012-workspace-anaconda.html#personal-laptops",
+    "title": "Anaconda",
+    "section": "Personal laptops",
+    "text": "Personal laptops\nIf you don’t have access to Self Service or are using a personal computer, you can download and install Anaconda directly from the web:\n\nVisit the official Anaconda website\nDownload the appropriate version for your operating system (Windows, macOS, or Linux)\nRun the installer and follow the on-screen instructions"
+  },
+  {
+    "objectID": "pages/012-workspace-anaconda.html#starting-jupyter-lab",
+    "href": "pages/012-workspace-anaconda.html#starting-jupyter-lab",
+    "title": "Anaconda",
+    "section": "Starting Jupyter Lab",
+    "text": "Starting Jupyter Lab\nOnce Anaconda is installed, start “Anaconda Navigator” and press the JupyterLab button on the main screen:\n\n\n\nAnaconda Navigator\n\n\nThis will open JupyterLab in your default web browser and will look something like this:\n\n\n\nJupyterLab\n\n\nWe’re now ready to get started!\nContinue with the course"
+  },
+  {
+    "objectID": "pages/053-while.html",
+    "href": "pages/053-while.html",
+    "title": "While loop",
+    "section": "",
+    "text": "We have seen that for loops can repeatedly execute a block of code for each element specified. We can think of another scenario where we only want to continue executing a block of code as long as a given condition is True. The basic idea is:\n    WHILE there is money in my account\n        have lunch out\n        update my bank statement\nIn while loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is True. The basic syntax in Python which has a similar scaffolding to an if clause:\nwhile condition:\n    # code to execute while condition is True\nTo ensure that the condition will eventually become False, it is common usage to increment/decrement a counter variable in the loop body:\n\ncount = 0\nwhile count &lt; 5:\n    print(count)\n    count = count + 1\n\n0\n1\n2\n3\n4\n\n\nThere are some extra flow control instructions in while loops that we are not going to see here in detail but it is important to mention them. They are:\n\nbreak: exits the loop immediately\ncontinue: skips the rest of the current iteration and moves to the next\nelse: executes when the loop condition becomes False\n\nwhile True:\n    user_input = input(\"Enter 'q' to quit: \")\n    if user_input == 'q':\n        break\n\n\n\n\n\n\nExercise\n\n\n\nGiven a list of students sorted by name\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\nwrite a Python code that prints the names of students starting with letters before ‘M’ in the alphabet.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nNote in the code below that the while loop needs to take into account two different conditions:\n\nThat the student’s name starts with a letter before ‘M’\nThat we don’t try to index an element out of range in students\n\n\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\n\n# Initialize the index\ni = 0\n\n# While loop to print names before 'M'\nwhile i &lt; len(students) and students[i][0] &lt; 'M':\n    print(students[i])\n    i = i + 1\n\nAlice\nBob\nCharlie\nFrank\nGeorge\nHannah\nJulia",
     "crumbs": [
       "Control structures",
-      "Conditional if"
+      "While loop"
     ]
   },
   {
@@ -114,7 +120,7 @@
     "href": "pages/001-programming.html",
     "title": "What is programming?",
     "section": "",
-    "text": "Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.\nAt the heart of this system are two essential components:\n\nCentral Processing Unit (CPU) - It’s primary role is to interpret and carry out instructions. It operates at remarkable speed, handling millions of instructions per second.\nMemory (RAM) - It is the workspace where the computer temporarily stores the information and instructions the CPU needs to access. Unlike long-term storage (like a hard drive), memory is volatile and its contents are lost when the computer is turned off.\n\nFundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that’s performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, sequential steps.\n\n\nA program is, in essence, an algorithm: a step-by-step procedure for solving a problem or performing a task. The computer follows these instructions exactly as written, with no room for interpretation or assumption.\nA programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.\nProgramming is the process of writing a precise sequence of instructions that tell the computer what to do.",
+    "text": "Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.\nAt the heart of this system are two essential components:\n\nCentral Processing Unit (CPU) - It’s primary role is to interpret and carry out instructions. It operates at remarkable speed, handling millions of instructions per second.\nMemory (RAM) - It is the workspace where the computer temporarily stores the information and instructions the CPU needs to access. Unlike long-term storage (like a hard drive), memory is volatile and its contents are lost when the computer is turned off.\n\nFundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that’s performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, sequential steps.",
     "crumbs": [
       "What is programming?"
     ]
@@ -124,31 +130,29 @@
     "href": "pages/001-programming.html#how-a-computer-works",
     "title": "What is programming?",
     "section": "",
-    "text": "Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.\nAt the heart of this system are two essential components:\n\nCentral Processing Unit (CPU) - It’s primary role is to interpret and carry out instructions. It operates at remarkable speed, handling millions of instructions per second.\nMemory (RAM) - It is the workspace where the computer temporarily stores the information and instructions the CPU needs to access. Unlike long-term storage (like a hard drive), memory is volatile and its contents are lost when the computer is turned off.\n\nFundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that’s performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, sequential steps.\n\n\nA program is, in essence, an algorithm: a step-by-step procedure for solving a problem or performing a task. The computer follows these instructions exactly as written, with no room for interpretation or assumption.\nA programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.\nProgramming is the process of writing a precise sequence of instructions that tell the computer what to do.",
+    "text": "Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.\nAt the heart of this system are two essential components:\n\nCentral Processing Unit (CPU) - It’s primary role is to interpret and carry out instructions. It operates at remarkable speed, handling millions of instructions per second.\nMemory (RAM) - It is the workspace where the computer temporarily stores the information and instructions the CPU needs to access. Unlike long-term storage (like a hard drive), memory is volatile and its contents are lost when the computer is turned off.\n\nFundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that’s performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, sequential steps.",
     "crumbs": [
       "What is programming?"
     ]
   },
   {
-    "objectID": "pages/011-workspace-anaconda.html",
-    "href": "pages/011-workspace-anaconda.html",
-    "title": "Anaconda",
-    "section": "",
-    "text": "University-Managed Laptops\nIf you’re using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:\n\nOpen the Company Portal (Windows) or Self Service (Mac) application on your laptop\nSearch for “Anaconda”\nClick on the Anaconda package and follow the installation prompts\n\n\n\nAlternative Installation Method\nIf you don’t have access to Self Service or are using a personal computer, you can download and install Anaconda directly from the web:\n\nVisit the official Anaconda website (https://www.anaconda.com/download/)\nDownload the appropriate version for your operating system (Windows, macOS, or Linux)\nRun the installer and follow the on-screen instructions\n\n\nOnce Anaconda is installed, start “Anaconda Navigator” and press the JupyterLab button on the main screen:\n\n\n\nAnaconda Navigator\n\n\nThis will open JupyterLab in your default web browser and will look something like this:\n\n\n\nJupyterLab\n\n\nWe’re now ready to get started!",
+    "objectID": "pages/001-programming.html#programming",
+    "href": "pages/001-programming.html#programming",
+    "title": "What is programming?",
+    "section": "Programming",
+    "text": "Programming\nA program is, in essence, an algorithm: a step-by-step procedure for solving a problem or performing a task. The computer follows these instructions exactly as written, with no room for interpretation or assumption.\nA programming language is a formal system of instructions used to create computer applications. In other words, it allows humans to communicate with computers by providing a way for writing instructions that can be executed by a machine.\nProgramming is the process of writing a precise sequence of instructions that tell the computer what to do.",
     "crumbs": [
-      "Workspace setup",
-      "Anaconda"
+      "What is programming?"
     ]
   },
   {
-    "objectID": "pages/012-workspace-condaforge.html",
-    "href": "pages/012-workspace-condaforge.html",
-    "title": "Conda-Forge",
+    "objectID": "pages/980-summary.html",
+    "href": "pages/980-summary.html",
+    "title": "Summary",
     "section": "",
-    "text": "Install Miniforge (Recommended for Conda-Forge)\nMiniforge is a lightweight installer that sets up Conda with the conda-forge channel (i.e. source of libraries) as the default that provides a robust environment for data science and machine learning workflows.\nGo to https://conda-forge.org/download/ and download the latest version for your operating system.\n\nWindows: Download the Miniforge installer for Windows. Run the installer and follow the prompts.\nMac/Linux: Download the appropriate installer script (2021 and newer MacBooks) and and run:\n\n\nTerminal/Command Prompt\n\nbash Miniforge3-MacOSX-arm64.sh\n\nFollow the on-screen instructions.\n\n\n\nVerify Installation\nAfter installation, open a command prompt/terminal and check if Conda is installed:\n\n\nTerminal/Command Prompt\n\nconda --version\n\n\n\nSteps to Create and Activate an Environment\n\nCreate a New Environment\nOpen a command prompt or terminal. Use the following command to create an environment named training with Python 3.12, Jupyter Lab, Jupyter Notebook, Pandas and Scikit-Learn:\n\n\nTerminal/Command Prompt\n\nconda create -n training python=3.12 jupyterlab pandas scikit-learn\n\nThis installs all specified packages in one command.\nIf you need to install packages individually after creating an environment, use:\n\n\nTerminal/Command Prompt\n\nconda install [PACKAGES]\n\nFor example:\n\n\nTerminal/Command Prompt\n\nconda install jupyterlab\n\n\n\nActivate the Environment\nTo activate the newly created environment type:\n\n\nTerminal/Command Prompt\n\nconda activate training\n\nThe terminal prompt will change to show (training) indicating the environment is active.\nLast, launch Jupyter Lab typing:\n\n\nTerminal/Command Prompt\n\njupyter lab\n\nJupyter Lab interface should open on your local web browser: \nWe’re now ready to get started!",
+    "text": "Well done for getting this far! We’ve covered a lot in this course:\n\nHow to set up a Python notebook with JupyterLab\nUsing the print() function\nBasic data types (integers, floats, strings, boolean)\nData structures: lists and dictionaries\nConditional branching using if statements\nLooping with for and while\n\nYou’re not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practice that you will become confident. These notes will remain online so feel free to refer back to them at any time.",
     "crumbs": [
-      "Workspace setup",
-      "Conda-Forge"
+      "Summary"
     ]
   },
   {
@@ -156,7 +160,40 @@
     "href": "pages/032-operators.html",
     "title": "Operators",
     "section": "",
-    "text": "Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.\n\nArithmetic Operators\nArithmetic operators can be used with numerical variables such as int and float. Some of them are:\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nAddition\n+\na + b\n\n\nSubtraction\n-\na - b\n\n\nMultiplication\n*\na * b\n\n\nDivision\n/\na / b\n\n\nExponentiation\n**\na ** b\n\n\n\n\na = 9\nb = 2\nprint('Subtraction:', a - b)\nprint('Division:', a / b)\nprint('Power:', a ** b)\n\nSubtraction: 7\nDivision: 4.5\nPower: 81\n\n\n\n\nComparison Operators\nWe can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nEqual To\n==\na == b\n\n\nNot Equal To\n!=\na != b\n\n\nGreater Than\n&gt;\na &gt; b\n\n\nLess Than\n&lt;\na &lt; b\n\n\nGreater Than or Equal To\n&gt;=\na &gt;= b\n\n\nLess Than or Equal To\n&lt;=\na &lt;= b\n\n\n\n\na = 5\nb = 2\nprint(\"Equal To:\", a == b)\nprint(\"Less Than:\", a &gt; b)\nprint(\"Not Equal To:\", a != b)\nprint(\"Greater Than:\", a &lt; b)\n\nEqual To: False\nLess Than: True\nNot Equal To: True\nGreater Than: False\n\n\n\n\nLogical Operators\nLogical operators are used to combine conditional statements or negate them, and can only be applied to booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nLogical AND\nand\n(a == b) and (a &gt; c)\n\n\nLogical OR\nor\n(a &gt; b) or (a &lt; c)\n\n\nLogical NOT\nnot\nnot (a &gt; b)\n\n\n\n\na = 5\nb = 2\nc = 4\nprint(\"(a == b) and (a &gt; c)\", (a == b) and (a &gt; c))\nprint(\"(a &gt; b) or (a &lt; c)\", (a &gt; b) or (a &lt; c))\nprint(\"not (a &gt; b):\", not (a &gt; b))\n\n(a == b) and (a &gt; c) False\n(a &gt; b) or (a &lt; c) True\nnot (a &gt; b): False\n\n\n\n\n\n\n\n\nExercise\n\n\n\nDefine two strings str1=\"Tuesday\" and str2=\"Wednesday\", and compare them (e.g. equal, greater and less than).\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nstr1=\"Tuesday\"\nstr2=\"Wednesday\"\n\nprint(str1,\"equal to\",str2,\":\",str1==str2)\nprint(str1,\"greater than\",str2,\":\",str1&gt;str2)\nprint(str1,\"less than\",str2,\":\",str1&lt;str2)\n\nTuesday equal to Wednesday : False\nTuesday greater than Wednesday : False\nTuesday less than Wednesday : True\n\n\nIt is easy undersand that the operator == returns True if two strings are the same. But what do &gt; and &lt;?\nPython doesn’t understand the meaning of works “Tuesday” and “Wednesday”, they are just two chains of characters. The operator &gt; will return True if the string str1 comes after alphabetically than str2, and &lt; will return True if the string str1 comes before alphabetically than str2.",
+    "text": "Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.",
+    "crumbs": [
+      "Variables and data types",
+      "Operators"
+    ]
+  },
+  {
+    "objectID": "pages/032-operators.html#arithmetic-operators",
+    "href": "pages/032-operators.html#arithmetic-operators",
+    "title": "Operators",
+    "section": "Arithmetic Operators",
+    "text": "Arithmetic Operators\nArithmetic operators can be used with numerical variables such as int and float. Some of them are:\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nAddition\n+\na + b\n\n\nSubtraction\n-\na - b\n\n\nMultiplication\n*\na * b\n\n\nDivision\n/\na / b\n\n\nExponentiation\n**\na ** b\n\n\n\n\na = 9\nb = 2\nprint('Subtraction:', a - b)\nprint('Division:', a / b)\nprint('Power:', a ** b)\n\nSubtraction: 7\nDivision: 4.5\nPower: 81",
+    "crumbs": [
+      "Variables and data types",
+      "Operators"
+    ]
+  },
+  {
+    "objectID": "pages/032-operators.html#comparison-operators",
+    "href": "pages/032-operators.html#comparison-operators",
+    "title": "Operators",
+    "section": "Comparison Operators",
+    "text": "Comparison Operators\nWe can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nEqual To\n==\na == b\n\n\nNot Equal To\n!=\na != b\n\n\nGreater Than\n&gt;\na &gt; b\n\n\nLess Than\n&lt;\na &lt; b\n\n\nGreater Than or Equal To\n&gt;=\na &gt;= b\n\n\nLess Than or Equal To\n&lt;=\na &lt;= b\n\n\n\n\na = 5\nb = 2\nprint(\"Equal To:\", a == b)\nprint(\"Less Than:\", a &gt; b)\nprint(\"Not Equal To:\", a != b)\nprint(\"Greater Than:\", a &lt; b)\n\nEqual To: False\nLess Than: True\nNot Equal To: True\nGreater Than: False",
+    "crumbs": [
+      "Variables and data types",
+      "Operators"
+    ]
+  },
+  {
+    "objectID": "pages/032-operators.html#logical-operators",
+    "href": "pages/032-operators.html#logical-operators",
+    "title": "Operators",
+    "section": "Logical Operators",
+    "text": "Logical Operators\nLogical operators are used to combine conditional statements or negate them, and can only be applied to booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nLogical AND\nand\n(a == b) and (a &gt; c)\n\n\nLogical OR\nor\n(a &gt; b) or (a &lt; c)\n\n\nLogical NOT\nnot\nnot (a &gt; b)\n\n\n\n\na = 5\nb = 2\nc = 4\nprint(\"(a == b) and (a &gt; c)\", (a == b) and (a &gt; c))\nprint(\"(a &gt; b) or (a &lt; c)\", (a &gt; b) or (a &lt; c))\nprint(\"not (a &gt; b):\", not (a &gt; b))\n\n(a == b) and (a &gt; c) False\n(a &gt; b) or (a &lt; c) True\nnot (a &gt; b): False\n\n\n\n\n\n\n\n\nExercise\n\n\n\nDefine two strings str1=\"Tuesday\" and str2=\"Wednesday\", and compare them (e.g. equal, greater and less than).\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nstr1=\"Tuesday\"\nstr2=\"Wednesday\"\n\nprint(str1,\"equal to\",str2,\":\",str1==str2)\nprint(str1,\"greater than\",str2,\":\",str1&gt;str2)\nprint(str1,\"less than\",str2,\":\",str1&lt;str2)\n\nTuesday equal to Wednesday : False\nTuesday greater than Wednesday : False\nTuesday less than Wednesday : True\n\n\nIt is easy undersand that the operator == returns True if two strings are the same. But what do &gt; and &lt;?\nPython doesn’t understand the meaning of works “Tuesday” and “Wednesday”, they are just two chains of characters. The operator &gt; will return True if the string str1 comes after alphabetically than str2, and &lt; will return True if the string str1 comes before alphabetically than str2.",
     "crumbs": [
       "Variables and data types",
       "Operators"
@@ -167,7 +204,40 @@
     "href": "pages/031-basic-data-types.html",
     "title": "Basic data types",
     "section": "",
-    "text": "In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.\n\n\n\n\n\n\nKey points\n\n\n\n\nPython is dynamically typed, meaning you don’t need to declare the type of a variable explicitly.\nYou can use the type() function to check the data type of a variable.\nData types determine what operations can be performed on the data.\nYou can convert between different data types using built-in functions like int(), float() and str()\n\n\n\n\nNumeric Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nintegers or whole numbers\nint\na = int(12)\n\n\nfloating-point numbers\nfloat\nb = float(7.3)\n\n\n\n\na = 12\nb = 7.3\nprint(\"A:\", a, type(a))\nprint(\"B:\", b, type(b))\n\nA: 12 &lt;class 'int'&gt;\nB: 7.3 &lt;class 'float'&gt;\n\n\n\n\nText Types\n\n\n\nDescription\nType\nExample\n\n\n\n\ntextual data (strings)\nstr\na = “Jean Golding”\n\n\n\n\nname = \"Jean Golding\"\nprint(\"Name:\", name, type(name))\n\nName: Jean Golding &lt;class 'str'&gt;\n\n\n\n\n\n\n\n\nNote that\n\n\n\nIt’s important that when writing numbers in your scripts, you do not put quotation marks around them, otherwise they will be recognized by the Python interpreter as strings. There is a difference between 3.14159 and “3.14159”, the first is a number and the second is just a pair of characters.\n\npi = 3.14159\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'float'&gt;\n\n\n\npi = \"3.14159\"\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'str'&gt;\n\n\n\n\n\n\nBoolean Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nboolean values (True or False)\nbool\na = True\n\n\n\n\na = 23\nb = 2\nc = a != b\nprint(\"C:\", c, type(c))\n\nC: True &lt;class 'bool'&gt;\n\n\n\n\n\n\n\n\nExercise\n\n\n\nWithout using Python, can you tell what is the data type of these variables?\nx = 32\nnumber_of_participants = \"1017\"\nFriday = True\ny = float(1)\na = 10&lt;8\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nx is an integer\nnumber_of_participants is a string\nFriday is a boolean\ny is a float\na is a boolean",
+    "text": "In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.",
+    "crumbs": [
+      "Variables and data types",
+      "Basic data types"
+    ]
+  },
+  {
+    "objectID": "pages/031-basic-data-types.html#numeric-types",
+    "href": "pages/031-basic-data-types.html#numeric-types",
+    "title": "Basic data types",
+    "section": "Numeric Types",
+    "text": "Numeric Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nintegers or whole numbers\nint\na = int(12)\n\n\nfloating-point numbers\nfloat\nb = float(7.3)\n\n\n\n\na = 12\nb = 7.3\nprint(\"A:\", a, type(a))\nprint(\"B:\", b, type(b))\n\nA: 12 &lt;class 'int'&gt;\nB: 7.3 &lt;class 'float'&gt;",
+    "crumbs": [
+      "Variables and data types",
+      "Basic data types"
+    ]
+  },
+  {
+    "objectID": "pages/031-basic-data-types.html#text-types",
+    "href": "pages/031-basic-data-types.html#text-types",
+    "title": "Basic data types",
+    "section": "Text Types",
+    "text": "Text Types\n\n\n\nDescription\nType\nExample\n\n\n\n\ntextual data (strings)\nstr\na = “Jean Golding”\n\n\n\n\nname = \"Jean Golding\"\nprint(\"Name:\", name, type(name))\n\nName: Jean Golding &lt;class 'str'&gt;\n\n\n\n\n\n\n\n\nNote that\n\n\n\nIt’s important that when writing numbers in your scripts, you do not put quotation marks around them, otherwise they will be recognized by the Python interpreter as strings. There is a difference between 3.14159 and “3.14159”, the first is a number and the second is just a pair of characters.\n\npi = 3.14159\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'float'&gt;\n\n\n\npi = \"3.14159\"\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'str'&gt;",
+    "crumbs": [
+      "Variables and data types",
+      "Basic data types"
+    ]
+  },
+  {
+    "objectID": "pages/031-basic-data-types.html#boolean-types",
+    "href": "pages/031-basic-data-types.html#boolean-types",
+    "title": "Basic data types",
+    "section": "Boolean Types",
+    "text": "Boolean Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nboolean values (True or False)\nbool\na = True\n\n\n\n\na = 23\nb = 2\nc = a != b\nprint(\"C:\", c, type(c))\n\nC: True &lt;class 'bool'&gt;\n\n\n\n\n\n\n\n\nExercise\n\n\n\nWithout using Python, can you tell what is the data type of these variables?\nx = 32\nnumber_of_participants = \"1017\"\nFriday = True\ny = float(1)\na = 10&lt;8\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nx is an integer\nnumber_of_participants is a string\nFriday is a boolean\ny is a float\na is a boolean",
     "crumbs": [
       "Variables and data types",
       "Basic data types"
@@ -218,17 +288,27 @@
     "href": "index.html",
     "title": "Introduction",
     "section": "",
-    "text": "Welcome to Introduction to Python (ALSS) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile programming languages today.\nPython is known for its simple syntax, which makes it an excellent choice for beginners. This course is going to show you to give instructions to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.",
+    "text": "Welcome to Introduction to Python (part 1) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile programming languages today.\nPython is known for its simple syntax, which makes it an excellent choice for beginners. This course is going to show you to give instructions to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.",
     "crumbs": [
       "Introduction"
     ]
   },
   {
-    "objectID": "index.html#how-to-read-this-documentation",
-    "href": "index.html#how-to-read-this-documentation",
+    "objectID": "index.html#intended-learning-outcomes",
+    "href": "index.html#intended-learning-outcomes",
     "title": "Introduction",
-    "section": "How to read this documentation",
-    "text": "How to read this documentation\nIn this documentation, any time that we are seeing a small snippet of Python code, we’ll see it written in a grey box like the following:\nprint(\"Hello, Python\")\nIf the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:\n\nprint(\"Hello, Python!\")\n\nHello, Python!\n\n\nIn some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:\nFOR EACH sample IN my_study\n    IF (sample.value &gt; 100)\n        DO SOMETHING\n    OTHERWISE\n        DO SOMETHING ELSE\nThere are some exercises along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution.\n\n\n\n\n\n\nExercise\n\n\n\nThis is an exercise. You will need to click in the below box to see the answer.\n\n\n\n\n\n\n\n\nAnswer (click to open)\n\n\n\n\n\nThis is the answer.\n\n\n\nLast, we will highlight important points using green boxes like this one:\n\n\n\n\n\n\nImportant points\n\n\n\nThese are important concepts and technical notes.",
+    "section": "Intended learning outcomes",
+    "text": "Intended learning outcomes\nBy the end of this course, you will:\n\nUnderstand what a programming language is.\nHave the skills to create simple Python code.\nKnow how to execute instructions, or commands, in Jupyter notebooks.\nFeel more confident to embark on your programming journey!",
+    "crumbs": [
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-read-this-course",
+    "href": "index.html#how-to-read-this-course",
+    "title": "Introduction",
+    "section": "How to read this course",
+    "text": "How to read this course\nIn this course, any time that we are seeing a small snippet of Python code, we’ll see it written in a grey box like the following:\nprint(\"Hello, Python\")\nIf the commands are executed by the machine we will see the output of them below enclosed on a vertical purple line:\n\nprint(\"Hello, Python!\")\n\nHello, Python!\n\n\nIn some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:\nFOR EACH sample IN my_study\n    IF (sample.value &gt; 100)\n        DO SOMETHING\n    OTHERWISE\n        DO SOMETHING ELSE\nThere are some exercises along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution.\n\n\n\n\n\n\nExercise\n\n\n\nThis is an exercise. You will need to click in the below box to see the answer.\n\n\n\n\n\n\n\n\nAnswer (click to open)\n\n\n\n\n\nThis is the answer.\n\n\n\nLast, we will highlight important points using green boxes like this one:\n\n\n\n\n\n\nImportant points\n\n\n\nThese are important concepts and technical notes.",
     "crumbs": [
       "Introduction"
     ]
@@ -361,7 +441,27 @@
     "href": "pages/010-workspace-setup.html",
     "title": "Workspace setup",
     "section": "",
-    "text": "There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.\nIf you are new to Python and you don’t have it installed in your computer we recommend you to follow the steps on how to install mini-conda.\nAlternatively, you can follow these steps to install Anaconda, also a very popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.\nIf you cannot install Python in your computer, you can try a free web browser-based service to write and execute Python code like Google Colab https://colab.research.google.com/. Please, do not upload any sensitive information in there.",
+    "text": "There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.",
+    "crumbs": [
+      "Workspace setup"
+    ]
+  },
+  {
+    "objectID": "pages/010-workspace-setup.html#recommended-way-to-install-python",
+    "href": "pages/010-workspace-setup.html#recommended-way-to-install-python",
+    "title": "Workspace setup",
+    "section": "Recommended way to install Python",
+    "text": "Recommended way to install Python\nIf you are new to Python and you don’t have it installed in your computer we recommend you install Miniforge.",
+    "crumbs": [
+      "Workspace setup"
+    ]
+  },
+  {
+    "objectID": "pages/010-workspace-setup.html#alternative-methods",
+    "href": "pages/010-workspace-setup.html#alternative-methods",
+    "title": "Workspace setup",
+    "section": "Alternative methods",
+    "text": "Alternative methods\nAlternatively, you can install Anaconda, another popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.\nIf you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is Google Colab. Please be aware that you should not upload any sensitive information to web-based services like this.",
     "crumbs": [
       "Workspace setup"
     ]
@@ -374,16 +474,6 @@
     "text": "This page contains a number of exercises to give you a chance to practice what you have learned this session. You should create a new notebook for each of them.\n\n\n\n\n\n\nExercise 1\n\n\n\nCreate a list containing 5 different animal types, for example:\n\ncat\ndog\nelephant\nminnow\nbeaver\n\nPrint out the list to the screen.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nanimal_list = [\"cat\", \"dog\", \"elephant\", \"minnow\", \"beaver\"]\n\nprint(animal_list)\n\n['cat', 'dog', 'elephant', 'minnow', 'beaver']\n\n\n\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\nStart by copying the code that you used to create the list of animals in the last exercise. Write a loop which will print out each of the animals, prefixed with Species:. For example the output could look like:\nSpecies: cat\nSpecies: dog\nSpecies: elephant\nSpecies: minnow\nSpecies: beaver\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nanimal_list = [\"cat\", \"dog\", \"elephant\", \"minnow\", \"beaver\"]\n\nfor animal in animal_list:\n    print(\"Species:\", animal)\n\nSpecies: cat\nSpecies: dog\nSpecies: elephant\nSpecies: minnow\nSpecies: beaver\n\n\n\n\n\n\n\n\n\n\n\nExercise 3\n\n\n\nCreate a list containing 10 different numbers, ranging from 0 to 100. For example: 65, 54, 17, 78, 66, 24, 32, 80, 79, 95.\nWrite a loop which will print out only those numbers which are larger than 50.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nmy_numbers = [65, 54, 17, 78, 66, 24, 32, 80, 79, 95]\n\nfor num in my_numbers:\n    if num &gt; 50:\n        print(num)\n\n65\n54\n78\n66\n80\n79\n95\n\n\n\n\n\n\n\n\n\n\n\nExercise 4\n\n\n\nCreate a loop which iterates over the numbers from 1 to 20 (inclusive). Inside the loop: - if the number is divisible by three then print “ook”, - if the number is divisible by both three and five then print “foo”, - and if the number is not divisible by either then just print the number.\nHint: You can use the % operator to find the remainder from a division. Also, take care in the order that you do your if-else.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nWhen creating a chain of if-elif-else, you should put the most specific checks first. Otherwise they will be swamped by the more general checks.\n\nfor i in range(1, 21):\n    if i % 3 == 0 and i % 5 == 0:\n        print(\"foo\")\n    elif i % 3 == 0:\n        print(\"ook\")\n    else:\n        print(i)\n\n1\n2\nook\n4\n5\nook\n7\n8\nook\n10\n11\nook\n13\n14\nfoo\n16\n17\nook\n19\n20\n\n\n\n\n\n\n\n\n\n\n\nExercise 5\n\n\n\nLet’s end this session with a more difficult challenge. We’re going to make an integer calculator which can read numerical operations from the input and print the answers to the screen.\nFor example, it should print out an input prompt like\n&gt;\ninto which you can type a calculation as\n&gt; 4 * 6\nand it should then print out the answer like\n&gt; 4 * 6\n4 * 6 is 24\nExamples of inputs it should be able to accept are:\n4 * 6\n5 + 6\n457 - 75\n54 / 3\n4 + 6\nNotice that all the input strings have spaces around the operator, this will make your life much easier if you assume this.\nOne extra function you will need to do this is the split function which takes a string and returns a list containing the string, split by spaces. Also, remember the int function which can convert a string into an integer.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\ncalculation = input(\"&gt; \")\n\nparts = calculation.split()  # Split e.g. \"4 * 6\" into [\"4\", \"*\", \"6\"]\nlhs = int(parts[0])  # e.g. \"4\" and turn it into 4\noperation = parts[1]  # e.g. \"*\"\nrhs = int(parts[2])  # e.g. \"6\" and turn it into 6\n\nif operation == \"+\":\n    print(calculation, \"is\", lhs + rhs)\nelif operation == \"-\":\n    print(calculation, \"is\", lhs - rhs)\nelif operation == \"*\":\n    print(calculation, \"is\", lhs * rhs)\nelif operation == \"/\":\n    print(calculation, \"is\", lhs / rhs)",
     "crumbs": [
       "Worksheet"
-    ]
-  },
-  {
-    "objectID": "pages/980-summary.html",
-    "href": "pages/980-summary.html",
-    "title": "Summary",
-    "section": "",
-    "text": "Well done for getting this far! We’ve covered a lot in this course:\n\nHow to set up a Python notebook with JupyterLab\nUsing the print() function\nBasic data types (integers, floats, strings, boolean)\nData structures: lists and dictionaries\nConditional branching using if statements\nLooping with for and while\n\nYou’re not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practice that you will become confident. These notes will remain online so feel free to refer back to them at any time.",
-    "crumbs": [
-      "Summary"
     ]
   },
   {
@@ -431,14 +521,71 @@
     ]
   },
   {
-    "objectID": "pages/053-while.html",
-    "href": "pages/053-while.html",
-    "title": "While loop",
+    "objectID": "pages/011-workspace-miniforge.html",
+    "href": "pages/011-workspace-miniforge.html",
+    "title": "Miniforge",
     "section": "",
-    "text": "We have seen that for loops can repeatedly execute a block of code for each element specified. We can think of another scenario where we only want to continue executing a block of code as long as a given condition is True. The basic idea is:\n    WHILE there is money in my account\n        have lunch out\n        update my bank statement\nIn while loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is True. The basic syntax in Python which has a similar scaffolding to an if clause:\nwhile condition:\n    # code to execute while condition is True\nTo ensure that the condition will eventually become False, it is common usage to increment/decrement a counter variable in the loop body:\n\ncount = 0\nwhile count &lt; 5:\n    print(count)\n    count = count + 1\n\n0\n1\n2\n3\n4\n\n\nThere are some extra flow control instructions in while loops that we are not going to see here in detail but it is important to mention them. They are:\n\nbreak: exits the loop immediately\ncontinue: skips the rest of the current iteration and moves to the next\nelse: executes when the loop condition becomes False\n\nwhile True:\n    user_input = input(\"Enter 'q' to quit: \")\n    if user_input == 'q':\n        break\n\n\n\n\n\n\nExercise\n\n\n\nGiven a list of students sorted by name\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\nwrite a Python code that prints the names of students starting with letters before ‘M’ in the alphabet.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nNote in the code below that the while loop needs to take into account two different conditions:\n\nThat the student’s name starts with a letter before ‘M’\nThat we don’t try to index an element out of range in students\n\n\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\n\n# Initialize the index\ni = 0\n\n# While loop to print names before 'M'\nwhile i &lt; len(students) and students[i][0] &lt; 'M':\n    print(students[i])\n    i = i + 1\n\nAlice\nBob\nCharlie\nFrank\nGeorge\nHannah\nJulia",
+    "text": "Miniforge is a lightweight installer that sets up Conda to install packages from conda-forge, a robust environment for data science and machine learning workflows.\nGo to the conda-forge website and download the latest version of Miniforge for your operating system.\n\nWindows: Download the Miniforge installer for Windows. Run the installer and follow the prompts.\nMac/Linux: Download the appropriate installer script (2021 and newer MacBooks) and and run:\n\n\nTerminal/Command Prompt\n\nbash Miniforge3-MacOSX-arm64.sh\n\nFollow the on-screen instructions."
+  },
+  {
+    "objectID": "pages/011-workspace-miniforge.html#install-miniforge",
+    "href": "pages/011-workspace-miniforge.html#install-miniforge",
+    "title": "Miniforge",
+    "section": "",
+    "text": "Miniforge is a lightweight installer that sets up Conda to install packages from conda-forge, a robust environment for data science and machine learning workflows.\nGo to the conda-forge website and download the latest version of Miniforge for your operating system.\n\nWindows: Download the Miniforge installer for Windows. Run the installer and follow the prompts.\nMac/Linux: Download the appropriate installer script (2021 and newer MacBooks) and and run:\n\n\nTerminal/Command Prompt\n\nbash Miniforge3-MacOSX-arm64.sh\n\nFollow the on-screen instructions."
+  },
+  {
+    "objectID": "pages/011-workspace-miniforge.html#verify-installation",
+    "href": "pages/011-workspace-miniforge.html#verify-installation",
+    "title": "Miniforge",
+    "section": "Verify installation",
+    "text": "Verify installation\nAfter installation, open a command prompt/terminal and check if Conda is installed:\n\n\nTerminal/Command Prompt\n\nconda --version"
+  },
+  {
+    "objectID": "pages/011-workspace-miniforge.html#create-a-new-environment",
+    "href": "pages/011-workspace-miniforge.html#create-a-new-environment",
+    "title": "Miniforge",
+    "section": "Create a new environment",
+    "text": "Create a new environment\nOpen a command prompt or terminal. Use the following command to create an environment named training with Python 3.12, Jupyter Lab, Jupyter Notebook, Pandas and Scikit-Learn:\n\n\nTerminal/Command Prompt\n\nconda create -n training python=3.12 jupyterlab pandas seaborn scikit-learn\n\nThis installs all specified packages in one command.\n\n\n\n\n\n\nInstalling additional packages\n\n\n\n\n\nIf you need to install additional packages, use conda install. For example, to install scipy type:\n\n\nTerminal/Command Prompt\n\nconda install -n training scipy"
+  },
+  {
+    "objectID": "pages/011-workspace-miniforge.html#activate-the-environment",
+    "href": "pages/011-workspace-miniforge.html#activate-the-environment",
+    "title": "Miniforge",
+    "section": "Activate the environment",
+    "text": "Activate the environment\nTo activate the newly created environment type:\n\n\nTerminal/Command Prompt\n\nconda activate training\n\nThe terminal prompt will change to show (training) indicating the environment is active.\nLast, launch Jupyter Lab by typing:\n\n\nTerminal/Command Prompt\n\njupyter lab\n\nThe Jupyter Lab interface should open on your local web browser:\n\n\n\nScreenshow of the JupyterLab interface\n\n\nWe’re now ready to get started!\nContinue with the course"
+  },
+  {
+    "objectID": "pages/051-conditionals.html",
+    "href": "pages/051-conditionals.html",
+    "title": "Conditional if",
+    "section": "",
+    "text": "Conditional if statements allow programs to make decisions and execute different code based on whether certain conditions are True or False. For instance, we may want to perform a different action when a study participant is an adult or not:\nThe basic syntax for conditional statements is if condition:, where condition is an expression that evaluates to either True or False, i.e. a boolean. If it’s True, the indented code block under the if statement will run. If False, it will be skipped. For example, the below code will print “You are an adult” if age is 18 or higher.\nage = 18\nif age &gt;= 18:\n    print(\"You are an adult\")\n\nYou are an adult\nYou can also add an else clause to specify code to run if the condition is False:\nage = 17\nif age &gt;= 18:\n    print(\"You are an adult\")\nelse:\n    print(\"You are not an adult\")\n\nYou are not an adult\nFor multiple conditions, you can use elif (else if) clauses to execute the first matching block.\nage = 14\nif age &lt; 13:\n    print(\"You are a child\") \nelif age &lt; 18:\n    print(\"You are a teenager\")\nelse:\n    print(\"You are an adult\")\n\nYou are a teenager",
     "crumbs": [
       "Control structures",
-      "While loop"
+      "Conditional if"
+    ]
+  },
+  {
+    "objectID": "pages/051-conditionals.html#ordering-your-options",
+    "href": "pages/051-conditionals.html#ordering-your-options",
+    "title": "Conditional if",
+    "section": "Ordering your options",
+    "text": "Ordering your options\nWhen working out which lines of code will be run, Python will work down the list of if, elifs and else and will run the first one that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.\nFor example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:\n\n\n\nif.py\n\nmy_number = int(input(\"Enter a number: \"))\n\nif my_number &gt; 100:\n    print(my_number, \"is large\")\nelif my_number &gt; 1:\n    print(my_number, \"is positive\")\nelse:\n    print(my_number, \"negative\")",
+    "crumbs": [
+      "Control structures",
+      "Conditional if"
+    ]
+  },
+  {
+    "objectID": "pages/051-conditionals.html#combining-questions",
+    "href": "pages/051-conditionals.html#combining-questions",
+    "title": "Conditional if",
+    "section": "Combining questions",
+    "text": "Combining questions\nIt is possible to ask two or more questions in one go by combining them with and and or. So, if you want to check is a number is smaller than ten (my_number &lt; 10) and is not equal to zero (my_number != 0), you can use:\nif my_number &lt; 10 and my_number != 0:\n    ...\nThese combined checks can be used in both if and elif statements.",
+    "crumbs": [
+      "Control structures",
+      "Conditional if"
     ]
   },
   {

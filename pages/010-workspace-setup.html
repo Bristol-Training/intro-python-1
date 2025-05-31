@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../pages/011-workspace-anaconda.html" rel="next">
+<link href="../pages/020-hello-python.html" rel="next">
 <link href="../pages/001-programming.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-5be870dbbac568d2c1a3de7dc8b56426.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e9db4bb78bda1afd1ac8cb5acfeff558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -97,7 +97,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header sidebar-header-stacked">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../assets/UoB_RGB_24.png" alt="Jean Golding Institute Logo" class="sidebar-logo py-0 d-lg-inline d-none">
+      <img src="../assets/logo.png" alt="University of Bristol" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="../">Introduction to Python (part 1)</a> 
@@ -122,29 +122,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">What is programming?</span></a>
   </div>
 </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link active">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../pages/010-workspace-setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Workspace setup</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/011-workspace-anaconda.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Anaconda</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../pages/012-workspace-condaforge.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conda-Forge</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/020-hello-python.html" class="sidebar-item-text sidebar-link">
@@ -155,11 +138,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../pages/030-variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Variables and data types</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/031-basic-data-types.html" class="sidebar-item-text sidebar-link">
@@ -190,11 +173,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../pages/050-control-structures.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Control structures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/051-conditionals.html" class="sidebar-item-text sidebar-link">
@@ -244,8 +227,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#recommended-way-to-install-python" id="toc-recommended-way-to-install-python" class="nav-link active" data-scroll-target="#recommended-way-to-install-python">Recommended way to install Python</a></li>
+  <li><a href="#alternative-methods" id="toc-alternative-methods" class="nav-link" data-scroll-target="#alternative-methods">Alternative methods</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-1/edit/main/pages/010-workspace-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -270,11 +260,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.</p>
-<p>If you are new to Python and you don’t have it installed in your computer we recommend you to follow the <a href="../pages/012-workspace-condaforge.html">steps on how to install mini-conda</a>.</p>
-<p>Alternatively, you can follow these <a href="../pages/011-workspace-anaconda.html">steps to install Anaconda</a>, also a very popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.</p>
-<p>If you cannot install Python in your computer, you can try a free web browser-based service to write and execute Python code like Google Colab <a href="https://colab.research.google.com/" class="uri">https://colab.research.google.com/</a>. <strong>Please, do not upload any sensitive information in there</strong>.</p>
+<section id="recommended-way-to-install-python" class="level2">
+<h2 class="anchored" data-anchor-id="recommended-way-to-install-python">Recommended way to install Python</h2>
+<p>If you are new to Python and you don’t have it installed in your computer we recommend you <a href="../pages/011-workspace-miniforge.html">install Miniforge</a>.</p>
+</section>
+<section id="alternative-methods" class="level2">
+<h2 class="anchored" data-anchor-id="alternative-methods">Alternative methods</h2>
+<p>Alternatively, you can <a href="../pages/012-workspace-anaconda.html">install Anaconda</a>, another popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.</p>
+<p>If you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is <a href="https://colab.research.google.com/">Google Colab</a>. <strong>Please be aware that you should not upload any sensitive information to web-based services like this.</strong></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -683,8 +679,8 @@ ul.task-list li input[type="checkbox"] {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/011-workspace-anaconda.html" class="pagination-link" aria-label="Anaconda">
-        <span class="nav-page-text">Anaconda</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/020-hello-python.html" class="pagination-link" aria-label="Hello, Python!">
+        <span class="nav-page-text">Hello, Python!</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -696,7 +692,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/010-workspace-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/bristol-training/intro-python-1/edit/main/pages/010-workspace-setup.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
