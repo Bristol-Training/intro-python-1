@@ -18,6 +18,7 @@ print(my_list)
 ```
 
 This will create a Python `list` with three elements and assign it to the variable `my_list`. The square brackets `[` and `]` in this case mean "create a list" and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the `print()` function. Run this code and look at the output.
+
 ```{python}
 #| echo: false
 my_list = ["cat", "dog", "horse"]
@@ -50,7 +51,6 @@ my_list = ["cat", "dog", "horse", 7, "quail"]
 print(my_list)
 ```
 
-
 Here we edit our list so that the items are all in a different order:
 
 ```{python}
@@ -58,8 +58,6 @@ my_list = ["quail", "cat", 7, "dog", "horse"]
 print(my_list)
 ```
 :::
-
-
 
 ## Indexing
 
@@ -94,7 +92,6 @@ print(my_list[2])
 ```
 :::
 
-
 ## Reverse indexing
 
 Putting a single positive number in the square brackets gives us back the element which is at that distance from the start of the list, but what if we want the *last* element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, `2`), but perhaps we don't know how long the list is (or we don't want to check it).
@@ -107,9 +104,7 @@ my_list = ["cat", "dog", "horse"]
 print(my_list[-1])
 ```
 
-
 If you run this code then you will see that it prints `horse` which is the last item in the list. Using negative numbers allows you to count backwards from the end of the list so that `-1` is the last item, `-2` is the second-last item etc.
-
 
 ## Slicing
 
@@ -127,8 +122,6 @@ print(my_slice)
 ```
 
 You see that is printed `['green', 5.3, 'house']` which is index `2` (`'green'`), index `3` (`5.3`) and index `4` (`'house'`). Notice that it did not give us the element at index `5` and that is because with slicing, Python will give you the elements from the starting index up to, **but not including**, the end index.
-
-
 
 ## Errors while working with lists
 
@@ -153,7 +146,6 @@ which a very dense collection of information. Usually is the the *last* line of 
 Moving to the lines above that, we see printed the line of code at which the exception occurred along with the line number within the code. These are essential in larger work to track down where the problem came from.
 
 Take your time to read the error messages when they are printed to the screen, they will most likely help you solve the issue.
-
 
 ::: {#exercise3 .callout-note title="Exercise" icon=false} 
 Edit your code to print various slices of a list. If you get an error printed, make sure you understand what it is telling you.
@@ -181,7 +173,6 @@ Last, `print(my_list[33:37])` tries to access elements of a range that do not ex
 
 :::
 
-
 ## Adding elements to lists
 
 Lists in Python are *dynamic*, meaning that they can change in size during execution. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we have used so far (like `print` and `range`) in that it is a part of the `list` data type so we use it in a slighlty different way.
@@ -194,6 +185,4 @@ my_list.append("quokka")
 print(my_list)
 ```
 
-
 Here you see we gave the name of our list (`my_list`) followed it by a dot (`.`) and then the name of the function that we wanted to call (`append`). Functions which are part of data types like this are sometimes called *methods*. We might describe the middle line here as "calling the `append` method on the object `my_list`".
-

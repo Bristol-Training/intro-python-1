@@ -2,7 +2,6 @@
 title: What is programming?
 ---
 
-
 ## How a computer works
 
 Imagine a computer as a highly efficient, precise worker designed to process information and execute tasks exactly as instructed.
@@ -15,7 +14,7 @@ At the heart of this system are two essential components:
 
 Fundamentally, the CPU retrieves the next instruction from memory, interprets what it means and carries out the instruction — whether that's performing a calculation or moving data. This cycle is repeated continuously, allowing the computer to perform complex tasks by breaking them down into simple, **sequential** steps.
 
-### Programming
+## Programming
 
 A program is, in essence, an algorithm: a step-by-step procedure for solving a problem or performing a task. The computer follows these instructions exactly as written, with no room for interpretation or assumption.
 

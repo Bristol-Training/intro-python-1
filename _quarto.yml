@@ -17,10 +17,7 @@ website:
 
       - "pages/001-programming.qmd"
 
-      - section: "pages/010-workspace-setup.qmd"
-        contents:
-          - "pages/011-workspace-anaconda.qmd"
-          - "pages/012-workspace-condaforge.qmd"
+      - "pages/010-workspace-setup.qmd"
 
       - "pages/020-hello-python.qmd"
 

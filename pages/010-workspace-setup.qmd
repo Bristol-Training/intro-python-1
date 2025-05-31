@@ -4,9 +4,12 @@ title: Workspace setup
 
 There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.
 
-If you are new to Python and you don't have it installed in your computer we recommend you to follow the [steps on how to install mini-conda](./012-workspace-condaforge.qmd).
+## Recommended way to install Python
 
-Alternatively, you can follow these [steps to install Anaconda](./011-workspace-anaconda.qmd), also a very popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times. 
+If you are new to Python and you don't have it installed in your computer we recommend you [install Miniforge](./011-workspace-miniforge.qmd).
 
-If you cannot install Python in your computer, you can try a free web browser-based service to write and execute Python code like Google Colab 
-<https://colab.research.google.com/>. **Please, do not upload any sensitive information in there**.
+## Alternative methods
+
+Alternatively, you can [install Anaconda](./012-workspace-anaconda.qmd), another popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times. 
+
+If you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is [Google Colab](https://colab.research.google.com/). **Please be aware that you should not upload any sensitive information to web-based services like this.**

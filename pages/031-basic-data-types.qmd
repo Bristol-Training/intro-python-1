@@ -11,7 +11,7 @@ In Python we have several built-in data types. The most common types of data tha
 - You can convert between different data types using built-in functions like `int()`, `float()` and `str()`
 :::
 
-### Numeric Types
+## Numeric Types
 
 Description                       | Type     | Example 
 ----------------------------------|----------|----------------
@@ -26,7 +26,7 @@ print("A:", a, type(a))
 print("B:", b, type(b))
 ```
 
-### Text Types
+## Text Types
 
 Description                       | Type     | Example 
 ----------------------------------|----------|----------------
@@ -50,8 +50,7 @@ print("pi:", pi, type(pi))
 ```
 :::
 
-
-### Boolean Types
+## Boolean Types
 
 Description                       | Type     | Example 
 ----------------------------------|----------|----------------
@@ -63,8 +62,6 @@ b = 2
 c = a != b
 print("C:", c, type(c))
 ```
-
-
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 

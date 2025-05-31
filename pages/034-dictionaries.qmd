@@ -14,13 +14,11 @@ cat_sound = sounds["cat"]
 print(cat_sound)
 ```
 
-
 What we did here was create a dictionary on the first line. A dictionary is created using curly brackets (`{}`), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a *key* and a *value*. The *value* is the real data that we want to keep hold of and the *key* is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.
 
 On the next line we access the data in the dictionary `sounds`. Again, like lists we use the square brackets to ask questions of our data. In this case we're asking the dictionary to give us the value associated with the key `"cat"` and so it will return to us `"meow"`.
 
 Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:
-
 
 ```{python }
 #| output: false
@@ -35,11 +33,10 @@ cat_sound = sounds["cat"]
 print(cat_sound)
 ```
 
-
-
 ::: {#exercise-1 .callout-note title="Exercise 1" icon=false} 
 Edit your code to ask for the sound of a dog and a horse. What happens if you ask for an animal that isn't in the dictionary?
 :::
+
 ::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
 ```{python }
 #| error: true
@@ -55,13 +52,11 @@ print(sounds["duck"])
 ```
 :::
 
-
 ## Adding new data into dictionaries
 
 As with lists, dictionaries are dynamic so we can add entries into a dictionary.
 
 Let's say that we want to add in a new sound for a cow into our `sounds` dictionary. The key that the data will have will be `"cow"` and the value will be `"moo"`. To do so we put `sounds["cow"]` on the left-hand side of a variable assignment expression, as if we're making a new variable. On the right goes the data that we want to put into the dictionary:
-
 
 ```{python}
 #| output: false
@@ -76,9 +71,6 @@ sounds["cow"] = "moo"
 print(sounds)
 
 ```
-
-
-
 
 This is saying that we want the value `"moo"` associated with the key `"cow"` in the dictionary `sounds`.
 
@@ -97,9 +89,7 @@ sounds["cow"] = "moo"
 print(sounds)
 ```
 
-
 ::: {#exercise-2 .callout-note title="Exercise 2" icon=false} 
-
 Edit your code so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.
 :::
 
@@ -116,7 +106,6 @@ sounds["cow"] = "moo"
 print(sounds)
 ```
 :::
-
 
 ## Uses for dictionaries
 
@@ -141,9 +130,7 @@ bookshelf = {
 ```
 
 ::: {#exercise-3 .callout-note title="Exercise 3" icon=false} 
-
 Make a dictionary with the keys being the name of countries and the value being the country's capital city. Print something like `"The capital of France is Paris"` for any item.
-
 :::
 
 ::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
@@ -158,4 +145,3 @@ print("The capital of France is", capital["France"])
 print("The capital of Italy is", capital["Italy"])
 ```
 :::
-

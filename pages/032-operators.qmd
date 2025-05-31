@@ -4,7 +4,7 @@ title: Operators
 
 Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.
 
-### Arithmetic Operators
+## Arithmetic Operators
 
 Arithmetic operators can be used with numerical variables such as `int` and `float`. Some of them are:
 
@@ -24,8 +24,7 @@ print('Division:', a / b)
 print('Power:', a ** b)
 ```
 
-
-### Comparison Operators
+## Comparison Operators
 
 We can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.
 
@@ -47,8 +46,7 @@ print("Not Equal To:", a != b)
 print("Greater Than:", a < b)
 ```
 
-
-### Logical Operators
+## Logical Operators
 
 Logical operators are used to combine conditional statements or negate them, and can only be applied to booleans.
 
@@ -66,7 +64,6 @@ print("(a == b) and (a > c)", (a == b) and (a > c))
 print("(a > b) or (a < c)", (a > b) or (a < c))
 print("not (a > b):", not (a > b))
 ```
-
 
 ::: {#exercise .callout-note title="Exercise" icon=false} 
 

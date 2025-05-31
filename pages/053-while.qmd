@@ -9,13 +9,11 @@ We have seen that `for` loops can repeatedly execute a block of code for each el
         update my bank statement
 ```
 
-
 In `while` loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is `True`. The basic syntax in Python which has a similar scaffolding to an `if` clause:
 ```{.python}
 while condition:
     # code to execute while condition is True
 ```
-
 
 To ensure that the condition will eventually become `False`, it is common usage to increment/decrement a counter variable in the loop body:
 
@@ -67,9 +65,4 @@ while i < len(students) and students[i][0] < 'M':
     print(students[i])
     i = i + 1
 ```
-
 :::
-
-
-
-

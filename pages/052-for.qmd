@@ -56,7 +56,6 @@ for word in my_words:
     print(word)
 ```
 
-
 A list with a mixture of data types can be printed without issue
 
 ```{python}
@@ -67,7 +66,6 @@ for word in my_words:
     print(word)
 ```
 
-
 Looping over an empty list does not print anything
 
 ```{python}
@@ -76,9 +74,7 @@ my_words = []
 for word in my_words:
     print(word)
 ```
-
 :::
-
 
 ::: {#keypoints .callout-tip icon=false title='`for` statement syntax'}
 
@@ -113,7 +109,6 @@ for word in my_words<b style="color:darkred">:</b>
 
 :::
 
-
 If we want to write more code after the end of a loop, we have to make sure that it is *not* indented. So the below code will print:
 
 ```{python}
@@ -125,7 +120,6 @@ for word in my_words:
 print("...Goodbye")
 ```
 
-
 On the contrary, the below code will print `...Goodbye` in each iteration. This is because it was inside the body of the loop since it was indented.
 ```{python }
 my_words = ["Hello", "Python"]
@@ -135,8 +129,6 @@ for word in my_words:
 
     print("...Goodbye")
 ```
-
-
 
 ## What can we loop over?
 
@@ -148,15 +140,14 @@ for word in ["Hello", "Python"]:
     print(word)
 ```
 
-
 As well as lists we can put anything which Python considers *iterable*. For now we haven't come across many of those but as we keep learning we'll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.
+
 ```{python }
 phrase = "Hello Python"
 
 for letter in phrase:
     print(letter)
 ```
-
 
 ::: {#exercise .callout-note title="Exercise 2" icon=false} 
 Experiment with your code and make it loop over both lists and strings.
@@ -172,7 +163,6 @@ for word in words:
     print(word)
 ```
 
-
 On the contrary, if we loop over a string we see that each character gets printed on its own line.
 ```{python}
 phrase = "Hello Python"
@@ -183,7 +173,6 @@ for letter in phrase:
 ```
 :::
 
-
 ## Looping over a range of numbers
 
 There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an argument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
@@ -193,14 +182,12 @@ for number in range(5):
     print(number)
 ```
 
-
 The `range` function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:
+
 ```{python}
 for number in range(10, 13):
     print(number)
 ```
-
-
 
 ## Looping over dictionaries
 
@@ -232,7 +219,6 @@ for sound in sounds.values():
     print(sound)    
 ```
 
-
 If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
 
 ```{python}
@@ -248,11 +234,8 @@ for animal, sound in sounds.items():
 
 The `items` method gives us two pieces of data where the first is always the key and the second if always the value. We give the keys the name `animal` and the values the name `sound`. We can then use both those variables in the loop body.
 
-
 ::: {#exercise-4 .callout-note title="Exercise 4" icon=false} 
-
 Can you modify your code where you created a dictionary with country-capital pairs to loop over it and print something like `"The capital of France is Paris"` for all items?
-
 :::
 
 ::: {#answer4 .callout-caution icon=false title='Answer' collapse="true"}

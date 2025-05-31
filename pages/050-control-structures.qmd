@@ -6,7 +6,6 @@ Earlier you were told that Python will read each one of your cells of code start
 
 ![Adapted from: *This Is A Book*, by Demetri Martin](../assets/path.jpg "Non-linear path")
 
-
 Imagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:
 ```
 LOOP FOR EACH sample IN my_study
@@ -17,4 +16,3 @@ LOOP FOR EACH sample IN my_study
 ```
 
 In essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as `if`, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as `for` and `while`, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.
-

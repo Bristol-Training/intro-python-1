@@ -12,6 +12,7 @@ OTHERWISE
 ```
 
 The basic syntax for conditional statements is `if condition:`, where `condition` is an expression that evaluates to either `True` or `False`, i.e. a boolean. If it's `True`, the indented code block under the if statement will run. If `False`, it will be skipped. For example, the below code will print "You are an adult" if age is 18 or higher.
+
 ```{python}
 age = 18
 if age >= 18:
@@ -40,7 +41,6 @@ else:
     print("You are an adult")
 ```
 
-
 ::: {#keypoints .callout-tip icon=false title='`if` statement syntax'}
 
 An `if` statement has scaffolding as well as user-supplied parts. The scafolding is the word `if` and the colon `:` as shown below.
@@ -65,10 +65,8 @@ if my_number > 100<b style="color:darkred">:</b>
 <i style="color:gray">indentation</i>
 </pre>
 
-You can chain multiple conditions with `elif` using the same syntax. On the contrary, `else` provides a default case if no conditions are `True` and do not requiere a condition.
-
+You can chain multiple conditions with `elif` using the same syntax. On the contrary, `else` provides a default case if no conditions are `True` and do not require a condition.
 :::
-
 
 ::: {#exercise1 .callout-note title="Exercise" icon=false} 
 
@@ -116,15 +114,11 @@ if my_number > 100:
 ```
 :::
 
-
-
 ::: {#exercise2 .callout-note title="Exercise 2" icon=false} 
 Experiment with editing your code to use some different boolean statements.
-
 :::
 
 ::: {#answer2 .callout-caution icon=false title='Answer' collapse="true"}
-
 **Less than:**
 
 ```{python}
@@ -145,7 +139,7 @@ if my_number < 100:
     print(my_number, "is less than 100")
 ```
 
-<br/>
+<br>
 
 **Equal to:**
 
@@ -172,10 +166,10 @@ if my_number == 74:
     print(my_number, "== 74")
 ```
 
-
-<br/>
+<br>
 
 **Not equal to:**
+
 ```{python}
 #| eval: false
 
@@ -200,7 +194,6 @@ if my_number != 74:
 ```
 :::
 
-
 ## Ordering your options
 
 When working out which lines of code will be run, Python will work down the list of `if`, `elif`s and `else` and will run the *first one* that matches. Once it's matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.
@@ -220,7 +213,6 @@ else:
     print(my_number, "negative")
 ```
 
-
 ## Combining questions
 
 It is possible to ask two or more questions in one go by combining them with `and` and `or`. So, if you want to check is a number is smaller than ten (`my_number < 10`) and is not equal to zero (`my_number != 0`), you can use:
@@ -231,4 +223,3 @@ if my_number < 10 and my_number != 0:
 ```
 
 These combined checks can be used in both `if` and `elif` statements.
-

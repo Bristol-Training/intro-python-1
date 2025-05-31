@@ -2,12 +2,12 @@
 title: "Introduction"
 ---
 
-Welcome to Introduction to Python (ALSS) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile *programming languages* today.
+Welcome to Introduction to Python (part 1) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile *programming languages* today.
 
 Python is known for its simple syntax, which makes it an excellent choice for beginners. This course is going to show you to give instructions to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.
 
 
-### Intended learning outcomes
+## Intended learning outcomes
 
 By the end of this course, you will:
 
@@ -17,9 +17,9 @@ By the end of this course, you will:
 - Feel more confident to embark on your programming journey!
 
 
-## How to read this documentation
+## How to read this course
 
-In this documentation, any time that we are seeing a small snippet of Python code, we'll see it written in a grey box like the following:
+In this course, any time that we are seeing a small snippet of Python code, we'll see it written in a grey box like the following:
 
 ```{.python}
 print("Hello, Python")
@@ -31,8 +31,8 @@ If the commands are executed by the machine we will see the output of them below
 print("Hello, Python!")
 ```
 
-
 In some cases we will introduce general programming concepts and structures using pseudocode, a high-level, easy-to-read syntax close to natural language. This should not be confused with Python code and cannot be executed on your machine, but it is useful to describe how your code should behave. Here there is an example:
+
 ```
 FOR EACH sample IN my_study
     IF (sample.value > 100)
@@ -40,7 +40,6 @@ FOR EACH sample IN my_study
     OTHERWISE
         DO SOMETHING ELSE
 ```
-
 
 There are some exercises along this course, and it is important you try to answer them yourself to understand how Python works. Exercises are shown in blue boxes followed by a yellow box that contains the answer of each exercise. We recommend you to try to answer each exercise yourself before looking at the solution. 
 
@@ -57,4 +56,3 @@ Last, we will highlight important points using green boxes like this one:
 ::: {#keypointsN .callout-tip icon=false title='Important points'}
 These are important concepts and technical notes.
 :::
-

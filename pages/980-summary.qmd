@@ -1,6 +1,7 @@
 ---
 title: Summary
 ---
+
 Well done for getting this far! We've covered a lot in this course:
 
 - How to set up a Python notebook with JupyterLab

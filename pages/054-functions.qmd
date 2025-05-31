@@ -83,7 +83,6 @@ def ounces_to_grams(weight):
 
 Note that the body of the function has been copied from our script above with the only change being that the variables have different names and we added a `return` statement.
 
-
 ## Calling functions
 
 You can now call the function using:
@@ -112,8 +111,6 @@ weight_in_grams = ounces_to_grams(weight_in_ounces)
 
 print(f"{weight_in_grams} g")
 ```
-
-
 
 ::: {#exercise2 .callout-note title="Exercise" icon=false} 
 Take the following code:
@@ -168,4 +165,3 @@ large_numbers = big(my_list)
 print(large_numbers)
 ```
 :::
-

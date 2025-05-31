@@ -2,7 +2,6 @@
 title: Variables and data types
 ---
 
-
 We call variable to a symbolic name that refers to an object. They act as memory containers for storing data values and are created when you assign a value to them using the assignment operator `=`. For example, `x = 5` assigns the integer value 5 to the variable `x`.
 
 The value stored in a variable can change or vary throughout your program and can be any data type such as integers, strings, or lists. You will see different data types in the next section.
@@ -23,8 +22,6 @@ When naming variables in Python, there are specific rules to follow:
 - Variable names are case-sensitive, meaning `myVariable`, `MyVariable`, and `MYVARIABLE` would be considered different variables.
 :::
 
-
-
 ## Getting data in
 
 So far, all the code we've run is somewhat static. Variables get assigned a value in our code and very time we run it, the output is always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, [`input`](https://docs.python.org/3/library/functions.html#input).
@@ -38,7 +35,6 @@ print("My favourite colour is", fav)
 
 Now, if we run these lines of code, it will print the message specified and wait for you to type something. If you type "red" and then press enter, it will assign "red" to the variable `fav` and then use that variable in the final `print` function:
 
-
 ```{python}
 #| echo: false
 print("What is your favourite colour? red")
@@ -47,7 +43,6 @@ fav = 'red'
 
 print("My favourite colour is", fav)
 ```
-
 
 ::: {#exercise .callout-note title="Exercise" icon=false} 
 
@@ -86,5 +81,3 @@ print("What is your name? Jean")
 print(greeting, name)
 ```
 :::
-
-
