@@ -12,3 +12,6 @@ preview = "quarto preview"
 [dependencies]
 quarto = ">=1.7.33,<2"
 jupyterlab = ">=4.4.7,<5"
+pandas = ">=2.3.2,<3"
+seaborn = ">=0.13.2,<0.14"
+matplotlib = ">=3.10.6,<4"
