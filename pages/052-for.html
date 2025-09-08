@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -73,10 +73,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-e9db4bb78bda1afd1ac8cb5acfeff558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a6db9d8f1df8c24f8bdf88114c8cee65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -297,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>It is possible to make Python repeat certain lines of code using <em>loops</em>. The ability to run a line of code multiple times is the first large step on your road to making your code more <em>structured</em> and <em>reusable</em>.</p>
 <p>Imagine we have three strings in a <code>list</code> that we want to print. We could start by calling <code>print</code> three times to create a program like:</p>
-<div id="64a9d195" class="cell" data-execution_count="1">
+<div id="09d6cb13" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Jean"</span>, <span class="st">"Golding"</span>, <span class="st">"Institute"</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_words[<span class="dv">0</span>])</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(my_words[<span class="dv">1</span>])</span>
@@ -312,7 +312,7 @@ Institute</code></pre>
 <pre><code>FOR EACH word IN my_words
     DO SOMETHING WITH word    </code></pre>
 <p>We can write a <code>for</code> loop in Python which will perform a task once for each word in our list:</p>
-<div id="04645d30" class="cell" data-execution_count="2">
+<div id="f666fafa" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Jean"</span>, <span class="st">"Golding"</span>, <span class="st">"Institute"</span>]</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -358,7 +358,7 @@ Answer
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Adding more items to the list makes the loop go around more times</p>
-<div id="6a0c2a74" class="cell" data-execution_count="3">
+<div id="0cb15a9a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>, <span class="st">"Goodbye"</span>, <span class="st">"Python"</span>]</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -371,7 +371,7 @@ Python</code></pre>
 </div>
 </div>
 <p>A list with a mixture of data types can be printed without issue</p>
-<div id="84391959" class="cell" data-execution_count="4">
+<div id="5505b422" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>, <span class="dv">404</span>, <span class="st">"Goodbye"</span>, <span class="st">"Python"</span>, <span class="dv">42</span>]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -386,7 +386,7 @@ Python
 </div>
 </div>
 <p>Looping over an empty list does not print anything</p>
-<div id="3403a68f" class="cell" data-execution_count="5">
+<div id="d8dba0dd" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> []</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -429,7 +429,7 @@ Finally, if we want the loop to actually <em>do</em> something then we need to g
 </div>
 </div>
 <p>If we want to write more code after the end of a loop, we have to make sure that it is <em>not</em> indented. So the below code will print:</p>
-<div id="783e7f97" class="cell" data-execution_count="6">
+<div id="b29cbab1" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -443,7 +443,7 @@ Python
 </div>
 </div>
 <p>On the contrary, the below code will print <code>...Goodbye</code> in each iteration. This is because it was inside the body of the loop since it was indented.</p>
-<div id="d8035cfb" class="cell" data-execution_count="7">
+<div id="9acb1711" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>my_words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> my_words:</span>
@@ -461,7 +461,7 @@ Python
 <h2 class="anchored" data-anchor-id="what-can-we-loop-over">What can we loop over?</h2>
 <p>A lot of the power of loops comes from being able to put a lot of different types of data.</p>
 <p>Most simply, instead of putting a variable name there, you can put a list directly:</p>
-<div id="945a331c" class="cell" data-execution_count="8">
+<div id="92f47038" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]:</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -470,7 +470,7 @@ Python</code></pre>
 </div>
 </div>
 <p>As well as lists we can put anything which Python considers <em>iterable</em>. For now we haven’t come across many of those but as we keep learning we’ll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.</p>
-<div id="53bb8542" class="cell" data-execution_count="9">
+<div id="de8acd9e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>phrase <span class="op">=</span> <span class="st">"Hello Python"</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> phrase:</span>
@@ -516,7 +516,7 @@ Answer
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Starting with the same list we used before, each item in the list gets printed on its own line.</p>
-<div id="1dac42b7" class="cell" data-execution_count="10">
+<div id="3f417ae8" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>words <span class="op">=</span> [<span class="st">"Hello"</span>, <span class="st">"Python"</span>]</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word <span class="kw">in</span> words:</span>
@@ -527,7 +527,7 @@ Python</code></pre>
 </div>
 </div>
 <p>On the contrary, if we loop over a string we see that each character gets printed on its own line.</p>
-<div id="a78bcae8" class="cell" data-execution_count="11">
+<div id="f00dbbd7" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>phrase <span class="op">=</span> <span class="st">"Hello Python"</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> letter <span class="kw">in</span> phrase:</span>
@@ -554,7 +554,7 @@ n</code></pre>
 <section id="looping-over-a-range-of-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="looping-over-a-range-of-numbers">Looping over a range of numbers</h2>
 <p>There’s a built in function in Python called <code>range</code> which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, <em>but not including</em>, the number you gave as an argument. We can put this call to the <code>range</code> function directly into our loop as the object to loop over and it will print:</p>
-<div id="4130df40" class="cell" data-execution_count="12">
+<div id="908e6073" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -566,7 +566,7 @@ n</code></pre>
 </div>
 </div>
 <p>The <code>range</code> function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:</p>
-<div id="142c861b" class="cell" data-execution_count="13">
+<div id="cf1b4f7b" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> number <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">13</span>):</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -589,7 +589,7 @@ for animal in sounds:
     print(animal)</code></pre>
 <p>You will recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the <em>keys</em>.</p>
 <p>What if, for example, you wanted to loop over the <em>values</em> instead. Well, there is a method on dictionaries called <code>values</code> which gives you just those so that you can loop over them:</p>
-<div id="e25ec425" class="cell" data-execution_count="14">
+<div id="c85e0b78" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -605,7 +605,7 @@ neigh</code></pre>
 </div>
 </div>
 <p>If we want to loop over the dictionary and get both the keys <em>and</em> the values, there is a method called <code>items</code>. Since it will be giving us two things each loop iteration, we’ll have to use the same trick as we did with <code>enumerate</code> and give two variable names in the <code>for</code> loop declaration:</p>
-<div id="8c6c4ff8" class="cell" data-execution_count="15">
+<div id="2f2f6880" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -646,7 +646,7 @@ Answer
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="c7158f83" class="cell" data-execution_count="16">
+<div id="c2f4a7cc" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>capital <span class="op">=</span> {</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"England"</span>: <span class="st">"London"</span>,</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"France"</span> : <span class="st">"Paris"</span>,</span>
