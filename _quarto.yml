@@ -15,7 +15,7 @@ website:
     contents:
       - "index.qmd"
 
-      - "pages/001-programming.qmd"
+      # - "pages/001-programming.qmd"
 
       - "pages/010-workspace-setup.qmd"
 
