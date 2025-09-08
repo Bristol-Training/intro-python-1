@@ -8,7 +8,7 @@ This course is maintained by the [Jean Golding Institute](https://www.bristol.ac
 
 ## Changing the course
 
-* This packahe is managed using [pixi](https://pixi.sh/latest/). Install pixi using 
+* The course material dependencies managed using [pixi](https://pixi.sh/latest/). Install pixi using 
 [these instructions](https://pixi.sh/latest/installation/).
 
 * Preview the course using `pixi run preview` and build the course using `pixi run build`.
