@@ -1,4 +1,0 @@
-jupyter==1.0.0
-pandas
-seaborn
-matplotlib

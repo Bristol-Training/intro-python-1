@@ -11,3 +11,4 @@ preview = "quarto preview"
 
 [dependencies]
 quarto = ">=1.7.33,<2"
+jupyterlab = ">=4.4.7,<5"
