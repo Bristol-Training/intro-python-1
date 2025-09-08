@@ -1,5 +1,5 @@
 ---
-title: Conditional if
+title: If Statements (Conditionals)
 ---
 
 Conditional `if` statements allow programs to make decisions and execute different code based on whether certain conditions are `True` or `False`. For instance, we may want to perform a different action when a study participant is an adult or not:

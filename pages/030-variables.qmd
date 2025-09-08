@@ -1,5 +1,5 @@
 ---
-title: Variables and data types
+title: Types of Data and Operators
 ---
 
 We call variable to a symbolic name that refers to an object. They act as memory containers for storing data values and are created when you assign a value to them using the assignment operator `=`. For example, `x = 5` assigns the integer value 5 to the variable `x`.

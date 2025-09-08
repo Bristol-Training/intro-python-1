@@ -1,5 +1,5 @@
 ---
-title: Basic data types
+title: Writing more Flexible Programs
 ---
 
 In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.
@@ -59,9 +59,17 @@ boolean values (True or False)    | bool     | a = True
 ```{python}
 a = 23
 b = 2
-c = a != b
-print("C:", c, type(c))
+print(a != b)
 ```
+
+We can assign this boolean value to a variable:
+
+```{python}
+c = (a != b)
+print("c:", c, type(c))
+```
+
+Note the use of the brackets around `a != b`. This isn't necessary here, but it can help to make the code clearer!
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 

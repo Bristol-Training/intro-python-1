@@ -12,3 +12,5 @@ Well done for getting this far! We've covered a lot in this course:
 - Looping with `for` and `while`
 
 You're not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practice that you will become confident. These notes will remain online so feel free to refer back to them at any time.
+
+If you want to continue learning python, you might want to look at the [Intro to Python2](https://bristol-training.github.io/intro-python-2) course which covers more advanced data structures, functions, and working with files.
