@@ -8,11 +8,12 @@ This course is maintained by the [Jean Golding Institute](https://www.bristol.ac
 
 ## Changing the course
 
-* [Install Quarto](https://quarto.org/docs/get-started/)
-* Create a Python virtual environment and run `pip install -r requirements.txt`
-* Preview the course by activating the virtual environment and running `quarto preview` 
+* This packahe is managed using [pixi](https://pixi.sh/latest/). Install pixi using 
+[these instructions](https://pixi.sh/latest/installation/).
+
+* Preview the course using `pixi run preview` and build the course using `pixi run build`.
+
 * When you push changes to GitHub, the course is automatically built via a [GitHub action](.github/workflows/publish-course.yml)
-* When publishing for the first time, run this command locally: `quarto publish gh-pages`
 
 ## License
 

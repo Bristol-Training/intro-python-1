@@ -4,3 +4,6 @@ _site/
 _freeze/
 venv/
 .DS_Store
+# pixi environments
+.pixi
+*.egg-info

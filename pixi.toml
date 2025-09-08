@@ -1,0 +1,13 @@
+[workspace]
+authors = ["l-gorman <leo.gorman@bristol.ac.uk>"]
+channels = ["conda-forge"]
+name = "intro-python-1"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+build = "quarto render"
+preview = "quarto preview"
+
+[dependencies]
+quarto = ">=1.7.33,<2"
