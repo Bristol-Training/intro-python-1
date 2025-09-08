@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Types of Data and Operators</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -172,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../pages/030-variables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Variables and data types</span></a>
+ <span class="menu-text">Types of Data and Operators</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -181,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/031-basic-data-types.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic data types</span></a>
+ <span class="menu-text">Writing more Flexible Programs</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -207,7 +207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="../pages/050-control-structures.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Control structures</span></a>
+ <span class="menu-text">Writing More Flexible and Dynamic Code</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -216,7 +216,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../pages/051-conditionals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Conditional if</span></a>
+ <span class="menu-text">If Statements (Conditionals)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -275,7 +275,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Variables and data types</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../pages/030-variables.html">Types of Data and Operators</a></li><li class="breadcrumb-item"><a href="../pages/034-dictionaries.html">Dictionaries</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Dictionaries</h1>
 </div>
@@ -296,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you want to store lots of variables, but access them using more complex relationships. One example is a <code>dictionary</code>, which lets you store variables and access them using a <em>key</em>.</p>
 <p>Dictionaries in Python are created using curly brackets. Make a new file called <code>dict.py</code> and put this in it:</p>
-<div id="9171d1b1" class="cell" data-execution_count="1">
+<div id="c5ce63a1" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {<span class="st">"cat"</span>: <span class="st">"meow"</span>, <span class="st">"dog"</span>: <span class="st">"woof"</span>, <span class="st">"horse"</span>: <span class="st">"neigh"</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cat_sound <span class="op">=</span> sounds[<span class="st">"cat"</span>]</span>
@@ -309,7 +309,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What we did here was create a dictionary on the first line. A dictionary is created using curly brackets (<code>{}</code>), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a <em>key</em> and a <em>value</em>. The <em>value</em> is the real data that we want to keep hold of and the <em>key</em> is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.</p>
 <p>On the next line we access the data in the dictionary <code>sounds</code>. Again, like lists we use the square brackets to ask questions of our data. In this case we’re asking the dictionary to give us the value associated with the key <code>"cat"</code> and so it will return to us <code>"meow"</code>.</p>
 <p>Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:</p>
-<div id="c3aee0f7" class="cell" data-execution_count="2">
+<div id="891a3f6d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -345,7 +345,7 @@ Answer
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="4ba31a2c" class="cell" data-execution_count="3">
+<div id="0656e1b4" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -379,7 +379,7 @@ neigh</code></pre>
 <h2 class="anchored" data-anchor-id="adding-new-data-into-dictionaries">Adding new data into dictionaries</h2>
 <p>As with lists, dictionaries are dynamic so we can add entries into a dictionary.</p>
 <p>Let’s say that we want to add in a new sound for a cow into our <code>sounds</code> dictionary. The key that the data will have will be <code>"cow"</code> and the value will be <code>"moo"</code>. To do so we put <code>sounds["cow"]</code> on the left-hand side of a variable assignment expression, as if we’re making a new variable. On the right goes the data that we want to put into the dictionary:</p>
-<div id="413050c2" class="cell" data-execution_count="4">
+<div id="e1ddedd8" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -392,7 +392,7 @@ neigh</code></pre>
 </div>
 <p>This is saying that we want the value <code>"moo"</code> associated with the key <code>"cow"</code> in the dictionary <code>sounds</code>.</p>
 <p>Running it, we see:</p>
-<div id="e28413ec" class="cell" data-execution_count="5">
+<div id="41f8c244" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}</code></pre>
 </div>
@@ -422,7 +422,7 @@ Answer
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="ee02a7b6" class="cell" data-execution_count="6">
+<div id="7227e410" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span></span>
@@ -443,7 +443,7 @@ Answer
 <section id="uses-for-dictionaries" class="level2">
 <h2 class="anchored" data-anchor-id="uses-for-dictionaries">Uses for dictionaries</h2>
 <p>Dictionaries can be used for any key-value mapping. The example above was a mapping of an animal species (as a string) to an animal sound ( as a string). You can use any data type you wish as the value in a dictionary. For example you might make a dictionary containing the population of some cities in millions (as a float):</p>
-<div id="83985d08" class="cell" data-execution_count="7">
+<div id="72d0738a" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>census <span class="op">=</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"London"</span>: <span class="fl">8.615</span>,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Paris"</span>: <span class="fl">2.244</span>,</span>
@@ -451,7 +451,7 @@ Answer
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>or one which contains a list of authors as the key (as a string) and their books (as a list of strings):</p>
-<div id="e7f2b637" class="cell" data-execution_count="8">
+<div id="79ef0d94" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bookshelf <span class="op">=</span> {</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terry Pratchett"</span>: [<span class="st">"Mort"</span>, <span class="st">"Jingo"</span>, <span class="st">"Truckers"</span>],</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Jane Austen"</span>: [<span class="st">"Sense and Sensibility"</span>, <span class="st">"Pride and Prejudice"</span>],</span>
@@ -483,7 +483,7 @@ Answer
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="3355bc2c" class="cell" data-execution_count="9">
+<div id="6f1e58fb" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>capital <span class="op">=</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"England"</span>: <span class="st">"London"</span>,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"France"</span> : <span class="st">"Paris"</span>,</span>
@@ -911,8 +911,8 @@ The capital of Italy is Rome</code></pre>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../pages/050-control-structures.html" class="pagination-link" aria-label="Control structures">
-        <span class="nav-page-text">Control structures</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../pages/050-control-structures.html" class="pagination-link" aria-label="Writing More Flexible and Dynamic Code">
+        <span class="nav-page-text">Writing More Flexible and Dynamic Code</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

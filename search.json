@@ -1,83 +1,55 @@
 [
   {
-    "objectID": "pages/012-workspace-anaconda.html",
-    "href": "pages/012-workspace-anaconda.html",
-    "title": "Anaconda",
-    "section": "",
-    "text": "If you’re using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:\n\nOpen the Company Portal (Windows) or Self Service (Mac) application on your laptop\nSearch for “Anaconda”\nClick on the Anaconda package and follow the installation prompts"
-  },
-  {
-    "objectID": "pages/012-workspace-anaconda.html#university-managed-laptops",
-    "href": "pages/012-workspace-anaconda.html#university-managed-laptops",
-    "title": "Anaconda",
-    "section": "",
-    "text": "If you’re using a university-managed laptop, the easiest and most recommended method is to install Anaconda through Self Service:\n\nOpen the Company Portal (Windows) or Self Service (Mac) application on your laptop\nSearch for “Anaconda”\nClick on the Anaconda package and follow the installation prompts"
-  },
-  {
-    "objectID": "pages/012-workspace-anaconda.html#personal-laptops",
-    "href": "pages/012-workspace-anaconda.html#personal-laptops",
-    "title": "Anaconda",
-    "section": "Personal laptops",
-    "text": "Personal laptops\nIf you don’t have access to Self Service or are using a personal computer, you can download and install Anaconda directly from the web:\n\nVisit the official Anaconda website\nDownload the appropriate version for your operating system (Windows, macOS, or Linux)\nRun the installer and follow the on-screen instructions"
-  },
-  {
-    "objectID": "pages/012-workspace-anaconda.html#starting-jupyter-lab",
-    "href": "pages/012-workspace-anaconda.html#starting-jupyter-lab",
-    "title": "Anaconda",
-    "section": "Starting Jupyter Lab",
-    "text": "Starting Jupyter Lab\nOnce Anaconda is installed, start “Anaconda Navigator” and press the JupyterLab button on the main screen:\n\n\n\nAnaconda Navigator\n\n\nThis will open JupyterLab in your default web browser and will look something like this:\n\n\n\nJupyterLab\n\n\nWe’re now ready to get started!\nContinue with the course"
-  },
-  {
     "objectID": "pages/030-variables.html",
     "href": "pages/030-variables.html",
-    "title": "Variables and data types",
+    "title": "Types of Data and Operators",
     "section": "",
     "text": "We call variable to a symbolic name that refers to an object. They act as memory containers for storing data values and are created when you assign a value to them using the assignment operator =. For example, x = 5 assigns the integer value 5 to the variable x.\nThe value stored in a variable can change or vary throughout your program and can be any data type such as integers, strings, or lists. You will see different data types in the next section.\nChoosing the correct name for a particular variable is an important task as a non-descriptive name (or worse, an incorrect name) will be very confusing for you and anyone reading your code. For instance, for a variable which contains a number representing a distance in miles, avoid shortened names like dm, distm or d and instead use a name like distance_miles. Remember, code will be written once but read many times so make it easy to read.",
     "crumbs": [
-      "Variables and data types"
+      "Types of Data and Operators"
     ]
   },
   {
     "objectID": "pages/030-variables.html#getting-data-in",
     "href": "pages/030-variables.html#getting-data-in",
-    "title": "Variables and data types",
+    "title": "Types of Data and Operators",
     "section": "Getting data in",
     "text": "Getting data in\nSo far, all the code we’ve run is somewhat static. Variables get assigned a value in our code and very time we run it, the output is always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, input.\nThe print function is how we get information out of our program, and the input function is a way of getting data into it. The function will pause the program and wait for you to type something in followed by Enter, and assign your input to a variable on the left hand side of the =.\n\n\ncolour.py\n\nfav = input(\"What is your favourite colour?\")\nprint(\"My favourite colour is\", fav)\n\nNow, if we run these lines of code, it will print the message specified and wait for you to type something. If you type “red” and then press enter, it will assign “red” to the variable fav and then use that variable in the final print function:\n\n\nWhat is your favourite colour? red\nMy favourite colour is red\n\n\n\n\n\n\n\n\nExercise\n\n\n\nCreate a code so the value of the variable name is set using the input function.\nThe code should print out:\nWhat is your name?\nwait for you to type your name and press Enter, then print out:\nWhat is your name? Jean\nHello Jean\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\ngreeting = \"Hello\"\n\nname = input(\"What is your name? \")\n\nprint(greeting, name)\n\n\nWhat is your name? Jean\nHello Jean",
     "crumbs": [
-      "Variables and data types"
+      "Types of Data and Operators"
     ]
   },
   {
     "objectID": "pages/051-conditionals.html",
     "href": "pages/051-conditionals.html",
-    "title": "Conditional if",
+    "title": "If Statements (Conditionals)",
     "section": "",
     "text": "Conditional if statements allow programs to make decisions and execute different code based on whether certain conditions are True or False. For instance, we may want to perform a different action when a study participant is an adult or not:\nThe basic syntax for conditional statements is if condition:, where condition is an expression that evaluates to either True or False, i.e. a boolean. If it’s True, the indented code block under the if statement will run. If False, it will be skipped. For example, the below code will print “You are an adult” if age is 18 or higher.\nage = 18\nif age &gt;= 18:\n    print(\"You are an adult\")\n\nYou are an adult\nYou can also add an else clause to specify code to run if the condition is False:\nage = 17\nif age &gt;= 18:\n    print(\"You are an adult\")\nelse:\n    print(\"You are not an adult\")\n\nYou are not an adult\nFor multiple conditions, you can use elif (else if) clauses to execute the first matching block.\nage = 14\nif age &lt; 13:\n    print(\"You are a child\") \nelif age &lt; 18:\n    print(\"You are a teenager\")\nelse:\n    print(\"You are an adult\")\n\nYou are a teenager",
     "crumbs": [
-      "Control structures",
-      "Conditional if"
+      "Writing More Flexible and Dynamic Code",
+      "If Statements (Conditionals)"
     ]
   },
   {
     "objectID": "pages/051-conditionals.html#ordering-your-options",
     "href": "pages/051-conditionals.html#ordering-your-options",
-    "title": "Conditional if",
+    "title": "If Statements (Conditionals)",
     "section": "Ordering your options",
     "text": "Ordering your options\nWhen working out which lines of code will be run, Python will work down the list of if, elifs and else and will run the first one that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.\nFor example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:\n\n\n\nif.py\n\nmy_number = int(input(\"Enter a number: \"))\n\nif my_number &gt; 100:\n    print(my_number, \"is large\")\nelif my_number &gt; 1:\n    print(my_number, \"is positive\")\nelse:\n    print(my_number, \"negative\")",
     "crumbs": [
-      "Control structures",
-      "Conditional if"
+      "Writing More Flexible and Dynamic Code",
+      "If Statements (Conditionals)"
     ]
   },
   {
     "objectID": "pages/051-conditionals.html#combining-questions",
     "href": "pages/051-conditionals.html#combining-questions",
-    "title": "Conditional if",
+    "title": "If Statements (Conditionals)",
     "section": "Combining questions",
     "text": "Combining questions\nIt is possible to ask two or more questions in one go by combining them with and and or. So, if you want to check is a number is smaller than ten (my_number &lt; 10) and is not equal to zero (my_number != 0), you can use:\nif my_number &lt; 10 and my_number != 0:\n    ...\nThese combined checks can be used in both if and elif statements.",
     "crumbs": [
-      "Control structures",
-      "Conditional if"
+      "Writing More Flexible and Dynamic Code",
+      "If Statements (Conditionals)"
     ]
   },
   {
@@ -87,7 +59,7 @@
     "section": "",
     "text": "It is possible to make Python repeat certain lines of code using loops. The ability to run a line of code multiple times is the first large step on your road to making your code more structured and reusable.\nImagine we have three strings in a list that we want to print. We could start by calling print three times to create a program like:\nmy_words = [\"Jean\", \"Golding\", \"Institute\"]\nprint(my_words[0])\nprint(my_words[1])\nprint(my_words[2])\n\nJean\nGolding\nInstitute\nThis printed the output we want. But you may feel that repeating the same call to print is wasteful code, particularly if we want to repeat the same operation for many elements. If we can manage to write that line only once then we could save ourselves some typing and potentially make the code easier to read!\nWe can write a for loop in Python which will perform a task once for each word in our list:\nmy_words = [\"Jean\", \"Golding\", \"Institute\"]\n\nfor word in my_words:\n    print(word)\n\nJean\nGolding\nInstitute\nEven in this tiny example, we have ve taken a script that was four lines of code and have reduced it to three lines, and more interestingly the same loop will work no matter how many items there are in the list my_words.\nThis maps to real life where you may want, for example, to pay for each item on your shopping list. Another way of saying that could be “for each item on my shopping list, add its price to my total”, or as you would write that in Python:\nIf we want to write more code after the end of a loop, we have to make sure that it is not indented. So the below code will print:\nmy_words = [\"Hello\", \"Python\"]\n\nfor word in my_words:\n    print(word)\n\nprint(\"...Goodbye\")\n\nHello\nPython\n...Goodbye\nOn the contrary, the below code will print ...Goodbye in each iteration. This is because it was inside the body of the loop since it was indented.\nmy_words = [\"Hello\", \"Python\"]\n\nfor word in my_words:\n    print(word)\n\n    print(\"...Goodbye\")\n\nHello\n...Goodbye\nPython\n...Goodbye",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "For loops"
     ]
   },
@@ -98,7 +70,7 @@
     "section": "What can we loop over?",
     "text": "What can we loop over?\nA lot of the power of loops comes from being able to put a lot of different types of data.\nMost simply, instead of putting a variable name there, you can put a list directly:\n\nfor word in [\"Hello\", \"Python\"]:\n    print(word)\n\nHello\nPython\n\n\nAs well as lists we can put anything which Python considers iterable. For now we haven’t come across many of those but as we keep learning we’ll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.\n\nphrase = \"Hello Python\"\n\nfor letter in phrase:\n    print(letter)\n\nH\ne\nl\nl\no\n \nP\ny\nt\nh\no\nn\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\nExperiment with your code and make it loop over both lists and strings.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nStarting with the same list we used before, each item in the list gets printed on its own line.\n\nwords = [\"Hello\", \"Python\"]\n\nfor word in words:\n    print(word)\n\nHello\nPython\n\n\nOn the contrary, if we loop over a string we see that each character gets printed on its own line.\n\nphrase = \"Hello Python\"\n\nfor letter in phrase:\n    print(letter)\n\nH\ne\nl\nl\no\n \nP\ny\nt\nh\no\nn",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "For loops"
     ]
   },
@@ -109,7 +81,7 @@
     "section": "Looping over a range of numbers",
     "text": "Looping over a range of numbers\nThere’s a built in function in Python called range which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, but not including, the number you gave as an argument. We can put this call to the range function directly into our loop as the object to loop over and it will print:\n\nfor number in range(5):\n    print(number)\n\n0\n1\n2\n3\n4\n\n\nThe range function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:\n\nfor number in range(10, 13):\n    print(number)\n\n10\n11\n12",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "For loops"
     ]
   },
@@ -120,7 +92,7 @@
     "section": "Looping over dictionaries",
     "text": "Looping over dictionaries\nPython also allows you to loop over dictionaries. To discover how it works, let’s do the naïve thing first and just see what happens when we loop over a dictionary:\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor animal in sounds:\n    print(animal)\nYou will recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the keys.\nWhat if, for example, you wanted to loop over the values instead. Well, there is a method on dictionaries called values which gives you just those so that you can loop over them:\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor sound in sounds.values():\n    print(sound)    \n\nmeow\nwoof\nneigh\n\n\nIf we want to loop over the dictionary and get both the keys and the values, there is a method called items. Since it will be giving us two things each loop iteration, we’ll have to use the same trick as we did with enumerate and give two variable names in the for loop declaration:\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor animal, sound in sounds.items():\n    print(animal, \"goes\", sound)\n\ncat goes meow\ndog goes woof\nhorse goes neigh\n\n\nThe items method gives us two pieces of data where the first is always the key and the second if always the value. We give the keys the name animal and the values the name sound. We can then use both those variables in the loop body.\n\n\n\n\n\n\nExercise 4\n\n\n\nCan you modify your code where you created a dictionary with country-capital pairs to loop over it and print something like \"The capital of France is Paris\" for all items?\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\ncapital = {\n    \"England\": \"London\",\n    \"France\" : \"Paris\",\n    \"Italy\": \"Rome\"\n}\n\n# note we use 'cap' and not 'capital', as it is used for the dictionary\nfor country, cap in capital.items():\n    print(\"The capital of\", country, \"is\", cap)\n\nThe capital of England is London\nThe capital of France is Paris\nThe capital of Italy is Rome",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "For loops"
     ]
   },
@@ -149,7 +121,7 @@
     "href": "pages/980-summary.html",
     "title": "Summary",
     "section": "",
-    "text": "Well done for getting this far! We’ve covered a lot in this course:\n\nHow to set up a Python notebook with JupyterLab\nUsing the print() function\nBasic data types (integers, floats, strings, boolean)\nData structures: lists and dictionaries\nConditional branching using if statements\nLooping with for and while\n\nYou’re not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practice that you will become confident. These notes will remain online so feel free to refer back to them at any time.",
+    "text": "Well done for getting this far! We’ve covered a lot in this course:\n\nHow to set up a Python notebook with JupyterLab\nUsing the print() function\nBasic data types (integers, floats, strings, boolean)\nData structures: lists and dictionaries\nConditional branching using if statements\nLooping with for and while\n\nYou’re not expected to have committed all of this to memory already, learning any programming language takes more than three hours. It is only by continuing to use Python and practice that you will become confident. These notes will remain online so feel free to refer back to them at any time.\nIf you want to continue learning python, you might want to look at the Intro to Python2 course which covers more advanced data structures, functions, and working with files.",
     "crumbs": [
       "Summary"
     ]
@@ -159,7 +131,7 @@
     "href": "pages/010-workspace-setup.html",
     "title": "Workspace setup",
     "section": "",
-    "text": "There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.",
+    "text": "There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Lab which provides you with a local editor in your web browser where you can write and run Python code.",
     "crumbs": [
       "Workspace setup"
     ]
@@ -169,7 +141,7 @@
     "href": "pages/010-workspace-setup.html#recommended-way-to-install-python",
     "title": "Workspace setup",
     "section": "Recommended way to install Python",
-    "text": "Recommended way to install Python\nIf you are new to Python and you don’t have it installed in your computer we recommend you install Miniforge.",
+    "text": "Recommended way to install Python\nPlease see here for detailed instructions on how to install Python and Jupyter Lab on your computer. These instructions will be useful for the course, but also more generally for your future work in Python.",
     "crumbs": [
       "Workspace setup"
     ]
@@ -179,7 +151,7 @@
     "href": "pages/010-workspace-setup.html#alternative-methods",
     "title": "Workspace setup",
     "section": "Alternative methods",
-    "text": "Alternative methods\nAlternatively, you can install Anaconda, another popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times.\nIf you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is Google Colab. Please be aware that you should not upload any sensitive information to web-based services like this.",
+    "text": "Alternative methods\nIf you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is Google Colab. Please be aware that you should not upload any sensitive information to web-based services like this.",
     "crumbs": [
       "Workspace setup"
     ]
@@ -201,7 +173,7 @@
     "section": "",
     "text": "We have seen that for loops can repeatedly execute a block of code for each element specified. We can think of another scenario where we only want to continue executing a block of code as long as a given condition is True. The basic idea is:\n    WHILE there is money in my account\n        have lunch out\n        update my bank statement\nIn while loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is True. The basic syntax in Python which has a similar scaffolding to an if clause:\nwhile condition:\n    # code to execute while condition is True\nTo ensure that the condition will eventually become False, it is common usage to increment/decrement a counter variable in the loop body:\n\ncount = 0\nwhile count &lt; 5:\n    print(count)\n    count = count + 1\n\n0\n1\n2\n3\n4\n\n\nThere are some extra flow control instructions in while loops that we are not going to see here in detail but it is important to mention them. They are:\n\nbreak: exits the loop immediately\ncontinue: skips the rest of the current iteration and moves to the next\nelse: executes when the loop condition becomes False\n\nwhile True:\n    user_input = input(\"Enter 'q' to quit: \")\n    if user_input == 'q':\n        break\n\n\n\n\n\n\nExercise\n\n\n\nGiven a list of students sorted by name\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\nwrite a Python code that prints the names of students starting with letters before ‘M’ in the alphabet.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nNote in the code below that the while loop needs to take into account two different conditions:\n\nThat the student’s name starts with a letter before ‘M’\nThat we don’t try to index an element out of range in students\n\n\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\n\n# Initialize the index\ni = 0\n\n# While loop to print names before 'M'\nwhile i &lt; len(students) and students[i][0] &lt; 'M':\n    print(students[i])\n    i = i + 1\n\nAlice\nBob\nCharlie\nFrank\nGeorge\nHannah\nJulia",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "While loop"
     ]
   },
@@ -308,45 +280,45 @@
   {
     "objectID": "pages/031-basic-data-types.html",
     "href": "pages/031-basic-data-types.html",
-    "title": "Basic data types",
+    "title": "Writing more Flexible Programs",
     "section": "",
     "text": "In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.",
     "crumbs": [
-      "Variables and data types",
-      "Basic data types"
+      "Types of Data and Operators",
+      "Writing more Flexible Programs"
     ]
   },
   {
     "objectID": "pages/031-basic-data-types.html#numeric-types",
     "href": "pages/031-basic-data-types.html#numeric-types",
-    "title": "Basic data types",
+    "title": "Writing more Flexible Programs",
     "section": "Numeric Types",
     "text": "Numeric Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nintegers or whole numbers\nint\na = int(12)\n\n\nfloating-point numbers\nfloat\nb = float(7.3)\n\n\n\n\na = 12\nb = 7.3\nprint(\"A:\", a, type(a))\nprint(\"B:\", b, type(b))\n\nA: 12 &lt;class 'int'&gt;\nB: 7.3 &lt;class 'float'&gt;",
     "crumbs": [
-      "Variables and data types",
-      "Basic data types"
+      "Types of Data and Operators",
+      "Writing more Flexible Programs"
     ]
   },
   {
     "objectID": "pages/031-basic-data-types.html#text-types",
     "href": "pages/031-basic-data-types.html#text-types",
-    "title": "Basic data types",
+    "title": "Writing more Flexible Programs",
     "section": "Text Types",
     "text": "Text Types\n\n\n\nDescription\nType\nExample\n\n\n\n\ntextual data (strings)\nstr\na = “Jean Golding”\n\n\n\n\nname = \"Jean Golding\"\nprint(\"Name:\", name, type(name))\n\nName: Jean Golding &lt;class 'str'&gt;\n\n\n\n\n\n\n\n\nNote that\n\n\n\nIt’s important that when writing numbers in your scripts, you do not put quotation marks around them, otherwise they will be recognized by the Python interpreter as strings. There is a difference between 3.14159 and “3.14159”, the first is a number and the second is just a pair of characters.\n\npi = 3.14159\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'float'&gt;\n\n\n\npi = \"3.14159\"\nprint(\"pi:\", pi, type(pi))\n\npi: 3.14159 &lt;class 'str'&gt;",
     "crumbs": [
-      "Variables and data types",
-      "Basic data types"
+      "Types of Data and Operators",
+      "Writing more Flexible Programs"
     ]
   },
   {
     "objectID": "pages/031-basic-data-types.html#boolean-types",
     "href": "pages/031-basic-data-types.html#boolean-types",
-    "title": "Basic data types",
+    "title": "Writing more Flexible Programs",
     "section": "Boolean Types",
-    "text": "Boolean Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nboolean values (True or False)\nbool\na = True\n\n\n\n\na = 23\nb = 2\nc = a != b\nprint(\"C:\", c, type(c))\n\nC: True &lt;class 'bool'&gt;\n\n\n\n\n\n\n\n\nExercise\n\n\n\nWithout using Python, can you tell what is the data type of these variables?\nx = 32\nnumber_of_participants = \"1017\"\nFriday = True\ny = float(1)\na = 10&lt;8\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nx is an integer\nnumber_of_participants is a string\nFriday is a boolean\ny is a float\na is a boolean",
+    "text": "Boolean Types\n\n\n\nDescription\nType\nExample\n\n\n\n\nboolean values (True or False)\nbool\na = True\n\n\n\n\na = 23\nb = 2\nprint(a != b)\n\nTrue\n\n\nWe can assign this boolean value to a variable:\n\nc = (a != b)\nprint(\"c:\", c, type(c))\n\nc: True &lt;class 'bool'&gt;\n\n\nNote the use of the brackets around a != b. This isn’t necessary here, but it can help to make the code clearer!\n\n\n\n\n\n\nExercise\n\n\n\nWithout using Python, can you tell what is the data type of these variables?\nx = 32\nnumber_of_participants = \"1017\"\nFriday = True\ny = float(1)\na = 10&lt;8\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nx is an integer\nnumber_of_participants is a string\nFriday is a boolean\ny is a float\na is a boolean",
     "crumbs": [
-      "Variables and data types",
-      "Basic data types"
+      "Types of Data and Operators",
+      "Writing more Flexible Programs"
     ]
   },
   {
@@ -356,7 +328,7 @@
     "section": "",
     "text": "In previous section we saw how to repeat a set of instructions inside loops. But if someone wants to make use that operations multiple times on your code, they will have to copy and paste your code every time.\nFunctions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in this materials, e.g. print() wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.\nYou can also bundle up your own code into functions, avoiding repeating yourself and making your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams.\nweight_in_ounces = 6\n\nweight_in_grams = weight_in_ounces * 28.3495\n\nprint(f\"{weight_in_grams} g\")\n\n170.09699999999998 g\nYou can see this script has three main parts:\nThe data processing section will work regardless of what data is inside the variable weight_in_ounces and so we can grab that bit of code and make it usable in other contexts quite easily, using functions.",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "Functions"
     ]
   },
@@ -367,7 +339,7 @@
     "section": "Defining functions",
     "text": "Defining functions\nWe can turn this into a function that can convert ounces to grams by using def. To do this, type:\n\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nThis has created a new function called ounces_to_grams which we can now call. In a similar fashion to other constructs in Python (like for loops and if statements) it has a rigid structure.\nFirst we must use the def keyword to start a function definition:\n ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nThen we specify the name that we want to give the function. This is the name which we will use when calling the function. Like anything in Python, choose a descriptive name that describes what it does:\n           ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nFunction definitions must then be followed by a pair of round brackets. This is a similar syntax to that used when calling a function and giving it arguments but here we’re just defining it. Between those brackets go the names of the parameters we want the function to accept (can be zero or more parameters). Here we are defining one:\n                   ↓      ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nFinally, the line is completed with a colon. And since we’ve used a colon, we must indent the body of the function as we did with loops and conditional statements.\n                           ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nMost functions will also want to return data back to the code that called it. You can choose what data is returned using the return keyword followed by the data you want to return:\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n      ↑\n\nNote that the body of the function has been copied from our script above with the only change being that the variables have different names and we added a return statement.",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "Functions"
     ]
   },
@@ -378,7 +350,7 @@
     "section": "Calling functions",
     "text": "Calling functions\nYou can now call the function using:\n\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nweight_in_ounces = 6\n\nweight_in_grams = ounces_to_grams(weight_in_ounces)\n\nprint(f\"{weight_in_grams} g\")\n\n170.09699999999998 g\n\n\nIn this case you have called the function ounces_to_grams and passed in the argument weight_in_ounces. In the function, weight_in_ounces is copied to its internal variable, weight. The function ounces_to_grams then acts on weight, creating the new variable new_weight. It then returns new_weight, which is assigned to weight_in_grams.\nYou can use your new ounces_to_grams function to convert any numbers. Try typing:\n\nweight_in_ounces = 999\n\nweight_in_grams = ounces_to_grams(weight_in_ounces)\n\nprint(f\"{weight_in_grams} g\")\n\n28321.1505 g\n\n\n\n\n\n\n\n\nExercise\n\n\n\nTake the following code:\nmy_list = [5, 7, 34, 5, 3, 545]\n\nbig_numbers = []\nfor num in my_list:\n    if num &gt; 10:\n        big_numbers.append(num)\n\nprint(big_numbers)\nand convert the data-processing parts to a function called big which can be called like:\nmy_list = [5, 7, 34, 5, 3, 545]\n\nlarge_numbers = big(my_list)\n\nprint(large_numbers)\ngiving\n[34, 545]\nBe careful to pay attention to the indentation, ensuring that it is consistent with the original code. Particularly, note that the return statement will cause the function to exit, so make sure that it doesn’t run until after the loop has finished.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nStarting from the initial code, we pull out the middle four lines, indent them, put def big(numbers): in front and add return big_numbers to the end, paying careful attention to the indentation of the return statement. Finally, we update the variable name used in the function to match the argument name numbers:\n\ndef big(numbers):\n    big_numbers = []\n    for num in numbers:\n        if num &gt; 10:\n            big_numbers.append(num)\n    return big_numbers\n\n\nmy_list = [5, 7, 34, 5, 3, 545]\n\nlarge_numbers = big(my_list)\n\nprint(large_numbers)\n\n[34, 545]",
     "crumbs": [
-      "Control structures",
+      "Writing More Flexible and Dynamic Code",
       "Functions"
     ]
   },
@@ -429,7 +401,7 @@
     "section": "",
     "text": "Until now all the variables we have used have contained a single piece of information, for example, a = 4 makes a variable a containing a single number, 4. It’s very common to want to refer to collections of data. You can think, for example, of a bank statement that contains the list of expenses you had last month.\nPython has several build-in data structures that facilitate working with this common kind of data. In this beginners course we will see list and dictionary.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -440,7 +412,7 @@
     "section": "Lists",
     "text": "Lists\nA list is a data type that stores an ordered sequence of elements and can be created using square brackets [], with elements separated by commas ,. Let’s create a new notebook with the following code:\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nprint(my_list)\n\nThis will create a Python list with three elements and assign it to the variable my_list. The square brackets [ and ] in this case mean “create a list” and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the print() function. Run this code and look at the output.\n\n\n['cat', 'dog', 'horse']\n\n\nYou can have as many items in a list as you like, even zero items as in:\n\nmy_list = []\n\nYou can even have a mixture of different type of data types:\n\nmy_list = [5, 34.6, \"Hello\", -6, False]\n\n\n\n\n\n\n\nExercise\n\n\n\nEdit my_list so it has some more items in it. Try adding some different data types or rearranging items. Check that the output matches what you expect.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nWe have changed our list by adding two more items to the end of it. We add an integer, 7 and a new string, \"quail\". Each is still separated by a comma:\n\nmy_list = [\"cat\", \"dog\", \"horse\", 7, \"quail\"]\nprint(my_list)\n\n['cat', 'dog', 'horse', 7, 'quail']\n\n\nHere we edit our list so that the items are all in a different order:\n\nmy_list = [\"quail\", \"cat\", 7, \"dog\", \"horse\"]\nprint(my_list)\n\n['quail', 'cat', 7, 'dog', 'horse']",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -451,7 +423,7 @@
     "section": "Indexing",
     "text": "Indexing\nThe power of Python’s lists comes not simply from being able to hold many pieces of data but from being able to get specific pieces of data out. The primary method of this is called indexing. Indexing a list in Python is done using the square brackets []. This is a different use of the square brackets to that which we saw above for making a list.\nTo get a single element out of a list you write the name of the variable followed by a pair of square brackets with a single number between them:\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nprint(my_list[1])\n\ndog\n\n\nThe code my_list[1] means “give me the number 1 element of the list my_list”. Is the above output what you expected?\nProbably you noticed that it prints dog whereas you may have expected it to print cat. This is because in Python you count from zero when indexing lists and so index 1 refers to the second item in the list. To get the first item you must use the index 0. This “zero-indexing” is very common and is used in many programming languages.\n\n\n\n\n\n\nExercise\n\n\n\nTry accessing some different elements from the list by putting in different number between the square brackets.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nAs well as setting my_element to the “0th” element of the list, we also print the value of the element at index 2:\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nmy_element = my_list[0]\nprint(my_element)\n\nprint(my_list[2])\n\ncat\nhorse",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -462,7 +434,7 @@
     "section": "Reverse indexing",
     "text": "Reverse indexing\nPutting a single positive number in the square brackets gives us back the element which is at that distance from the start of the list, but what if we want the last element? If we know the length of the list (in our case here, 3 elements) then we can use that to know the index of the last element (in this case, 2), but perhaps we don’t know how long the list is (or we don’t want to check it).\nIn this case we can use Python’s reverse indexing by placing a negative integer in the square brackets:\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nprint(my_list[-1])\n\nhorse\n\n\nIf you run this code then you will see that it prints horse which is the last item in the list. Using negative numbers allows you to count backwards from the end of the list so that -1 is the last item, -2 is the second-last item etc.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -473,7 +445,7 @@
     "section": "Slicing",
     "text": "Slicing\nAs well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called slicing. Slicing starts out the same way as standard indexing (i.e. with square brackets) but instead of putting a single number between them, you put multiple numbers separated by a colon.\nBetween the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index 2 to index 4, you do:\n\nmy_list = [3, 5, \"green\", 5.3, \"house\", 100, 1]\n\nmy_slice = my_list[2:5]\n\nprint(my_slice)\n\n['green', 5.3, 'house']\n\n\nYou see that is printed ['green', 5.3, 'house'] which is index 2 ('green'), index 3 (5.3) and index 4 ('house'). Notice that it did not give us the element at index 5 and that is because with slicing, Python will give you the elements from the starting index up to, but not including, the end index.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -484,7 +456,7 @@
     "section": "Errors while working with lists",
     "text": "Errors while working with lists\nIt is very likely that indexing lists is the first time you will see a Python error. Seing Python errors (also sometimes called exceptions) is not a sign that you’re a bad programmer or that you’re doing something terrible. Even experienced programmers see Python errors on their screen.\nError messages are in fact a very useful feedback mechanism for the programmer but that can be a bit daunting when you first see them. Let’s recreate a typical error message: a list with three elements will not have an element at index 6 (the highest index in that case would be 2) and produce an error if we ask for it.\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nmy_element = my_list[6]\n\nprint(my_element)\n\n\n---------------------------------------------------------------------------\nIndexError                                Traceback (most recent call last)\nCell In[11], line 3\n      1 my_list = [\"cat\", \"dog\", \"horse\"]\n----&gt; 3 my_element = my_list[6]\n      5 print(my_element)\n\nIndexError: list index out of range\n\n\n\nRunning this you will see the following printed to the screen:\nwhich a very dense collection of information. Usually is the the last line of an error as that is where the most useful information is. In this case, the last line reads IndexError: list index out of range which has two parts to it. The first is the word before the colon which tells you the type of the exception is an IndexError, i.e. an error when indexing. The second part of that line is usually a slightly more descriptive message, in this case telling us that the specific problem was that the index was “out of range”, i.e. too high or too low.\nMoving to the lines above that, we see printed the line of code at which the exception occurred along with the line number within the code. These are essential in larger work to track down where the problem came from.\nTake your time to read the error messages when they are printed to the screen, they will most likely help you solve the issue.\n\n\n\n\n\n\nExercise\n\n\n\nEdit your code to print various slices of a list. If you get an error printed, make sure you understand what it is telling you.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\nWe make a list and then select a few slices of it:\n\nmy_list = [3, 5, \"green\", 5.3, \"house\", 100, 1]\n\nprint(my_list[2:4])\nprint(my_list[3:-2])\nprint(my_list[-4:-1])\nprint(my_list[33:37])\n\n['green', 5.3]\n[5.3, 'house']\n[5.3, 'house', 100]\n[]\n\n\nThe first print selects every element from index-2 up to, but not including, the index-4, i.e. the 2nd and 3rd elements.\nThe second print starts at index 3 and goe as far as index -2 (which is the same as index 5 in this list).\nThe next print starts at index -4 (i.e. index 3) and goes until index -1 (i.e. index 6).\nLast, print(my_list[33:37]) tries to access elements of a range that do not exist, but the behavior of Python is different than when accessing a single element as we saw before. In this case, it returns and empty list instead of showing an error message. This wrapping of slicing calls give us some flexibility when accessing a list, but will require us to check, in most cases, that the output is not an empty list.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -495,7 +467,7 @@
     "section": "Adding elements to lists",
     "text": "Adding elements to lists\nLists in Python are dynamic, meaning that they can change in size during execution. You can add items to the end of your list by using the append function. The append function is a little different to other functions that we have used so far (like print and range) in that it is a part of the list data type so we use it in a slighlty different way.\n\nmy_list = [\"cat\", \"dog\", \"horse\"]\n\nmy_list.append(\"quokka\")\n\nprint(my_list)\n\n['cat', 'dog', 'horse', 'quokka']\n\n\nHere you see we gave the name of our list (my_list) followed it by a dot (.) and then the name of the function that we wanted to call (append). Functions which are part of data types like this are sometimes called methods. We might describe the middle line here as “calling the append method on the object my_list”.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Lists"
     ]
   },
@@ -506,7 +478,7 @@
     "section": "",
     "text": "Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you want to store lots of variables, but access them using more complex relationships. One example is a dictionary, which lets you store variables and access them using a key.\nDictionaries in Python are created using curly brackets. Make a new file called dict.py and put this in it:\nsounds = {\"cat\": \"meow\", \"dog\": \"woof\", \"horse\": \"neigh\"}\n\ncat_sound = sounds[\"cat\"]\n\nprint(cat_sound)\n\nmeow\nWhat we did here was create a dictionary on the first line. A dictionary is created using curly brackets ({}), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a key and a value. The value is the real data that we want to keep hold of and the key is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.\nOn the next line we access the data in the dictionary sounds. Again, like lists we use the square brackets to ask questions of our data. In this case we’re asking the dictionary to give us the value associated with the key \"cat\" and so it will return to us \"meow\".\nSince dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\ncat_sound = sounds[\"cat\"]\n\nprint(cat_sound)",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Dictionaries"
     ]
   },
@@ -517,7 +489,7 @@
     "section": "Adding new data into dictionaries",
     "text": "Adding new data into dictionaries\nAs with lists, dictionaries are dynamic so we can add entries into a dictionary.\nLet’s say that we want to add in a new sound for a cow into our sounds dictionary. The key that the data will have will be \"cow\" and the value will be \"moo\". To do so we put sounds[\"cow\"] on the left-hand side of a variable assignment expression, as if we’re making a new variable. On the right goes the data that we want to put into the dictionary:\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nsounds[\"cow\"] = \"moo\"\n\nprint(sounds)\n\nThis is saying that we want the value \"moo\" associated with the key \"cow\" in the dictionary sounds.\nRunning it, we see:\n\n\n{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}\n\n\n\n\n\n\n\n\nExercise 2\n\n\n\nEdit your code so that the dictionary is initially defined with only the cat and dog entries. Add the entry for the horse and then the cow dynamically.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\"\n}\n\nsounds[\"horse\"] = \"neigh\"\nsounds[\"cow\"] = \"moo\"\n\nprint(sounds)\n\n{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Dictionaries"
     ]
   },
@@ -528,18 +500,18 @@
     "section": "Uses for dictionaries",
     "text": "Uses for dictionaries\nDictionaries can be used for any key-value mapping. The example above was a mapping of an animal species (as a string) to an animal sound ( as a string). You can use any data type you wish as the value in a dictionary. For example you might make a dictionary containing the population of some cities in millions (as a float):\n\ncensus = {\n    \"London\": 8.615,\n    \"Paris\": 2.244,\n    \"Rome\": 2.627,\n}\n\nor one which contains a list of authors as the key (as a string) and their books (as a list of strings):\n\nbookshelf = {\n    \"Terry Pratchett\": [\"Mort\", \"Jingo\", \"Truckers\"],\n    \"Jane Austen\": [\"Sense and Sensibility\", \"Pride and Prejudice\"],\n    \"Charles Dickens\": [\"Oliver Twist\"],\n}\n\n\n\n\n\n\n\nExercise 3\n\n\n\nMake a dictionary with the keys being the name of countries and the value being the country’s capital city. Print something like \"The capital of France is Paris\" for any item.\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\ncapital = {\n    \"England\": \"London\",\n    \"France\" : \"Paris\",\n    \"Italy\": \"Rome\"\n}\n\nprint(\"The capital of France is\", capital[\"France\"])\nprint(\"The capital of Italy is\", capital[\"Italy\"])\n\nThe capital of France is Paris\nThe capital of Italy is Rome",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Dictionaries"
     ]
   },
   {
     "objectID": "pages/050-control-structures.html",
     "href": "pages/050-control-structures.html",
-    "title": "Control structures",
+    "title": "Writing More Flexible and Dynamic Code",
     "section": "",
-    "text": "Earlier you were told that Python will read each one of your cells of code starting at the top and running each line of code until it reaches the bottom. While largely true, real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.\n\n\n\nAdapted from: This Is A Book, by Demetri Martin\n\n\nImagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:\nLOOP FOR EACH sample IN my_study\n    IF  sample value &gt; 100\n        DO SOMETHING\n    OTHERWISE\n        DO SOMETHING ELSE\nIn essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as if, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as for and while, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.",
+    "text": "Earlier you were told that Python will read each one of your cells of code starting at the top and running each line of code until it reaches the bottom. The way we wrote code previously meant that we were manipulating each piece of data manually, this is not usually what we want in real applications. Real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.\n\n\n\nAdapted from: This Is A Book, by Demetri Martin\n\n\nImagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:\nLOOP FOR EACH sample IN my_study\n    IF  sample value &gt; 100\n        DO SOMETHING\n    OTHERWISE\n        DO SOMETHING ELSE\nIn essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as if, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as for and while, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.",
     "crumbs": [
-      "Control structures"
+      "Writing More Flexible and Dynamic Code"
     ]
   },
   {
@@ -549,7 +521,7 @@
     "section": "",
     "text": "Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Operators"
     ]
   },
@@ -560,7 +532,7 @@
     "section": "Arithmetic Operators",
     "text": "Arithmetic Operators\nArithmetic operators can be used with numerical variables such as int and float. Some of them are:\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nAddition\n+\na + b\n\n\nSubtraction\n-\na - b\n\n\nMultiplication\n*\na * b\n\n\nDivision\n/\na / b\n\n\nExponentiation\n**\na ** b\n\n\n\n\na = 9\nb = 2\nprint('Subtraction:', a - b)\nprint('Division:', a / b)\nprint('Power:', a ** b)\n\nSubtraction: 7\nDivision: 4.5\nPower: 81",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Operators"
     ]
   },
@@ -571,7 +543,7 @@
     "section": "Comparison Operators",
     "text": "Comparison Operators\nWe can compare two variables (or a variable and a value) using comparison operators. They are applicable to numerical variables, strings and booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nEqual To\n==\na == b\n\n\nNot Equal To\n!=\na != b\n\n\nGreater Than\n&gt;\na &gt; b\n\n\nLess Than\n&lt;\na &lt; b\n\n\nGreater Than or Equal To\n&gt;=\na &gt;= b\n\n\nLess Than or Equal To\n&lt;=\na &lt;= b\n\n\n\n\na = 5\nb = 2\nprint(\"Equal To:\", a == b)\nprint(\"Less Than:\", a &gt; b)\nprint(\"Not Equal To:\", a != b)\nprint(\"Greater Than:\", a &lt; b)\n\nEqual To: False\nLess Than: True\nNot Equal To: True\nGreater Than: False",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Operators"
     ]
   },
@@ -582,43 +554,8 @@
     "section": "Logical Operators",
     "text": "Logical Operators\nLogical operators are used to combine conditional statements or negate them, and can only be applied to booleans.\n\n\n\nDescription\nOperator\nExample\n\n\n\n\nLogical AND\nand\n(a == b) and (a &gt; c)\n\n\nLogical OR\nor\n(a &gt; b) or (a &lt; c)\n\n\nLogical NOT\nnot\nnot (a &gt; b)\n\n\n\n\na = 5\nb = 2\nc = 4\nprint(\"(a == b) and (a &gt; c)\", (a == b) and (a &gt; c))\nprint(\"(a &gt; b) or (a &lt; c)\", (a &gt; b) or (a &lt; c))\nprint(\"not (a &gt; b):\", not (a &gt; b))\n\n(a == b) and (a &gt; c) False\n(a &gt; b) or (a &lt; c) True\nnot (a &gt; b): False\n\n\n\n\n\n\n\n\nExercise\n\n\n\nDefine two strings str1=\"Tuesday\" and str2=\"Wednesday\", and compare them (e.g. equal, greater and less than).\n\n\n\n\n\n\n\n\nAnswer\n\n\n\n\n\n\nstr1=\"Tuesday\"\nstr2=\"Wednesday\"\n\nprint(str1,\"equal to\",str2,\":\",str1==str2)\nprint(str1,\"greater than\",str2,\":\",str1&gt;str2)\nprint(str1,\"less than\",str2,\":\",str1&lt;str2)\n\nTuesday equal to Wednesday : False\nTuesday greater than Wednesday : False\nTuesday less than Wednesday : True\n\n\nIt is easy undersand that the operator == returns True if two strings are the same. But what do &gt; and &lt;?\nPython doesn’t understand the meaning of works “Tuesday” and “Wednesday”, they are just two chains of characters. The operator &gt; will return True if the string str1 comes after alphabetically than str2, and &lt; will return True if the string str1 comes before alphabetically than str2.",
     "crumbs": [
-      "Variables and data types",
+      "Types of Data and Operators",
       "Operators"
     ]
-  },
-  {
-    "objectID": "pages/011-workspace-miniforge.html",
-    "href": "pages/011-workspace-miniforge.html",
-    "title": "Miniforge",
-    "section": "",
-    "text": "Miniforge is a lightweight installer that sets up Conda to install packages from conda-forge, a robust environment for data science and machine learning workflows.\nGo to the conda-forge website and download the latest version of Miniforge for your operating system.\n\nWindows: Download the Miniforge installer for Windows. Run the installer and follow the prompts.\nMac/Linux: Download the appropriate installer script (2021 and newer MacBooks) and and run:\n\n\nTerminal/Command Prompt\n\nbash Miniforge3-MacOSX-arm64.sh\n\nFollow the on-screen instructions."
-  },
-  {
-    "objectID": "pages/011-workspace-miniforge.html#install-miniforge",
-    "href": "pages/011-workspace-miniforge.html#install-miniforge",
-    "title": "Miniforge",
-    "section": "",
-    "text": "Miniforge is a lightweight installer that sets up Conda to install packages from conda-forge, a robust environment for data science and machine learning workflows.\nGo to the conda-forge website and download the latest version of Miniforge for your operating system.\n\nWindows: Download the Miniforge installer for Windows. Run the installer and follow the prompts.\nMac/Linux: Download the appropriate installer script (2021 and newer MacBooks) and and run:\n\n\nTerminal/Command Prompt\n\nbash Miniforge3-MacOSX-arm64.sh\n\nFollow the on-screen instructions."
-  },
-  {
-    "objectID": "pages/011-workspace-miniforge.html#verify-installation",
-    "href": "pages/011-workspace-miniforge.html#verify-installation",
-    "title": "Miniforge",
-    "section": "Verify installation",
-    "text": "Verify installation\nAfter installation, open a command prompt/terminal and check if Conda is installed:\n\n\nTerminal/Command Prompt\n\nconda --version"
-  },
-  {
-    "objectID": "pages/011-workspace-miniforge.html#create-a-new-environment",
-    "href": "pages/011-workspace-miniforge.html#create-a-new-environment",
-    "title": "Miniforge",
-    "section": "Create a new environment",
-    "text": "Create a new environment\nOpen a command prompt or terminal. Use the following command to create an environment named training with Python 3.12, Jupyter Lab, Jupyter Notebook, Pandas and Scikit-Learn:\n\n\nTerminal/Command Prompt\n\nconda create -n training python=3.12 jupyterlab pandas seaborn scikit-learn\n\nThis installs all specified packages in one command.\n\n\n\n\n\n\nInstalling additional packages\n\n\n\n\n\nIf you need to install additional packages, use conda install. For example, to install scipy type:\n\n\nTerminal/Command Prompt\n\nconda install -n training scipy"
-  },
-  {
-    "objectID": "pages/011-workspace-miniforge.html#activate-the-environment",
-    "href": "pages/011-workspace-miniforge.html#activate-the-environment",
-    "title": "Miniforge",
-    "section": "Activate the environment",
-    "text": "Activate the environment\nTo activate the newly created environment type:\n\n\nTerminal/Command Prompt\n\nconda activate training\n\nThe terminal prompt will change to show (training) indicating the environment is active.\nLast, launch Jupyter Lab by typing:\n\n\nTerminal/Command Prompt\n\njupyter lab\n\nThe Jupyter Lab interface should open on your local web browser:\n\n\n\nScreenshow of the JupyterLab interface\n\n\nWe’re now ready to get started!\nContinue with the course"
   }
 ]
