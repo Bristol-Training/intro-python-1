@@ -2,14 +2,13 @@
 title: Workspace setup
 ---
 
-There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Notebooks which provides you with a local editor in your web browser where you can write and run Python code.
+There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Lab which provides you with a local editor in your web browser where you can write and run Python code.
 
 ## Recommended way to install Python
 
-If you are new to Python and you don't have it installed in your computer we recommend you [install Miniforge](./011-workspace-miniforge.qmd).
+Please see [here](https://bristol-training.github.io/data-science-project-setup/) for detailed instructions on how to install Python and Jupyter Lab on your computer. These instructions will be useful for the course, but also more generally for your future work in Python.
 
 ## Alternative methods
 
-Alternatively, you can [install Anaconda](./012-workspace-anaconda.qmd), another popular tool. Please note, however, that we are transitioning away from the use of Anaconda due to several issues reported by users, including installation challenges related to insufficient permissions, the large download size, and extended waiting times. 
 
 If you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is [Google Colab](https://colab.research.google.com/). **Please be aware that you should not upload any sensitive information to web-based services like this.**
