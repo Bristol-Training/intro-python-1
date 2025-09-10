@@ -7,3 +7,5 @@ venv/
 # pixi environments
 .pixi
 *.egg-info
+
+/.venv/

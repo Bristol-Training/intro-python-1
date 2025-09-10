@@ -1,5 +1,5 @@
 ---
-title: Writing more Flexible Programs
+title: Data Types
 ---
 
 In Python we have several built-in data types. The most common types of data that you will find are numbers, strings and booleans.
