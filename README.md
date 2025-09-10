@@ -8,10 +8,15 @@ This course is maintained by the [Jean Golding Institute](https://www.bristol.ac
 
 ## Changing the course
 
-* The course material dependencies managed using [pixi](https://pixi.sh/latest/). Install pixi using 
-[these instructions](https://pixi.sh/latest/installation/).
+This project is built with Quarto (https://quarto.org). Dependencies
+are managed using [uv](https://docs.astral.sh/uv/) (installation
+instructions [here](https://docs.astral.sh/uv/getting-started/installation/).
 
-* Preview the course using `pixi run preview` and build the course using `pixi run build`.
+Once uv is installed, you can render local changes with:
+
+```
+uv run quarto preview
+```
 
 * When you push changes to GitHub, the course is automatically built via a [GitHub action](.github/workflows/publish-course.yml)
 
