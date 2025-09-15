@@ -4,7 +4,7 @@ title: "Introduction"
 
 Welcome to Introduction to Python (part 1) course! This course is designed for individuals with no prior programming experience, aiming to introduce you to the fundamentals of Python, one of the most popular and versatile *programming languages* today.
 
-Python is known for its simple syntax, which makes it an excellent choice for beginners. This course is going to show you to give instructions to the computer to perform simple tasks and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.
+Python is known for its simple syntax, which makes it an excellent choice for beginners. This course will show you how to perform simple tasks in python and as you become more confident and follow the later courses, you will find that you are able to write much more complex applications.
 
 
 ## Intended learning outcomes
