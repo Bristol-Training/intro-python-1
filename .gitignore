@@ -9,3 +9,4 @@ venv/
 *.egg-info
 
 /.venv/
+**/*.quarto_ipynb

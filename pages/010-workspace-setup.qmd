@@ -2,7 +2,7 @@
 title: Workspace setup
 ---
 
-There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course we will be using a free tool called Jupyter Lab which provides you with a local editor in your web browser where you can write and run Python code.
+There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course, we will be using a free tool called Jupyter Lab which provides you with a local editor in your web browser where you can write and run Python code.
 
 ## Recommended way to install Python
 
