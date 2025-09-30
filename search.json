@@ -219,7 +219,7 @@
     "section": "",
     "text": "We have seen that for loops can repeatedly execute a block of code for each element specified. We can think of another scenario where we only want to continue executing a block of code as long as a given condition is True. The basic idea is:\n    WHILE there is money in my account\n        have lunch out\n        update my bank statement\nIn while loops the condition is checked at the beginning of each iteration and the loop continues executing as long as the condition is True. The basic syntax in Python which has a similar scaffolding to an if clause:\nwhile condition:\n    # code to execute while condition is True\nTo ensure that the condition will eventually become False, it is common usage to increment/decrement a counter variable in the loop body:\n\ncount = 0\nwhile count &lt; 5:\n    print(count)\n    count = count + 1\n\n0\n1\n2\n3\n4\n\n\nThere are some extra flow control instructions in while loops that we are not going to see here in detail but it is important to mention them. They are:\n\nbreak: exits the loop immediately\ncontinue: skips the rest of the current iteration and moves to the next\nelse: executes when the loop condition becomes False\n\nwhile True:\n    user_input = input(\"Enter 'q' to quit: \")\n    if user_input == 'q':\n        break\n\n\n\n\n\n\nNoteExercise\n\n\n\nGiven a list of students sorted by name\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\nwrite a Python code that prints the names of students starting with letters before ‘M’ in the alphabet.\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\nNote in the code below that the while loop needs to take into account two different conditions:\n\nThat the student’s name starts with a letter before ‘M’\nThat we don’t try to index an element out of range in students\n\n\nstudents = [\"Alice\", \"Bob\", \"Charlie\", \"Frank\", \"George\", \"Hannah\", \"Julia\", \"Mia\", \"Noah\", \"Olivia\"]\n\n# Initialize the index\ni = 0\n\n# While loop to print names before 'M'\nwhile i &lt; len(students) and students[i][0] &lt; 'M':\n    print(students[i])\n    i = i + 1\n\nAlice\nBob\nCharlie\nFrank\nGeorge\nHannah\nJulia",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "While loop"
     ]
   },
@@ -250,7 +250,7 @@
     "section": "",
     "text": "It is possible to make Python repeat certain lines of code using loops. The ability to run a line of code multiple times is the first large step on your road to making your code more structured and reusable.\nImagine we have three strings in a list that we want to print. We could start by calling print three times to create a program like:\nmy_words = [\"Jean\", \"Golding\", \"Institute\"]\nprint(my_words[0])\nprint(my_words[1])\nprint(my_words[2])\n\nJean\nGolding\nInstitute\nThis printed the output we want. But you may feel that repeating the same call to print is wasteful code, particularly if we want to repeat the same operation for many elements. If we can manage to write that line only once then we could save ourselves some typing and potentially make the code easier to read!\nWe can write a for loop in Python which will perform a task once for each word in our list:\nmy_words = [\"Jean\", \"Golding\", \"Institute\"]\n\nfor word in my_words:\n    print(word)\n\nJean\nGolding\nInstitute\nEven in this tiny example, we have ve taken a script that was four lines of code and have reduced it to three lines, and more interestingly the same loop will work no matter how many items there are in the list my_words.\nThis maps to real life where you may want, for example, to pay for each item on your shopping list. Another way of saying that could be “for each item on my shopping list, add its price to my total”, or as you would write that in Python:\nIf we want to write more code after the end of a loop, we have to make sure that it is not indented. So the below code will print:\nmy_words = [\"Hello\", \"Python\"]\n\nfor word in my_words:\n    print(word)\n\nprint(\"...Goodbye\")\n\nHello\nPython\n...Goodbye\nOn the contrary, the below code will print ...Goodbye in each iteration. This is because it was inside the body of the loop since it was indented.\nmy_words = [\"Hello\", \"Python\"]\n\nfor word in my_words:\n    print(word)\n\n    print(\"...Goodbye\")\n\nHello\n...Goodbye\nPython\n...Goodbye",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "For loops"
     ]
   },
@@ -261,7 +261,7 @@
     "section": "What can we loop over?",
     "text": "What can we loop over?\nA lot of the power of loops comes from being able to put a lot of different types of data.\nMost simply, instead of putting a variable name there, you can put a list directly:\n\nfor word in [\"Hello\", \"Python\"]:\n    print(word)\n\nHello\nPython\n\n\nAs well as lists we can put anything which Python considers iterable. For now we haven’t come across many of those but as we keep learning we’ll discover many more. One that we have already come across is strings: looping over a string will always give you one letter at a time.\n\nphrase = \"Hello Python\"\n\nfor letter in phrase:\n    print(letter)\n\nH\ne\nl\nl\no\n \nP\ny\nt\nh\no\nn\n\n\n\n\n\n\n\n\nNoteExercise 2\n\n\n\nExperiment with your code and make it loop over both lists and strings.\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\nStarting with the same list we used before, each item in the list gets printed on its own line.\n\nwords = [\"Hello\", \"Python\"]\n\nfor word in words:\n    print(word)\n\nHello\nPython\n\n\nOn the contrary, if we loop over a string we see that each character gets printed on its own line.\n\nphrase = \"Hello Python\"\n\nfor letter in phrase:\n    print(letter)\n\nH\ne\nl\nl\no\n \nP\ny\nt\nh\no\nn",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "For loops"
     ]
   },
@@ -272,7 +272,7 @@
     "section": "Looping over a range of numbers",
     "text": "Looping over a range of numbers\nThere’s a built in function in Python called range which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, but not including, the number you gave as an argument. We can put this call to the range function directly into our loop as the object to loop over and it will print:\n\nfor number in range(5):\n    print(number)\n\n0\n1\n2\n3\n4\n\n\nThe range function can also be given two arguments, in which case, the first argument is the number to start counting from and the second argument is used as above:\n\nfor number in range(10, 13):\n    print(number)\n\n10\n11\n12",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "For loops"
     ]
   },
@@ -283,7 +283,7 @@
     "section": "Looping over dictionaries",
     "text": "Looping over dictionaries\nPython also allows you to loop over dictionaries. To discover how it works, let’s do the naïve thing first and just see what happens when we loop over a dictionary:\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor animal in sounds:\n    print(animal)\nYou will recognise those as the keys from the dictionary. So, it seems that when looping over a dictionary we will be given the keys.\nWhat if, for example, you wanted to loop over the values instead. Well, there is a method on dictionaries called values which gives you just those so that you can loop over them:\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor sound in sounds.values():\n    print(sound)    \n\nmeow\nwoof\nneigh\n\n\nIf we want to loop over the dictionary and get both the keys and the values, there is a method called items. Since it will be giving us two things each loop iteration, we’ll have to use the same trick as we did with enumerate and give two variable names in the for loop declaration:\n\nsounds = {\n    \"cat\": \"meow\",\n    \"dog\": \"woof\",\n    \"horse\": \"neigh\"\n}\n\nfor animal, sound in sounds.items():\n    print(animal, \"goes\", sound)\n\ncat goes meow\ndog goes woof\nhorse goes neigh\n\n\nThe items method gives us two pieces of data where the first is always the key and the second if always the value. We give the keys the name animal and the values the name sound. We can then use both those variables in the loop body.\n\n\n\n\n\n\nNoteExercise 4\n\n\n\nCan you modify your code where you created a dictionary with country-capital pairs to loop over it and print something like \"The capital of France is Paris\" for all items?\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\n\ncapital = {\n    \"England\": \"London\",\n    \"France\" : \"Paris\",\n    \"Italy\": \"Rome\"\n}\n\n# note we use 'cap' and not 'capital', as it is used for the dictionary\nfor country, cap in capital.items():\n    print(\"The capital of\", country, \"is\", cap)\n\nThe capital of England is London\nThe capital of France is Paris\nThe capital of Italy is Rome",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "For loops"
     ]
   },
@@ -364,7 +364,7 @@
     "section": "",
     "text": "In previous section we saw how to repeat a set of instructions inside loops. But if someone wants to make use that operations multiple times on your code, they will have to copy and paste your code every time.\nFunctions provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in this materials, e.g. print() wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.\nYou can also bundle up your own code into functions, avoiding repeating yourself and making your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams.\nweight_in_ounces = 6\n\nweight_in_grams = weight_in_ounces * 28.3495\n\nprint(f\"{weight_in_grams} g\")\n\n170.09699999999998 g\nYou can see this script has three main parts:\nThe data processing section will work regardless of what data is inside the variable weight_in_ounces and so we can grab that bit of code and make it usable in other contexts quite easily, using functions.",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "Functions"
     ]
   },
@@ -375,7 +375,7 @@
     "section": "Defining functions",
     "text": "Defining functions\nWe can turn this into a function that can convert ounces to grams by using def. To do this, type:\n\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nThis has created a new function called ounces_to_grams which we can now call. In a similar fashion to other constructs in Python (like for loops and if statements) it has a rigid structure.\nFirst we must use the def keyword to start a function definition:\n ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nThen we specify the name that we want to give the function. This is the name which we will use when calling the function. Like anything in Python, choose a descriptive name that describes what it does:\n           ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nFunction definitions must then be followed by a pair of round brackets. This is a similar syntax to that used when calling a function and giving it arguments but here we’re just defining it. Between those brackets go the names of the parameters we want the function to accept (can be zero or more parameters). Here we are defining one:\n                   ↓      ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nFinally, the line is completed with a colon. And since we’ve used a colon, we must indent the body of the function as we did with loops and conditional statements.\n                           ↓\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nMost functions will also want to return data back to the code that called it. You can choose what data is returned using the return keyword followed by the data you want to return:\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n      ↑\n\nNote that the body of the function has been copied from our script above with the only change being that the variables have different names and we added a return statement.",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "Functions"
     ]
   },
@@ -386,7 +386,7 @@
     "section": "Calling functions",
     "text": "Calling functions\nYou can now call the function using:\n\ndef ounces_to_grams(weight):\n    new_weight = weight * 28.3495\n    return new_weight\n\nweight_in_ounces = 6\n\nweight_in_grams = ounces_to_grams(weight_in_ounces)\n\nprint(f\"{weight_in_grams} g\")\n\n170.09699999999998 g\n\n\nIn this case you have called the function ounces_to_grams and passed in the argument weight_in_ounces. In the function, weight_in_ounces is copied to its internal variable, weight. The function ounces_to_grams then acts on weight, creating the new variable new_weight. It then returns new_weight, which is assigned to weight_in_grams.\nYou can use your new ounces_to_grams function to convert any numbers. Try typing:\n\nweight_in_ounces = 999\n\nweight_in_grams = ounces_to_grams(weight_in_ounces)\n\nprint(f\"{weight_in_grams} g\")\n\n28321.1505 g\n\n\n\n\n\n\n\n\nNoteExercise\n\n\n\nTake the following code:\nmy_list = [5, 7, 34, 5, 3, 545]\n\nbig_numbers = []\nfor num in my_list:\n    if num &gt; 10:\n        big_numbers.append(num)\n\nprint(big_numbers)\nand convert the data-processing parts to a function called big which can be called like:\nmy_list = [5, 7, 34, 5, 3, 545]\n\nlarge_numbers = big(my_list)\n\nprint(large_numbers)\ngiving\n[34, 545]\nBe careful to pay attention to the indentation, ensuring that it is consistent with the original code. Particularly, note that the return statement will cause the function to exit, so make sure that it doesn’t run until after the loop has finished.\n\n\n\n\n\n\n\n\nCautionAnswer\n\n\n\n\n\nStarting from the initial code, we pull out the middle four lines, indent them, put def big(numbers): in front and add return big_numbers to the end, paying careful attention to the indentation of the return statement. Finally, we update the variable name used in the function to match the argument name numbers:\n\ndef big(numbers):\n    big_numbers = []\n    for num in numbers:\n        if num &gt; 10:\n            big_numbers.append(num)\n    return big_numbers\n\n\nmy_list = [5, 7, 34, 5, 3, 545]\n\nlarge_numbers = big(my_list)\n\nprint(large_numbers)\n\n[34, 545]",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "Functions"
     ]
   },
@@ -441,7 +441,7 @@
     "section": "",
     "text": "Conditional if statements allow programs to make decisions and execute different code based on whether certain conditions are True or False. For instance, we may want to perform a different action when a study participant is an adult or not:\nThe basic syntax for conditional statements is if condition:, where condition is an expression that evaluates to either True or False, i.e. a boolean. If it’s True, the indented code block under the if statement will run. If False, it will be skipped. For example, the below code will print “You are an adult” if age is 18 or higher.\nage = 18\nif age &gt;= 18:\n    print(\"You are an adult\")\n\nYou are an adult\nYou can also add an else clause to specify code to run if the condition is False:\nage = 17\nif age &gt;= 18:\n    print(\"You are an adult\")\nelse:\n    print(\"You are not an adult\")\n\nYou are not an adult\nFor multiple conditions, you can use elif (else if) clauses to execute the first matching block.\nage = 14\nif age &lt; 13:\n    print(\"You are a child\") \nelif age &lt; 18:\n    print(\"You are a teenager\")\nelse:\n    print(\"You are an adult\")\n\nYou are a teenager",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "If Statements (Conditionals)"
     ]
   },
@@ -452,7 +452,7 @@
     "section": "Ordering your options",
     "text": "Ordering your options\nWhen working out which lines of code will be run, Python will work down the list of if, elifs and else and will run the first one that matches. Once it’s matched one, it will not bother checking to see if any of those later on would have matched. This means that you should order your questions from most-specific to least-specific.\nFor example, if you want to do one thing for positive numbers, but something special instead for numbers greater than 100, then you should put the more specific check first:\n\n\n\nif.py\n\nmy_number = int(input(\"Enter a number: \"))\n\nif my_number &gt; 100:\n    print(my_number, \"is large\")\nelif my_number &gt; 1:\n    print(my_number, \"is positive\")\nelse:\n    print(my_number, \"negative\")",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "If Statements (Conditionals)"
     ]
   },
@@ -463,7 +463,7 @@
     "section": "Combining questions",
     "text": "Combining questions\nIt is possible to ask two or more questions in one go by combining them with and and or. So, if you want to check is a number is smaller than ten (my_number &lt; 10) and is not equal to zero (my_number != 0), you can use:\nif my_number &lt; 10 and my_number != 0:\n    ...\nThese combined checks can be used in both if and elif statements.",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code",
+      "Control Structures",
       "If Statements (Conditionals)"
     ]
   },
@@ -523,11 +523,11 @@
   {
     "objectID": "pages/050-control-structures.html",
     "href": "pages/050-control-structures.html",
-    "title": "Writing More Flexible and Dynamic Code",
+    "title": "Control Structures",
     "section": "",
     "text": "Earlier you were told that Python will read each one of your cells of code starting at the top and running each line of code until it reaches the bottom. The way we wrote code previously meant that we were manipulating each piece of data manually, this is not usually what we want in real applications. Real code will use control structures to create dynamic and structured programs capable of handling complex tasks while keeping the code more readable and understandable, which is crucial for collaboration, maintenance, and debugging.\n\n\n\nAdapted from: This Is A Book, by Demetri Martin\n\n\nImagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:\nLOOP FOR EACH sample IN my_study\n    IF  sample value &gt; 100\n        DO SOMETHING\n    OTHERWISE\n        DO SOMETHING ELSE\nIn essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as if, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as for and while, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.",
     "crumbs": [
-      "Writing More Flexible and Dynamic Code"
+      "Control Structures"
     ]
   },
   {
