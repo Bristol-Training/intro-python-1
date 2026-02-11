@@ -2,7 +2,7 @@
 title: Operators
 ---
 
-Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do it.
+Operators are essential for performing various operations on variables and values. You may want to multiply two numbers or compare them to know which one is greater, and operators allow us to do this.
 
 ## Arithmetic Operators
 
@@ -81,7 +81,7 @@ print(str1,"greater than",str2,":",str1>str2)
 print(str1,"less than",str2,":",str1<str2)
 ```
 
-It is easy undersand that the operator `==` returns `True` if two strings are the same. But what do `>` and `<`? 
+It is easy to understand that the operator `==` returns `True` if two strings are the same. But what about `>` and `<`? 
 
-Python doesn't understand the meaning of works "Tuesday" and "Wednesday", they are just two chains of characters. The operator `>` will return `True` if the string `str1` comes after alphabetically than `str2`, and `<` will return `True` if the string `str1` comes before alphabetically than `str2`.
+Python doesn't understand the meaning of words "Tuesday" and "Wednesday", they are just two chains of characters. The operator `>` will return `True` if the string `str1` comes after alphabetically than `str2`, and `<` will return `True` if the string `str1` comes before alphabetically than `str2`.
 :::
