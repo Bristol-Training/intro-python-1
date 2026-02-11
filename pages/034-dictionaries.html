@@ -298,7 +298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Lists let you store lots of variables, and to access them by their location in the list. However, there are times when you want to store lots of variables, but access them using more complex relationships. One example is a <code>dictionary</code>, which lets you store variables and access them using a <em>key</em>.</p>
 <p>Dictionaries in Python are created using curly brackets. Make a new file called <code>dict.py</code> and put this in it:</p>
-<div id="8af1136a" class="cell" data-execution_count="1">
+<div id="da04d86f" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {<span class="st">"cat"</span>: <span class="st">"meow"</span>, <span class="st">"dog"</span>: <span class="st">"woof"</span>, <span class="st">"horse"</span>: <span class="st">"neigh"</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cat_sound <span class="op">=</span> sounds[<span class="st">"cat"</span>]</span>
@@ -311,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What we did here was create a dictionary on the first line. A dictionary is created using curly brackets (<code>{}</code>), in much the same way as square brackets are used for creating lists. The dictionary we created here has three items in it where each item comprises a <em>key</em> and a <em>value</em>. The <em>value</em> is the real data that we want to keep hold of and the <em>key</em> is how we can get at the data we want. The key and value are separated by a colon and each key-value pair is separated by a comma.</p>
 <p>On the next line we access the data in the dictionary <code>sounds</code>. Again, like lists we use the square brackets to ask questions of our data. In this case we’re asking the dictionary to give us the value associated with the key <code>"cat"</code> and so it will return to us <code>"meow"</code>.</p>
 <p>Since dictionaries can be quite large and it can sometimes be hard to see which parts are keys and which are values, it is possible to write dictionaries over multiple lines, one line per key-value item:</p>
-<div id="6c07d4b9" class="cell" data-execution_count="2">
+<div id="9f62e92a" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -347,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="af24b554" class="cell" data-execution_count="3">
+<div id="83bcc630" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -381,7 +381,7 @@ neigh</code></pre>
 <h2 class="anchored" data-anchor-id="adding-new-data-into-dictionaries">Adding new data into dictionaries</h2>
 <p>As with lists, dictionaries are dynamic so we can add entries into a dictionary.</p>
 <p>Let’s say that we want to add in a new sound for a cow into our <code>sounds</code> dictionary. The key that the data will have will be <code>"cow"</code> and the value will be <code>"moo"</code>. To do so we put <code>sounds["cow"]</code> on the left-hand side of a variable assignment expression, as if we’re making a new variable. On the right goes the data that we want to put into the dictionary:</p>
-<div id="0f546ac7" class="cell" data-execution_count="4">
+<div id="1dc74969" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span>,</span>
@@ -394,7 +394,7 @@ neigh</code></pre>
 </div>
 <p>This is saying that we want the value <code>"moo"</code> associated with the key <code>"cow"</code> in the dictionary <code>sounds</code>.</p>
 <p>Running it, we see:</p>
-<div id="8e6fde83" class="cell" data-execution_count="5">
+<div id="7539f193" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>{'cat': 'meow', 'dog': 'woof', 'horse': 'neigh', 'cow': 'moo'}</code></pre>
 </div>
@@ -424,7 +424,7 @@ neigh</code></pre>
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="5c5ba041" class="cell" data-execution_count="6">
+<div id="791afaa3" class="cell" data-execution_count="6">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>sounds <span class="op">=</span> {</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cat"</span>: <span class="st">"meow"</span>,</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"dog"</span>: <span class="st">"woof"</span></span>
@@ -445,7 +445,7 @@ neigh</code></pre>
 <section id="uses-for-dictionaries" class="level2">
 <h2 class="anchored" data-anchor-id="uses-for-dictionaries">Uses for dictionaries</h2>
 <p>Dictionaries can be used for any key-value mapping. The example above was a mapping of an animal species (as a string) to an animal sound ( as a string). You can use any data type you wish as the value in a dictionary. For example you might make a dictionary containing the population of some cities in millions (as a float):</p>
-<div id="bd62d9a0" class="cell" data-execution_count="7">
+<div id="e8aa5e92" class="cell" data-execution_count="7">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>census <span class="op">=</span> {</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"London"</span>: <span class="fl">8.615</span>,</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Paris"</span>: <span class="fl">2.244</span>,</span>
@@ -453,7 +453,7 @@ neigh</code></pre>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>or one which contains a list of authors as the key (as a string) and their books (as a list of strings):</p>
-<div id="a4899248" class="cell" data-execution_count="8">
+<div id="aecd2975" class="cell" data-execution_count="8">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>bookshelf <span class="op">=</span> {</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Terry Pratchett"</span>: [<span class="st">"Mort"</span>, <span class="st">"Jingo"</span>, <span class="st">"Truckers"</span>],</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Jane Austen"</span>: [<span class="st">"Sense and Sensibility"</span>, <span class="st">"Pride and Prejudice"</span>],</span>
@@ -485,7 +485,7 @@ neigh</code></pre>
 </div>
 <div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div id="5c2cb6aa" class="cell" data-execution_count="9">
+<div id="962ec382" class="cell" data-execution_count="9">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>capital <span class="op">=</span> {</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"England"</span>: <span class="st">"London"</span>,</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"France"</span> : <span class="st">"Paris"</span>,</span>
