@@ -24,7 +24,7 @@ When naming variables in Python, there are specific rules to follow:
 
 ## Getting data in
 
-So far, all the code we've run is somewhat static. Variables get assigned a value in our code and very time we run it, the output is always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, [`input`](https://docs.python.org/3/library/functions.html#input).
+So far, all the code we've run is somewhat static. Variables get assigned a value in our code and every time we run it, the output will always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, [`input`](https://docs.python.org/3/library/functions.html#input).
 
 The `print` function is how we get information *out* of our program, and the `input` function is a way of getting data *into* it. The function will pause the program and wait for you to type something in followed by *Enter*, and assign your input to a variable on the left hand side of the `=`.
 
