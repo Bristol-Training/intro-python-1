@@ -73,7 +73,7 @@ print(my_list[1])
 
 The code `my_list[1]` means "give me the number 1 element of the list `my_list`". Is the above output what you expected?
 
-Probably you noticed that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used in many programming languages.
+You have probably noticed that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used in many programming languages.
 
 ::: {#exercise-2 .callout-note title="Exercise" icon=false} 
 Try accessing some different elements from the list by putting in different number between the square brackets.
