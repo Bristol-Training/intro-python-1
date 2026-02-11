@@ -76,7 +76,7 @@ The code `my_list[1]` means "give me the number 1 element of the list `my_list`"
 You have probably noticed that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used in many programming languages.
 
 ::: {#exercise-2 .callout-note title="Exercise" icon=false} 
-Try accessing some different elements from the list by putting in different number between the square brackets.
+Try accessing some different elements from the list by putting in different numbers between the square brackets.
 :::
 
 ::: {#answer .callout-caution icon=false title='Answer' collapse="true"}
@@ -121,7 +121,7 @@ my_slice = my_list[2:5]
 print(my_slice)
 ```
 
-You see that is printed `['green', 5.3, 'house']` which is index `2` (`'green'`), index `3` (`5.3`) and index `4` (`'house'`). Notice that it did not give us the element at index `5` and that is because with slicing, Python will give you the elements from the starting index up to, **but not including**, the end index.
+You see what is printed is `['green', 5.3, 'house']` which is index `2` (`'green'`), index `3` (`5.3`) and index `4` (`'house'`). Notice that it did not give us the element at index `5` and that is because with slicing, Python will give you the elements from the starting index up to, **but not including**, the end index.
 
 ## Errors while working with lists
 
