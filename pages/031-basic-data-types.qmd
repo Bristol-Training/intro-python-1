@@ -73,7 +73,7 @@ Note the use of the brackets around `a != b`. This isn't necessary here, but it 
 
 ::: {#exercise-1 .callout-note title="Exercise" icon=false} 
 
-Without using Python, can you tell what is the data type of these variables?
+Without using Python, can you tell what data type these variables are?
 ```{.python}
 x = 32
 number_of_participants = "1017"
