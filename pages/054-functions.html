@@ -299,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>In previous section we saw how to repeat a set of instructions inside loops. But if someone wants to make use that operations multiple times on your code, they will have to copy and paste your code every time.</p>
 <p><em>Functions</em> provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in this materials, e.g.&nbsp;<code>print()</code> wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.</p>
 <p>You can also bundle up your own code into functions, avoiding repeating yourself and making your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams.</p>
-<div id="79480dcb" class="cell" data-execution_count="1">
+<div id="472d9579" class="cell" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>weight_in_ounces <span class="op">=</span> <span class="dv">6</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> weight_in_ounces <span class="op">*</span> <span class="fl">28.3495</span></span>
@@ -319,7 +319,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="defining-functions" class="level2">
 <h2 class="anchored" data-anchor-id="defining-functions">Defining functions</h2>
 <p>We can turn this into a function that can convert ounces to grams by using <code>def</code>. To do this, type:</p>
-<div id="8404ed3d" class="cell" data-execution_count="2">
+<div id="4cabbdd1" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -360,7 +360,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <section id="calling-functions" class="level2">
 <h2 class="anchored" data-anchor-id="calling-functions">Calling functions</h2>
 <p>You can now call the function using:</p>
-<div id="ec404b4d" class="cell" data-execution_count="3">
+<div id="acebd065" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ounces_to_grams(weight):</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    new_weight <span class="op">=</span> weight <span class="op">*</span> <span class="fl">28.3495</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> new_weight</span>
@@ -376,7 +376,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 </div>
 <p>In this case you have called the function <code>ounces_to_grams</code> and passed in the argument <code>weight_in_ounces</code>. In the function, <code>weight_in_ounces</code> is copied to its internal variable, <code>weight</code>. The function <code>ounces_to_grams</code> then acts on <code>weight</code>, creating the new variable <code>new_weight</code>. It then returns <code>new_weight</code>, which is assigned to <code>weight_in_grams</code>.</p>
 <p>You can use your new <code>ounces_to_grams</code> function to convert any numbers. Try typing:</p>
-<div id="c07ddc69" class="cell" data-execution_count="4">
+<div id="3e0cce70" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>weight_in_ounces <span class="op">=</span> <span class="dv">999</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>weight_in_grams <span class="op">=</span> ounces_to_grams(weight_in_ounces)</span>
@@ -429,7 +429,7 @@ def ounces_to_grams(weight)<b style="color:darkred">:</b>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Starting from the initial code, we pull out the middle four lines, indent them, put <code>def big(numbers):</code> in front and add <code>return big_numbers</code> to the end, paying careful attention to the indentation of the <code>return</code> statement. Finally, we update the variable name used in the function to match the argument name <code>numbers</code>:</p>
-<div id="4e5e623b" class="cell" data-execution_count="5">
+<div id="e3387256" class="cell" data-execution_count="5">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> big(numbers):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    big_numbers <span class="op">=</span> []</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> numbers:</span>

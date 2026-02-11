@@ -320,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="getting-data-in" class="level2">
 <h2 class="anchored" data-anchor-id="getting-data-in">Getting data in</h2>
-<p>So far, all the code we’ve run is somewhat static. Variables get assigned a value in our code and very time we run it, the output is always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, <a href="https://docs.python.org/3/library/functions.html#input"><code>input</code></a>.</p>
+<p>So far, all the code we’ve run is somewhat static. Variables get assigned a value in our code and every time we run it, the output will always be the same. We will see a lot more of this throughout this workshop, but for now we will introduce one more function that Python provides, <a href="https://docs.python.org/3/library/functions.html#input"><code>input</code></a>.</p>
 <p>The <code>print</code> function is how we get information <em>out</em> of our program, and the <code>input</code> function is a way of getting data <em>into</em> it. The function will pause the program and wait for you to type something in followed by <em>Enter</em>, and assign your input to a variable on the left hand side of the <code>=</code>.</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
@@ -330,7 +330,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"My favourite colour is"</span>, fav)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Now, if we run these lines of code, it will print the message specified and wait for you to type something. If you type “red” and then press enter, it will assign “red” to the variable <code>fav</code> and then use that variable in the final <code>print</code> function:</p>
-<div id="fbf2c6b9" class="cell" data-execution_count="1">
+<div id="5f126f1c" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>What is your favourite colour? red
 My favourite colour is red</code></pre>
@@ -371,7 +371,7 @@ Hello Jean</code></pre>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="bu">input</span>(<span class="st">"What is your name? "</span>)</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greeting, name)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="03f26134" class="cell" data-execution_count="2">
+<div id="37db4989" class="cell" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>What is your name? Jean
 Hello Jean</code></pre>
