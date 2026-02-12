@@ -15,4 +15,4 @@ LOOP FOR EACH sample IN my_study
         DO SOMETHING ELSE
 ```
 
-In essence, control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as `if`, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as `for` and `while`, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.
+Control structures are fundamental building blocks that enable programmers to create logically structured programs. Flow control structures, such as `if`, allow programmers to dictate the order and conditions under which specific instructions are executed within a program. Looping structures, such as `for` and `while`, enable the repetition of code blocks, which is crucial for tasks that require iterating through data performing calculations multiple items.
