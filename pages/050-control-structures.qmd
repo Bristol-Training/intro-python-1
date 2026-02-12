@@ -6,7 +6,7 @@ Earlier you were told that Python will read each one of your cells of code start
 
 ![Adapted from: *This Is A Book*, by Demetri Martin](../assets/path.jpg "Non-linear path")
 
-Imagine that you want to process your data in different ways depending if your samples are above or not of a certain value, for example:
+Imagine that you want to process your data in different ways depending on whether or not your samples are above a certain value, for example: 
 ```
 LOOP FOR EACH sample IN my_study
     IF  sample value > 100
