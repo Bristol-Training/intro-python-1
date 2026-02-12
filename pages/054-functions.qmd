@@ -2,9 +2,9 @@
 title: Functions
 ---
 
-In previous section we saw how to repeat a set of instructions inside loops. But if someone wants to make use that operations multiple times on your code, they will have to copy and paste your code every time.
+In the previous section we saw how to repeat a set of instructions inside loops. But if you want to make use of that operation multiple times, you will have to copy and paste the code every time.
 
-*Functions* provide a way of packaging code into reusable and easy-to-use components. We saw plenty of examples of functions in this materials, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.
+*Functions* provide a way of packaging code into reusable and easy-to-use components. We have seen plenty of examples of functions in this course, e.g. `print()` wraps up all the logic about exactly how to print things, all you need to do is pass in some arguments and it handles the rest.
 
 You can also bundle up your own code into functions, avoiding repeating yourself and making your code easier to read. To explain how they work, lets imagine we are writing some code to help us with baking recipes. Often you will need to convert between different units, for example from ounces to grams. 
 
