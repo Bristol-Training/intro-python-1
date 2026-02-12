@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Everything we’ve done so far has been completely self-contained in the script and every time we run any of them we will get exactly the same output. The power of programming is to be able to take the same piece of code and apply it to different data to get different results. One common way in which this is done is writing a script which can analyse a data file. To do that we need to learn how to open files.</p>
 <p>The simplest this we can do with files is read a file in and print it to the screen. Make a new script called <code>file.py</code> and put the following in it:</p>
-<div id="08cc2018" class="cell" data-execution_count="1">
+<div id="107e884e" class="cell" data-execution_count="1">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>file.py</strong></pre>
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>When you run it, you will see the following:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> file.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="4278af78" class="cell" data-filename="file.py" data-execution_count="2">
+<div id="318f4cc2" class="cell" data-filename="file.py" data-execution_count="2">
 <div class="cell-output cell-output-stdout">
 <pre><code>with open("file.py") as f:
     for line in f:
@@ -197,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="data-type-conversion" class="level2">
 <h2 class="anchored" data-anchor-id="data-type-conversion">Data type conversion</h2>
 <p>Simply reading the data and printing it isn’t very useful. Let’s take a first step towards some data analysis and pretend that the task we’re trying to do is to read in data from the file and add 17 to each value.</p>
-<div id="6ac774da" class="cell" data-execution_count="3">
+<div id="e3cfb912" class="cell" data-execution_count="3">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>file.py</strong></pre>
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 TypeError: can only concatenate str (not "int") to str</code></pre>
 <p>This is telling us that there is an error occuring when trying to add 17 to the data read in from the line in the file. The <em>type</em> of the error is <code>TypeError</code> which tells us the problem is likely due to incorrect data types (i.e.&nbsp;string, float, int, list etc.). The error message says <code>can only concatenate str (not "int") to str</code> which implies that the computer believes that we’re trying to concatenate (join together) something with a string. The only two things involved in this operation are <code>line</code> and <code>17</code>. We know that <code>17</code> is an integer so <code>line</code> must be a string!</p>
 <p>When reading from a file like this, everything it gives you will <em>always</em> be a string, even if the string only contains digits like <code>"12"</code>. If we know that the file only contains integers then we can convert each number as it comes in using <a href="https://docs.python.org/3/library/functions.html#int">the <code>int</code> function</a>. Also, since we’re now printing integers, we no longer need the <code>end=""</code> tweak:</p>
-<div id="3b50afb8" class="cell" data-execution_count="4">
+<div id="08a44f92" class="cell" data-execution_count="4">
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>file.py</strong></pre>
@@ -229,7 +229,7 @@ TypeError: can only concatenate str (not "int") to str</code></pre>
 </div>
 <p>Running this new script will now print out our “processed” data:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> file.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div id="145ec7e8" class="cell" data-filename="file.py" data-execution_count="5">
+<div id="fbee8729" class="cell" data-filename="file.py" data-execution_count="5">
 <div class="cell-output cell-output-stdout">
 <pre><code>29
 71
