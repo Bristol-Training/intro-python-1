@@ -175,7 +175,7 @@ for letter in phrase:
 
 ## Looping over a range of numbers
 
-There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If given one number as an argument it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an argument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
+There's a built in function in Python called `range` which provides you with numbers (integers) in a range. If you put in a number as an argument, it will give you integers, starting from zero and going up to, *but not including*, the number you gave as an argument. We can put this call to the `range` function directly into our loop as the object to loop over and it will print:
 
 ```{python}
 for number in range(5):
@@ -219,7 +219,7 @@ for sound in sounds.values():
     print(sound)    
 ```
 
-If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
+If we want to loop over the dictionary and get both the keys *and* the values, there is a method called `items`. Since it will be giving us two things in each loop iteration, we'll have to use the same trick as we did with `enumerate` and give two variable names in the `for` loop declaration:
 
 ```{python}
 sounds = {
