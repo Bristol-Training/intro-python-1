@@ -13,7 +13,7 @@ print(my_words[1])
 print(my_words[2])
 ```
 
-This printed the output we want. But you may feel that repeating the same call to `print` is *wasteful* code, particularly if we want to repeat the same operation for many elements. If we can manage to write that line only once then we could save ourselves some typing and potentially make the code easier to read!
+This printed the output we wanted. But you may feel that repeating the same call to `print` is *wasteful* code, particularly if we want to repeat the same operation for many elements. If we can manage to write that line only once then we could save ourselves some typing and potentially make the code easier to read!
 
 ```
 FOR EACH word IN my_words
@@ -29,7 +29,7 @@ for word in my_words:
     print(word)
 ```
 
-Even in this tiny example, we have ve taken a script that was four lines of code and have reduced it to three lines, and more interestingly the same loop will work no matter how many items there are in the list `my_words`.
+Even in this tiny example, we have taken a script that was four lines of code and have reduced it to three lines, and more interestingly the same loop will work no matter how many items there are in the list `my_words`.
 
 This maps to real life where you may want, for example, to pay for each item on your shopping list. Another way of saying that could be "for each item on my shopping list, add its price to my total", or as you would write that in Python:
 
@@ -85,14 +85,14 @@ A `for` statement has an scaffolding, the parts of the line which must always be
     print(word)
 </pre>
 
-Once the scaffolding is in place, you can place between it the things that *you* care about. The first thing to think about is the variable that you want to loop over. In our case we want to loop over the list `my_words` because we want to print every item in that list:
+Once the scaffolding is in place, you can place things between it that *you* care about. The first thing to think about is the variable that you want to loop over. In our case we want to loop over the list `my_words` because we want to print every item in that list:
 <pre>
                 ↓
 for word in <b style="color:darkred">my_words</b>:
     print(word)
 </pre>
 
-Now we need to decide what name we want to give temporarily to each item as we get to it. As with any variable naming, it is important that we choose a good name which describe a single object from the list. For example, if we're looping over all students in a class then we could call the variable `student` or if we're looping over a list of ages then we could call the variable `age`. Here, since we're looping over a list of generic *words*, we name our variable `word`:
+Now we need to decide what name we want to temporarily give each item as we get to it. As with any variable naming, it is important that we choose a good name which describes a single object from the list. For example, if we're looping over all students in a class then we could call the variable `student`, or if we're looping over a list of ages then we could call the variable `age`. Here, since we're looping over a list of generic *words*, we name our variable `word`:
 <pre>
       ↓
 for <b style="color:darkred">word</b> in my_words:
