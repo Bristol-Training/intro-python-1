@@ -165,17 +165,17 @@ print(my_list[33:37])
 
 The first `print` selects every element from index-2 up to, but not including, the index-4, i.e. the 2nd and 3rd elements.
 
-The second `print` starts at index 3 and goe as far as index -2 (which is the same as index 5 in this list).
+The second `print` starts at index 3 and goes as far as index -2 (which is the same as index 5 in this list).
 
 The next `print` starts at index -4 (i.e. index 3) and goes until index -1 (i.e. index 6).
 
-Last, `print(my_list[33:37])` tries to access elements of a range that do not exist, but the behavior of Python is different than when accessing a single element as we saw before. In this case, it returns and empty list instead of showing an error message. This wrapping of *slicing* calls give us some flexibility when accessing a `list`, but will require us to check, in most cases, that the output is not an empty list.
+Last, `print(my_list[33:37])` tries to access elements of a range that do not exist, but the behavior of Python is different when accessing a single element as we saw before. In this case, it returns an empty list instead of showing an error message. This wrapping of *slicing* calls give us some flexibility when accessing a `list`, but will require us to check, in most cases, that the output is not an empty list.
 
 :::
 
 ## Adding elements to lists
 
-Lists in Python are *dynamic*, meaning that they can change in size during execution. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we have used so far (like `print` and `range`) in that it is a part of the `list` data type so we use it in a slighlty different way.
+Lists in Python are *dynamic*, meaning that they can change in size during execution. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we have used so far (like `print` and `range`) in that it is a part of the `list` data type so we use it in a slightly different way.
 
 ```{python filename="list.py"}
 my_list = ["cat", "dog", "horse"]
