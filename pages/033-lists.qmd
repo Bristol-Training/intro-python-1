@@ -17,7 +17,7 @@ my_list = ["cat", "dog", "horse"]
 print(my_list)
 ```
 
-This will create a Python `list` with three elements and assign it to the variable `my_list`. The square brackets `[` and `]` in this case mean "create a list" and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the `print()` function. Run this code and look at the output.
+This will create a Python `list` with three items (called elements) and assign it to the variable `my_list`. The square brackets `[` and `]` in this case mean "create a list" and the elements of the list are separated by commas. As with previous variable types, you can print lists by passing their name to the `print()` function. Run this code and look at the output.
 
 ```{python}
 #| echo: false
@@ -71,7 +71,7 @@ my_list = ["cat", "dog", "horse"]
 print(my_list[1])
 ```
 
-The code `my_list[1]` means "give me the number 1 element of the list `my_list`". Is the above output what you expected?
+The code `my_list[1]` means "show me the number 1 element on the list `my_list`". Is the above output what you expected?
 
 You have probably noticed that it prints `dog` whereas you may have expected it to print `cat`. This is because in Python you count from zero when indexing lists and so index `1` refers to the second item in the list. To get the first item you must use the index `0`. This ["zero-indexing"](https://en.wikipedia.org/wiki/Zero-based_numbering) is very common and is used in many programming languages.
 
@@ -110,7 +110,7 @@ If you run this code then you will see that it prints `horse` which is the last 
 
 As well as being able to select individual elements from a list, you can also grab sections of it at once. This process of asking for subsections of a list of called *slicing*. Slicing starts out the same way as standard indexing (i.e. with square brackets) but instead of putting a single number between them, you put multiple numbers separated by a colon.
 
-Between the square brackets you put two numbers, the starting index and the ending index. So, to get the elements from index `2` to index `4`, you do:
+Between the square brackets you put two numbers; the starting index and the ending index. So, to get the elements from index `2` to index `4`, you type:
 
 ```{python}
 
@@ -143,7 +143,7 @@ Running this you will see the following printed to the screen:
 
 which is a very dense collection of information. Usually the *last* line of an error is where the most useful information is. In this case, the last line reads `IndexError: list index out of range` which has two parts to it. The first is the word before the colon which tells you that the type of the exception is an `IndexError`, i.e. an error when *indexing*. The second part of that line is usually a slightly more descriptive message, in this case telling us that the specific problem was that the index was "out of range", i.e. too high or too low.
 
-Moving to the lines above that, we can see printed the line of code at which the exception occurred along with the line number within the code (line 3). These are essential in larger work to track down where the problem came from.
+Moving to the lines above that, we can see printed the line of code where the exception occurred along with the line number within the code (line 3). These are essential in larger work to track down where the problem came from.
 
 Take your time to read the error messages when they are printed to the screen, they will most likely help you solve the issue.
 
@@ -175,7 +175,7 @@ Last, `print(my_list[33:37])` tries to access elements of a range that do not ex
 
 ## Adding elements to lists
 
-Lists in Python are *dynamic*, meaning that they can change in size during execution. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we have used so far (like `print` and `range`) in that it is a part of the `list` data type so we use it in a slightly different way.
+Lists in Python are *dynamic*, meaning that they can change in size during execution. You can add items to the end of your list by using the `append` function. The `append` function is a little different to other functions that we have used so far (like `print`) in that it is a part of the `list` data type so we use it in a slightly different way.
 
 ```{python filename="list.py"}
 my_list = ["cat", "dog", "horse"]
