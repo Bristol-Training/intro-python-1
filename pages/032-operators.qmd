@@ -40,7 +40,7 @@ Less Than or Equal To       | <=       | a <= b
 ```{python}
 a = 5
 b = 2
-print("Equal To:", a == b)
+print("a is equal to b:", a == b)
 print("Less Than:", a > b)
 print("Not Equal To:", a != b)
 print("Greater Than:", a < b)
