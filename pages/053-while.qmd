@@ -65,4 +65,11 @@ while i < len(students) and students[i][0] < 'M':
     print(students[i])
     i = i + 1
 ```
+
+Notes to help understand the code above: 
+1.	students is a list of strings students = ["Alice", "Bob", "Charlie", "Frank", "George", "Hannah", "Julia", "Mia", "Noah", "Olivia"]
+2.	Each string (e.g. "Alice" is made up of characters (e.g. "A")
+     students[i] gives you the 'i'th student; i.e. as the while loop repeats it will be "Alice", "Bob", etc.
+     The [0] tells you to take the first element - in a string, that means the first character, so students[i][0] gives you the first letter of each of the students - "A", "B", "C", "F",  ... etc
+3. “len” is a function meaning length, so here, used to say don’t run past the end of the list
 :::
