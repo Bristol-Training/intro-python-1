@@ -40,10 +40,10 @@ Less Than or Equal To       | <=       | a <= b
 ```{python}
 a = 5
 b = 2
-print("Equal To:", a == b)
-print("Less Than:", a > b)
-print("Not Equal To:", a != b)
-print("Greater Than:", a < b)
+print("a is equal to b:", a == b)
+print("a is greater than b:", a > b)
+print("a is not equal to b:", a != b)
+print("a is less than b:", a < b)
 ```
 
 ## Logical Operators
@@ -83,5 +83,10 @@ print(str1,"less than",str2,":",str1<str2)
 
 It is easy to understand that the operator `==` returns `True` if two strings are the same. But what about `>` and `<`? 
 
-Python doesn't understand the meaning of words "Tuesday" and "Wednesday", they are just two chains of characters. The operator `>` will return `True` if the string `str1` comes after alphabetically than `str2`, and `<` will return `True` if the string `str1` comes before alphabetically than `str2`.
+Python doesn't understand the meaning of words "Tuesday" and "Wednesday", they are just two strings of characters. 
+
+In the above examples:
+str1 > str2 is asking python: “Is str1 alphabetically after str2?".  So in this example, does “Tuesday” come after “Wednesday” in the alphabet? (Answer: “No it doesn’t” so python returns “False”) 
+
+str1 < str2 is asking python: “Is str1 alphabetically before str2”?.  So, does “Tuesday” come before “Wednesday” in the alphabet? (Answer: “Yes it does, so python returns “True”)
 :::
