@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>answer_data_sum_count – Introduction to Python (part 1)</title>
+<title>condaforge – Introduction to Python (part 1)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,8 +111,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#install-conda-from-conda-forge-and-environment-set-up" id="toc-install-conda-from-conda-forge-and-environment-set-up" class="nav-link active" data-scroll-target="#install-conda-from-conda-forge-and-environment-set-up">Install Conda from Conda-Forge and Environment Set Up</a></li>
+  <li><a href="#steps-to-create-and-activate-an-environment" id="toc-steps-to-create-and-activate-an-environment" class="nav-link" data-scroll-target="#steps-to-create-and-activate-an-environment">Steps to Create and Activate an Environment</a></li>
+  <li><a href="#verify-installation-1" id="toc-verify-installation-1" class="nav-link" data-scroll-target="#verify-installation-1">Verify Installation</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/011-condaforge.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -120,46 +128,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<p>Starting with creating our data file <code>data.txt</code>:</p>
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>data.txt</strong></pre>
-</div>
-<div class="sourceCode" id="cb1" data-filename="data.txt"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>12</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>54</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>7</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>332</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>54</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>1</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>As before we start with defining a variable <code>count</code> to start at zero. We increase it by <code>1</code> each time around the loop and print it out at the end:</p>
-<div id="90704756" class="cell" data-execution_count="1">
-<div class="code-with-filename">
-<div class="code-with-filename-file">
-<pre><strong>file.py</strong></pre>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"data.txt"</span>) <span class="im">as</span> f:</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> f:</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        number <span class="op">=</span> <span class="bu">int</span>(line)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        total <span class="op">+=</span> number</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Sum of all"</span>, count, <span class="st">"values is:"</span>, total)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> file.py</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="9b672a1c" class="cell" data-execution_count="2">
-<div class="cell-output cell-output-stdout">
-<pre><code>Sum of all 7 values is: 460</code></pre>
-</div>
-</div>
-<p><a href="../appendix/appendix_files.html#exercise-2">Return to course</a></p>
+<section id="install-conda-from-conda-forge-and-environment-set-up" class="level3">
+<h3 class="anchored" data-anchor-id="install-conda-from-conda-forge-and-environment-set-up">Install Conda from Conda-Forge and Environment Set Up</h3>
+<section id="install-miniforge-recommended-for-conda-forge" class="level4">
+<h4 class="anchored" data-anchor-id="install-miniforge-recommended-for-conda-forge">Install Miniforge (Recommended for Conda-Forge)</h4>
+<p>Miniforge is a lightweight installer that sets up Conda with the conda-forge channel (i.e.&nbsp;source of libraries) as the default that provides a robust environment for data science and machine learning workflows.</p>
+<p>Go to <a href="https://conda-forge.org/download/" class="uri">https://conda-forge.org/download/</a> and download the latest version for your operating system.</p>
+<ul>
+<li><p><strong>Windows</strong>: Download the <a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe">Miniforge installer for Windows</a>. Run the installer and follow the prompts.</p></li>
+<li><p><strong>Mac/Linux</strong>: Download the appropriate <a href="https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh">installer script (2021 and newer MacBooks)</a> and and run:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniforge3-MacOSX-arm64.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Follow the on-screen instructions.</p></li>
+</ul>
+</section>
+<section id="verify-installation" class="level4">
+<h4 class="anchored" data-anchor-id="verify-installation">Verify Installation</h4>
+<p>After installation, open a command prompt/terminal and check if Conda is installed:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="steps-to-create-and-activate-an-environment" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-create-and-activate-an-environment">Steps to Create and Activate an Environment</h3>
+<section id="create-a-new-environment" class="level4">
+<h4 class="anchored" data-anchor-id="create-a-new-environment">Create a New Environment</h4>
+<p>Open a command prompt or terminal. Use the following command to create an environment named <code>ml-env</code> with Python 3.11, Jupyter Lab, Jupyter Notebook, Pandas, Scikit-Learn, and PyTorch:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> ml-env python=3.11 jupyterlab notebook pandas scikit-learn pytorch</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This installs all specified packages in one command.</p>
+<p>Alternatively, you can specify versions for each package:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> ml-env python=3.11 jupyterlab=4.3 notebook=6.5 pandas=2.0 scikit-learn=1.2 pytorch=2.0</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you need to install packages individually after creating an environment, use:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge <span class="pp">[</span><span class="ss">PACKAGES</span><span class="pp">]</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="activate-the-environment" class="level4">
+<h4 class="anchored" data-anchor-id="activate-the-environment">Activate the Environment</h4>
+<p>To activate the newly created environment type:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate ml-env</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The terminal prompt will change to show <code>(ml-env)</code> indicating the environment is active.</p>
+</section>
+</section>
+<section id="verify-installation-1" class="level3">
+<h3 class="anchored" data-anchor-id="verify-installation-1">Verify Installation</h3>
+<p>To ensure everything works correctly:</p>
+<ol type="1">
+<li><p>Launch Jupyter Lab:</p>
+<pre><code>jupyter lab</code></pre></li>
+<li><p>Launch Jupyter Notebook:</p>
+<pre><code>jupyter notebook</code></pre></li>
+<li><p>Test PyTorch in Python:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(torch.__version__)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(torch.cuda.is_available())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ol>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -254,7 +278,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/Bristol-Training\.github\.io\/intro-python-1\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -590,7 +614,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/bristol-training/intro-python-1/edit/main/appendix/answer_data_sum_count.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/bristol-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/uob-training/intro-python-1/edit/main/pages/011-condaforge.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/uob-training/intro-python-1/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
