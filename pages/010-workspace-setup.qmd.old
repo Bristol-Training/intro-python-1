@@ -1,0 +1,14 @@
+---
+title: Workspace setup
+---
+
+There are lots of different ways to run Python code and many tools to help you write it. For the purpose of this course, we will be using a free tool called Jupyter Lab which provides you with a local editor in your web browser where you can write and run Python code.
+
+## Recommended way to install Python
+
+Please see [here](https://bristol-training.github.io/data-science-project-setup/) for detailed instructions on how to install Python and Jupyter Lab on your computer. These instructions will be useful for the course, but also more generally for your future work in Python.
+
+## Alternative methods
+
+
+If you cannot install Python on your computer, you can use a free web-based service to write and execute Python code. One such service is [Google Colab](https://colab.research.google.com/). **Please be aware that you should not upload any sensitive information to web-based services like this.**
