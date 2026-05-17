@@ -59,7 +59,9 @@ boolean values (True or False)    | bool     | a = True
 ```{python}
 a = 23
 b = 2
-print(a != b)
+
+print(a == b)   # Hint == means "is equal to"
+print(a != b)   # Hint != means "is not equal to"
 ```
 
 We can assign this boolean value to a variable:

@@ -78,7 +78,7 @@ for word in my_words:
 
 ::: {#keypoints .callout-tip icon=false title='`for` statement syntax'}
 
-A `for` statement has an scaffolding, the parts of the line which must always be the same and tell Python that you're trying to make a loop, composed by the word `for`, the word `in` and the colon (`:`) at the end of the line. These must always be there and in that order:
+A `for` statement has a scaffolding; the parts of the line which must always be the same and tell Python that you're trying to make a loop, composed by `for`, `in` and the colon (`:`) at the end of the line. These must always be there and in that order:
 <pre>
  ↓        ↓         ↓
 <b style="color:darkred">for</b> word <b style="color:darkred">in</b> my_words<b style="color:darkred">:</b>
@@ -99,7 +99,15 @@ for <b style="color:darkred">word</b> in my_words:
     print(word)
 </pre>
 
-Finally, if we want the loop to actually *do* something then we need to give the loop a *body*. The body is the lines of code that are going to be repeated. They can be any Python code but it is only within the body of the loop that we can refer to the loop variable `word`. As with `if`, Python  uses indentation to decide what is in the body of the loop and what is not. Remember that it will only repeat the code in the body. All code in the body must be indented relative to the word `for` by four spaces.
+Finally, if we want the loop to actually *do* something then we need to give the loop a *body*. The body is the lines of code that are going to be repeated (e.g: print(word). They can be any Python code but it is only within the body of the loop that we can refer to the loop variable `word`. 
+
+<pre>
+      
+for <b style="color:darkred">word</b> in my_words:   #(header of loop)
+    print(word)                                      #(body)
+</pre>
+
+As with `if`, Python  uses indentation to decide what is in the body of the loop and what is not. Remember that it will only repeat the code in the body. All code in the body must be indented relative to the word `for` by four spaces.
 <pre>
 for word in my_words<b style="color:darkred">:</b>
     print(word)
